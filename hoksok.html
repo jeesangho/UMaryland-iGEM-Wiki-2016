@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (typeof jQuery == 'undefined') {
+			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+	<link href='css/hoksok.css' rel='stylesheet' type='text/css'>
+	<title>UMaryland iGEM 2015</title>
+</head>
+<body>
+	<div id="div-topbar">
+		<div id="div-border">
+			<a href="index.html"><img src="img/logo.png" id="img-logo" /></a>
+			<nav>
+				<ul>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="parts.html">Parts</a></li>
+					<li><a href="outreach.html">Outreach</a></li>
+					<li><a href="notebook.html">Notebook</a></li>
+					<li><a href="about.html">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	<div id="div-text">
+		<h1>Hok/Sok</h1>
+		<h2>Antibiotic Independent Plasmid Retention</h2>
+		<h3>A natural internal maintenance cassette relying on internal mRNA silencing that is an alternative to common antibiotic-based methods without relying on exogenous drugs</h3>
+		<div class="longText">
+			<p>The Hok-Sok cassette contains three genes:</p>
+			<ol>
+			<li><em>hok</em> - host-killing</li>
+			<li> sok - suppressor of killing</li>
+			<li> mok - modulator of killing</li>
+			</ol>
+			<p><em>Hok</em>, located on the forward strand, encodes a 52 amino acid toxin that is capable of permeating the cell membrane, leading to a loss of electrochemical potential and cell death. The hok toxin acts with "single-hit" kinetics, indicating that a single molecule of translated <em>hok</em> is sufficient for killing a cell. Hok is freely transcribed under a weak promoter.</p> 
+			<p>In order to stay alive, cells need to be able to block translation of the hok transcript. <em>Mok</em>, located on the same locus as <em>hok</em>, modulates <em>hok</em> translation by the ribosome. <em>Mok</em> is located on a different reading frame than <em>hok</em> and the two genes are always co-transcribed as part of a single mRNA transcript.</p>
+			<p><em>Mok</em> is then recognized by <em>sok</em>, a short ssRNA "antitoxin" transcribed under a strong constitutive promoter on the reverse strand of the Hok-Sok cassette. <em>Sok</em> is capable of forming a double-stranded RNA duplex near the 5'-end of the <em>mok</em> transcript, indirectly blocking the <em>hok</em> open reading frame and preventing the transcript from being read. The dsRNA duplex is then recognized by RNAse III, leading to enzymatic degradation of the silenced transcript.</p>
+		</div>
+		<img id="img-diagram" src="img/hoksokdiagram.png" />
+		<div class="longText">
+			<p>This cassette promotes plasmid maintenance because the <em>hok</em> mRNA, due to a high degree of secondary structure, has a long half-life, measured at 20 minutes, or approximately the time of one growth cycle. <em>Sok</em>, on the other hand, has a half-life of only 30 seconds. Thus in order to continue suppressing <em>hok</em> translation, the cell must retain the plasmid and the <em>sok</em> gene through cell division.</p> 
+			<p>If the plasmid is "lost", or not passed down to the daughter cell, then both the <em>hok</em> and <em>sok</em> coding regions will be lost. However, due to its long half-life, previously transcribed <em>hok</em> mRNA will remain in the cell while previously transcribed <em>sok</em> rapidly degrades. No longer silenced, <em>hok</em> mRNA will be then translated, killing the daughter cell that did not maintain the plasmid. In nature, this is how the Hok-Sok system maintains antibiotic resistance in E. coli in the absence of antibiotic pressure.</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -3,9 +3,6 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Able to share files simply for all your needs. Upload documents, photos, videos and more while using the latest in web technologies." />
-	<meta name="keywords" content="abletoshare, able to share, sharing, file sharing, HTML5, CSS3, web, internet, photos, upload documents, free, documents, videos, upload photos, upload photos free, upload videos free" />
-	<link rel="shortcut icon" href="img/favicon.ico">
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -37,12 +34,52 @@
 		<h3>Alternative methods of plasmid maintenance and PCR amplification accelerate the construction of new biodesigns, reduce cost, and avoid environmental hazards.</h3>
 		<div id="div-circles">
 			<div id="div-hoksok" class="circle">
-				<img id="img-plasmidcircle" src="img/plasmidcircle.png" />
+				<a href="hoksok.html">
+					<div class="insideText"><h4>Hok/Sok</h4><h5>Plasmid Retention</h5></div>
+					<img id="img-plasmidcircle" src="img/plasmidcircle.png" />
+				</a>
 			</div>
-			<div id="div-thermo" class="circle"><img id="img-thermocircle" src="img/thermocircle.png" /></div>
-			<div id="div-il" class="circle"><img id="img-ilcircle" src="img/ilcircle.png" /></div>
-			<div id="div-side" class="circle"><img id="img-sidecircle" src="img/sidecircle.png" /></div>
+			<div id="div-thermo" class="circle">
+				<a href="thermo.html">
+					<div class="insideText"><h4>Hardware</h4><h5>Homemade PCR</h5></div>
+					<img id="img-thermocircle" src="img/thermocircle.png" />
+				</a>
+			</div>
+			<div id="div-il" class="circle">
+				<a href="il.html">
+					<div class="insideText"><h4>IL Study</h4><h5>Characterizing Promoters</h5></div>
+					<img id="img-ilcircle" src="img/ilcircle.png" />
+				</a>
+			</div>
+			<div id="div-side" class="circle">
+				<a href="side.html">
+					<div class="insideText"><h4>Side Projects</h4><h5>Leutein & Miraculin</h5></div>
+					<img id="img-sidecircle" src="img/sidecircle.png" />
+				</a>
+			</div>
 		</div>
 	</div>
 </body>
+<script>
+$('.circle').hover(
+	function() { 
+		$(this).css('background-color','black');
+		$(this).children().children('.insideText').css('opacity','100');
+		$(this).children().children('img').css('opacity','.4');
+	}, 
+	function() { 
+		$(this).css('background-color','#FEFFFA');
+		$(this).children().children('.insideText').css('opacity','0');
+		$(this).children().children('img').css('opacity','100');
+	}
+)
+$('.insideText').hover(
+	function() {
+		$(this).children('h4').css('font-weight','400')
+		$(this).siblings('img').css('opacity','.4');}, 
+	function() {
+		$(this).children('h4').css('font-weight','200')
+	}
+)
+</script>
 </html>
