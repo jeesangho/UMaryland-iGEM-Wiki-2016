@@ -30,19 +30,21 @@ nav ul li {
 #div-title {
 	font-weight: 200;
 	margin-right: 10px;
-	margin-top: 0px;
+	margin-top: 10px;
 }
 
 /* Start Page Specific CSS */
 
+/* UMaryland*/
 h1 {
-	font-size: 90pt;
+	font-size: 100pt;
 	margin-top: 0px;
 	margin-bottom: 40px;
 }
 
+/* Project Name*/
 h2 {
-	font-size: 60pt;
+	font-size: 70pt;
 	display: inline;
 }
 
@@ -54,11 +56,15 @@ h2 {
 	color: green;
 }	
 
+/* Project Description */
 h3 {
 	margin-top: 40px;
-	font-size: 72pt;
+	font-size: 30pt;
 	font-weight: 200;
 }
+
+/* Images */
+
 
 /* sets the background image */
 #img-plasmid {
@@ -67,5 +73,5 @@ h3 {
 	left: 0px;
 	top: 0px;
 	width: 100%;
-	height: 100%;
+	height: 100%;d
 }
