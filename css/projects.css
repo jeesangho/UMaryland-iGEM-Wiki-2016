@@ -6,6 +6,8 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: black;
 	background-color: #FEFFFA;
+	min-width: 1100px;
+	max-width: 1100px;
 }
 
 nav {
