@@ -109,6 +109,7 @@ h3 {
 	display: inline-block;
 	margin-right: 10px;
 	width: 260px;
+	height: 260px;
 	overflow: hidden;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
