@@ -55,6 +55,7 @@ h2 {
 	font-weight: 200;
 }
 
+/* sets the background image */
 #img-plasmid {
 	position: absolute;
 	z-index: -999;
