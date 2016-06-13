@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Increase compatibility with older browsers that do nto support HTML5 -->
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<!-- Load jQuery from the web, if down then local -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 		if (typeof jQuery == 'undefined') {
 			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
 		}
 	</script>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-	<link href='css/hoksok.css' rel='stylesheet' type='text/css'>
+	<!-- Load Google Web Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css' />
+	<!-- Load CSS for the page -->	
+	<link href='css/hoksok.css' rel='stylesheet' type='text/css' />
+	<!-- Title of the web page - as displayed in the tab -->
 	<title>UMaryland iGEM 2015 - Hok/Sok</title>
 </head>
 <body>
-	<div id="div-topbar">
-		<div id="div-border">
+	<div id="div-topbar"> 		<!-- Start of top header navigation bar 		-->
+		<div id="div-border">	<!-- Should remain the same throughout all pages-->
 			<a href="index.html"><img src="img/logo.png" id="img-logo" alt="UMaryland iGEM Logo"/></a>
 			<nav>
 				<ul>
@@ -27,25 +32,37 @@
 				</ul>
 			</nav>
 		</div>
-	<div id="div-text">
-		<div id="div-pic">
+	<div id="div-text"> <!-- Start of main text of page -->
+		<!-- Heading text -->
+		<div id="div-pic"> 
+		<!-- where background image below titles show -->
 			<h1>Hok/Sok</h1>
 			<h2>Antibiotic Independent Plasmid Retention</h2>
 			<h3>A natural internal maintenance cassette relying on internal mRNA silencing that is an alternative to common antibiotic-based methods without relying on exogenous drugs</h3>
 		</div>
-		<table id="table-selector">
+		<table id="table-selector"> <!-- Table of navigational links -->
 			<thead>
+				<!-- .border classes signify where broder needs to be drawn -->
+				<!-- navigator class trigger javascript on that element     -->
+				<!-- data-select attribute sends to script which element    -->
+				<!-- was clicked 											-->
 				<th class="borderRight navigator" data-select="purpose"><p>Purpose</p></th>
 				<th class="borderBoth navigator" data-select="background"><p>Background</p></th>
 				<th class="borderBoth navigator" data-select="experiment"><p>Experiment</p></th>
 				<th class="borderLeft navigator" data-select="results"><p>Results</p></th>
 			</thead>
 		</table>
-		<div id="div-purpose" class="blockText">
-			<div class="longText">
+		<!-- .blockText makes text initially hidden until clicked upon in navigational element 	   -->
+		<!-- start the div shown initially and when 'purpose' nav element is clicked 			   -->
+		<div id="div-purpose" class="blockText"> 
+			<div class="longText"> <!-- .longText reduces width of text and centers slightly left -->
+								   <!-- formats font, line height, font weight					  -->
 				<p>The ability to use plasmids as vectors to introduce genes of interest in E. coli is one of the most essential bioengineering tools. However, one of the limitations of transforming a bacterium with a plasmid, is that the organism will eventually eject the plasmid over time. To counter this, scientists add a positive selective pressure on E. coli to retain plasmids carrying resistance genes through the use of antibiotics.</p> 
 				<p>While this technique has proven to be reliable and effective, there are many limitations. The prevalent use of antibiotics both for medical and agricultural purposes has rapidly increased the number of pathogens that harbor antibiotic resistant genes. As a result, there is a pressing need to find an alternative to antibiotic use for plasmid maintenance to prevent the spread of antibiotic resistant genes.</p>
 			</div>
+			<!-- .imageEmbed creates border around picture to improve transition to background 	-->
+			<!-- increase the space above and below the image									-->
+			<!-- make sure .imageEmbed is outside of div.longText								-->
 			<img class="imageEmbed" id="img-antibiotic" src="img/antibiotic.jpg" alt="A picture of antibiotics"/>
 			<div class="longText">
 				<p>Many synthetic biology projects which focus of solving health or environmental issues are confined to the lab because of these limitations. The University of Maryland iGEM team seeks to solve this problem by developing an alternative plasmid maintenance system that should liberate other iGEM teams from the dependance on antibiotic usage.</p> 
@@ -53,13 +70,14 @@
 
 			</div>
 		</div>
+		<!-- start the div shown initially and when 'background' nav element is clicked -->
 		<div id="div-background" class="blockText">
 			<div class="longText">
 				<p>The Hok-Sok cassette contains three genes:</p>
 				<ol>
 				<li><em>hok</em> - host-killing</li>
-				<li> sok - suppressor of killing</li>
-				<li> mok - modulator of killing</li>
+				<li><em>sok</em> - suppressor of killing</li>
+				<li><em>mok</em> - modulator of killing</li>
 				</ol>
 				<p><em>Hok</em>, located on the forward strand, encodes a 52 amino acid toxin that is capable of permeating the cell membrane, leading to a loss of electrochemical potential and cell death. The hok toxin acts with "single-hit" kinetics, indicating that a single molecule of translated <em>hok</em> is sufficient for killing a cell. Hok is freely transcribed under a weak promoter.</p> 
 				<p>In order to stay alive, cells need to be able to block translation of the hok transcript. <em>Mok</em>, located on the same locus as <em>hok</em>, modulates <em>hok</em> translation by the ribosome. <em>Mok</em> is located on a different reading frame than <em>hok</em> and the two genes are always co-transcribed as part of a single mRNA transcript.</p>
@@ -71,9 +89,10 @@
 				<p>If the plasmid is "lost", or not passed down to the daughter cell, then both the <em>hok</em> and <em>sok</em> coding regions will be lost. However, due to its long half-life, previously transcribed <em>hok</em> mRNA will remain in the cell while previously transcribed <em>sok</em> rapidly degrades. No longer silenced, <em>hok</em> mRNA will be then translated, killing the daughter cell that did not maintain the plasmid. In nature, this is how the Hok-Sok system maintains antibiotic resistance in E. coli in the absence of antibiotic pressure.</p>
 			</div>
 		</div>
+		<!-- start the div shown initially and when 'experiment' nav element is clicked -->
 		<div id="div-experiment" class="blockText">
 			<div class="longText">
-				<h4>Hok/Sok Construct</h4>
+				<h4>Hok/Sok Construct</h4> <!-- h4 mini heading within the text, formatted specifically within .longText -->
 				<p>Prior to experimentation, we had to insert the Hok-Sok construct into pSB1C3 in order to make it a BioBrick. We originally planned to PCR amplify the cassette out of the R1 plasmid of E. coli, but we were unable to find an suitable wild-type strain that was easily available. Instead, we turned to synthesizing the construct as a gBlock from IDT. As a 580 bp dsDNA fragment, it was suitable for addition via Gibson Assembly into pSB1C3.</p>
 			</div>
 			<img class="imageEmbed" id="img-construct" src="img/construct.png" alt="An image of our BioBrick" />
@@ -113,17 +132,23 @@
 				<p>In order to find a definite answer as to the loss of fluorescence, we took minipreps of our non-fluorescent DH5α cultures, digested them to extract their inserts, and separated them using agarose gel electrophoresis in order to determine whether or not they were the proper size. For samples that contained an insert of the proper size, the miniprepped plasmid was then sequenced in order to determine the genetic reason as to the fluorescence loss.</p>
 			</div>
 		</div>
+		<!-- start the div shown initially and when 'results' nav element is clicked -->
 		<div id="div-results" class="blockText">
 			<div class="longText">
 				<h4>Plating Tests</h4>
 				<p>Over time, all cultures appeared to maintain antibiotic resistance, except for the negative control, which experienced no pressure during its growth. The following figures demonstrate the presence of resistant colonies over many hundreds of bacterial generations. Most importantly, the Hok-Sok culture grown without antibiotic was shown to maintain chloramphenicol resistance. This sets up one of our major conclusions: the Hok-Sok cassette is capable of maintaining a recombinant plasmid for an extended period of time.</p>
 			</div>
+				<!-- table that formats the images and captions 								-->
+				<!-- h5 and p formatted differently, specific to elements within table element 	-->
 				<table id="table-plating">
 					<tbody>
 					<tr>
 						<td>
-							<h5>Negative Control (No Pressure)</h5>
+							<!-- h5 - heading above image -->
+							<h5>Negative Control (No Pressure)</h5> 
+							<!-- .figure fixes size of the pictures -->
 							<img src="img/fig1.png" class="figure" alt="Figure showing the number of colonies when under no selective pressure" />
+							<!-- p - caption below image -->
 							<p><strong>Figure 1.</strong> Negative control was K1783002 (constitutive unstable RFP) grown in media without chloramphenicol. After 2-3 days, plates demonstrate fewer than 10 colonies per plate, suggesting that antibiotic resistance is now only minimally present in the culture.</p>
 						</td>
 						<td>
@@ -144,7 +169,7 @@
 							<p><strong>Figure 4.</strong> K1783003 (constitutive unstable RFP under Hok-Sok regulation) grown in media without chloramphenicol. Colonies persist through several days of plating, suggesting that antibiotic resistance was maintained throughout the test.</p>
 						</td>
 					</tr>
-				</table>
+				</table> <!-- end table of results -->
 			<div class="longText">
 				<h4>Growth Curve</h4>
 				<p><strong>Figure 5. </strong>Growth curves of parallel cultures grown with and without chloramphenicol. The presence of Hok-Sok on the inserted plasmid does not appear to have a major effect on the bacterial growth rate. This is in line with our qualitative observations, where we do not observe any major difference in cell density during plating or fluorescence studies.</p>
@@ -154,9 +179,12 @@
 				<h4>Fluorescence Studies</h4>
 				<p>Our fluorescence studies supported the findings of our plating tests. We were able to observe that fluorescence was rapidly lost in the negative control. This was expected due to plating tests demonstrating the loss of plasmid from that group. We were pleasantly surprised to observe that Hok-Sok was able to maintain fluorescence for a longer period of time than typical chloramphenicol pressure.</p>
 			</div>
+			<!-- table that formats the images and captions 								-->
+			<!-- h5 and p formatted differently, specific to elements within table element 	-->
 			<table id="table-fluro">
 				<tbody>
 					<tr>
+						<!-- .centerText centers the heading of the subsection of the table  -->
 						<td colspan="2"><h5 class="centerText" >DH5α Cell Line</h5></td>
 					</tr>
 					<tr>
@@ -210,7 +238,7 @@
 							<p><strong>Figure 13.</strong> Fluorescence measurements of K1783003 (Hok-Sok+Constitutive unstable RFP) in BL21 cells grown in media without antibiotic.</p>
 						</td>
 					</tr>
-			</table>
+			</table> <!-- end table of fluroescence results -->
 			<div class="longText">
 				<h4>Analysis of Fluorescence Loss</h4>
 			</div>
@@ -269,20 +297,21 @@
 				<p>As mentioned earlier, many synthetic biology projects, including those within iGEM, intend to release their final product into nature. As our testing supports the conclusion that Hok-Sok can successfully be implemented to maintain plasmids without antibiotics, it would be intriguing to test this further ourselves or see other iGEM teams test this by implementing the Hok-Sok cassette as the maintenance system on a project where the final product is intended for release into nature. Successful implementation of this would further prove the efficacy of Hok-Sok as an alternative plasmid maintenance system and as a method for combating the widespread use of antibiotics and growing population of antibiotic resistant bacteria.</p>
 			</div>
 		</div>
+		<!-- end of #div-results -->
 	</div>
 </body>
 <script>
-var current = 'purpose';
- $('.navigator').click( function() {
-	$('.navigator').css('border-bottom','none');
-	$(this).css('border-bottom', '4px solid #A8A8A8');
-	var selected = $(this).attr('data-select');
-	if (selected != current) {
-		$('.blockText').css('display','none');
-		$('.blockText').css('margin-left', '60px')
-		$('#div-' + selected).css('display','block');
-		$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
-		current = selected
+var current = 'purpose'; // sets initial display to be purpose
+ $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+	$('.navigator').css('border-bottom','none');		// make all navigational element shave no bottom border
+	$(this).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border
+	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+	if (selected != current) {							// only change display / trigger animation if clicking different nav
+		$('.blockText').css('display','none');			// hides all text
+		$('.blockText').css('margin-left', '60px')		// slighly shifts right all text to set up for animation
+		$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
+		$('#div-' + selected).animate({ marginLeft: '0px'}, 200);	// the text is animated to quickly move left
+		current = selected;								// sets the current display
 	}
  })
 </script>

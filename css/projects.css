@@ -1,46 +1,56 @@
 
 /* Navbar and body setup */
-body {
+body {	
+	/* Enforces font on the entire page, colored black by default
+	   Makes background off-white slightly to improve visibility with gray font */
 	font-family: 'Raleway', sans-serif;
 	color: black;
 	background-color: #FEFFFA;
 }
 
 nav {
+	/* Moves the top bar to be centered with the UMD logo, increases font size */
 	margin-top: 50px;
 	font-size: 20pt;
 }
 
 nav a {
+	/* removes underlining of links by default, makes color of text grayish */
 	text-decoration: none;
 	color: #757575;
 }
 
 a:hover {
+	/* when hovering over links, the text becomes bold to signify it can be clicked on */
 	font-weight: 800;
 }
 
 nav ul {
+	/* removes bullets in the list */
 	list-style: none;
 	text-align: right;
 	padding-top: 30px;
 }
 
 nav ul li {
+	/* makes list display horizontally, increases spacing with the left side */
 	display: inline;
 	padding-left: 40px;
 }
 
 #img-logo {
+	/* fixes size of logo, makes the nav bar go to the right of the logo */
 	width: 300px;
 	float: left;
 }
 
 #div-text {
+	/* Increases space between main content and the nav heading */
 	padding-top: 40px;
 }
 
 #div-topbar {
+	/* fixes the size of the heading to improve compatibility, centers on the page */
 	margin-right: auto;
 	margin-left: auto;
 	min-width: 1366px;
@@ -48,6 +58,8 @@ nav ul li {
 }
 
 #div-border {
+	/* create a smaller div that is centered, which has a gray bottom border
+	   creates the shadow underneath border									 */
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 1200px;
@@ -61,8 +73,8 @@ nav ul li {
 }
 /* Start Page Specific CSS */
 
-h1 {
-	color: #6B6B6B;
+h1 {							/* Centers the heading text on the page at different sizes */
+	color: #6B6B6B;				/* makes the text centered and gray colored */
 	font-size: 60pt;
 	font-weight: 200;
 	text-align: center;
@@ -85,6 +97,9 @@ h3 {
 	margin-right: auto;
 }
 
+
+/* makes circles display horizontally at a fixed width, 
+   turns div from rectangle to circle 					*/
 .circle {
 	display: inline-block;
 	margin-right: 15px;
@@ -96,20 +111,23 @@ h3 {
 	color: white;
 }
 
+/* makes the actual image inside circle the same width as .circle */
 .circle img {
 	width:300px;
 }
 
+/* Triggers darkening of the image within .circle when hovered */
 .circle img:hover {
 	opacity: 0.4;
 }
 
-
+/* moves all circles down and centered on the page */
 #div-circles {
 	margin-top: 100px;
 	margin-left: 70px;
 }
 
+/* Creates initially invisible text that overlay the circles, positioned over it */
 .insideText {
 	position: absolute;
 	opacity: 0;
@@ -118,6 +136,7 @@ h3 {
 	margin-left: 30px;
 }
 
+/* Formats the text inside the circles that show up when darkened */
 h4 {
 	font-size: 24pt;
 	font-weight: 200;
@@ -130,6 +149,7 @@ h5 {
 	margin-top: 15px;
 }
 
+/* Prevents the overlay text links from being blue and underlined */
 #div-circles a {
 	text-decoration: none;
 	color: white;
