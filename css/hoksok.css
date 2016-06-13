@@ -112,9 +112,15 @@ h3 {
 
 
 /* fixes width of each image and makes it centered in between the text */
-#img-antibiotic, #img-growth, #img-rfp, #img-seq, #img-oyster {
+#img-antibiotic, #img-oyster {
 	width: 600px;
 	margin-left: 210px;
+}
+
+#img-rfp, #img-seq, #img-growth {
+	width: 600px;
+	margin-left: 210px;
+	margin-bottom: 0px;
 }
 
 #img-diagram {
@@ -125,11 +131,13 @@ h3 {
 #img-construct {
 	width: 900px;
 	margin-left: 70px;
+	margin-bottom: 0px;
 }
 
 #img-gram {
 	width: 300px;
 	margin-left: 340px;
+	margin-bottom: 0px;
 }
 
 p, .longText li {
@@ -150,7 +158,6 @@ p, .longText li {
 	/* formats the table containing nav elements to be centered, addes space on top / bottom */
 	width: 100%;
 	margin-top: 30px;
-	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -252,7 +259,7 @@ td {
 
 .centerText {
 	/* formats table heading to be larger and centered*/
-	margin-left: 35%;
+	margin-left: 425px;
 	font-size: 18pt;
 	margin-bottom: 15px;
 }
@@ -266,4 +273,8 @@ td {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.firstHeader {
+	margin-top: 30px;
 }
