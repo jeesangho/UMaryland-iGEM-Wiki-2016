@@ -5,9 +5,11 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: black;
 	background-color: #FEFFFA;
-	min-width: 1100px;
-	max-width: 1100px;
+	min-width: 1200px;
+	max-width: 1200px;
 	overflow-x:hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 nav {
@@ -48,7 +50,7 @@ nav ul li {
 
 #div-text {
 	/* Increases space between main content and the nav heading */
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 #div-topbar {
@@ -64,8 +66,8 @@ nav ul li {
 	   creates the shadow underneath border									 */
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 1200px;
-	max-width: 1200px;
+	min-width: 1150px;
+	max-width: 1150px;
 	border-bottom-style: solid;
 	border-color: #A8A8A8;
 	border-width: 2px;
@@ -77,14 +79,14 @@ nav ul li {
 
 h1 {							/* Centers the heading text on the page at different sizes 		*/
 	color: white;				/* makes the text centered and white to contrast background img */
-	font-size: 60pt;
+	font-size: 56pt;
 	font-weight: 200;
 	text-align: center;
 }
 
 h2 {
 	color: white;
-	font-size: 30pt;
+	font-size: 28pt;
 	font-weight: 200;
 	text-align: center;
 }
@@ -112,22 +114,22 @@ h3 {
 /* fixes width of each image and makes it centered in between the text */
 #img-antibiotic, #img-growth, #img-rfp, #img-seq, #img-oyster {
 	width: 600px;
-	margin-left: 280px;
+	margin-left: 210px;
 }
 
 #img-diagram {
 	width: 800px;
-	margin-left: 180px;
+	margin-left: 110px;
 }
 
 #img-construct {
 	width: 900px;
-	margin-left: 130px;
+	margin-left: 70px;
 }
 
 #img-gram {
 	width: 300px;
-	margin-left: 400px;
+	margin-left: 340px;
 }
 
 p, .longText li {
@@ -140,15 +142,15 @@ p, .longText li {
 .longText {
 	/* fixes width of the text and displays it slighly left of center */
 	width: 950px;
-	margin-left: 130px;
+	margin-left: 50px;
 	margin-right: auto;
 }
 
 #table-selector {
 	/* formats the table containing nav elements to be centered, addes space on top / bottom */
-	width: 90%;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }

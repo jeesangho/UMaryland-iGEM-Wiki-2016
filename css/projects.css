@@ -6,9 +6,11 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: black;
 	background-color: #FEFFFA;
-	min-width: 1100px;
-	max-width: 1100px;
+	min-width: 1200px;
+	max-width: 1200px;
 	overflow-x:hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 nav {
@@ -49,15 +51,15 @@ nav ul li {
 
 #div-text {
 	/* Increases space between main content and the nav heading */
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 #div-topbar {
 	/* fixes the size of the heading to improve compatibility, centers on the page */
 	margin-right: auto;
 	margin-left: auto;
-	min-width: 1280px;
-	max-width: 1280px;
+	min-width: 1200px;
+	max-width: 1200px;
 }
 
 #div-border {
@@ -65,8 +67,8 @@ nav ul li {
 	   creates the shadow underneath border									 */
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 1200px;
-	max-width: 1200px;
+	min-width: 1150px;
+	max-width: 1150px;
 	border-bottom-style: solid;
 	border-color: #A8A8A8;
 	border-width: 2px;
@@ -78,14 +80,14 @@ nav ul li {
 
 h1 {							/* Centers the heading text on the page at different sizes */
 	color: #6B6B6B;				/* makes the text centered and gray colored */
-	font-size: 60pt;
+	font-size: 56pt;
 	font-weight: 200;
 	text-align: center;
 }
 
 h2 {
 	color: #6B6B6B;
-	font-size: 30pt;
+	font-size: 28pt;
 	font-weight: 200;
 	text-align: center;
 }
@@ -105,8 +107,8 @@ h3 {
    turns div from rectangle to circle 					*/
 .circle {
 	display: inline-block;
-	margin-right: 15px;
-	width: 300px;
+	margin-right: 10px;
+	width: 260px;
 	overflow: hidden;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -116,7 +118,7 @@ h3 {
 
 /* makes the actual image inside circle the same width as .circle */
 .circle img {
-	width:300px;
+	width:260px;
 }
 
 /* Triggers darkening of the image within .circle when hovered */
