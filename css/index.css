@@ -6,8 +6,9 @@ body {
 }
 
 nav {
-	margin-top: 100px;
+	margin-top: 50px;
 	font-size: 28pt;
+	margin-left: 15px;
 }
 
 nav a {
@@ -23,34 +24,42 @@ nav ul {
 	list-style: none;
 	text-align: left;
 	margin-right: 50px;
-	padding-top: 50px;
 }
 
 nav ul li {
 	display: inline;
-	padding-left: 40px;
+	margin-right: 80px;
 }
 
-#img-logo {
-	margin-left: 50px;
-	width: 500px;
-	float: left;
-}
-
-#div-text {
-	margin-left: 50px;
-	padding-top: 40px;
+#div-title {
+	font-weight: 200;
+	margin-right: 10px;
+	margin-top: 0px;
 }
 
 /* Start Page Specific CSS */
 
 h1 {
-	font-size: 125pt;
-	font-weight: 200;
-	clear: both;
+	font-size: 90pt;
+	margin-top: 0px;
+	margin-bottom: 40px;
 }
 
 h2 {
+	font-size: 60pt;
+	display: inline;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}	
+
+h3 {
+	margin-top: 40px;
 	font-size: 72pt;
 	font-weight: 200;
 }
