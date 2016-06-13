@@ -46,10 +46,10 @@
 				<!-- navigator class trigger javascript on that element     -->
 				<!-- data-select attribute sends to script which element    -->
 				<!-- was clicked 											-->
-				<th class="borderRight navigator" data-select="purpose"><p>Purpose</p></th>
-				<th class="borderBoth navigator" data-select="background"><p>Background</p></th>
-				<th class="borderBoth navigator" data-select="experiment"><p>Experiment</p></th>
-				<th class="borderLeft navigator" data-select="results"><p>Results</p></th>
+				<th class="borderRight navigator" id="th-purpose" data-select="purpose"><p>Purpose</p></th>
+				<th class="borderBoth navigator" id="th-background" data-select="background"><p>Background</p></th>
+				<th class="borderBoth navigator" id="th-experiment" data-select="experiment"><p>Experiment</p></th>
+				<th class="borderLeft navigator" id="th-results" data-select="results"><p>Results</p></th>
 			</thead>
 		</table>
 		<!-- .blockText makes text initially hidden until clicked upon in navigational element 	   -->
@@ -303,16 +303,46 @@
 <script>
 var current = 'purpose'; // sets initial display to be purpose
  $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
-	$('.navigator').css('border-bottom','none');		// make all navigational element shave no bottom border
-	$(this).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border
 	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
 	if (selected != current) {							// only change display / trigger animation if clicking different nav
-		$('.blockText').css('display','none');			// hides all text
-		$('.blockText').css('margin-left', '60px')		// slighly shifts right all text to set up for animation
-		$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
-		$('#div-' + selected).animate({ marginLeft: '0px'}, 200);	// the text is animated to quickly move left
-		current = selected;								// sets the current display
+		changeText(selected)
 	}
  })
+ 
+var dir = location.hash;								// grabs the anchor (text following the #)
+var n = dir.indexOf('?');								// and initially sets the page 
+dir = dir.substring(0, n != -1 ? n : dir.length);		
+dir = dir.replace('#','');
+if (dir == '') {
+	dir = 'purpose';
+}
+switch (dir) {
+	case 'purpose':
+        break;
+    case 'background':
+        changeText(dir)
+        break;
+	case 'experiment':
+        changeText(dir)
+        break;
+	case 'results':
+        changeText(dir)
+        break;
+    default:
+        break;
+}
+
+function changeText(selected) {
+	$('.navigator').css('border-bottom','none');					// make all navigational element shave no bottom border
+	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border		
+	$('.blockText').css('display','none');							// hides all text
+	$('.blockText').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
+	$('#div-' + selected).css('display','block');					// the div containing the text is displayed
+	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);		// the text is animated to quickly move left
+	current = selected;												// sets the current display
+	location.hash = current;
+}
+
+ 
 </script>
 </html>
