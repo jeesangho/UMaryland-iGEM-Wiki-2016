@@ -161,21 +161,21 @@ th p:hover {
 }
 
 /* creates a solid gray border between elements of navigational element */
+.borderTop{
+	border-bottom: 1px solid #A8A8A8; 
+}
+
 .borderLeft {
-	border-left: 2px solid #A8A8A8;
+	border-left: 1px solid #A8A8A8;
 }
 
 .borderRight {
-	border-right: 2px solid #A8A8A8;
+	border-right: 1px solid #A8A8A8;
 }
 
 .borderBoth {
-	border-left: 2px solid #A8A8A8;
-	border-right: 2px solid #A8A8A8;
-}
-
-.borderRight {
-	border-bottom: 4px solid #A8A8A8;
+	border-left: 1px solid #A8A8A8;
+	border-right: 1px solid #A8A8A8;
 }
 
 
@@ -188,9 +188,7 @@ p, .longText li {
 
 .longText {
 	/* fixes width of the text and displays it slighly left of center */
-	max-width: 950px;
-	min-width: 500px;
-	width: 70%;
+	width: 850px;
 	margin-left: 75px;
 	margin-right: auto;
 }
@@ -216,27 +214,17 @@ h4 {
 /* fixes width of each image and makes it centered in between the text */
 .imgW600 {
 	width: 600px;
-	margin-left: 210px;
+	margin-left: 170px;
 }
 
 .imgW800 {
 	width: 800px;
-	margin-left: 110px;
-}
-
-.imgW900 {
-	width: 900px;
-	margin-left: 70px;
+	margin-left: 80px;
 }
 
 .imgW300{
 	width: 300px;
-	margin-left: 340px;
-}
-
-.imgW500 {
-	width: 500px;
-	margin-left: 250px;
+	margin-left: 300px;
 }
 
 .noBottomMargin {
@@ -290,4 +278,32 @@ td {
 	margin-left: 425px;
 	font-size: 18pt;
 	margin-bottom: 15px;
+}
+
+.subNavList {
+	/* formats the table containing nav elements to be centered, addes space on top / bottom */
+	width: 95%;
+	margin-top: 30px;
+	margin-left: 35px;
+	margin-right: auto;
+}
+
+.subNavList li {
+	/* formats text inside table of navigational elements */
+	/* makes cursor emulate a link to show it's clickable */
+	display: inline;
+	font-size: 14pt;
+	font-weight: 400;
+	cursor: pointer;
+	padding: 5px 45px 15px 0px;
+	margin: 0 0 0 0;
+}
+
+.subNavList li:hover {
+	/* makes links bold when hovered to show it is a link */
+	font-weight: 800;
+}
+
+.subNavList {
+	display:none;
 }

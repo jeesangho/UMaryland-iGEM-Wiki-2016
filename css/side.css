@@ -188,11 +188,10 @@ p, .longText li {
 
 .longText {
 	/* fixes width of the text and displays it slighly left of center */
-	width: 950px;
-	margin-left: 50px;
+	width: 850px;
+	margin-left: 75px;
 	margin-right: auto;
 }
-
 
 h4 {
 	/* formats intratext section headings */
@@ -212,29 +211,15 @@ h4 {
 }
 
 /* fixes width of each image and makes it centered in between the text */
-.imgW600 {
-	width: 600px;
-	margin-left: 210px;
-}
 
 .imgW800 {
 	width: 800px;
-	margin-left: 110px;
-}
-
-.imgW900 {
-	width: 900px;
-	margin-left: 70px;
-}
-
-.imgW300{
-	width: 300px;
-	margin-left: 340px;
+	margin-left: 80px;
 }
 
 .imgW500 {
 	width: 500px;
-	margin-left: 250px;
+	margin-left: 200px;
 }
 
 .noBottomMargin {

@@ -188,8 +188,8 @@ p, .longText li {
 
 .longText {
 	/* fixes width of the text and displays it slighly left of center */
-	width: 950px;
-	margin-left: 50px;
+	width: 850px;
+	margin-left: 75px;
 	margin-right: auto;
 }
 

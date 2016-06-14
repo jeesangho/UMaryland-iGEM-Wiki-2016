@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- Increase compatibility with older browsers that do not support HTML5 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>-->
 	<!-- Load jQuery from the web, if down then local -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -46,12 +46,29 @@
 				<!-- navigator class trigger javascript on that element     -->
 				<!-- data-select attribute sends to script which element    -->
 				<!-- was clicked 											-->
-				<th class="borderRight navigator" id="th-purpose" data-select="purpose"><p>Purpose</p></th>
-				<th class="borderBoth navigator" id="th-background" data-select="background"><p>Background</p></th>
-				<th class="borderBoth navigator" id="th-experiment" data-select="experiment"><p>Experiment</p></th>
-				<th class="borderLeft navigator" id="th-results" data-select="results"><p>Results</p></th>
+				<th class="borderRight navigator borderTop" id="th-purpose" data-select="purpose"><p>Purpose</p></th>
+				<th class="borderBoth navigator borderTop" id="th-background" data-select="background"><p>Background</p></th>
+				<th class="borderBoth navigator borderTop" id="th-experiment" data-select="experiment"><p>Experiment</p></th>
+				<th class="borderLeft navigator borderTop" id="th-results" data-select="results"><p>Results</p></th>
 			</thead>
 		</table>
+		<ul id="ul-experiment" class="subNavList">
+				<li class="subNav" id="th-construct" data-select="construct">Construct</li>
+				<li class="subNav" id="th-plating" data-select="plating">Plating</li>
+				<li class="subNav" id="th-growth" data-select="growth">Growth Curve</li>
+				<li class="subNav" id="th-fluorescence" data-select="fluorescence">Fluorescence</li>
+				<li class="subNav" id="th-loss" data-select="loss">Fluorescence Loss</li>
+				<li class="subNav" id="th-sequence" data-select="sequence">Sequence</li>
+		</ul>
+		<ul id="ul-results" class="subNavList">
+				<li class="subNav" data-select="plating2">Plating</li>
+				<li class="subNav" data-select="growth2">Growth Curve</li>
+				<li class="subNav" data-select="fluorescence2">Fluorescence</li>
+				<li class="subNav" data-select="loss2">Fluorescence Loss</li>
+				<li class="subNav" data-select="sequence2">Sequence</li>
+				<li class="subNav" data-select="conclusions">Conclusions</li>
+				<li class="subNav" data-select="considerations">Considerations</li>
+		</ul>
 		<!-- .blockText makes text initially hidden until clicked upon in navigational element 	   -->
 		<!-- start the div shown initially and when 'purpose' nav element is clicked 			   -->
 		<div id="div-purpose" class="blockText initialDisplay"> 
@@ -95,16 +112,9 @@
 				<h4 class="firstHeader">Hok/Sok Construct</h4> <!-- h4 mini heading within the text, formatted specifically within .longText -->
 				<p>Prior to experimentation, we had to insert the Hok-Sok construct into pSB1C3 in order to make it a BioBrick. We originally planned to PCR amplify the cassette out of the R1 plasmid of E. coli, but we were unable to find an suitable wild-type strain that was easily available. Instead, we turned to synthesizing the construct as a gBlock from IDT. As a 580 bp dsDNA fragment, it was suitable for addition via Gibson Assembly into pSB1C3.</p>
 			</div>
-			<img class="imageEmbed imgW900 noBottomMargin" src="img/construct.png" alt="An image of our BioBrick" />
+			<img class="imageEmbed imgW800 noBottomMargin" src="img/construct.png" alt="An image of our BioBrick" />
 			<div class="longText">
-				<h4>Fluorescence Studies</h4>
-				<p>In order to determine if Hok/Sok was capable of maintaining a plasmid without antibiotic pressure, we decided to use a visual reporter gene to quantify the ability of Hok/Sok to maintain plasmids over many generations. We decided to use RFP along with a degradation tag as the reporter gene. The most suitable candidate was an unstable LVA-tagged RFP that has a half-life of 1 hour. The shorter half-life allows for more frequent measurements of protein production that would not aggregate over time.</p> 
-				<p>We combined a constitutive promoter and RBS to the LVA-tagged RFP through 3A assembly. We transformed this construct to E. coli DH5a to confirm the effectiveness of this reporter gene and its expression through increased fluorescence. Afterwords we ordered a g-block of our Hok/Sok+reporter construct. The expression of this reporter gene is proportional to plasmid number. Therefore, we concluded that if the cells containing a plasmid with both Hok/Sok and reporter gene could maintain fluorescence over many generations without the positive pressure of antibiotics compared to our controls, Hok/Sok can be used as a viable plasmid maintenance system.</p>
-				<p>We used two E. coli strains for our testing. Originally, we used BL21 strain of E. coli because it is known to be the best for testing because the cell lacks proteases; the protein expression is optimal because the proteins are not digested by the enzymes. After testing BL21, we transitioned to the DH5a strain of E. coli because the cells lack recombinase.</p>
-			</div>
-			<img class="imageEmbed imgW600 noBottomMargin" src="img/RFP.png" alt="Bacteria expressing RFP" />
-			<div class="longText">
-				<h4>Plating Studies</h4>
+				<h4 id="h4-plating">Plating Studies</h4>
 				<p>While our fluorescence studies were effective at measuring protein expression over time, we wanted a second test that would more directly measure whether or not plasmids were being maintained throughout generations. Using the identical cultures as the fluorescence tests, we devised a plating protocol involving a challenge of chloramphenicol every 24 hours.</p>
 				<ol>
 					<li>Dilute each culture (1 : 106) with LB media</li>
@@ -115,8 +125,9 @@
 				<p>The goal in doing this was to determine how many bacteria were surviving by retaining their plasmids. We did not discriminate between the color of colonies.</p>
 				<p>For continuing generations of BL21 strain E. coli, we observed that on the plates for groups A and B, there was growth but no redness. If the bacteria were retaining the plasmids with the chloramphenicol resistance, the RFP gene should have been expressed and the colonies should fluoresce. We hypothesized that the chloramphenicol resistance gene was being recombined into the bacterial genome so the bacteria could therefore freely eject our inserted plasmids. As BL21 carries the gene for recombinase, it is possible. However, DH5α, as a common cloning strain, does not have recombinase. We created a new generation with every group (A, B, C, D, and E) to test whether the same plate would have similar results or once the bacteria stopped fluorescing, there would be no growth on the plates.</p>
 			</div>
+			<img class="imageEmbed imgW600 noBottomMargin" src="img/RFP.png" alt="Bacteria expressing RFP" />
 			<div class="longText">
-				<h4>Growth Curve</h4>
+				<h4 id="h4-growth">Growth Curve</h4>
 				<p>While the Hok-Sok cassette may help to maintain a plasmid, it may also impact the rate of cell growth. We were unsure of the level of stress that came from additional hok and sok translation, and we decided to measure whether or not cultures containing the Hok-Sok construct would grow at a similar rate to control. We created a growth curve of Hok/Sok in comparison to controls to test the effectiveness of the Hok/Sok system in keeping the bacteria alive. We had four groups:</p>
 				<ul>
 					<li>Hok/Sok without chloramphenicol</li>
@@ -125,17 +136,23 @@
 					<li>RFP with chloramphenicol</li>
 				</ul>
 				<p>We started growing 250 mL cultures and monitored the OD at 600nm using a spectrophotometer over the span of 7.5 hours.</p>
-				<h4>Fluorescence Loss Analysis</h4>
+			</div>
+			<div class="longText">
+				<h4 id="h4-fluorescence">Fluorescence Studies</h4>
+				<p>In order to determine if Hok/Sok was capable of maintaining a plasmid without antibiotic pressure, we decided to use a visual reporter gene to quantify the ability of Hok/Sok to maintain plasmids over many generations. We decided to use RFP along with a degradation tag as the reporter gene. The most suitable candidate was an unstable LVA-tagged RFP that has a half-life of 1 hour. The shorter half-life allows for more frequent measurements of protein production that would not aggregate over time.</p> 
+				<p>We combined a constitutive promoter and RBS to the LVA-tagged RFP through 3A assembly. We transformed this construct to E. coli DH5a to confirm the effectiveness of this reporter gene and its expression through increased fluorescence. Afterwords we ordered a g-block of our Hok/Sok+reporter construct. The expression of this reporter gene is proportional to plasmid number. Therefore, we concluded that if the cells containing a plasmid with both Hok/Sok and reporter gene could maintain fluorescence over many generations without the positive pressure of antibiotics compared to our controls, Hok/Sok can be used as a viable plasmid maintenance system.</p>
+				<p>We used two E. coli strains for our testing. Originally, we used BL21 strain of E. coli because it is known to be the best for testing because the cell lacks proteases; the protein expression is optimal because the proteins are not digested by the enzymes. After testing BL21, we transitioned to the DH5a strain of E. coli because the cells lack recombinase.</p>
+				<h4 id="h4-loss">Fluorescence Loss Analysis</h4>
 				<p>Interested as to why our cells were losing fluorescence in the span of a week, we increased the level of protein expression in order to observe this effect on a larger scale. This was done by switching cell lines from DH5α to BL21, which is optimized for protein expression due to the removal of several proteases. We repeated plating experiments in triplicate in order to determine if fluorescence loss would be as dramatic in such a small span of time. Plates were exposed to UV light using a transilluminator in order to visually observe fluorescence loss over many generations.</p>
 				<p>In addition to our observations, we also wanted to make sure that our cultures had not been contaminated with a non-fluorescent, chloramphenicol resistant bacteria that had out-competed our intended culture. We thus performed a gram stain in order to verify that our bacteria were gram negative bacilli.</p>
-				<h4>Sequence Analysis</h4>
+				<h4 id="h4-sequence">Sequence Analysis</h4>
 				<p>In order to find a definite answer as to the loss of fluorescence, we took minipreps of our non-fluorescent DH5α cultures, digested them to extract their inserts, and separated them using agarose gel electrophoresis in order to determine whether or not they were the proper size. For samples that contained an insert of the proper size, the miniprepped plasmid was then sequenced in order to determine the genetic reason as to the fluorescence loss.</p>
 			</div>
 		</div>
 		<!-- start the div shown initially and when 'results' nav element is clicked -->
 		<div id="div-results" class="blockText">
 			<div class="longText">
-				<h4 class="firstHeader">Plating Tests</h4>
+				<h4 id="h4-plating2">Plating Tests</h4>
 				<p>Over time, all cultures appeared to maintain antibiotic resistance, except for the negative control, which experienced no pressure during its growth. The following figures demonstrate the presence of resistant colonies over many hundreds of bacterial generations. Most importantly, the Hok-Sok culture grown without antibiotic was shown to maintain chloramphenicol resistance. This sets up one of our major conclusions: the Hok-Sok cassette is capable of maintaining a recombinant plasmid for an extended period of time.</p>
 			</div>
 				<!-- table that formats the images and captions 								-->
@@ -171,12 +188,12 @@
 					</tr>
 				</table> <!-- end table of results -->
 			<div class="longText">
-				<h4>Growth Curve</h4>
+				<h4 id="h4-growth2">Growth Curve</h4>
 				<p><strong>Figure 5. </strong>Growth curves of parallel cultures grown with and without chloramphenicol. The presence of Hok-Sok on the inserted plasmid does not appear to have a major effect on the bacterial growth rate. This is in line with our qualitative observations, where we do not observe any major difference in cell density during plating or fluorescence studies.</p>
 			</div>
 			<img class="imageEmbed imgW600 noBottomMargin" src="img/figgrowth.png" alt="Figure showing growth rates using differnet maintenance systems" />
 			<div class="longText">
-				<h4>Fluorescence Studies</h4>
+				<h4 id="h4-fluorescence2">Fluorescence Studies</h4>
 				<p>Our fluorescence studies supported the findings of our plating tests. We were able to observe that fluorescence was rapidly lost in the negative control. This was expected due to plating tests demonstrating the loss of plasmid from that group. We were pleasantly surprised to observe that Hok-Sok was able to maintain fluorescence for a longer period of time than typical chloramphenicol pressure.</p>
 			</div>
 			<!-- table that formats the images and captions 								-->
@@ -240,7 +257,7 @@
 					</tr>
 			</table> <!-- end table of fluroescence results -->
 			<div class="longText">
-				<h4>Analysis of Fluorescence Loss</h4>
+				<h4 id="h4-loss2">Analysis of Fluorescence Loss</h4>
 			</div>
 			<table id="table-loss">
 				<tbody>
@@ -271,17 +288,17 @@
 			</div>
 			<img class="imageEmbed imgW300 noBottomMargin" src="img/gram.png" alt="Representative gram stain of culture." /> 
 			<div class="longText">
-				<h4>Sequence Analysis</h4>
+				<h4 id="h4-sequence2">Sequence Analysis</h4>
 				<p>Top right bands of gel are of negative control in DH5-alpha. They demonstrate that the cells no longer have the plasmid of interest. Gels generally show that plasmids are kept whenever a form of pressure is placed on the cell. Why then, is RFP not being expressed? Our sequencing results showed random mutations in the promoter and coding region of the RFP construct.</p> 
 				<p>This is a valuable lesson that, with any BioBrick construct, mutations and evolution is inevitable. However, plasmids that were maintained with Hok-Sok alone (no chloramphenicol) did not display mutations in the RFP construct. The large difference in protein expression over multiple days, as shown by our fluorescence and plating tests, suggests to us that the presence of Hok-Sok, combined with the absence of chloramphenicol pressure, is putting a smaller evolutionary pressure on the bacterium.</p>
 			</div>
 			<img class="imageEmbed imgW600 noBottomMargin" src="img/sequence.jpeg" /> 
 			<div class="longText">
-				<h4>Conclusions and Future Plans</h4>
+				<h4 id="h4-conclusions">Conclusions and Future Plans</h4>
 				<p>Through our plating tests and fluorescence measurements, we were able to successfully observe the plasmid maintenance ability of the Hok-Sok system. In comparison to a negative control grown without chloramphenicol pressure, cells containing Hok-Sok were able to maintain their antibiotic resistance for a significant period of time, as shown from our plating tests.</p> 
 				<p>In addition, we noted the ability of Hok-Sok had a negative effect on protein production, as shown from our fluorescence study. However, this level of production was consistent over a long period of time, contrasting with traditional pressure systems where mutations were able to build up quickly, shutting down production of RFP, which has no biological usefulness for the cell. </p>
 				<p>We thus suggest that the downregulation of RFP production via Hok-Sok is capable of decreasing the evolutionary pressure against the removal on non-essential genes. This effect will be further studied in later experiments, where the distance between the hok-sok cassette and a gene of interest is lengthened. Overall, we suggest use of the Hok-Sok system as an effective method for internal plasmid maintenance without the use of antibiotics.</p>
-				<h4>Considerations</h4>
+				<h4 id="h4-considerations">Considerations</h4>
 				<p><strong>PCR of Hok-Sok Construct</strong><br />
 				Amplification of the Hok-Sok cassette is difficult due to the high inherent secondary structure in the construct. Hok ssDNA is capable of naturally folding into a stable secondary structure, resulting in early terminations and other side products. We recommend that a reaction buffer suitable for difficult templates be used, such as Phusion GC buffer + added DMSO.</p>
 				<p><strong>Measuring OD of RFP Cultures</strong><br />
@@ -301,6 +318,7 @@
 	</div>
 </body>
 <script>
+var clicked = '';
 var current = 'purpose'; // sets initial display to be purpose
  $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
 	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
@@ -316,28 +334,41 @@ dir = dir.replace('#','');
 if (dir == '') {
 	dir = 'purpose';
 }
+changeText(dir)
 switch (dir) {
 	case 'purpose':
         break;
     case 'background':
-        changeText(dir)
         break;
 	case 'experiment':
-        changeText(dir)
+        displayTable(dir)
         break;
 	case 'results':
-        changeText(dir)
+        displayTable(dir)
         break;
     default:
         break;
 }
 
+$(".subNav").click(function() {
+	clicked = $(this).attr('data-select');	
+    $('html, body').animate({
+        scrollTop: $("#h4-"+ clicked).offset().top
+    }, 0000);
+});
+
+function displayTable(selected) {
+	$('#ul-'+selected).css('display','block');
+}
+
 function changeText(selected) {
-	$('.navigator').css('border-bottom','none');					// make all navigational element shave no bottom border
+	$('.navigator').css('border-bottom','1px solid #A8A8A8');		// make all navigational element have no bottom border
 	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border		
-	$('.blockText').css('display','none');							// hides all text
+	$('.blockText').css('display','none');
+	$('.subNavList').css('display','none');							// hides all text
 	$('.blockText').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
-	$('#div-' + selected).css('display','block');					// the div containing the text is displayed
+	$('#div-' + selected).css('display','block');
+	displayTable(selected)											// the div containing the text is displayed
 	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);		// the text is animated to quickly move left
 	current = selected;												// sets the current display
 	location.hash = current;
