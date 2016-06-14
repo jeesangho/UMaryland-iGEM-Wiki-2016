@@ -108,7 +108,7 @@ h3 {
 #div-pic {
 	/* sets the background image above the main text */
 	padding-top: 30px;
-	background-image: url("../img/iowis.jpg");
+	background-image: url("../img/canbg.jpg");
 	padding-bottom: 30px;
 	margin-top: 20px;
 	min-width: 1200px;
@@ -137,7 +137,7 @@ h3 {
 #table-selector th {
 	/* makes each cell of nav evenly spaced */
 	text-align: center; 
-	width: 25%; /* modify when adding / deleting elements in nav */
+	width: 20%; /* modify when adding / deleting elements in nav */
 }
 
 th p {
@@ -208,7 +208,7 @@ h4 {
 }
 
 .firstHeader {
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 /* fixes width of each image and makes it centered in between the text */
@@ -245,47 +245,10 @@ h4 {
 	/* initially display only the first text block*/
 	display: block;
 }
-
 /*						   */
 /* Start Page Specific CSS */
 /*						   */
 
-.figure {
-	/* fixes the width of images in results tables */
-	width: 500px;
-}
-
-/* formats caption and heading of results tables */
-td p {
-	padding: 15px 0 15px 0;
-	margin: 0 0 30px 0;
-	font-size: 12pt;
-	line-height: 1.5;
-	width: 500px;
-}
-
-td h5 {
-	padding: 0 0 15px 0;
-	margin: 0 0 0 0;
-	font-size: 16pt;
-}
-
-td {
-	vertical-align: top;
-}
-
-
-#table-plating, #table-fluro, #table-loss {
-	/* centers all tables on page and increase spacing above and below */
-	margin-top: 70px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.centerText {
-	/* formats table heading to be larger and centered*/
-	margin-left: 425px;
-	font-size: 18pt;
-	margin-bottom: 15px;
+.red {
+	color: #D40000;
 }

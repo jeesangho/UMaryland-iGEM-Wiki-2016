@@ -108,7 +108,7 @@ h3 {
 #div-pic {
 	/* sets the background image above the main text */
 	padding-top: 30px;
-	background-image: url("../img/iowis.jpg");
+	background-image: url("../img/il.jpg");
 	padding-bottom: 30px;
 	margin-top: 20px;
 	min-width: 1200px;
@@ -208,7 +208,7 @@ h4 {
 }
 
 .firstHeader {
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 /* fixes width of each image and makes it centered in between the text */
@@ -252,7 +252,10 @@ h4 {
 
 .figure {
 	/* fixes the width of images in results tables */
-	width: 500px;
+	width: 600px;
+	border-style: solid;
+	border-color: #A8A8A8;
+	border-width: 2px;
 }
 
 /* formats caption and heading of results tables */
@@ -266,7 +269,7 @@ td p {
 
 td h5 {
 	padding: 0 0 15px 0;
-	margin: 0 0 0 0;
+	margin: 25px 0 0px 0;
 	font-size: 16pt;
 }
 
@@ -274,18 +277,12 @@ td {
 	vertical-align: top;
 }
 
-
-#table-plating, #table-fluro, #table-loss {
-	/* centers all tables on page and increase spacing above and below */
-	margin-top: 70px;
-	width: 90%;
-	margin-left: auto;
+#table-devices {
+	width: 600px;
+	margin-left: 190px;
 	margin-right: auto;
 }
 
-.centerText {
-	/* formats table heading to be larger and centered*/
-	margin-left: 425px;
-	font-size: 18pt;
-	margin-bottom: 15px;
+#h4-first {
+	margin-top: 50px;
 }
