@@ -7,8 +7,8 @@ body {
 
 nav {
 	margin-top: 50px;
-	font-size: 28pt;
-	margin-left: 15px;
+	font-size: 2.5vw;
+	margin-left: 100px;
 }
 
 nav a {
@@ -24,7 +24,7 @@ nav ul {
 
 nav ul li {
 	display: inline;
-	margin-right: 80px;
+	margin-right: 60px;
 }
 
 #div-title {
