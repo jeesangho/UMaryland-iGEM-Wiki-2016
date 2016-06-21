@@ -11,12 +11,25 @@ body {
 }
 
 nav {
-	margin-top: -110px;
-	font-size: 20pt;
-	position: fixed;
 	min-width: 1250px;
-	background-color: #333;
-	background-height: 
+	max-width: 1250px;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 0px;
+    font-size: 10pt;
+    display: block;
+    background: #842d2d;
+    width: 100%;
+	transition: all .5s ease;
+} 
+
+nav:hover{
+	transition: all .5s ease;
+	opacity: 1.0;
+	font-size: 20pt;
+	line-height: 20px;
 }
 
 nav a {
@@ -25,7 +38,6 @@ nav a {
 }
 
 nav ul {
-	
 	list-style: none;
 	text-align: center;
 }
@@ -40,6 +52,15 @@ nav ul li {
 	font-weight: 200;
 	margin-top: 10px;
 	margin-right: 0px;
+}
+
+#bot-nav {
+    background: #842d2d;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    left: 0;
+    top: 2000px;
 }
 
 /* Background of page */
@@ -86,6 +107,7 @@ h3 {
 	position: absolute;
 	left: 250px;
 	top: 800px;
+	z-index: -999;
 }
 
 /* sets the background image */
