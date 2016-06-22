@@ -15,12 +15,14 @@
 	<link href='css/index.css' rel='stylesheet' type='text/css'>
 	<title>UMaryland iGEM 2015</title>
 </head>
-
 <body>
 	<img src="img/plasmid2.jpg" id="img-plasmid"/>
 	<nav>
 		<a href="index.html">
 		<img src="img/logo.png" id="img-logo">
+		</a>
+		<a href="http://2016.igem.org/Main_Page">
+		<img src="img/igemLogo.png" id="img-igemlogo">
 		</a>
 		<ul>
 			<li><a href="projects.html" class="hvr-float">Projects</a></li>
@@ -28,19 +30,22 @@
 			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
 			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
 			<li><a href="about.html" class="hvr-float">About Us</a></li>
-		</ul>
 	</nav>
 	<script>
 		$('nav').mouseover(
 			function () {
-				$('#img-logo').css('transition', '1s ease');
+				$('#img-logo').css('transition', '.35s ease-in');
 				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1');
 			}
 		),
 		$('nav').mouseout(
 			function () {
 				$('#img-logo').css('transition', '.25s ease');
 				$('#img-logo').css('opacity', '0');
+				$('#img-igemlogo').css('transition', '.25s ease');
+				$('#img-igemlogo').css('opacity', '0');
 			}
 		)	
 	</script>
