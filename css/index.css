@@ -9,25 +9,16 @@ body {
 /* Navbar */
 nav {
 	min-width: 1150px;
-    opacity: 0.5;
+    opacity: 1.0;
     position: fixed;
     top: 0;
     left: 0;
-    line-height: 0px;
-    font-size: 10pt;
+    line-height: 10px;
+    font-size: 20pt;
     display: block;
     background: #d8d8d8;
     width: 100%;
-	transition: all .5s ease;
 } 
-
-/* animation when mouse is over Navbar */
-nav:hover {
-	transition: all .5s ease;
-	opacity: 1.0;
-	font-size: 20pt;
-	line-height: 10px;
-}
 
 nav a {
 	text-decoration: none;
@@ -37,6 +28,7 @@ nav a {
 nav ul {	
 	list-style: none;
 	text-align: center;
+	transition: all .5s ease;
 }
 
 nav ul li {
@@ -82,6 +74,10 @@ nav ul li {
 	color: black;
 }
 
+#bot-nav li:hover {
+	text-shadow: .5px .5px black;
+}
+
 /* Background of page */
 
 html {
@@ -110,7 +106,20 @@ h2 {
 
 .green {
 	color: green;
+}
+
+/* Hides nav bar when scrolling */
+.scrolled {
+	font-size: 10pt;
+	line-height: 0px;
 }	
+
+/* animation when mouse is over Navbar */
+.hover {
+	opacity: 1.0;
+	font-size: 20pt;
+	line-height: 10px;
+}
 
 /* Project Description */
 h3 {
@@ -128,7 +137,7 @@ h3 {
 	position: fixed;
 	margin-top: 12px;
 	margin-left: 65px;
-	opacity: 0;
+	opacity: 1.0;
 }
 
 /* iGEM logo */
@@ -137,7 +146,7 @@ h3 {
 	float: right;
 	position: fixed;
 	margin-top: 10px;
-	opacity: 0;
+	opacity: 1.0;
 }
 
 /* hok sok diagram */

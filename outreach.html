@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Increase compatibility with older browsers that do not support HTML5 -->
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<!-- Load jQuery from the web, if down then local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (typeof jQuery == 'undefined') {
+			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+	<!-- Load Google Web Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+	<!-- Load CSS for the page -->	
+	<link href='css/outreach.css' rel='stylesheet' type='text/css'>
+	<link href="css/hover.css" rel="stylesheet" media="all">
+	<!-- Title of the web page - as displayed in the tab -->
+	<title>UMaryland iGEM 2015 - Outreach</title>
+</head>
+<body> 
+	<div id="div-topbar"> 		<!-- Start of top header navigation bar 		-->
+		<nav>
+			<a href="index.html">
+			<img src="img/logo.png" id="img-logo">
+			</a>
+			<a href="http://2016.igem.org/Main_Page">
+			<img src="img/igemLogo.png" id="img-igemlogo">
+			</a>
+			<ul>
+				<li><a href="projects.html" class="hvr-float">Projects</a></li>
+				<li><a href="parts.html" class="hvr-float">Parts</a></li>
+				<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
+				<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
+				<li><a href="about.html" class="hvr-float">About Us</a></li>
+			</ul>	
+		</nav>
+	<script>
+		$('nav').mouseover(
+			function () {
+				$('#img-logo').css('transition', '.35s ease-in');
+				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1');
+			}
+		),
+		$('nav').mouseout(
+			function () {
+				$('#img-logo').css('transition', '.25s ease');
+				$('#img-logo').css('opacity', '0');
+				$('#img-igemlogo').css('transition', '.25s ease');
+				$('#img-igemlogo').css('opacity', '0');
+			}
+		)	
+	</script>
+	</div>
+	<div id="div-text"> <!-- Start of main text of page -->
+		<!-- Heading text -->
+		<h1>Outreach</h1>
+		<h2>Header?</h2>
+		<h3>Description?</h3>
+		<!-- Contains all of the circles to be clicked on -->
+		<div id="div-circles"> 
+			<div id="div-hoksok" class="circle"> 
+			<!-- Class 'circle' makes div from rectangle into circle -->
+				<a href="hoksok.html"> 
+				<!-- Makes the entire circle clickable -->
+					<div class="insideText"><h4>Human Practices</h4></div>
+					<img id="img-plasmidcircle" src="img/plasmidcircle.png" />
+				</a>
+			</div>
+			<div id="div-thermo" class="circle">
+				<a href="thermo.html">
+					<div class="insideText"><h4>Mid-Atlantic Meet-up</h4></div>
+					<img id="img-thermocircle" src="img/thermocircle.png" />
+				</a>
+			</div>
+			<div id="div-il" class="circle">
+				<a href="il.html">
+					<div class="insideText"><h4>3rd thing?</h4></div>
+					<img id="img-ilcircle" src="img/ilcircle.png" />
+				</a>
+			</div>
+			<div id="div-side" class="circle">
+				<a href="side.html">
+					<div class="insideText"><h4>4th?</h4></div>
+					<img id="img-sidecircle" src="img/sidecircle.png" />
+				</a>
+			</div>
+		</div>
+		<!-- End of #div-circles -->
+	</div>
+	<div id="bot-nav">
+		<ul>
+			<li> <a href="https://www.facebook.com/UMarylandiGEM/">Facebook</a></li>
+			<li>|</li>
+			<li> <a href="https://www.instagram.com/umarylandigem/">Instagram</a></li>
+			<li>|</li>	
+			<li> <a href="mailto:umarylandigem@gmail.com">Email</a></li>
+		</ul>
+	</div>
+</body>
+<script>
+$('.circle').hover( //when hovering over any circle trigger script
+	function() { 
+		$(this).css('background-color','black');							//makes the circle background black to darken img
+		$(this).children().children('.insideText').css('opacity','100');	//makes inside text visible
+		$(this).children().children('img').css('opacity','.4');				//decreases opacity of img to simulate darkening 
+	}, 
+	function() { 
+		$(this).css('background-color','#FEFFFA');							//makes the circle background white to not show
+		$(this).children().children('.insideText').css('opacity','0');		//makes inside text invisible
+		$(this).children().children('img').css('opacity','100');			//increase opacity of img to return to normal
+	}
+)
+$('.insideText').hover(
+	function() {
+		$(this).children('h4').css('font-weight','400')		//makes heading 'hok/sok' or 'side projects' bold when hovered over
+		$(this).siblings('img').css('opacity','.4');}, 		//makes img darkened when hovering over the text
+	function() {
+		$(this).children('h4').css('font-weight','200')		//returns everything to normal
+	}
+)
+</script>
+</html>

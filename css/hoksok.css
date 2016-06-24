@@ -91,6 +91,10 @@ nav ul li {
 	color: black;
 }
 
+#bot-nav li:hover {
+	text-shadow: .5px .5px black;
+}
+
 #bot-nav a {
 	display: inline-block;
 	vertical-align: middle;
