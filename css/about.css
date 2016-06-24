@@ -1,0 +1,172 @@
+body {	
+	/* Enforces font on the entire page, colored black by default
+	   Makes background off-white slightly to improve visibility with gray font */
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	background-color: #FEFFFA;
+	min-width: 1200px;
+	max-width: 1200px;
+	overflow-x:hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Navbar */
+nav {
+	min-width: 1250px;
+    opacity: 1.0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 10px;
+    font-size: 20pt;
+    display: block;
+    background: #d8d8d8;
+    width: 100%;
+} 
+
+nav a {
+	text-decoration: none;
+	color: black;
+}
+
+nav ul {	
+	list-style: none;
+	text-align: center;
+	transition: all .5s ease;
+}
+
+nav ul li {
+	display: inline;
+	margin-right: 20px;
+}
+
+/* Permanent bottom bar */
+#bot-nav {
+    background: #d8d8d8;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    top: 2000px;
+}
+
+#bot-nav ul {
+	margin-top: 25px;
+	list-style: none;
+	text-align: center;
+}
+
+#bot-nav li {
+	display: inline;
+	font-size: 20pt;
+	color: black;
+}
+
+#bot-nav a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -5px;
+	text-decoration: none;
+	font-size: 12pt;
+	color: black;
+}
+
+#bot-nav li:hover {
+	text-shadow: .5px .5px black;
+}
+
+/* Classes */
+
+/* Hides nav bar when scrolling */
+.scrolled {
+	font-size: 10pt;
+	line-height: 0px;
+}	
+
+/* animation when mouse is over Navbar */
+.hover {
+	opacity: 1.0;
+	font-size: 20pt;
+	line-height: 10px;
+}
+
+/* Content */
+
+h1 {							/* Centers the heading text on the page at different sizes */
+	color: #6B6B6B;				/* makes the text centered and gray colored */
+	font-size: 56pt;
+	font-weight: 200;
+	text-align: center;
+	margin-top: 80px;
+}
+
+#table-selector {
+	/* formats the table containing nav elements to be centered, addes space on top / bottom */
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#table-selector th {
+	/* makes each cell of nav evenly spaced */
+	text-align: center; 
+	width: 25%; /* modify when adding / deleting elements in nav */
+}
+
+th p {
+	/* formats text inside table of navigational elements */
+	/* makes cursor emulate a link to show it's clickable */
+	font-size: 24pt;
+	font-weight: 400;
+	cursor: pointer;
+	padding: 5px 0px 15px 0px;
+	margin: 0 0 0 0;
+}
+
+th p:hover {
+	/* makes links bold when hovered to show it is a link */
+	font-weight: 800;
+}
+
+#table-selector {
+	/* makes a single border between two cells rather than two */
+    border-collapse: collapse;
+}
+
+/* creates a solid gray border between elements of navigational element */
+.borderRight {
+	border-right: 2px solid #A8A8A8;
+}
+
+.borderLeft {
+	border-left: 2px solid #A8A8A8;
+}
+
+.borderRight {
+	border-bottom: 4px solid #A8A8A8;
+}
+
+
+/* Images */
+
+/* Logo */
+#img-logo {
+	width: 150px;
+	float: left;
+	position: fixed;
+	margin-top: 12px;
+	margin-left: 65px;
+	opacity: 1.0;
+}
+
+/* iGEM logo */
+#img-igemlogo {
+	width: 60px;
+	float: right;
+	position: fixed;
+	margin-top: 10px;
+	opacity: 1.0;
+}
