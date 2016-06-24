@@ -31,28 +31,65 @@
 			<ul>
 				<li><a href="projects.html" class="hvr-float">Projects</a></li>
 				<li><a href="parts.html" class="hvr-float">Parts</a></li>
+				<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
 				<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
 				<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
 				<li><a href="about.html" class="hvr-float">About Us</a></li>
 			</ul>	
 		</nav>
 	<script>
+		<!-- For nav bar scrolling + hovering -->
 		$('nav').mouseover(
 			function () {
 				$('#img-logo').css('transition', '.35s ease-in');
 				$('#img-logo').css('opacity', '1');
 				$('#img-igemlogo').css('transition', '.35s ease-in');
 				$('#img-igemlogo').css('opacity', '1');
-			}
+				$('nav ul').addClass("hover");
+				$('nav').css('opacity', '1');
+				$('nav').css('transition', '.5s ease');
+			}	
 		),
 		$('nav').mouseout(
 			function () {
-				$('#img-logo').css('transition', '.25s ease');
-				$('#img-logo').css('opacity', '0');
-				$('#img-igemlogo').css('transition', '.25s ease');
-				$('#img-igemlogo').css('opacity', '0');
+			var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav ul').removeClass("hover");
+					$('nav').css('opacity', '.5');
+					$('nav').css('transition', '.5s ease');
+				}
 			}
-		)	
+		);
+		$(function() {
+			var nav = $('nav ul');
+			var navList = $('nav ul li');
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					nav.addClass("scrolled");
+					nav.removeClass("hover");
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav').css('transition', '.5s ease');
+					$('nav').css('opacity', '.5');
+				} else {
+					nav.removeClass("scrolled");
+					$('nav').css('transition', '.5s ease');
+					$('nav').css('opacity', '1');
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1');
+					
+				}
+			});
+		});
 	</script>
 	</div>
 	<div id="div-text"> <!-- Start of main text of page -->
