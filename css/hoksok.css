@@ -102,6 +102,8 @@ nav ul li {
 	text-decoration: none;
 	font-size: 12pt;
 	color: black;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 /* Start Page Specific CSS */
