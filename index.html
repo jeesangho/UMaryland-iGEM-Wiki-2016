@@ -11,18 +11,39 @@
 		}
 	</script>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-	<link href='css/index.css' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>	
 	<link href="css/hover.css" rel="stylesheet" media="all">
+	<link href='css/index.css' rel='stylesheet' type='text/css'>
 	<title>UMaryland iGEM 2015</title>
 </head>
 <body>
 	<img src="img/plasmid2.jpg" id="img-plasmid"/>
-	<nav>
+	<a id="button" title="button">Press Me</a>
+	<nav>		
 		<a href="index.html">
 		<img src="img/logo.png" id="img-logo">
 		</a>
 		<a href="http://2016.igem.org/Main_Page">
 		<img src="img/igemLogo.png" id="img-igemlogo">
+		</a>
+		<ul>
+			<a style="opacity: 0">Fix</a>
+			<li><a href="projects.html" class="hvr-float">Projects</a></li>
+			<li><a href="parts.html" class="hvr-float">Parts</a></li>
+			<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
+			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
+			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
+			<li><a href="about.html" class="hvr-float">About Us</a></li>
+		</ul>	
+	</nav>
+	<img src="img/more.png" id="img-more">
+	<!-- Nav bar when more button is clicked	 -->
+	<div id="div-navResized">
+		<a href="http://2016.igem.org/Main_Page">
+		<img src="img/igemLogo.png" id="img-igemlogoResized">
+		</a>
+		<a href="index.html">
+		<img src="img/logo.png" id="img-logoResized">
 		</a>
 		<ul>
 			<li><a href="projects.html" class="hvr-float">Projects</a></li>
@@ -32,9 +53,9 @@
 			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
 			<li><a href="about.html" class="hvr-float">About Us</a></li>
 		</ul>	
-	</nav>
+	</div>
+	<!-- For nav bar scrolling + hovering + window resize effects-->
 	<script>
-		<!-- For nav bar scrolling + hovering -->
 		$('nav').mouseover(
 			function () {
 				$('#img-logo').css('transition', '.35s ease-in');
@@ -42,47 +63,78 @@
 				$('#img-igemlogo').css('transition', '.35s ease-in');
 				$('#img-igemlogo').css('opacity', '1');
 				$('nav ul').addClass("hover");
-				$('nav').css('opacity', '1');
-				$('nav').css('transition', '.5s ease');
 			}	
 		),
 		$('nav').mouseout(
 			function () {
 			var scroll = $(window).scrollTop();
-				if (scroll > 0) {
+				if (scroll > 0 && $(window).width() >= 980 && !$('body').hasClass('pushed')) {
 					$('#img-logo').css('transition', '.25s ease');
 					$('#img-logo').css('opacity', '0');
 					$('#img-igemlogo').css('transition', '.25s ease');
 					$('#img-igemlogo').css('opacity', '0');
 					$('nav ul').removeClass("hover");
-					$('nav').css('opacity', '.5');
 					$('nav').css('transition', '.5s ease');
 				}
 			}
-		);
+		),
+		$(window).resize(function() {		
+			if ($(this).width() < 980 || $('body').hasClass('pushed')){
+				$('nav li').css('display', 'none');	
+				$('#img-more').css('display','block');
+				$('nav ul').addClass("hover");
+				$('#img-logo').css('transition', '.35s ease-in');
+				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1')
+			} else {
+				$('nav li').css('display', 'inline');
+				$('#img-more').css('display','none');
+				$('nav ul').removeClass("hover");
+				$('#bot-nav').css('display', 'block');  // FIX BLKASHFINFASIOFJA
+				if ($(window).scrollTop() > 0) {
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('nav ul').addClass("scrolled");
+				}	
+			}
+		});
+		$('#img-more').click(function() {
+			$('#img-more').toggleClass('pushed');
+			$('#div-navResized').toggleClass('pushed');
+			$('nav').toggleClass('pushed');
+			$('body').toggleClass('pushed');
+			$('nav img').toggleClass('pushed');
+			$('#bot-nav').toggleClass('pushed');
+			if ($(window).width() >= 980 && !$('body').hasClass('pushed')){
+				$('nav li').css('display', 'inline');
+				$('#img-more').css('display','none');
+				$('nav ul').removeClass("hover");
+				$('#img-igemlogo').css('transition', '.25s ease');
+				$('#img-igemlogo').css('opacity', '0');
+				$('#img-logo').css('transition', '.25s ease');
+				$('#img-logo').css('opacity', '0');
+			}
+		});	
 		$(function() {
 			var nav = $('nav ul');
-			var navList = $('nav ul li');
 			$(window).scroll(function() {
 				var scroll = $(window).scrollTop();
-				if (scroll > 0) {
+				if (scroll > 0 && $(window).width() >= 980) {
 					nav.addClass("scrolled");
 					nav.removeClass("hover");
 					$('#img-logo').css('transition', '.25s ease');
 					$('#img-logo').css('opacity', '0');
 					$('#img-igemlogo').css('transition', '.25s ease');
 					$('#img-igemlogo').css('opacity', '0');
-					$('nav').css('transition', '.5s ease');
-					$('nav').css('opacity', '.5');
 				} else {
 					nav.removeClass("scrolled");
-					$('nav').css('transition', '.5s ease');
-					$('nav').css('opacity', '1');
 					$('#img-logo').css('transition', '.35s ease-in');
 					$('#img-logo').css('opacity', '1');
 					$('#img-igemlogo').css('transition', '.35s ease-in');
-					$('#img-igemlogo').css('opacity', '1');
-					
+					$('#img-igemlogo').css('opacity', '1');	
 				}
 			});
 		});
@@ -97,11 +149,9 @@
 	</div>
 	<div id="bot-nav">
 		<ul>
-			<li> <a href="https://www.facebook.com/UMarylandiGEM/">Facebook</a></li>
-			<li>|</li>
-			<li> <a href="https://www.instagram.com/umarylandigem/">Instagram</a></li>
-			<li>|</li>	
-			<li> <a href="mailto:umarylandigem@gmail.com">Email</a></li>
+			<li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="img/FBLogo.png"/> </a> </li>
+			<li> <a href="https://www.instagram.com/umarylandigem/"> <img src="img/InstaLogo.png"/> </a> </li>
+			<li> <a href="mailto:umarylandigem@gmail.com"> <img src="img/MailLogo.png"/> </a> </li>
 		</ul>
 	</div>
 </body>

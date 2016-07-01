@@ -2,82 +2,114 @@
 
 body {
 	font-family: 'Raleway', sans-serif;
-	color: white;
+	color: #fff;
 	overflow-x: hidden;
 }
 
 /* Navbar */
 nav {
-	min-width: 1250px;
     opacity: 1.0;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     line-height: 10px;
     font-size: 20pt;
     display: block;
-    background: #d8d8d8;
-    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid black;	
 } 
 
 nav a {
 	text-decoration: none;
 	color: black;
+	font-family: 'Exo', sans-serif;
 }
 
 nav ul {	
 	list-style: none;
-	text-align: center;
 	transition: all .5s ease;
+	text-align: right;
 }
 
-nav ul li {
+nav li {
 	display: inline;
 	margin-right: 20px;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* Nav bar when more icon is clicked */
+
+#div-navResized {
+	font-size: 20pt;
+	position: fixed;
+	text-align: center;
+	display: none;
+	margin-top: -55px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin-top: 100px;
+}
+
+#div-navResized a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Exo', sans-serif;
+}
+
+#div-navResized ul {	
+	list-style: none;
+	margin-right: 40px;
+}
+
+#div-navResized ul li {
+	margin-top: 20px;	
 }
 
 /* Hok Sok */
 #div-title {
 	font-weight: 200;
-	margin-top: 10px;
+	margin-top: 2%;
 	margin-right: 0px;
 }
 
 /* Permanent bottom bar */
 #bot-nav {
-    background: #d8d8d8;
+    background-color: #f9f9f9;    
+    border-top: 1px solid #f5f5f5;
     position: absolute;
     width: 100%;
     height: 75px;
     left: 0;
     top: 2000px;
+    display: block;
 }
 
-#bot-nav ul {
-	margin-top: 25px;
-	list-style: none;
-	text-align: center;
+#bot-nav img {
+	height: 30px;
+	width: 30px;
+}
+
+#bot-nav img:hover {
+	-webkit-filter: drop-shadow(-1.5px 1.5px 2px black);
 }
 
 #bot-nav li {
 	display: inline;
-	font-size: 20pt;
-	color: black;
+	margin-left: 15px;
+}
+
+#bot-nav ul {
+	margin-top: 20px;
+	text-align: center;
 }
 
 #bot-nav a {
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: -5px;
-	text-decoration: none;
-	font-size: 12pt;
-	color: black;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-#bot-nav li:hover {
-	text-shadow: .5px .5px black;
+	text-decoration: none !important;
 }
 
 /* Background of page */
@@ -110,6 +142,35 @@ h2 {
 	color: green;
 }
 
+/* Pushed class actives */
+#img-more.pushed {
+	-webkit-filter: grayscale(75%);
+}
+
+#div-navResized.pushed {
+	display: block;
+}
+
+#div-navResized.pushed a:hover {
+	text-decoration: underline;
+}
+
+nav.pushed {
+	height: 100%;
+}
+
+body.pushed {
+	overflow-y: hidden;
+}
+
+nav img.pushed {
+	display: none;
+}
+
+#bot-nav.pushed {
+	display: none;
+}
+
 /* Hides nav bar when scrolling */
 .scrolled {
 	font-size: 10pt;
@@ -118,7 +179,6 @@ h2 {
 
 /* animation when mouse is over Navbar */
 .hover {
-	opacity: 1.0;
 	font-size: 20pt;
 	line-height: 10px;
 }
@@ -168,4 +228,33 @@ h3 {
 	top: 0px;
 	width: 1600px;
 	height: 600px;
+}
+
+/* More Icon */
+#img-more {
+	position: fixed;
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin-right: 0px;
+	right: 15px;
+	margin-top: -20px;
+	-webkit-filter: grayscale(100%);
+}
+
+/* Logos when more button is clicked */
+
+#img-logoResized {
+	width: 150px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -450px;
+}
+#img-igemlogoResized {
+	width: 60px; 
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 350px;
 }
