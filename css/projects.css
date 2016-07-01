@@ -15,7 +15,7 @@ body {
 
 /* Navbar */
 nav {
-	min-width: 1250px;
+	min-width: 1200px;
     opacity: 1.0;
     position: fixed;
     top: 0;
@@ -30,6 +30,7 @@ nav {
 nav a {
 	text-decoration: none;
 	color: black;
+	font-family: 'Exo', sans-serif;
 }
 
 nav ul {	
