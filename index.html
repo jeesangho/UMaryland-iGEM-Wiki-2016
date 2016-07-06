@@ -56,6 +56,7 @@
 	</div>
 	<!-- For nav bar scrolling + hovering + window resize effects-->
 	<script>
+		// Animation over top nav bar when mouse hovers
 		$('nav').mouseover(
 			function () {
 				$('#img-logo').css('transition', '.35s ease-in');
@@ -78,29 +79,36 @@
 				}
 			}
 		),
-		$(window).resize(function() {		
-			if ($(this).width() < 980 || $('body').hasClass('pushed')){
-				$('nav li').css('display', 'none');	
-				$('#img-more').css('display','block');
-				$('nav ul').addClass("hover");
-				$('#img-logo').css('transition', '.35s ease-in');
-				$('#img-logo').css('opacity', '1');
-				$('#img-igemlogo').css('transition', '.35s ease-in');
-				$('#img-igemlogo').css('opacity', '1')
-			} else {
-				$('nav li').css('display', 'inline');
-				$('#img-more').css('display','none');
-				$('nav ul').removeClass("hover");
-				$('#bot-nav').css('display', 'block');  // FIX BLKASHFINFASIOFJA
-				if ($(window).scrollTop() > 0) {
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('nav ul').addClass("scrolled");
-				}	
+		// Window width effect on top nav bar
+		$(document).ready(function() {
+			function checkWidth() {		
+				if ($(window).width() < 980 || $('body').hasClass('pushed')){
+					$('nav li').css('display', 'none');	
+					$('#img-more').css('display','block');
+					$('nav ul').addClass("hover");
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1')
+				} else {
+					$('nav li').css('display', 'inline');
+					$('#img-more').css('display','none');
+					$('nav ul').removeClass("hover");
+					if ($(window).scrollTop() > 0) {
+						$('#img-igemlogo').css('transition', '.25s ease');
+						$('#img-igemlogo').css('opacity', '0');
+						$('#img-logo').css('transition', '.25s ease');
+						$('#img-logo').css('opacity', '0');
+						$('nav ul').addClass("scrolled");
+					}	
+				}
 			}
+			// Execute on load
+    		checkWidth();
+    		// Bind event listener
+    		$(window).resize(checkWidth);	
 		});
+		// Resized nav bar effect when more icon is clicked
 		$('#img-more').click(function() {
 			$('#img-more').toggleClass('pushed');
 			$('#div-navResized').toggleClass('pushed');
@@ -117,7 +125,8 @@
 				$('#img-logo').css('transition', '.25s ease');
 				$('#img-logo').css('opacity', '0');
 			}
-		});	
+		});
+		// Scrolling animation for top nav bar
 		$(function() {
 			var nav = $('nav ul');
 			$(window).scroll(function() {
