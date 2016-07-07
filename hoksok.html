@@ -3,11 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- Increase compatibility with older browsers that do not support HTML5 -->
-<<<<<<< HEAD
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-=======
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>-->
->>>>>>> SangHo-V1
 	<!-- Load jQuery from the web, if down then local -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -41,61 +38,7 @@
 				<li><a href="about.html" class="hvr-float">About Us</a></li>
 			</ul>	
 		</nav>
-	</div>	
-	<script>
-		<!-- For nav bar scrolling + hovering -->
-		$('nav').mouseover(
-			function () {
-				$('#img-logo').css('transition', '.35s ease-in');
-				$('#img-logo').css('opacity', '1');
-				$('#img-igemlogo').css('transition', '.35s ease-in');
-				$('#img-igemlogo').css('opacity', '1');
-				$('nav ul').addClass("hover");
-				$('nav').css('opacity', '1');
-				$('nav').css('transition', '.5s ease');
-			}	
-		),
-		$('nav').mouseout(
-			function () {
-			var scroll = $(window).scrollTop();
-				if (scroll > 0) {
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-					$('nav ul').removeClass("hover");
-					$('nav').css('opacity', '.5');
-					$('nav').css('transition', '.5s ease');
-				}
-			}
-		);
-		$(function() {
-			var nav = $('nav ul');
-			var navList = $('nav ul li');
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-				if (scroll > 0) {
-					nav.addClass("scrolled");
-					nav.removeClass("hover");
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-					$('nav').css('transition', '.5s ease');
-					$('nav').css('opacity', '.5');
-				} else {
-					nav.removeClass("scrolled");
-					$('nav').css('transition', '.5s ease');
-					$('nav').css('opacity', '1');
-					$('#img-logo').css('transition', '.35s ease-in');
-					$('#img-logo').css('opacity', '1');
-					$('#img-igemlogo').css('transition', '.35s ease-in');
-					$('#img-igemlogo').css('opacity', '1');
-					
-				}
-			});
-		});
-	</script>
+	</div>
 	<div id="div-text"> <!-- Start of main text of page -->
 		<!-- Heading text -->
 		<div id="div-pic"> 
@@ -390,6 +333,60 @@
 		</ul>
 	</div>
 </body>
+<script>
+	<!-- For nav bar scrolling + hovering -->
+		$('nav').mouseover(
+			function () {
+				$('#img-logo').css('transition', '.35s ease-in');
+				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1');
+				$('nav ul').addClass("hover");
+				$('nav').css('opacity', '1');
+				$('nav').css('transition', '.5s ease');
+			}	
+		),
+		$('nav').mouseout(
+			function () {
+			var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav ul').removeClass("hover");
+					$('nav').css('opacity', '.5');
+					$('nav').css('transition', '.5s ease');
+				}
+			}
+		);
+		$(function() {
+			var nav = $('nav ul');
+			var navList = $('nav ul li');
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					nav.addClass("scrolled");
+					nav.removeClass("hover");
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav').css('transition', '.5s ease');
+					$('nav').css('opacity', '.5');
+				} else {
+					nav.removeClass("scrolled");
+					$('nav').css('transition', '.5s ease');
+					$('nav').css('opacity', '1');
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1');
+					
+				}
+			});
+		});
+</script>
 <script>
 var clicked = '';
 var current = 'purpose'; // sets initial display to be purpose
