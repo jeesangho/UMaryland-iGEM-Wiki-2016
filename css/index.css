@@ -2,12 +2,20 @@
 
 body {
 	font-family: 'Raleway', sans-serif;
+<<<<<<< HEAD
 	color: #fff;
 	overflow-x: hidden;
+=======
+	color: white;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+>>>>>>> SangHo-V1
 }
 
 /* Navbar */
 nav {
+<<<<<<< HEAD
     opacity: 1.0;
     position: fixed;
     top: 0;
@@ -19,6 +27,11 @@ nav {
     background: #fff;
     border-bottom: 1px solid black;	
 } 
+=======
+	margin-top: 100px;
+	font-size: 24pt;
+}
+>>>>>>> SangHo-V1
 
 nav a {
 	text-decoration: none;
@@ -63,7 +76,13 @@ nav a:hover {
 
 #div-navResized ul {	
 	list-style: none;
+<<<<<<< HEAD
 	margin-right: 40px;
+=======
+	text-align: right;
+	margin-right: 50px;
+	padding-top: 35px;
+>>>>>>> SangHo-V1
 }
 
 #div-navResized ul li {
@@ -101,9 +120,16 @@ nav a:hover {
 	margin-left: 15px;
 }
 
+<<<<<<< HEAD
 #bot-nav ul {
 	margin-top: 20px;
 	text-align: center;
+=======
+#img-logo {
+	margin-left: 50px;
+	width: 400px;
+	float: left;
+>>>>>>> SangHo-V1
 }
 
 #bot-nav a {
@@ -120,14 +146,22 @@ html {
 
 /* UMaryland */
 h1 {
+<<<<<<< HEAD
 	font-size: 14vw;
 	margin-top: 100px;
 	margin-bottom: 40px;
 	text-shadow: -3px 3px 1px black;
+=======
+	margin-top: 10%;
+	font-size: 80pt;
+	font-weight: 200;
+	clear: both;
+>>>>>>> SangHo-V1
 }
 
 /* Project Name*/
 h2 {
+<<<<<<< HEAD
 	font-size: 9vw;
 	display: inline;
 }
@@ -218,6 +252,10 @@ nav img.pushed {
 	margin-top: 200px;
 	width: 80%;
 	z-index: -999;
+=======
+	font-size: 60pt;
+	font-weight: 200;
+>>>>>>> SangHo-V1
 }
 
 /* sets the background image */
@@ -226,6 +264,7 @@ nav img.pushed {
 	z-index: -999;
 	left: 0px;
 	top: 0px;
+<<<<<<< HEAD
 	width: 100%;
 	height: auto;
 	min-height: 77%;
@@ -257,4 +296,13 @@ nav img.pushed {
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 350px;
+=======
+	width: 2560px;
+	height: 1440px;
+}
+
+html {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+>>>>>>> SangHo-V1
 }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Increase compatibility with older browsers that do not support HTML5 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<!-- Load jQuery from the web, if down then local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (typeof jQuery == 'undefined') {
+			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+	<!-- Load Google Web Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css' />
+	<!-- Load CSS for the page -->	
+	<link href='css/thermo.css' rel='stylesheet' type='text/css' />
+	<!-- Title of the web page - as displayed in the tab -->
+	<title>UMaryland iGEM 2015 - Hok/Sok</title>
+</head>
+<body>
+	<div id="div-topbar"> 		<!-- Start of top header navigation bar 		-->
+		<div id="div-border">	<!-- Should remain the same throughout all pages-->
+			<a href="index.html"><img src="img/logo.png" id="img-logo" alt="UMaryland iGEM Logo"/></a>
+			<nav>
+				<ul>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="parts.html">Parts</a></li>
+					<li><a href="outreach.html">Outreach</a></li>
+					<li><a href="notebook.html">Notebook</a></li>
+					<li><a href="about.html">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	<div id="div-text"> <!-- Start of main text of page -->
+		<!-- Heading text -->
+		<div id="div-pic"> 
+		<!-- where background image below titles show -->
+			<h1>Hardware</h1>
+			<h2>Affordable Homemade Thermocycler</h2>
+			<h3>Increasing access to synthetic biology and genetic engineering to iGEM teams and other labs by lowering the cost of access to hardware</h3>
+		</div>
+		<table id="table-selector"> <!-- Table of navigational links -->
+			<thead>
+				<!-- .border classes signify where broder needs to be drawn -->
+				<!-- navigator class trigger javascript on that element     -->
+				<!-- data-select attribute sends to script which element    -->
+				<!-- was clicked 											-->
+				<th class="borderRight navigator" id="th-background" data-select="background"><p>Background</p></th>
+				<th class="borderBoth navigator" id="th-design" data-select="design"><p>Design</p></th>
+				<th class="borderBoth navigator" id="th-hareware" data-select="hardware"><p>Hardware</p></th>
+				<th class="borderBoth navigator" id="th-electronics" data-select="electronics"><p>Electronics</p></th>
+				<th class="borderLeft navigator" id="th-problems" data-select="problems"><p>Problems</p></th>
+			</thead>
+		</table>
+		<div class="blockText initialDisplay" id="div-background">
+			<div class="longText red">
+				<h4>Construction Hazard</h4><p><strong>Jumping hairdryer safety measures will cause rapid heating of the machine, without proper control the machine may cause fires. Proceed with caution.</strong></p>
+			</div>
+			<div class="longText">
+				<p>The PCR machine is an essential component of any biological laboratory that needs to amplify or extend fragments of DNA for subsequent experiments. This tool is especially relevant to iGEM and synthetic biology labs who may have less funding but need this equipment</p>
+				<p>Our initial prototype for a DIY PCR machine was modeled in the fashion of most readily available commercial machines, relying on on two Peltier units stacked on top of each other to heat a customized aluminum block in which PCR tubes would sit. In order for the system to be informed by accurate feedback on temperature fluctuations, we embedded a temperature sensor in the aluminum block. The sensor reported the temperature to an Arduino UNO, which responded by regulating the energy flow to the Peltier units, thereby controlling the temperature of the block and tubes.</p>
+				<p>However, after substantial testing, this design proved to be unoriginal, expensive, and inefficient. We were troubled to realize that the parts used to assemble it were not as easily accessible as we had hoped, which we felt would take away from the possible applications of this machine as well as the philosophy of its construction. In addition, although the price of this first prototype was relatively inexpensive compared to laboratory-grade PCR machines, the price still exceeded our goal, ultimately costing several hundred dollars.</p> 
+			</div>
+			<img class="imageEmbed imgW600" src="img/commercial.jpg" alt="An image of a standard commercial thermocycler"/>
+			<div class="longText">
+				<p>Finally, the final straw that led to our eventual redesign was the inefficiency of the hardware: we found that the Peltier units were not able to quickly cycle through the desired temperatures, causing the unit to take 5 to 10 minutes just to rise up to 95℃, where denaturation must occur between each of the 25 or so cycles. After considering this combination of factors, we embarked on a redesign of our machine to better suit the needs of the DIY market.</p>
+				<p>To combat the unacceptably low temperature ramp rate, we made a decision to suspend construction on the Peltier-centered thermocycler in order to attempt making a rapid PCR machine out of a hair dryer. Before committing to this effort, we considered the danger of working with a hair dryer and the potential for failure: we were uncertain that the machine could be effectively controlled and had a narrow window of time within which to design and trouble shoot the machine. Nevertheless, we took the risk.</p>
+			</div>
+		</div>
+		<div class="blockText" id="div-design">
+			<div class="longText">
+				<p>We began by working out how to wire the hairdryer so that we could regulate the heating unit and the fan separately.After significant soldering and reworking the internal safety measures inside the hairdryer, we were able to wire the system so that we could turn the heat on and off while running the fan continuously.</p> 
+				<p>Using tape, we secured a sheet of aluminium foil to the top of the heating unit of the hairdryer. The outer casing of the hairdryer had been removed. We placed a heat sensor inside the tin to measure the temperature of the air inside the machine. By wiring the heat sensor to the Arduino, we were able to receive input/feedback from the sensor and adjust the heating of the device to maintain our desired setpoints and produce proper thermocycling.
+			</div>
+			<img class="imageEmbed imgW600" src="img/tin.jpg" alt="An image of the tin foil version"/>
+			<div class="longText">
+				<p>At this point, we tried to perform our first PCR reaction. Unfortunately, we soon found that we had melted our tube. We learned that the machine had difficulty with evenly distributing the heat. To better distribute the heat, we removed our tinfoil lid and replaced it with with a cut soda can. This can was designed with evenly spaced holes enabling for better heat distribution. Although we did not and still have not modeled the heat transfer of between the can's surface and the convection heating generated by the hair dryer, we were able to experimentally conclude that the heat distribution was more even across the can than the tin foil.</p>
+			</div>
+			<img class="imageEmbed imgW600" src="img/can.jpg" alt="An image of the tin foil version"/>
+			<div class="longText">
+				<p>After construction of the can-based cover, we attempted PCR once more and still found that amplification had not occurred. We assumed that the heat sensor might have been an issue; it was exposed to the moving air and as such was relaying information about the air temperature rather than the temperature of the reaction mixture within the PCR tubes. This meant that our feedback system was not accurately responding to or controlling the temperature inside of the PCR tubes. To compensate for this discrepancy, we put the heat sensor inside a PCR tube with mineral oil and placed this inside one of the holes. We ran another PCR reaction, visualized the products on an agarose gel, and witnessed a large band of the correct size, indicating that our machine had worked.</p>
+			</div>
+		</div>
+		<div class="blockText" id="div-hardware">
+			<div class="longText">
+				<p>The working internals of our PCR machine are comprised of hairdryer elements. With the exception of the hairdryers outer housing, the thermal fuse and bimetallic circuit breaker, all other working components remain intact. The thermal fuse and bimetallic circuit breaker were shorted using copper wire in order to reach temperatures up to 95 within our machine.</p> 
+				<p>The outer plastic housing of the hairdryer was also removed to enable our machine to stand upright and fit PCR tubes. The hairdryers heating mechanism which utilizes a bank of nichrome wires and fan that distributes the heat remained untouched.</p>
+			</div>
+		</div>
+		<div class="blockText" id="div-problems">
+			<div class="longText">
+				<p>We have had one successful amplification with our machine; however, we still struggle to replicate these results with an updated housing design (essentially, a new soda can with appropriately sized holes). Our trials still suggest that our temperature sensor and the liquid reaction housed within the tube are not at the same temperature, with a discrepancy of over 10 degrees Celsius.</p>
+				<p>We are currently working of milling a block of aluminum with better and more consistent heat transfer properties, and modeling the heat transfer within the can. Our hope is that modeling the heat transfer will facilitate better control of temperature within the device.</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+var current = 'background'; // sets initial display to be purpose
+ $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+	if (selected != current) {							// only change display / trigger animation if clicking different nav
+		changeText(selected)
+	}
+ })
+ 
+var dir = location.hash;								// grabs the anchor (text following the #)
+var n = dir.indexOf('?');								// and initially sets the page 
+dir = dir.substring(0, n != -1 ? n : dir.length);		
+dir = dir.replace('#','');
+if (dir == '') {
+	dir = 'lutein';
+}
+switch (dir) {
+	case 'background':
+        break;
+	case 'design':
+        changeText(dir)
+        break;
+	case 'hardware':
+        changeText(dir)
+        break;
+	case 'electronics':
+        changeText(dir)
+        break;
+	case 'problems':
+        changeText(dir)
+        break;
+    default:
+        break;
+}
+
+function changeText(selected) {
+	$('.navigator').css('border-bottom','none');					// make all navigational element shave no bottom border
+	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border		
+	$('.blockText').css('display','none');							// hides all text
+	$('.blockText').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
+	$('#div-' + selected).css('display','block');					// the div containing the text is displayed
+	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);		// the text is animated to quickly move left
+	current = selected;												// sets the current display
+	location.hash = current;
+}
+
+ 
+</script>
+</html>

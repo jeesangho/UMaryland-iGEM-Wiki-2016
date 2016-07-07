@@ -12,117 +12,73 @@ body {
 	margin-right: auto;
 }
 
-/* Navbar */
 nav {
-	min-width: 1250px;
-    opacity: 1.0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    line-height: 10px;
-    font-size: 20pt;
-    display: block;
-    background: #d8d8d8;
-    width: 100%;
-} 
-
-nav a {
-	text-decoration: none;
-	color: black;
+	/* Moves the top bar to be centered with the UMD logo, increases font size */
+	margin-top: 50px;
+	font-size: 20pt;
 }
 
-nav ul {	
+nav a {
+	/* removes underlining of links by default, makes color of text grayish */
+	text-decoration: none;
+	color: #757575;
+}
+
+a:hover {
+	/* when hovering over links, the text becomes bold to signify it can be clicked on */
+	font-weight: 800;
+}
+
+nav ul {
+	/* removes bullets in the list */
 	list-style: none;
-	text-align: center;
-	transition: all .5s ease;
+	text-align: right;
+	padding-top: 30px;
 }
 
 nav ul li {
+	/* makes list display horizontally, increases spacing with the left side */
 	display: inline;
-	margin-right: 20px;
+	padding-left: 40px;
 }
 
-/* Permanent bottom bar */
-#bot-nav {
-    background: #d8d8d8;
-    position: absolute;
-    width: 100%;
-    height: 75px;
-    left: 0;
-    margin-top: 45px;
-}
-
-#bot-nav ul {
-	margin-top: 25px;
-	list-style: none;
-	text-align: center;
-}
-
-#bot-nav li {
-	display: inline;
-	font-size: 20pt;
-	color: black;
-}
-
-#bot-nav a {
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: -5px;
-	text-decoration: none;
-	font-size: 12pt;
-	color: black;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-#bot-nav li:hover {
-	text-shadow: .5px .5px black;
-}
-
-/* Images */
-
-/* Logo */
 #img-logo {
-	width: 150px;
+	/* fixes size of logo, makes the nav bar go to the right of the logo */
+	width: 300px;
 	float: left;
-	position: fixed;
-	margin-top: 12px;
-	margin-left: 65px;
-	opacity: 1.0;
 }
 
-/* iGEM logo */
-#img-igemlogo {
-	width: 60px;
-	float: right;
-	position: fixed;
-	margin-top: 10px;
-	opacity: 1.0;
+#div-text {
+	/* Increases space between main content and the nav heading */
+	padding-top: 20px;
 }
 
-/* Classes */
-
-/* Hides nav bar when scrolling */
-.scrolled {
-	font-size: 10pt;
-	line-height: 0px;
-}	
-
-/* animation when mouse is over Navbar */
-.hover {
-	opacity: 1.0;
-	font-size: 20pt;
-	line-height: 10px;
+#div-topbar {
+	/* fixes the size of the heading to improve compatibility, centers on the page */
+	margin-right: auto;
+	margin-left: auto;
+	min-width: 1200px;
+	max-width: 1200px;
 }
 
-<<<<<<< HEAD
+#div-border {
+	/* create a smaller div that is centered, which has a gray bottom border
+	   creates the shadow underneath border									 */
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 1150px;
+	max-width: 1150px;
+	border-bottom-style: solid;
+	border-color: #A8A8A8;
+	border-width: 2px;
+	-webkit-box-shadow: -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
+	-moz-box-shadow:    -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
+	box-shadow:         -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
+}
 
-/* Start Page Specific CSS */
-=======
 /*							*/
 /* Start Resuable CSS code 	*/
 /*						   	*/
->>>>>>> SangHo-V1
 
 h1 {							/* Centers the heading text on the page at different sizes 		*/
 	color: white;				/* makes the text centered and white to contrast background img */
@@ -152,7 +108,7 @@ h3 {
 #div-pic {
 	/* sets the background image above the main text */
 	padding-top: 30px;
-	background-image: url("../img/iowis.jpg");
+	background-image: url("../img/Prettyflowers.jpg");
 	padding-bottom: 30px;
 	margin-top: 20px;
 	min-width: 1200px;
@@ -205,21 +161,21 @@ th p:hover {
 }
 
 /* creates a solid gray border between elements of navigational element */
-.borderTop{
-	border-bottom: 1px solid #A8A8A8; 
-}
-
 .borderLeft {
-	border-left: 1px solid #A8A8A8;
+	border-left: 2px solid #A8A8A8;
 }
 
 .borderRight {
-	border-right: 1px solid #A8A8A8;
+	border-right: 2px solid #A8A8A8;
 }
 
 .borderBoth {
-	border-left: 1px solid #A8A8A8;
-	border-right: 1px solid #A8A8A8;
+	border-left: 2px solid #A8A8A8;
+	border-right: 2px solid #A8A8A8;
+}
+
+.borderRight {
+	border-bottom: 4px solid #A8A8A8;
 }
 
 
@@ -237,7 +193,6 @@ p, .longText li {
 	margin-right: auto;
 }
 
-
 h4 {
 	/* formats intratext section headings */
 	font-size: 20pt;
@@ -252,23 +207,19 @@ h4 {
 }
 
 .firstHeader {
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 /* fixes width of each image and makes it centered in between the text */
-.imgW600 {
-	width: 600px;
-	margin-left: 170px;
-}
 
 .imgW800 {
 	width: 800px;
 	margin-left: 80px;
 }
 
-.imgW300{
-	width: 300px;
-	margin-left: 300px;
+.imgW500 {
+	width: 500px;
+	margin-left: 200px;
 }
 
 .noBottomMargin {
@@ -279,79 +230,6 @@ h4 {
 	/* initially display only the first text block*/
 	display: block;
 }
-
 /*						   */
 /* Start Page Specific CSS */
 /*						   */
-
-.figure {
-	/* fixes the width of images in results tables */
-	width: 500px;
-}
-
-/* formats caption and heading of results tables */
-td p {
-	padding: 15px 0 15px 0;
-	margin: 0 0 30px 0;
-	font-size: 12pt;
-	line-height: 1.5;
-	width: 500px;
-}
-
-td h5 {
-	padding: 0 0 15px 0;
-	margin: 0 0 0 0;
-	font-size: 16pt;
-}
-
-td {
-	vertical-align: top;
-}
-
-
-#table-plating, #table-fluro, #table-loss {
-	/* centers all tables on page and increase spacing above and below */
-	margin-top: 70px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.centerText {
-	/* formats table heading to be larger and centered*/
-	margin-left: 425px;
-	font-size: 18pt;
-	margin-bottom: 15px;
-}
-
-.subNavList {
-	/* formats the table containing nav elements to be centered, addes space on top / bottom */
-	width: 95%;
-	margin-top: 30px;
-	margin-left: 35px;
-	margin-right: auto;
-<<<<<<< HEAD
-	margin-top: -8px;
-=======
-}
-
-.subNavList li {
-	/* formats text inside table of navigational elements */
-	/* makes cursor emulate a link to show it's clickable */
-	display: inline;
-	font-size: 14pt;
-	font-weight: 400;
-	cursor: pointer;
-	padding: 5px 45px 15px 0px;
-	margin: 0 0 0 0;
-}
-
-.subNavList li:hover {
-	/* makes links bold when hovered to show it is a link */
-	font-weight: 800;
-}
-
-.subNavList {
-	display:none;
->>>>>>> SangHo-V1
-}
