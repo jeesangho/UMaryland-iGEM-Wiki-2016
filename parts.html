@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (typeof jQuery == 'undefined') {
+			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+	<link href='css/parts.css' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>	
+	<link href="css/hover.css" rel="stylesheet" media="all">
+	<title>UMaryland iGEM 2015 - about</title>
+</head>
+<body>
+	<nav>
+		<a href="index.html">
+		<img src="img/logo.png" id="img-logo">
+		</a>
+		<a href="http://2016.igem.org/Main_Page">
+		<img src="img/igemLogo.png" id="img-igemlogo">
+		</a>
+		<ul>
+			<li><a href="projects.html" class="hvr-float">Projects</a></li>
+			<li><a href="parts.html" class="hvr-float">Parts</a></li>
+			<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
+			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
+			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
+			<li><a href="about.html" class="hvr-float">About Us</a></li>
+		</ul>	
+	</nav>
+	<script>
+		<!-- For nav bar scrolling + hovering -->
+		$('nav').mouseover(
+			function () {
+				$('#img-logo').css('transition', '.35s ease-in');
+				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1');
+				$('nav ul').addClass("hover");
+				$('nav').css('opacity', '1');
+				$('nav').css('transition', '.5s ease');
+			}	
+		),
+		$('nav').mouseout(
+			function () {
+			var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav ul').removeClass("hover");
+				}
+			}
+		);
+		$(function() {
+			var nav = $('nav ul');
+			var navList = $('nav ul li');
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					nav.addClass("scrolled");
+					nav.removeClass("hover");
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+				} else {
+					nav.removeClass("scrolled");
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1');
+					
+				}
+			});
+		});
+	</script>
+	<h1>Parts</h1>
+	<table id="table-selector"> <!-- Table of navigational links -->
+			<thead>
+				<!-- .border classes signify where border needs to be drawn -->
+				<!-- navigator class trigger javascript on that element     -->
+				<!-- data-select attribute sends to script which element    -->
+				<!-- was clicked 											-->
+				<th class="borderRight navigator" data-select="Bparts"><p>Basic Parts</p></th>
+				<th class="borderBoth navigator" data-select="Cparts"><p>Composite Parts</p></th>
+				<th class="borderLeft navigator" data-select="acknowledgements"><p>All Parts</p></th>
+			</thead>
+	</table>
+	<div id="div-Bparts" class="profiles">
+		
+	</div>
+	<div id="div-Cparts" class="profiles">
+		
+	</div>
+	<div id="bot-nav">
+		<ul>
+			<li> <a href="https://www.facebook.com/UMarylandiGEM/">Facebook</a></li>
+			<li>|</li>
+			<li> <a href="https://www.instagram.com/umarylandigem/">Instagram</a></li>
+			<li>|</li>	
+			<li> <a href="mailto:umarylandigem@gmail.com">Email</a></li>
+		</ul>
+	</div>
+	<script>
+		 var current = 'students'; // sets initial display to be purpose
+		 $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+			$('.navigator').css('border-bottom','none');		// make all navigational element shave no bottom border
+			$(this).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border
+			var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+			if (selected != current) {							// only change display / trigger animation if clicking different nav
+				$('.profiles').css('display','none');			// hides all text
+				$('.profiles').css('margin-left', '30px')		// slighly shifts right all text to set up for animation
+				$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
+				$('#div-' + selected).animate({ marginLeft: '0px'}, 200);	// the text is animated to quickly move left
+				current = selected;								// sets the current display
+			}
+		 });
+		 $('.profiles img').click( function() { 
+			$('.profiles img').css('border','4px solid #FEFFFA');	
+			$(this).css('border', '4px solid #333');
+			var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+			if (selected != current) {							// only change display / trigger animation if clicking different nav
+				$('.description').css('display','none');		// hides all text
+				$('.description').css('margin-left', '60px')
+				$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
+				$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
+				current = selected;								// sets the current display
+			}
+		 });
+	</script>
+</body>

@@ -3,7 +3,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- Increase compatibility with older browsers that do not support HTML5 -->
+<<<<<<< HEAD
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+=======
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+>>>>>>> SangHo-V1
 	<!-- Load jQuery from the web, if down then local -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -15,23 +19,83 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css' />
 	<!-- Load CSS for the page -->	
 	<link href='css/hoksok.css' rel='stylesheet' type='text/css' />
+	<link href="css/hover.css" rel="stylesheet" media="all">
 	<!-- Title of the web page - as displayed in the tab -->
 	<title>UMaryland iGEM 2015 - Hok/Sok</title>
 </head>
 <body>
 	<div id="div-topbar"> 		<!-- Start of top header navigation bar 		-->
-		<div id="div-border">	<!-- Should remain the same throughout all pages-->
-			<a href="index.html"><img src="img/logo.png" id="img-logo" alt="UMaryland iGEM Logo"/></a>
-			<nav>
-				<ul>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="parts.html">Parts</a></li>
-					<li><a href="outreach.html">Outreach</a></li>
-					<li><a href="notebook.html">Notebook</a></li>
-					<li><a href="about.html">About Us</a></li>
-				</ul>
-			</nav>
-		</div>
+		<nav>
+			<a href="index.html">
+			<img src="img/logo.png" id="img-logo">
+			</a>
+			<a href="http://2016.igem.org/Main_Page">
+			<img src="img/igemLogo.png" id="img-igemlogo">
+			</a>
+			<ul>
+				<li><a href="projects.html" class="hvr-float">Projects</a></li>
+				<li><a href="parts.html" class="hvr-float">Parts</a></li>
+				<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
+				<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
+				<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
+				<li><a href="about.html" class="hvr-float">About Us</a></li>
+			</ul>	
+		</nav>
+	</div>	
+	<script>
+		<!-- For nav bar scrolling + hovering -->
+		$('nav').mouseover(
+			function () {
+				$('#img-logo').css('transition', '.35s ease-in');
+				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1');
+				$('nav ul').addClass("hover");
+				$('nav').css('opacity', '1');
+				$('nav').css('transition', '.5s ease');
+			}	
+		),
+		$('nav').mouseout(
+			function () {
+			var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav ul').removeClass("hover");
+					$('nav').css('opacity', '.5');
+					$('nav').css('transition', '.5s ease');
+				}
+			}
+		);
+		$(function() {
+			var nav = $('nav ul');
+			var navList = $('nav ul li');
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll > 0) {
+					nav.addClass("scrolled");
+					nav.removeClass("hover");
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav').css('transition', '.5s ease');
+					$('nav').css('opacity', '.5');
+				} else {
+					nav.removeClass("scrolled");
+					$('nav').css('transition', '.5s ease');
+					$('nav').css('opacity', '1');
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1');
+					
+				}
+			});
+		});
+	</script>
 	<div id="div-text"> <!-- Start of main text of page -->
 		<!-- Heading text -->
 		<div id="div-pic"> 
@@ -42,7 +106,7 @@
 		</div>
 		<table id="table-selector"> <!-- Table of navigational links -->
 			<thead>
-				<!-- .border classes signify where broder needs to be drawn -->
+				<!-- .border classes signify where border needs to be drawn -->
 				<!-- navigator class trigger javascript on that element     -->
 				<!-- data-select attribute sends to script which element    -->
 				<!-- was clicked 											-->
@@ -315,6 +379,15 @@
 			</div>
 		</div>
 		<!-- end of #div-results -->
+	</div>
+	<div id="bot-nav">
+		<ul>
+			<li> <a href="https://www.facebook.com/UMarylandiGEM/">Facebook</a></li>
+			<li>|</li>
+			<li> <a href="https://www.instagram.com/umarylandigem/">Instagram</a></li>
+			<li>|</li>	
+			<li> <a href="mailto:umarylandigem@gmail.com">Email</a></li>
+		</ul>
 	</div>
 </body>
 <script>

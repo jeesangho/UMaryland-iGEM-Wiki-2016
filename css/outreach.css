@@ -5,7 +5,7 @@ body {
 	   Makes background off-white slightly to improve visibility with gray font */
 	font-family: 'Raleway', sans-serif;
 	color: black;
-	background-color: #FFFEFE;
+	background-color: #FEFFFA;
 	min-width: 1200px;
 	max-width: 1200px;
 	overflow-x: hidden;
@@ -171,7 +171,7 @@ h3 {
 
 /* moves all circles down and centered on the page */
 #div-circles {
-	margin-top: 70px;
+	margin-top: 100px;
 	margin-left: 70px;
 }
 
@@ -189,12 +189,8 @@ h4 {
 	font-size: 24pt;
 	font-weight: 200;
 	margin-bottom: 15px;
-}
-
-h5 {
-	font-size: 14pt;
-	font-weight: 200;
-	margin-top: 15px;
+	max-width: 200px;
+	text-align: center;
 }
 
 /* Prevents the overlay text links from being blue and underlined */

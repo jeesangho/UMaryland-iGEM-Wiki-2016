@@ -11,24 +11,157 @@
 		}
 	</script>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>	
+	<link href="css/hover.css" rel="stylesheet" media="all">
 	<link href='css/index.css' rel='stylesheet' type='text/css'>
 	<title>UMaryland iGEM 2015</title>
 </head>
 <body>
 	<img src="img/plasmid2.jpg" id="img-plasmid"/>
-	<img src="img/logo.png" id="img-logo" alt="UMaryland iGEM Logo" />
-	<nav>
+	<a id="button" title="button">Press Me</a>
+	<nav>		
+		<a href="index.html">
+		<img src="img/logo.png" id="img-logo">
+		</a>
+		<a href="http://2016.igem.org/Main_Page">
+		<img src="img/igemLogo.png" id="img-igemlogo">
+		</a>
 		<ul>
-			<li><a href="projects.html">Projects</a></li>
-			<li><a href="parts.html">Parts</a></li>
-			<li><a href="outreach.html">Outreach</a></li>
-			<li><a href="notebook.html">Notebook</a></li>
-			<li><a href="about.html">About Us</a></li>
-		</ul>
+			<a style="opacity: 0">Fix</a>
+			<li><a href="projects.html" class="hvr-float">Projects</a></li>
+			<li><a href="parts.html" class="hvr-float">Parts</a></li>
+			<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
+			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
+			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
+			<li><a href="about.html" class="hvr-float">About Us</a></li>
+		</ul>	
 	</nav>
-	<div id="div-text">
-		<h1>Hok/Sok</h1>
-		<h2>Internal Plasmid Retention System</h2>
+	<img src="img/more.png" id="img-more">
+	<!-- Nav bar when more button is clicked	 -->
+	<div id="div-navResized">
+		<a href="http://2016.igem.org/Main_Page">
+		<img src="img/igemLogo.png" id="img-igemlogoResized">
+		</a>
+		<a href="index.html">
+		<img src="img/logo.png" id="img-logoResized">
+		</a>
+		<ul>
+			<li><a href="projects.html" class="hvr-float">Projects</a></li>
+			<li><a href="parts.html" class="hvr-float">Parts</a></li>
+			<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
+			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
+			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
+			<li><a href="about.html" class="hvr-float">About Us</a></li>
+		</ul>	
+	</div>
+	<!-- For nav bar scrolling + hovering + window resize effects-->
+	<script>
+		// Animation over top nav bar when mouse hovers
+		$('nav').mouseover(
+			function () {
+				$('#img-logo').css('transition', '.35s ease-in');
+				$('#img-logo').css('opacity', '1');
+				$('#img-igemlogo').css('transition', '.35s ease-in');
+				$('#img-igemlogo').css('opacity', '1');
+				$('nav ul').addClass("hover");
+			}	
+		),
+		$('nav').mouseout(
+			function () {
+			var scroll = $(window).scrollTop();
+				if (scroll > 0 && $(window).width() >= 980 && !$('body').hasClass('pushed')) {
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+					$('nav ul').removeClass("hover");
+					$('nav').css('transition', '.5s ease');
+				}
+			}
+		),
+		// Window width effect on top nav bar
+		$(document).ready(function() {
+			function checkWidth() {		
+				if ($(window).width() < 980 || $('body').hasClass('pushed')){
+					$('nav li').css('display', 'none');	
+					$('#img-more').css('display','block');
+					$('nav ul').addClass("hover");
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1')
+				} else {
+					$('nav li').css('display', 'inline');
+					$('#img-more').css('display','none');
+					$('nav ul').removeClass("hover");
+					if ($(window).scrollTop() > 0) {
+						$('#img-igemlogo').css('transition', '.25s ease');
+						$('#img-igemlogo').css('opacity', '0');
+						$('#img-logo').css('transition', '.25s ease');
+						$('#img-logo').css('opacity', '0');
+						$('nav ul').addClass("scrolled");
+					}	
+				}
+			}
+			// Execute on load
+    		checkWidth();
+    		// Bind event listener
+    		$(window).resize(checkWidth);	
+		});
+		// Resized nav bar effect when more icon is clicked
+		$('#img-more').click(function() {
+			$('#img-more').toggleClass('pushed');
+			$('#div-navResized').toggleClass('pushed');
+			$('nav').toggleClass('pushed');
+			$('body').toggleClass('pushed');
+			$('nav img').toggleClass('pushed');
+			$('#bot-nav').toggleClass('pushed');
+			if ($(window).width() >= 980 && !$('body').hasClass('pushed')){
+				$('nav li').css('display', 'inline');
+				$('#img-more').css('display','none');
+				$('nav ul').removeClass("hover");
+				$('#img-igemlogo').css('transition', '.25s ease');
+				$('#img-igemlogo').css('opacity', '0');
+				$('#img-logo').css('transition', '.25s ease');
+				$('#img-logo').css('opacity', '0');
+			}
+		});
+		// Scrolling animation for top nav bar
+		$(function() {
+			var nav = $('nav ul');
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll > 0 && $(window).width() >= 980) {
+					nav.addClass("scrolled");
+					nav.removeClass("hover");
+					$('#img-logo').css('transition', '.25s ease');
+					$('#img-logo').css('opacity', '0');
+					$('#img-igemlogo').css('transition', '.25s ease');
+					$('#img-igemlogo').css('opacity', '0');
+				} else {
+					nav.removeClass("scrolled");
+					$('#img-logo').css('transition', '.35s ease-in');
+					$('#img-logo').css('opacity', '1');
+					$('#img-igemlogo').css('transition', '.35s ease-in');
+					$('#img-igemlogo').css('opacity', '1');	
+				}
+			});
+		});
+	</script>
+	<h1 style="text-align: center">UMaryland</h1>
+	<div id="div-title" style="text-align: center;">
+		<h2 class="green">Hok</h2>
+		<h2>/</h2>
+		<h2 class="red">Sok</h2>
+		<h3 style="text-align:center">Internal Plasmid Retention System</h3>
+	<img src="img/hoksokdiagram.png" id="img-hoksok" style="border:5px solid black"/>
+	</div>
+	<div id="bot-nav">
+		<ul>
+			<li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="img/FBLogo.png"/> </a> </li>
+			<li> <a href="https://www.instagram.com/umarylandigem/"> <img src="img/InstaLogo.png"/> </a> </li>
+			<li> <a href="mailto:umarylandigem@gmail.com"> <img src="img/MailLogo.png"/> </a> </li>
+		</ul>
 	</div>
 </body>
 <script type="text/javascript" src="js/index.js"></script>
