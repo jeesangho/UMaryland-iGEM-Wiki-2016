@@ -89,17 +89,92 @@
 				<!-- navigator class trigger javascript on that element     -->
 				<!-- data-select attribute sends to script which element    -->
 				<!-- was clicked 											-->
-				<th class="borderRight navigator" data-select="students"><p>Students</p></th>
-				<th class="borderBoth navigator" data-select="advisors"><p>Advisors</p></th>
-				<th class="borderLeft navigator" data-select="acknowledgements"><p>Acknowledgements</p></th>
+				<th class="borderRight navigator" id="th-students" data-select="students"><p>Students</p></th>
+				<th class="borderBoth navigator" id="th-advisors" data-select="advisors"><p>Advisors</p></th>
+				<th class="borderLeft navigator" id="th-acknowledgements" data-select="acknowledgements"><p>Acknowledgements</p></th>
 			</thead>
 	</table>
 	<div id="div-content">
 		<div id="div-students" class="profiles">
-			<img src="">
+			<div class="descriptions">
+				<div id="div-subhashini" class="description">
+					<h2>Subhashini Arumugam</h2>
+					<p>Subhashini Arumugam is a freshman bioengineering major that aspires to go to medical school someday. Besides science, she is very interested in learning languages, writing, and political activism. She is also very passionate about dance, yoga, making breakfast, and taking naps. She hopes to gain research experience and exposure to the many facets of synthetic biology through iGEM, and looks forward to contributing to the team's outreach projects.</p>	
+				</div>
+				<div id="div-jacob" class="description">
+					<h2>Jacob Premo</h2>
+					<p>Jacob Premo is a freshman currently majoring in biochemistry and microbiology. He joined the UMaryland iGEM team in hopes of working with his peers on meaningful and unique research topics. After his undergraduate career, Jacob plans to pursue a PhD which he would like to put to use developing new medicines. Outside of his academic and research life Jacob enjoys reading books and watching sports.</p>	
+				</div>
+				<div id="div-ben" class="description">
+					<h2>Ben Walton</h2>
+					<p>Ben is a first-year student at the University of Maryland and is majoring in Mechanical Engineering and minoring in Computer Science. At this point in college, he still does not know his career path, but hopes that the experience of iGEM will help to give him some ideas. Outside of school, Ben can be found playing cards or board games with friends, reading, or slack-lining. Very recently, he has developed an interest in snorkeling and scuba diving.</p>	
+				</div>
+				<div id="div-sangho" class="description">
+					<h2>SangHo Jee</h2>
+					<p>SangHo is a freshman biochemistry and neurobiology &amp physiology double major in the Integrated Life Sciences program, who primarily joined iGEM to work on their wiki and website design, while gaining exposure to how the wet labs work. He hopes to one day attend medical school in the future but is interested in research as well. Outside of iGEM he enjoys web programming, reading the news, and playing video games.</p>	
+				</div>
+				<div id="div-seth" class="description">
+					<h2>Seth Cohen</h2>
+					<p>Seth is a freshman biochemistry major at the University of Maryland, but he's switching into bioengineering. Outside of science his favorite things to do are play basketball and write fiction. His favorite food is probably pizza and his favorite animal is definitely the elephant. Another kind of interesting fact about him is that he is vegetarian. That's pretty much all you need to know about Seth!<p>	
+				</div>
+				<div id="div-maria" class="description">
+					<h2>Maria Novitskaya</h2>
+					<p>Introducing Maria Novitskaya! Maria is a rising sophomore majoring in Neurobiology and Physiology and plans to minor in either Business, Computer Science, or Spanish. Outside of iGEM, Maria is involved in Circle K International and is training to be an Integrated Life Sciences section leader and an Images tour guide...go Terps! Aside from science, Maria is passionate about the color green, loves watching movies and documentaries, and makes great guacamole.<p>	
+				</div>
+				<div id="div-nancy" class="description">
+					<h2>Nancy Zhang</h2>
+					<p>Presenting Nancy Zhang! Nancy is a freshman majoring in Neurology &amp Physiology and is also a part of the ILS program in the Honors College. Aside from her strong focus in science, Nancy has a great passion for art and devotes her spare time to arts, crafts and sculpture, therefore she brings an artistic touch in addition to years of research experience. She hopes to be able to unite different disciplines like engineering, graphic design, and wet lab work in research to help the team create a strong project this year!<p>	
+				</div>
+				<div id="div-chaoyang" class="description">
+					<h2>Chaoyang Wang</h2>
+					<p>Chaoyang is a freshman studying Neurobiology and Physiology with a minor in Music Performance in the Integrated Life Sciences Program. Aspiring to become a surgeon one day, Chaoyang is an Executive Board Member of the American Medical Student Association. He has researched 2 summers at an Adult Stem Cell lab at the NIH and hopes to contribute his lab experience to the iGEM team.</p>
+					<p>Chaoyang has also recently partaken in an Alternative Spring Break to New York City to join the movement to end the stigma against HIV and AIDS. Outside of academics, he enjoys playing piano and has played in various renowned locales, including Carnegie Hall and the Millennium Stage at the Kennedy Center. Among his many wins are first prize at the 29th annual International Young Artist Piano Competition. Chaoyang also enjoys taking artsy pictures and loves hanging out with friends. <p>	
+				</div>
+				<div id="div-chunmun" class="description">
+					<h2>Chun Mun Loke</h2>
+					<p>Hailing from Singapore and Australia, Chun Mun's strong interest in genetic engineering prompted him to join iGEM. He hopes to conduct research in this field after attaining an MD/PhD. Outside of school, he is a self proclaimed piano prodigy, having won consecutive local competitions and finalizing in international ones. He can solve a Rubik's cube in a very slow average of 17 seconds and is an avid video gamer. He is actually not a weeaboo as some aspects of his profile may suggest.</p>
+				</div>
+			</div>
+			<table id="table-students">
+				<tbody>
+				<tr>
+					<td><img src="img/chaoyang.jpg" class="clickImageS" id="wang" data-select="chaoyang"></td>
+					<td><img src="img/chunmun.jpg" class="clickImageS" id="loke" data-select="chunmun"></td>
+					<td><img src="img/nancy.jpg" class="clickImageS" id="zhang" data-select="nancy"></td>
+				</tr>
+				<tr>
+					<td><img src="img/maria.jpg" class="clickImageS" id="novitskaya" data-select="maria"></td>
+				
+					<td><img src="img/seth.jpg" class="clickImageS" id="cohen" data-select="seth"></td>
+					<td><img src="img/sangho.jpg" class="clickImageS" id="jee" data-select="sangho"></td>
+				</tr>
+				<tr>
+					<td><img src="img/ben.png" class="clickImageS" id="walton" data-select="ben"></td>
+					<td><img src="img/jacob.png" class="clickImageS" id="premo" data-select="jacob"></td>
+					<td><img src="img/subhashini.jpg" class="clickImageS" id="arumugam" data-select="subhashini"></td>
+				</tr>
+				</tbody>
+			</table>
+			<table id="table-navigatorS">
+				<tbody>
+				<tr>
+					<td class="nospacing"><img src="img/chaoyang.jpg" class="clickImageSmallS" id="chaoyangSmall" data-select="chaoyang" data-id="wang" ></td>
+					<td class="nospacing"><img src="img/chunmun.jpg" class="clickImageSmallS" id="chunmunSmall" data-select="chunmun" data-id="loke" ></td>
+					<td class="nospacing"><img src="img/nancy.jpg" class="clickImageSmallS" id="nancySmall" data-select="nancy" data-id="zhang" ></td>
+					<td class="nospacing"><img src="img/maria.jpg" class="clickImageSmallS" id="mariaSmall" data-select="maria" data-id="novitskaya" ></td>
+					<td class="nospacing"><img src="img/seth.jpg" class="clickImageSmallS" id="sethSmall" data-select="seth" data-id="cohen" ></td>
+				</tr>
+				<tr>
+					<td class="nospacing"><img src="img/sangho.jpg" class="clickImageSmallS" id="sanghoSmall" data-select="sangho" data-id="jee" ></td>
+					<td class="nospacing"><img src="img/ben.png" class="clickImageSmallS" id="benSmall" data-select="ben" data-id="walton" ></td>
+					<td class="nospacing"><img src="img/jacob.png" class="clickImageSmallS" id="jacobSmall" data-select="jacob" data-id="premo" ></td>
+					<td class="nospacing"><img src="img/subhashini.jpg" class="clickImageSmallS" id="subhashiniSmall" data-select="subhashini" data-id="arumugam" ></td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
 		<div id="div-advisors" class="profiles">
-			<div id="descriptions">
+			<div class="descriptions">
 				<div id="div-Ed" class="description">
 					<h2>Dr. Edward Eisenstein</h2>
 					<p> Edward Eisenstein is a Fellow in the Institute for Bioscience and 
@@ -165,22 +240,45 @@
 		</div>
 	</div>
 	<script>
-		 var current = 'students'; // sets initial display to be purpose
-		 $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
-			$('.navigator').css('border-bottom','none');		// make all navigational element shave no bottom border
-			$(this).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border
-			var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
-			if (selected != current) {							// only change display / trigger animation if clicking different nav
-				$('.profiles').css('display','none');			// hides all text
-				$('.profiles').css('margin-left', '30px')		// slighly shifts right all text to set up for animation
-				$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
-				$('#div-' + selected).animate({ marginLeft: '0px'}, 200);	// the text is animated to quickly move left
-				current = selected;								// sets the current display
-			}
-		 });
+	var clickedT = '';
+	var current ='';
+	var currentT = 'students'; 	
+	var currentP = '';	
+	// sets initial display to be purpose
+	 $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+		var selectedT = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+		if (selectedT != currentT) {							// only change display / trigger animation if clicking different nav
+			changeText(selectedT, currentP)
+		}
+	 })
+	 
+	function changeText(selectedT, currentP) {
+		$('.navigator').css('border-bottom','1px solid #A8A8A8');		// make all navigational element have no bottom border
+		$('#th-' + selectedT).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border		
+		$('.profiles').css('display','none');
+		$('#div' + selectedT).css('margin-left', '60px')					// slighly shifts right all text to set up for animation
+		$('#div-' + selectedT).css('display','block');
+		alert(currentP)
+		if (currentP != '') {
+			$('#div-' + current).css('display','block');
+		} 		// the div containing the text is displayed
+		$('#div-' + selectedT).animate({ marginLeft: '0px'}, 200);		// the text is animated to quickly move left
+		currentT = selectedT;												// sets the current display
+		location.hash = currentT;
+	}
+
+	var dir = location.hash;								// grabs the anchor (text following the #)
+	var n = dir.indexOf('?');								// and initially sets the page 
+	dir = dir.substring(0, n != -1 ? n : dir.length);		
+	dir = dir.replace('#','');
+	if (dir == '') {
+		dir = 'students';
+	}
+	changeText(dir)
+	
 		 $('.profiles .clickImage').click( function() { 	
 			var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
-			if (selected != current) {							// only change display / trigger animation if clicking different nav
+			if (selected != current) {							
 				$('.description').css('display','none');		// hides all text
 				$('.description').css('margin-left', '60px')
 				$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
@@ -189,17 +287,9 @@
 				$(this).css('display', 'block');
 				$(this).parent().attr('colspan', '3');
 				$(this).animate({ width: '430px', height: '280px'}, 600);
+				currentP = current;
 				current = selected;								// sets the current display
-				$('#' + selected + 'Small').parent().css('width', '80px');
-				$('#' + selected + 'Small').parent().css('width', '0px');
 				$('.clickImageSmall').css('display','inline');
-				$('#' + selected + 'Small').css('display', 'none');
-				if (selected == 'Jason') {
-					$('#table-navigator').css('margin-left','710px');
-				} else {
-					$('#table-navigator').css('margin-left','705px');
-				}
-				
 			}
 		 });
 		$('.profiles .clickImageSmall').click( function() {
@@ -215,16 +305,44 @@
 				$('#' + id).css('display', 'block');
 				$('#' + id).parent().attr('colspan', '3');
 				$('#' + id).animate({ width: '430px', height: '280px'}, 600);
+				currentP = current;
 				current = selected;								// sets the current display
-				$('#' + selected + 'Small').parent().css('width', '80px');
-				$('#' + selected + 'Small').parent().css('width', '0px');
 				$('.clickImageSmall').css('display','inline');
-				$('#' + selected + 'Small').css('display', 'none');
-				if (selected == 'Jason') {
-					$('#table-navigator').css('margin-left','710px');
-				} else {
-					$('#table-navigator').css('margin-left','705px');
-				}
+			}
+		});
+		
+		 $('.profiles .clickImageS').click( function() { 	
+			var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+			if (selected != current) {							
+				$('.description').css('display','none');		// hides all text
+				$('.description').css('margin-left', '60px')
+				$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
+				$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
+				$('.clickImageS').css('display', 'none')
+				$(this).css('display', 'block');
+				$(this).parent().attr('colspan', '3');
+				$(this).animate({ width: '430px', height: '280px'}, 600);
+				currentP = current;
+				current = selected;								// sets the current display
+				$('.clickImageSmallS').css('display','inline');
+			}
+		 });
+		$('.profiles .clickImageSmallS').click( function() {
+			var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+			var id = $(this).attr('data-id');	
+			if (selected != current) {							// only change display / trigger animation if clicking different nav
+				$('.description').css('display','none');		// hides all text
+				$('.description').css('margin-left', '60px')
+				$('#div-' + selected).css('display','block');	// the div containing the text that is selected is displayed
+				$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
+				$('.clickImageS').css('display', 'none')
+				$('#' + id).css({ 'width': '150px', 'height': '133px' })
+				$('#' + id).css('display', 'block');
+				$('#' + id).parent().attr('colspan', '3');
+				$('#' + id).animate({ width: '430px', height: '280px'}, 600);
+				currentP = current;
+				current = selected;								// sets the current display
+				$('.clickImageSmallS').css('display','inline');
 			}
 		});
 	</script>
