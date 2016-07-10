@@ -251,6 +251,10 @@ th p:hover {
 	height: 50px;
 }
 
+.clickImageSmall, .clickImageS, .clickImageSmallS:hover {
+	cursor: pointer;
+}
+
 .nospacing {
 	width: 80px;
 	padding: 0 0 0 0;
