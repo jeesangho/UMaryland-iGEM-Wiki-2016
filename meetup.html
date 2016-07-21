@@ -1,22 +1,21 @@
-
+</div></div>
 <html lang="en">
-</div></div></div><!-- iGEM code bug? Makes our content not under iGEM CSS code -->
 <head>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <script>
-$(body).css('display','none');
-</script>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script> 
+        $(body).css('display','none'); 
+        </script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 		if (typeof jQuery == 'undefined') {
 			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
 		}
 	</script>
-	<link href='https://fonts.googleapis.com/css?family=Exo|Lora' rel='stylesheet' type='text/css'>	
+	<link href='https://fonts.googleapis.com/css?family=Exo|Lora|Arial' rel='stylesheet' type='text/css'>	
 	<title>2nd Annual Mid-Atlantic Meet-up</title>
 </head>
+<body>
 <style>
                    #bodyContent, #content, html, body, #globalWrapper, #iGEM, #overruled {
                              width: 100%;
@@ -43,7 +42,7 @@ $(body).css('display','none');
                     }
 
                     #content {
-                            margin-top: -700px;
+                            margin-top: 0px;
                     }
 
 
@@ -62,6 +61,7 @@ $(body).css('display','none');
                         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 	                border-radius: 15px;
 	                z-index: 1;
+	                margin-top: 18px;
                     } 
 
                     nav a {
@@ -116,7 +116,7 @@ $(body).css('display','none');
                     }
 
                     #div-navResized ul li {
-	                    margin-top: 10px;	
+	                    margin-top: 4px;	
                     }
 
                     #div-title {
@@ -131,7 +131,7 @@ $(body).css('display','none');
                         width: 100%;
                         height: 75px;
                         left: 0;
-                        top: 3550px;
+                        top: 3000px;
                         display: block;
                         color: black;
                         font-size: 12pt;
@@ -143,7 +143,7 @@ $(body).css('display','none');
 	                    margin-right: auto;
 	                    padding-right: 15px;
 	                    padding-left: 15px;
-	                    margin-top: 20px;
+	                    margin-top: -7px;
                     }
 
                     #bot-nav img {
@@ -176,7 +176,7 @@ $(body).css('display','none');
 
                     #copyright {
 	                    text-align: center;
-	                    padding-top: 5px;
+	                    padding-top: 24px;
                     }
 
                     #contact:hover {
@@ -230,20 +230,9 @@ $(body).css('display','none');
 	                    margin-bottom: 100px;
                     }
 
-                    h2 {
-	                    float: left;
-	                    margin-left: 15px;
-	                    font-size: 20pt;
-	                    text-shadow: -0.5px .5px .5px black;
-                    }
-
-                    #background {
-	                    margin-top: 100px;
-                    }
-
                     #meetup {
                         position: absolute;
-                        margin-left: -160px;
+                        margin-left: 10px;
                         z-index: -999;
                         margin-top: 149px;
                         height: 400px;
@@ -271,10 +260,12 @@ $(body).css('display','none');
 
                     /* Schedule */
 
-                    #img-whitebackground {
+                    #div-white {
                             z-index: -999;
-                            width: 150%;
-                            margin-left: -8px;
+							position: absolute;
+							background-color: white;
+                            width: 120%;
+                            left: 0px;
                             height: 700px;
                             margin-top: -52px;
                     }
@@ -284,22 +275,31 @@ $(body).css('display','none');
                             width: 500px;
                             height: 500px;
                             -webkit-filter: grayscale(100%);
-                            margin-left: 334px;
-                            margin-top: -591px;
+                            margin-top: 80px;
                     }
 
                     #img-schedule {
 	                    display: block;
 	                    position: absolute;
-                            margin-top: -632px;
-                            margin-left: 300px;
+                        margin-top: 50px;
 	                    opacity: .9;
                     }
-
+					
+					#div-img {
+						width: 600px;
+						margin-left: 20%;
+						margin-right: auto;
+						
+					}
+					
                     /* Speakers */
 
+                    h2 {
+	                    font-size: 30pt;
+                    }
+
                     #Speakers {
-	                    margin-top: 290px;
+	                    margin-top: 800px;
 	                    margin-left: -8px;
 	                    margin-right: -8px;
                     }
@@ -307,7 +307,6 @@ $(body).css('display','none');
                     #Speakers img {
 	                    width: 123px;
 	                    height: 170px;
-	                    margin-top: -179px;
 	                    position: absolute;
                     }
 
@@ -315,8 +314,10 @@ $(body).css('display','none');
                             font-size: 15pt;
                             line-height: 2;
                             width: 970px;
-                            margin-left: 50px;
+		            margin-right: auto;
+                            margin-left: auto;
                             margin-top: 5px;
+							
                     }
 
                     img#igemguy {
@@ -393,10 +394,6 @@ $(body).css('display','none');
                     	height: 271px;
                     }
 
-                    body.pushed {
-	                    overflow-y: hidden;
-                    }
-
                     nav img.pushed {
                     	display: none;
                     }
@@ -408,13 +405,13 @@ $(body).css('display','none');
                     /* Hides nav bar when scrolling */
                     .scrolled {
 	                    font-size: 10pt;
-	                    line-height: 0px;
+	                    line-height: 20px;
                     }	
 
                     /* animation when mouse is over Navbar */
                     .hover {
 	                    font-size: 20pt;
-	                    line-height: 10px;
+	                    line-height: 40px;
                     }
 
                     /* Images */
@@ -447,12 +444,13 @@ $(body).css('display','none');
 	                    margin-right: 0px;
 	                    right: 15px;
 	                    z-index: 2;
+	                    margin-top: -11px;
                     }
 
                     #img-UMD {
 	                    z-index: -999;
 	                    margin-left: -8px;
-	                    margin-top: -8px;
+	                    margin-top: -12px;
 	                    height: 600px;
                     }
 
@@ -470,18 +468,28 @@ $(body).css('display','none');
 	                    display: block;
 	                    margin-right: auto;
 	                    margin-left: auto;
-	                    margin-top: 142px;
+	                    margin-top: 139px;
                     }
-	</style>	
-<body>
+
+                    .centered {
+                            width:1200px; 
+							margin-left:auto;
+							margin-right:auto;
+                    }
+					
+					#umdguy, #igemguy:hover {
+						cursor: pointer;
+					}
+					
+	</style>
         <script>
 		/* Hiding stupid stuff*/
 		$(document).ready(function() {
                 		$('#top_title').css('display', 'none');
 				$('#top_menu').css('display', 'none');
-				$('#top_menu_14').css('display', 'none');
+				//$('#top_menu_14').css('display', 'none');
                 		$('#HQ_page').css('display', 'none');
-				$('#top_menu_under').css('display', 'none');
+				$('#top_menu_under').css('display', 'none');	
                 });
 		$('#HQ_page').attr("id","iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
 		$('#mw-content-text').attr("id","overruled").removeClass('mw-content-ltr');
@@ -518,8 +526,8 @@ $(body).css('display','none');
 		<h1><span>2nd Annual Mid-Atlantic Mini-Jamboree</span> </h1>	
                 <h1-2><br/><br/><br/><br/><span>July 22nd, 2016</span></h1-2> 
 	</div>
+        <div class="centered">
 	<h id="information"><a style="opacity: 0">I</a> </h>
-	<h2 id="background"> Background </h2>	
 	<img src="http://2015.igem.org/wiki/images/1/10/Meetup.png" id="meetup"/>
 	<div id="Info" style="text-align: center">
 		<p id = "p1"> Last year, UMaryland iGEM founded the first Mid-Atlantic Meet-up and hosted 
@@ -533,15 +541,18 @@ $(body).css('display','none');
 			attending, please do not hesitate to contact us through email or Facebook. </p>	
 		<h id="schedule"><a style="opacity: 0">S</a></h> 	
 	</div>
-	<img src="http://images.all-free-download.com/images/graphiclarge/plain_white_background_211387.jpg" id="img-whitebackground"/>
+	<div id="div-white">
+	<div id="div-img">
 	<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/University_of_Maryland_Seal.svg/1024px-University_of_Maryland_Seal.svg.png"
 		id="img-UMDseal"/>
 	<img src="http://2016.igem.org/wiki/images/e/eb/T--UMaryland--schedule.png" id="img-schedule"/>
+	</div>
+	</div>
 	<div id="hiddenS">
 		<h id="speakers"><a style="opacity: 0">S</a></h> 	
 	</div>	
-	<h2> Speakers </h2>
 	<div id="Speakers" class="bios">
+	<h2> Speakers </h2>
 		<img src="http://www.ench.umd.edu/sites/default/files/images/faculty/sriram4-lg.png" id="umdguy" data-select="ganesh"/>
 		<img src="http://www.synbioproject.org/site/assets/files/1299/todd_cropped.jpg" id="igemguy" data-select="todd"/>	
 		<div id="descriptions">
@@ -573,12 +584,13 @@ $(body).css('display','none');
 		<br/>
 		<sup>2. Bio from https://www.wilsoncenter.org/person/todd-kuiken-phd</sup>
 	</div>
+        </div>
 	<div id="bot-nav">
 		<div id="container">
 			<div class="pull-left">
 				<a href="mailto:umarylandigem@gmail.com"><p id="contact"> Contact Us </p></a>
 			</div>	
-			<p id="copyright">&copyright University of Maryland iGEM 2016</p>
+			<p id="copyright">© University of Maryland iGEM 2016</p>
 			<div class="pull-right">
 				<ul>
 					<li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png"/> </a> </li>
@@ -600,6 +612,7 @@ $(body).css('display','none');
 				current = selected;								// sets the current display
 			}
 		 });
+                 $(body).css('display','block');
 	</script>	
         <!-- For nav bar scrolling + hovering + window resize effects-->
 	<script>
@@ -616,20 +629,21 @@ $(body).css('display','none');
 		$('nav').mouseout(
 			function () {
 			var scroll = $(window).scrollTop();
-				if (scroll > 0 && $(window).width() >= 980 && !$('body').hasClass('pushed')) {
+				if (scroll > 0) {if ( $(window).width() >= 980) { var pushed = $('body').hasClass('pushed'); if (pushed == false) {
 					$('#img-logo').css('transition', '.25s ease');
 					$('#img-logo').css('opacity', '0');
 					$('#img-igemlogo').css('transition', '.25s ease');
 					$('#img-igemlogo').css('opacity', '0');
 					$('nav ul').removeClass("hover");
 					$('nav').css('transition', '.5s ease');
-				}
+				}}}
+
 			}
 		),
 		// Window width effect on top nav bar
 		$(document).ready(function() {
 			function checkWidth() {		
-				if ($(window).width() < 980 || $('body').hasClass('pushed')){
+				if ($(window).width() < 980 || $('nav').hasClass('pushed')){
 					$('nav li').css('display', 'none');	
 					$('#img-more').css('display','block');
 					$('nav ul').addClass("hover");
@@ -660,10 +674,9 @@ $(body).css('display','none');
 			$('#img-more').toggleClass('pushed');
 			$('#div-navResized').toggleClass('pushed');
 			$('nav').toggleClass('pushed');
-			$('body').toggleClass('pushed');
 			$('nav img').toggleClass('pushed');
 			$('#bot-nav').toggleClass('pushed');
-			if ($(window).width() >= 980 && !$('body').hasClass('pushed')){
+			if ($(window).width() >= 980) { var pushed = $('body').hasClass('pushed'); if (pushed == false){
 				$('nav li').css('display', 'inline');
 				$('#img-more').css('display','none');
 				$('nav ul').removeClass("hover");
@@ -671,21 +684,20 @@ $(body).css('display','none');
 				$('#img-igemlogo').css('opacity', '0');
 				$('#img-logo').css('transition', '.25s ease');
 				$('#img-logo').css('opacity', '0');
-			}
+			}}
 		});
 		// Scrolling animation for top nav bar
-		$(function() {
 			var nav = $('nav ul');
 			$(window).scroll(function() {
 				var scroll = $(window).scrollTop();
-				if (scroll > 0 && $(window).width() >= 980) {
+				if (scroll > 0) { if ( $(window).width() >= 980) {
 					nav.addClass("scrolled");
 					nav.removeClass("hover");
 					$('#img-logo').css('transition', '.25s ease');
 					$('#img-logo').css('opacity', '0');
 					$('#img-igemlogo').css('transition', '.25s ease');
 					$('#img-igemlogo').css('opacity', '0');
-				} else {
+				}} else {
 					nav.removeClass("scrolled");
 					$('#img-logo').css('transition', '.35s ease-in');
 					$('#img-logo').css('opacity', '1');
@@ -693,12 +705,9 @@ $(body).css('display','none');
 					$('#img-igemlogo').css('opacity', '1');	
 				}
 			});
-		});
+                $(body).css('display','block');
 
-$(body).css('display','block');
 	</script>
 </body>
-</div>
-</div>
-	
+		
 </html>
