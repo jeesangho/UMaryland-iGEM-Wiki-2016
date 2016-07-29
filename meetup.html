@@ -12,485 +12,569 @@
 			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
 		}
 	</script>
-	<link href='https://fonts.googleapis.com/css?family=Exo|Lora|Arial' rel='stylesheet' type='text/css'>	
+	<link href='https://fonts.googleapis.com/css?family=Exo|Lora' rel='stylesheet' type='text/css'>	
+        
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+	<link href='http://sachinchoolur.github.io/lightGallery/lightgallery/css/lightgallery.css' rel='stylesheet' type='text/css'>
 	<title>2nd Annual Mid-Atlantic Meet-up</title>
 </head>
 <body>
 <style>
-                   #bodyContent, #content, html, body, #globalWrapper, #iGEM, #overruled {
-                             width: 100%;
-			     height: 100%;
-			     padding: 0 0 0 0;
-			     border: none;
-			     margin: 0 0 0 0;
-			     background: transparent;
-		    }
+        #bars_item {
+            display: none;
+        }
+
+        #sideMenu {
+            display: none;
+        }  
+        #bodyContent, #content, html, body, #globalWrapper, #iGEM, #overruled {
+            width: 100%;
+            height: 100%;
+            padding: 0 0 0 0;
+            border: none;
+            margin: 0 0 0 0;
+            background: transparent;
+        }
+
+        #top_title {
+            display: none;
+            line-height: inherit;
+        }
+
+        #sideMenu {
+            display: none;
+        }
+
+        /* Navbar and body setup */
+        body {
+            font-family: 'Lora', serif;
+            overflow-x: hidden;
+        }
+
+        #content {
+            margin-top: 0px;
+        }
+
+        /* Navbar */
+        nav {
+            opacity: 1.0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            line-height: 10px;
+            font-size: 20pt;
+            display: block;
+            background: #fff;
+            border-bottom: 1px solid black;	
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            z-index: 1;
+            margin-top: 18px;
+        } 
+
+        element.style {
+            text-decoration: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Exo', sans-serif;
+        }
+
+        nav a:visited {
+            color: black;
+        }
+
+        nav a:hover {
+            opacity: .7;
+            text-decoration: none;
+        }
+
+        nav ul {	
+            list-style: none;
+            transition: all .5s ease;
+            text-align: right;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        /* Nav bar when more icon is clicked */
+
+        #div-navResized {
+            font-size: 20pt;
+            position: fixed;
+            text-align: center;
+            display: none;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 200px;
+            z-index: 3;
+        }
+
+        #div-navResized a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Exo', sans-serif;
+        }
+
+        #div-navResized ul {	
+            list-style: none;
+            margin-right: 40px;
+            margin-top: 0px;
+        }
+
+        #div-navResized ul li {
+            margin-top: 4px;	
+        }
+
+        #div-title {
+            z-index: -999;
+        }
+
+        /* Permanent bottom bar */
+        #bot-nav {
+            background-color: #f9f9f9;    
+            border-top: 1px solid #f5f5f5;
+            position: absolute;
+            width: 100%;
+            height: 75px;
+            margin-top: 20px;
+            display: block;
+            color: black;
+            font-size: 12pt;
+            font-family: 'Lora', serif;
+            z-index: -1;
+        }
+
+        #container {
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-top: -7px;
+        }
+
+        #container img {
+            height: 20px;
+            width: 20px;
+            margin-top: -40px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+
+        #bot-nav img:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+
+        #container ul {
+            text-align: center;
+            margin-top: -13px;
+            margin-right: -22px;
+        }
+
+        #container li {
+            display: inline;
+            margin-right: -14px;
+        }
+
+        #bot-nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #copyright {
+            text-align: center;
+            padding-top: 24px;
+            padding-right: 63px;
+        }
+
+        #contact:hover {
+            text-shadow: .1px .1px black;
+        }
+
+        /* Resized bot-nav */
+
+        h4, h5 {
+            font-family: 'Lora', serif;
+            font-weight: normal;
+            font-size: 12pt;
+        }
+
+        #bot-navResized {
+            text-align: center;
+        }
+
+        #bot-navResized img {
+            height: 20px;
+            width: 20px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+
+        #bot-navResized ul {
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        #bot-navResized li {
+            display: inline;
+            margin-right: -14px;
+        }
+
+        #copyrightResized {
+            margin-top: -23px;
+        }
+
+        #contactResized {
+            margin-top: -10px;
+        }
+
+        #contactResized:hover {
+            text-shadow: .1px .1px black;
+        }
+
+        /* Background of page */
+
+        html {
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        /* Start Page Specific CSS */
+        
+        #Speakers p, #Info p {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Title */
+        h1, h1-2 {
+            font-size: 30pt;
+            position: absolute; 
+            top: 350px;
+            left: 39px;
+            width: 100%;
+            border-bottom: none;
+            color: white;
+            font-family: 'Lora', serif;
+        }
+
+        h1-2 span { 
+            color: white; 
+            padding-bottom: 2px;
+            padding-right: 10px;
+            padding-left: 10px; 
+            letter-spacing: -1px;  
+            background: rgb(0, 0, 0); /* fallback color */
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            max-width: 759px;
+            min-width: 759px;
+            background: rgb(0, 0, 0); /* fallback color */
+            background: rgba(0, 0, 0, 0.7);
+            padding-left: 10px;
+            padding-bottom: 22px; 
+        }
+        
+        #h1 {
+            font-weight: normal !important;
+        }
+
+        /* Info */
+
+        #Info {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+			width: 970px;
+        }
+
+        #meetup {
+			float: left;
+            padding-top: 80px;
+			padding-bottom: 80px;
+            height: 400px;
+            width: 600px;
+			margin-right: 20px;
+        }
+
+        #Info p {
+            font-size: 15pt;
+            line-height: 2;
+        }
+
+		.pInfo {
+			text-align: left;
+		}
+        /* Schedule */
+
+        #div-white {
+            z-index: -999;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            left: 0px;
+            height: 700px;
+            margin-top: -52px;
+            min-width: 1200px;
+        }
+
+        #img-schedule {
+            display: block;
+            margin-top: 50px;
+            opacity: 1;
+            width: 600px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        #div-img {
+            width: 600px;
+            margin-left: 30%;
+            margin-right: auto;
+            
+         }
 		
-		     #top_title {
-			     display: none;
-			     line-height: inherit;
-		     }
+        /* Speakers */
+
+        h2 {
+            font-size: 30pt; width: 970px; margin-right: auto; margin-left: auto; margin-bottom: 20px;
+            overflow: visible;
+        }
+
+        #div-ganesh p, #div-eli p { margin-top: 20px;}
+
+        #Speakers {
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+        #Speakers img {
+            position: absolute;
+        }
+
+        #Speakers p {
+            font-size: 15pt;
+            line-height: 2;
+            width: 970px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+
+        #Speakers li {
+            display: inline;
+            margin-right: 400px;
+        }
 		
-		     #sideMenu {
-			     display: none;
-		     }
-
-                    /* Navbar and body setup */
-                    body {
-	                    font-family: 'Lora', serif;
-	                    overflow-x: hidden;
-                    }
-
-                    #content {
-                            margin-top: 0px;
-                    }
-
-
-                    /* Navbar */
-                    nav {
-                        opacity: 1.0;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        line-height: 10px;
-                        font-size: 20pt;
-                        display: block;
-                        background: #fff;
-                        border-bottom: 1px solid black;	
-                        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-	                border-radius: 15px;
-	                z-index: 1;
-	                margin-top: 18px;
-                    } 
-
-                    nav a {
-	                    text-decoration: none;
-	                    color: black;
-	                    font-family: 'Exo', sans-serif;
-                    }
-
-                    a:visited {
-	                    color: black;
-                    }
-
-                    nav ul {	
-	                    list-style: none;
-	                    transition: all .5s ease;
-	                    text-align: right;
-                    }
-
-                    nav li {
-	                    display: inline;
-	                    margin-right: 20px;
-                    }
-
-                    nav a:hover {
-	                    text-decoration: underline;
-                    }
-
-                    /* Nav bar when more icon is clicked */
-
-                    #div-navResized {
-	                    font-size: 20pt;
-	                    position: fixed;
-	                    text-align: center;
-	                    display: none;
-	                    width: 100%;
-	                    left: 0;
-	                    right: 0;
-	                    margin-top: 74px;
-	                    z-index: 3;
-                    }
-
-                    #div-navResized a {
-	                    text-decoration: none;
-	                    color: black;
-	                    font-family: 'Exo', sans-serif;
-                    }
-
-                    #div-navResized ul {	
-	                    list-style: none;
-	                    margin-right: 40px;
-	                    margin-top: 0px;
-                    }
-
-                    #div-navResized ul li {
-	                    margin-top: 4px;	
-                    }
-
-                    #div-title {
-	                    z-index: -999;
-                    }
-
-                    /* Permanent bottom bar */
-                    #bot-nav {
-                        background-color: #f9f9f9;    
-                        border-top: 1px solid #f5f5f5;
-                        position: absolute;
-                        width: 100%;
-                        height: 75px;
-                        left: 0;
-                        top: 3000px;
-                        display: block;
-                        color: black;
-                        font-size: 12pt;
-                    }
-
-                    #container {
-	                    width: 950px;
-	                    margin-left: auto;
-	                    margin-right: auto;
-	                    padding-right: 15px;
-	                    padding-left: 15px;
-	                    margin-top: -7px;
-                    }
-
-                    #bot-nav img {
-	                    height: 20px;
-	                    width: 20px;
-	                    margin-top: -40px;
-	                    -webkit-filter: grayscale(100%);
-	                    filter: grayscale(100%);
-                    }
-
-                    #bot-nav img:hover {
-	                    -webkit-filter: grayscale(0%);
-	                    filter: grayscale(0%);
-                    }
-
-                    #bot-nav ul {
-	                    text-align: center;
-	                    margin-top: -13px;
-                    }
-
-                    #bot-nav li {
-	                    display: inline;
-	                    margin-right: 5px;
-                    }
-
-                    #bot-nav a {
-	                    text-decoration: none;
-	                    color: black;
-                    }
-
-                    #copyright {
-	                    text-align: center;
-	                    padding-top: 24px;
-                    }
-
-                    #contact:hover {
-	                    text-shadow: .1px .1px black;
-                    }
-
-                    /* Background of page */
-
-                    html {
-	                    background-color: rgba(0, 0, 0, 0.06);
-                    }
-
-                    /* Start Page Specific CSS */
-
-                    /* Title */
-                    h1, h1-2 {
-	                    font-size: 30pt;
-	                    position: absolute; 
-   	                    top: 350px;
-                            left: 39px;
-	                    width: 100%;
-                            border-bottom: none;
-                            color: white;
-                    }
-
-                    h1-2 span { 
-                            color: white; 
-                            padding-bottom: 2px;
-                            padding-right: 10px;
-                            padding-left: 10px; 
-                            letter-spacing: -1px;  
-                            background: rgb(0, 0, 0); /* fallback color */
-                            background: rgba(0, 0, 0, 0.7);
-                    }
-
-                    h1 {
-	                    max-width: 759px;
-	                    min-width: 759px;
-                            background: rgb(0, 0, 0); /* fallback color */
-                            background: rgba(0, 0, 0, 0.7);
-                            padding-left: 10px;
-                            padding-bottom: 22px; 
-                    }
-
-                    /* Info */
-
-                    #Info {
-	                    margin-top: 200px;
-	                    margin-left: -8px;
-	                    margin-right: -8px;
-	                    margin-bottom: 100px;
-                    }
-
-                    #meetup {
-                        position: absolute;
-                        margin-left: 10px;
-                        z-index: -999;
-                        margin-top: 149px;
-                        height: 400px;
-                        min-width: 600px;
-                        max-width: 600px;
-                    }
-
-                    #Info p {
-	                    font-size: 15pt;
-                            line-height: 2;
-                    }
-
-                    #p1 {
-	                    margin-left: 626px;
-                            max-width: 585px;
-                            min-width: 585px
-                    }
-
-                    #p2 {
-	                    margin-top: 100px;
-                            margin-left: 204px;
-                            max-width: 850px;
-                            min-width: 850px;
-                    }
-
-                    /* Schedule */
-
-                    #div-white {
-                            z-index: -999;
-							position: absolute;
-							background-color: white;
-                            width: 120%;
-                            left: 0px;
-                            height: 700px;
-                            margin-top: -52px;
-                    }
-
-                    #img-UMDseal {
-                            position: absolute;
-                            width: 500px;
-                            height: 500px;
-                            -webkit-filter: grayscale(100%);
-                            margin-top: 80px;
-                    }
-
-                    #img-schedule {
-	                    display: block;
-	                    position: absolute;
-                        margin-top: 50px;
-	                    opacity: .9;
-                    }
-					
-					#div-img {
-						width: 600px;
-						margin-left: 20%;
-						margin-right: auto;
-						
-					}
-					
-                    /* Speakers */
-
-                    h2 {
-	                    font-size: 30pt;
-                    }
-
-                    #Speakers {
-	                    margin-top: 800px;
-	                    margin-left: -8px;
-	                    margin-right: -8px;
-                    }
-
-                    #Speakers img {
-	                    width: 123px;
-	                    height: 170px;
-	                    position: absolute;
-                    }
-
-                    #Speakers p {
-                            font-size: 15pt;
-                            line-height: 2;
-                            width: 970px;
-		            margin-right: auto;
-                            margin-left: auto;
-                            margin-top: 5px;
-							
-                    }
-
-                    img#igemguy {
-	                    border: 1px solid black;
-	                    margin-left: 721px;
-                    }
-
-                    #umdguy {
-	                    margin-left: 377px;
-                    }
-
-                    h3 {
-	                    font-size: 20pt;
-                            margin-left: 340px;
-                    }
-
-                    h4 {
-	                    font-size: 20pt;
-                            margin-left: 695px;
-                            margin-top: 11px;	    
-                    }	     
-
-                    #hiddenS {
-	                    margin-top: -50px;
-	                    margin-bottom: 50px;
-                    }
-
-                    /* Footnotes (References) */
-
-                    #footnotes {
-	                    margin-left: 50px;
-	                    margin-top: 25px;
-	                    font-size: 16px;
-                    }
-
-                    /* Classes */
-
-                    .description {
-	                    margin-top: 200px;
-	                    min-width: 970px;
-                    }
-
-                    .border {
-	                    border-bottom: 1px black;
-                    }
-
-                    .image { 
-                       position: relative; 
-                       width: 100%; /* for IE 6 */
-                    }
-
-                    .pull-right {
-	                    float: right !important;
-                    }
-
-                    .pull-left {
-                    	float: left !important;
-                    }
-
-                    /* Pushed class actives */
-                    #img-more.pushed {
-                    	box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .3);
-                    }
-
-                    #div-navResized.pushed {
-                    	display: block;
-                    }
-
-                    #div-navResized.pushed a:hover {
-	                    text-decoration: underline;
-                    }
-
-                    nav.pushed {
-                    	height: 271px;
-                    }
-
-                    nav img.pushed {
-                    	display: none;
-                    }
-
-                    #bot-nav.pushed {
-                    	display: none;
-                    }
-
-                    /* Hides nav bar when scrolling */
-                    .scrolled {
-	                    font-size: 10pt;
-	                    line-height: 20px;
-                    }	
-
-                    /* animation when mouse is over Navbar */
-                    .hover {
-	                    font-size: 20pt;
-	                    line-height: 40px;
-                    }
-
-                    /* Images */
-
-                    /* Logo */
-                    #img-logo {
-	                    width: 150px;
-	                    float: left;
-	                    position: fixed;
-	                    margin-top: 4px;
-	                    margin-left: 65px;
-	                    opacity: 1.0;
-                    }
-
-                    /* iGEM logo */
-                    #img-igemlogo {
-	                    width: 60px;
-	                    float: right;
-	                    position: fixed;
-	                    margin-top: 1px;
-	                    opacity: 1.0;
-                    }
-
-                    /* More Icon */
-                    #img-more {
-	                    position: fixed;
-	                    display: none;
-	                    width: 50px;
-	                    height: 50px;
-	                    margin-right: 0px;
-	                    right: 15px;
-	                    z-index: 2;
-	                    margin-top: -11px;
-                    }
-
-                    #img-UMD {
-	                    z-index: -999;
-	                    margin-left: -8px;
-	                    margin-top: -12px;
-	                    height: 600px;
-                    }
-
-                    /* Logos when more button is clicked */
-
-                    #img-logoResized {
-	                    width: 150px;
-	                    display: block;
-	                    margin-right: auto;
-	                    margin-left: auto;
-	                    margin-top: -266px;
-                    }
-                    #img-igemlogoResized {
-	                    width: 60px; 
-	                    display: block;
-	                    margin-right: auto;
-	                    margin-left: auto;
-	                    margin-top: 139px;
-                    }
-
-                    .centered {
-                            width:1200px; 
-							margin-left:auto;
-							margin-right:auto;
-                    }
-					
-					#umdguy, #igemguy:hover {
-						cursor: pointer;
-					}
-					
+        #img-speaker1, #img-speaker2:hover {
+            cursor: pointer;
+        }
+		
+		#img-speaker1, #img-speaker2 {
+			margin-left: 265px;
+			margin-bottom: 20px;
+		}
+
+		#descriptions {
+			margin-top: 20px;
+		}
+		
+		#ul-images {
+			height: 30px;
+		}
+		
+        h3 {
+            font-size: 20pt;
+            margin-left: 270px;
+        }
+
+        h6 {
+            font-size: 20pt;
+            margin-left: 670px;
+            margin-top: 11px;
+			margin-bottom: 0px;
+            font-family: "Arial",Gadget,sans-serif;
+            font-weight: bold;
+        }	     
+
+        /* Footnotes (References) */
+
+        small {
+            margin-left: 125px;
+            margin-top: 25px;
+        }
+
+        /* Classes */
+
+        .description {
+            margin-top: 200px;
+            min-width: 970px;
+        }
+
+        .border {
+            border-bottom: 1px black;
+        }
+
+        .image { 
+           position: relative; 
+           width: 100%; /* for IE 6 */
+        }
+
+        .pull-right {
+            float: right !important;
+            margin-left: -28px;
+        }
+
+        .pull-left {
+            float: left !important;
+        }
+
+        /* Pushed class actives */
+        #img-more.pushed {
+            box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .3);
+        }
+
+        #div-navResized.pushed {
+            display: block;
+        }
+
+        #div-navResized.pushed a:hover {
+            text-decoration: underline;
+        }
+
+        nav.pushed {
+            height: 100%;
+        }
+
+        body.pushed {
+            overflow-y: hidden;
+        }
+
+        nav img.pushed {
+            display: none;
+        }
+
+        /* Hides nav bar when scrolling */
+        .scrolled {
+            font-size: 10pt;
+            line-height: 20px;
+        }	
+
+        /* animation when mouse is over Navbar */
+        .hover {
+            font-size: 20pt;
+            line-height: 40px;
+        }
+
+        /* Images */
+
+        /* Logo */
+        #img-logo {
+            width: 150px;
+            float: left;
+            position: fixed;
+            margin-top: 4px;
+            margin-left: 65px;
+            opacity: 1.0;
+        }
+
+        /* iGEM logo */
+        #img-igemlogo {
+            width: 60px;
+            float: right;
+            position: fixed;
+            margin-top: 1px;
+            opacity: 1.0;
+        }
+
+        /* More Icon */
+        #img-more {
+            position: fixed;
+            display: none;
+            width: 50px;
+            height: 50px;
+            margin-right: 0px;
+            right: 15px;
+            z-index: 2;
+            margin-top: -11px;
+        }
+
+        #img-UMD {
+            z-index: -999;
+            margin-left: -8px;
+            margin-top: -12px;
+            height: 600px;
+        }
+
+        /* Logos when more button is clicked */
+
+        #img-logoResized {
+            width: 200px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: -165px;
+            padding-right: 40px;
+        }
+       
+        .centered {
+            margin-left:auto;
+            margin-right:auto;
+			width: 1200px;
+            text-align: left;
+        }
+        
+		#table-pictures p {
+			text-align: center;
+			font-size: 14pt;
+		}
+		
+		#table-pictures {
+			background-color: #F0F0F0;
+		}
+		
+		.center {
+			margin-top: 80px;
+			text-align: center;
+		}
+		
+		.thumbnail {
+			width: 256px;
+		}
+		
+		#lightgallery {
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#h2-pic1, #h2-pic2 {
+			margin-top: 80px;
+			margin-bottom: 50px !important;
+            font-family: 'Lora', serif;
+            font-weight: normal;
+		}
 	</style>
         <script>
 		/* Hiding stupid stuff*/
 		$(document).ready(function() {
-                		$('#top_title').css('display', 'none');
+                $('#top_title').css('display', 'none');
 				$('#top_menu').css('display', 'none');
 				//$('#top_menu_14').css('display', 'none');
-                		$('#HQ_page').css('display', 'none');
+                $('#HQ_page').css('display', 'none');
 				$('#top_menu_under').css('display', 'none');	
-                });
+        });
 		$('#HQ_page').attr("id","iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
 		$('#mw-content-text').attr("id","overruled").removeClass('mw-content-ltr');
 	</script>
@@ -501,105 +585,166 @@
 		</a>
 		<ul>
 			<a style="opacity: 0">Fix</a>
-			<li><a href="#div-title">Meet-Up</a></li>
-			<li><a href="#information">Information</a></li>
-			<li><a href="#schedule">Schedule</a></li>
-			<li><a href="#speakers">Speakers</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+			<!--<li><a href="http://2016.igem.org/Team:UMaryland/parts">Parts</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/modeling">Modeling</a></li>-->
+			<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
 		</ul>	
 	</nav>
 	<img src="http://2016.igem.org/wiki/images/e/e5/T--UMaryland--more.png" id="img-more">
 	<!-- Nav bar when more button is clicked	 -->
 	<div id="div-navResized">
-		<a href="http://2016.igem.org/Main_Page">
-		<img src="http://2016.igem.org/wiki/images/3/3d/T--UMaryland--igemlogo.png" id="img-igemlogoResized">
-		</a>
-		<img src="http://2016.igem.org/wiki/images/e/e3/16UMD-logoTemp.png" id="img-logoResized">
+		<img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized">
 		<ul>
-			<li><a href="#div-title">Meet-Up</a></li>
-			<li><a href="#information">Information</a></li>
-			<li><a href="#schedule">Schedule</a></li>
-			<li><a href="#speakers">Speakers</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+			<!--<li><a href="http://2016.igem.org/Team:UMaryland/parts">Parts</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/modeling">Modeling</a></li>-->
+			<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
 		</ul>	
 	</div>
 	<div id="div-title" class="image">
-		<img src="http://2015.igem.org/wiki/images/5/54/Campus.png" id="img-UMD"/>
-		<h1><span>2nd Annual Mid-Atlantic Mini-Jamboree</span> </h1>	
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/8/85/T--UMaryland--meetup.jpeg" id="img-UMD">
+                </div>
+		<h1 id="h1"><span>2nd Annual Mid-Atlantic Mini-Jamboree</span> </h1>	
                 <h1-2><br/><br/><br/><br/><span>July 22nd, 2016</span></h1-2> 
 	</div>
-        <div class="centered">
-	<h id="information"><a style="opacity: 0">I</a> </h>
-	<img src="http://2015.igem.org/wiki/images/1/10/Meetup.png" id="meetup"/>
+    <div class="centered">
 	<div id="Info" style="text-align: center">
-		<p id = "p1"> Last year, UMaryland iGEM founded the first Mid-Atlantic Meet-up and hosted 
+		<p class="pInfo"> UMaryland iGEM founded the first Mid-Atlantic Meet-up and hosted 
 			four other teams: UVA, William and Mary, Duke, and Rock Ridge High School.
 			Each team gave a 25 minute presentation of their project followed by a Q&A
 			with the audience. We were also fortunate enough to have Special Agent
 			Edward You of the FBI and UMD Professor Raymond St. Leger as guest speakers.</p>
-		<p id="p2"> This year, we plan to host many more teams and have a more ambitious agenda planned.
-			We cannot wait to welcome those who attend and show them an amazing UMD experience.
-			The location of the meet-up will be posted closer to the date. If you are a team interested in 
-			attending, please do not hesitate to contact us through email or Facebook. </p>	
-		<h id="schedule"><a style="opacity: 0">S</a></h> 	
+		<p class="pInfo">This year we included more iGEM teams in the Mid Atlantic Area hosting the University of Pittsburgh, the US Naval Academy, the College of Willam and Mary, and University of Virginia iGEM Teams. We shared ideas and received feedback about ours projects during our discussion session. We were joined by guest speakers Dr. Eli Groban and Dr. Ganesh Sriram with opening remarks by Dr. Edward Eisenstein and closing remarks by Anna Sifuentes.</p>
+		<p class="pInfo center">Thank you to everyone who particpiated!</p>
 	</div>
-	<div id="div-white">
-	<div id="div-img">
-	<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/University_of_Maryland_Seal.svg/1024px-University_of_Maryland_Seal.svg.png"
-		id="img-UMDseal"/>
-	<img src="http://2016.igem.org/wiki/images/e/eb/T--UMaryland--schedule.png" id="img-schedule"/>
+	<div id="div-participants">
+		<table id="table-pictures">
+			<tbody>
+				<tr>
+					<td>
+						<img src="http://2016.igem.org/wiki/images/3/3a/T--UMaryland--WM.jpeg" width="240px" />
+						<a href="http://2016.igem.org/Team:William_and_Mary" target="_blank"><p>William & Mary</p></a>
+					</td>
+					<td>
+						<img src="http://2016.igem.org/wiki/images/c/ca/T--UMaryland--UMD.jpeg" width="240px" />
+						<a href="http://2016.igem.org/Team:UMaryland" target="_blank"><p>University of Maryland</p></a>
+					</td>
+					<td>
+						<img src="http://2016.igem.org/wiki/images/2/22/T--UMaryland--UPitt.jpeg" width="240px" />
+						<a href="http://2016.igem.org/Team:Pittsburgh" target="_blank"><p>University of Pittsburgh</p></a>
+					</td>
+					<td>
+						<img src="http://2016.igem.org/wiki/images/d/d7/T--UMaryland--USNA.jpeg" width="240px" />
+						<a href="http://2016.igem.org/Team:USNA-Annapolis" target="_blank"><p>US Naval Academy</p></a>
+					</td>
+					<td>
+						<img src="http://2016.igem.org/wiki/images/1/16/T--UMaryland--UVA.jpeg" width="240px" />
+						<a href="http://2016.igem.org/Team:Virginia" target="_blank"><p>University of Virginia</p></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-	</div>
-	<div id="hiddenS">
-		<h id="speakers"><a style="opacity: 0">S</a></h> 	
-	</div>	
 	<div id="Speakers" class="bios">
-	<h2> Speakers </h2>
-		<img src="http://www.ench.umd.edu/sites/default/files/images/faculty/sriram4-lg.png" id="umdguy" data-select="ganesh"/>
-		<img src="http://www.synbioproject.org/site/assets/files/1299/todd_cropped.jpg" id="igemguy" data-select="todd"/>	
-		<div id="descriptions">
+	<h2 id="h2-pic1"> Speakers </h2>
+        <ul id="ul-images" class = "centered">
+		<li><img src="http://2016.igem.org/wiki/images/0/0b/T--UMaryland--GaneshSriram.jpg" id="img-speaker1" data-select="ganesh"/></li>
+		<li><img src="http://2016.igem.org/wiki/images/c/c8/T--UMaryland--EliGroban.jpg" id="img-speaker2" data-select="eli"/></li>	
+		</ul>
+        <div id="descriptions">
 			<div id="div-ganesh" class="description">
-				<h3> Dr. Ganesh Sriam</h3>
-				<p> Dr. Ganesh Sriram is Keystone Assistant Professor in the Department of Chemical and Biomolecular 
-				Engineering and Affiliate Faculty Member in the Bioengineering and Plant Biology graduate programs at 
-				University of Maryland. After earning his bachelor's and master's degrees in chemical engineering from 
-				Indian Institute of Technology (IIT) Bombay, he graduated a Ph.D. in chemical engineering from Iowa 
-				State University in 2004, working in the lab of Dr. Jacqueline Shanks. From 2004 to 2007, he was a 
-				postdoctoral researcher in the labs of Dr. Katrina Dipple and Dr. James Liao at UCLA.<sup>1</sup></p>
+				<h3> Dr. Ganesh Sriram</h3>
+				<p> Dr. Ganesh Sriram is a professor in the Department of Chemical and Biomolecular Engineering and an Affiliate Faculty Member in the Bioengineering and Plant Biology graduate programs at UMD. He has earned his B.S. and M.S degrees in Chemical Engineering from the Indian Institute of Technology in Bombay, and received his Ph.D. in chemical engineering from Iowa State University. His current research pertains to metabolic engineering and systems biology, especially of eukaryotes.<sup>1</sup></p>
+				<small>1. Bio from http://www.ench.umd.edu/faculty/sriram</small>
 			</div>
-			<div id="div-todd" class="description" style="display: none;">
-				<h4> Dr. Todd Kuiken </h4>
-				<p> Dr. Todd Kuiken is a Senior Program Associate with the Science and Technology Innovation Program 
-				where he explores the scientific and technological frontier, stimulating discovery and bringing new 
-				tools to bear on public policy challenges that emerge as science advances.
-				He is the principal investigator on the Wilson Center’s Synthetic Biology Project, where he has 
-				numerous projects evaluating and designing new research and governance strategies to proactively 
-				address the biosafety, biosecurity and environmental risks associated with synthetic biology. 
-			 	He is also the human practices chairperson of the International Genetically 
-				Engineered Machines competition and a founding member of its biosafety/biosecurity committee.<sup>2</sup>
+			<div id="div-eli" class="description" style="display: none;">
+				<h6> Dr. Eli Groban </h6>
+				<p> Dr. Eli Groban is the senior manager of of Bio/Nano Research at Autodesk, and has 6 patent applications on the development of new technologies for engineering proteins, metabolic pathways, and whole microbes. Eli will also be serving as an iGEM judge in the 2016 competition. He received his PhD in Biophysics from the University of California, San Francisco, and his B.A. in Chemistry from Williams College.<sup>2</sup>
 				</p>
+				<small>2. Bio from https://www.autodeskresearch.com/people/eli-groban</small>
 			</div>	
 		</div>	
 	</div>
-	<div id="footnotes">
-		<sup>1. Bio from http://www.ench.umd.edu/faculty/sriram</sup>
-		<br/>
-		<sup>2. Bio from https://www.wilsoncenter.org/person/todd-kuiken-phd</sup>
+	<h2 id="h2-pic2">Pictures</h2>
+	<div id="lightgallery">
+	  <a href="http://2016.igem.org/wiki/images/e/e4/T--UMaryland--meetup1.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/e/e8/T--UMaryland--meetup1th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/1/1a/T--UMaryland--meetup2.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/8/87/T--UMaryland--meetup2th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/a/a3/T--UMaryland--meetup3.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/c/c3/T--UMaryland--meetup3th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/7/7c/T--UMaryland--meetup4.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/f/f4/T--UMaryland--meetup4th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/3/3b/T--UMaryland--meetup5.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/a/a6/T--UMaryland--meetup5th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/5/55/T--UMaryland--meetup6.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/f/f1/T--UMaryland--meetup6th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/c/c1/T--UMaryland--meetup7.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/f/f0/T--UMaryland--meetup7th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--meetup8.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/1/16/T--UMaryland--meetup8th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/3/38/T--UMaryland--meetup9.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/e/e2/T--UMaryland--meetup9th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/1/18/T--UMaryland--meetup10.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/b/bb/T--UMaryland--meetup10th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/1/19/T--UMaryland--meetup11.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/6/6f/T--UMaryland--meetup11th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/7/7d/T--UMaryland--meetup12.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/3/3b/T--UMaryland--meetup12th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/e/ee/T--UMaryland--meetup13.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/4/49/T--UMaryland--meetup13th.jpg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/5/5e/T--UMaryland--meetup14.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/d/d6/T--UMaryland--meetup14th.jpeg" />
+	  </a>
+	  <a href="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--meetup15.jpeg">
+		  <img class="thumbnail" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--meetup15th.jpg" />
+	  </a>
 	</div>
+    </div>
+    <div id="bot-nav">
+        <div id="container">
+            <div class="pull-left">
+                <a href="mailto:umarylandigem@gmail.com"><p id="contact"> Contact Us </p></a>
+            </div>	
+            <p id="copyright">© University of Maryland iGEM 2016</p>
+            <div class="pull-right">
+                <ul id="social-media">
+                    <li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png"/> </a> </li>
+                    <li> <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--Instalogo.png"/> </a> </li>
+                </ul>
+            </div>	
         </div>
-	<div id="bot-nav">
-		<div id="container">
-			<div class="pull-left">
-				<a href="mailto:umarylandigem@gmail.com"><p id="contact"> Contact Us </p></a>
-			</div>	
-			<p id="copyright">© University of Maryland iGEM 2016</p>
-			<div class="pull-right">
-				<ul>
-					<li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png"/> </a> </li>
-					<li> <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--Instalogo.png"/> </a> </li>
-				</ul>
-			</div>	
-		</div>
-	</div>
+        <div id="bot-navResized">
+            <a href="mailto:umarylandigem@gmail.com"><h4 id="contactResized"> Contact Us </h4></a>	
+            <h5 id="copyrightResized">© University of Maryland iGEM 2016</h5>
+            <ul id="social-mediaResized">
+                <li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png"/> </a> </li>
+                <li> <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--Instalogo.png"/> </a> </li>
+            </ul>
+        </div>
+    </div>
 	<script>
+
+$('.linkText').click( function() { $(this).css('text-decoration','none'); $(this).focusout();});
+
 		// Text animation for speaker bios	
 		var current = 'ganesh';
 		$('.bios img').click( function() { 
@@ -664,10 +809,23 @@
 					}	
 				}
 			}
+            function checkBotNav() {		
+				if ($(window).width() < 980){
+                    $('#container').css('display', 'none');
+                    $('#bot-navResized').css('display', 'block');
+                    $('#bot-nav').css('height', '110px');	
+				} else {
+                    $('#container').css('display', 'block');
+                    $('#bot-navResized').css('display', 'none');
+                    $('#bot-nav').css('height', '75px');
+				}
+			}
 		// Execute on load
     		checkWidth();
+            checkBotNav();
     		// Bind event listener
     		$(window).resize(checkWidth);
+    		$(window).resize(checkBotNav);
 		});
 		// Resized nav bar effect when more icon is clicked
 		$('#img-more').click(function() {
@@ -675,7 +833,6 @@
 			$('#div-navResized').toggleClass('pushed');
 			$('nav').toggleClass('pushed');
 			$('nav img').toggleClass('pushed');
-			$('#bot-nav').toggleClass('pushed');
 			if ($(window).width() >= 980) { var pushed = $('body').hasClass('pushed'); if (pushed == false){
 				$('nav li').css('display', 'inline');
 				$('#img-more').css('display','none');
@@ -705,8 +862,22 @@
 					$('#img-igemlogo').css('opacity', '1');	
 				}
 			});
+                  
                 $(body).css('display','block');
-
+	</script>
+        <script src="http://pixelcog.github.io/parallax.js/js/parallax.min.js">
+        </script>
+	<script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lightgallery.js">
+	</script>
+	<script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-fullscreen.js">
+	</script>
+	<script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-thumbnail.js">
+	</script>
+	
+	<script>
+		$(document).ready(function() {
+			$("#lightgallery").lightGallery(); 
+		});
 	</script>
 </body>
 		
