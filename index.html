@@ -1,168 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
-
+</div></div><html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript">
-		if (typeof jQuery == 'undefined') {
-			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-		}
-	</script>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>	
-	<link href="css/hover.css" rel="stylesheet" media="all">
-	<link href='css/index.css' rel='stylesheet' type='text/css'>
-	<title>UMaryland iGEM 2015</title>
+	<link href='https://fonts.googleapis.com/css?family=Exo|Lora' rel='stylesheet' type='text/css'>	
+        
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
-	<img src="img/plasmid2.jpg" id="img-plasmid"/>
-	<a id="button" title="button">Press Me</a>
-	<nav>		
-		<a href="index.html">
-		<img src="img/logo.png" id="img-logo">
-		</a>
-		<a href="http://2016.igem.org/Main_Page">
-		<img src="img/igemLogo.png" id="img-igemlogo">
-		</a>
-		<ul>
-			<a style="opacity: 0">Fix</a>
-			<li><a href="projects.html" class="hvr-float">Projects</a></li>
-			<li><a href="parts.html" class="hvr-float">Parts</a></li>
-			<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
-			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
-			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
-			<li><a href="about.html" class="hvr-float">About Us</a></li>
-		</ul>	
-	</nav>
-	<img src="img/more.png" id="img-more">
-	<!-- Nav bar when more button is clicked	 -->
-	<div id="div-navResized">
-		<a href="http://2016.igem.org/Main_Page">
-		<img src="img/igemLogo.png" id="img-igemlogoResized">
-		</a>
-		<a href="index.html">
-		<img src="img/logo.png" id="img-logoResized">
-		</a>
-		<ul>
-			<li><a href="projects.html" class="hvr-float">Projects</a></li>
-			<li><a href="parts.html" class="hvr-float">Parts</a></li>
-			<li><a href="modeling.html" class="hvr-float">Modeling</a></li>
-			<li><a href="outreach.html" class="hvr-float">Outreach</a></li>
-			<li><a href="notebook.html" class="hvr-float">Notebook</a></li>
-			<li><a href="about.html" class="hvr-float">About Us</a></li>
-		</ul>	
-	</div>
-	<!-- For nav bar scrolling + hovering + window resize effects-->
-	<script>
-		// Animation over top nav bar when mouse hovers
-		$('nav').mouseover(
-			function () {
-				$('#img-logo').css('transition', '.35s ease-in');
-				$('#img-logo').css('opacity', '1');
-				$('#img-igemlogo').css('transition', '.35s ease-in');
-				$('#img-igemlogo').css('opacity', '1');
-				$('nav ul').addClass("hover");
-			}	
-		),
-		$('nav').mouseout(
-			function () {
-			var scroll = $(window).scrollTop();
-				if (scroll > 0 && $(window).width() >= 980 && !$('body').hasClass('pushed')) {
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-					$('nav ul').removeClass("hover");
-					$('nav').css('transition', '.5s ease');
-				}
-			}
-		),
-		// Window width effect on top nav bar
+<script>
+		/* Hiding stupid stuff*/
 		$(document).ready(function() {
-			function checkWidth() {		
-				if ($(window).width() < 980 || $('body').hasClass('pushed')){
-					$('nav li').css('display', 'none');	
-					$('#img-more').css('display','block');
-					$('nav ul').addClass("hover");
-					$('#img-logo').css('transition', '.35s ease-in');
-					$('#img-logo').css('opacity', '1');
-					$('#img-igemlogo').css('transition', '.35s ease-in');
-					$('#img-igemlogo').css('opacity', '1')
-				} else {
-					$('nav li').css('display', 'inline');
-					$('#img-more').css('display','none');
-					$('nav ul').removeClass("hover");
-					if ($(window).scrollTop() > 0) {
-						$('#img-igemlogo').css('transition', '.25s ease');
-						$('#img-igemlogo').css('opacity', '0');
-						$('#img-logo').css('transition', '.25s ease');
-						$('#img-logo').css('opacity', '0');
-						$('nav ul').addClass("scrolled");
-					}	
-				}
-			}
-			// Execute on load
-    		checkWidth();
-    		// Bind event listener
-    		$(window).resize(checkWidth);	
-		});
-		// Resized nav bar effect when more icon is clicked
-		$('#img-more').click(function() {
-			$('#img-more').toggleClass('pushed');
-			$('#div-navResized').toggleClass('pushed');
-			$('nav').toggleClass('pushed');
-			$('body').toggleClass('pushed');
-			$('nav img').toggleClass('pushed');
-			$('#bot-nav').toggleClass('pushed');
-			if ($(window).width() >= 980 && !$('body').hasClass('pushed')){
-				$('nav li').css('display', 'inline');
-				$('#img-more').css('display','none');
-				$('nav ul').removeClass("hover");
-				$('#img-igemlogo').css('transition', '.25s ease');
-				$('#img-igemlogo').css('opacity', '0');
-				$('#img-logo').css('transition', '.25s ease');
-				$('#img-logo').css('opacity', '0');
-			}
-		});
-		// Scrolling animation for top nav bar
-		$(function() {
-			var nav = $('nav ul');
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-				if (scroll > 0 && $(window).width() >= 980) {
-					nav.addClass("scrolled");
-					nav.removeClass("hover");
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-				} else {
-					nav.removeClass("scrolled");
-					$('#img-logo').css('transition', '.35s ease-in');
-					$('#img-logo').css('opacity', '1');
-					$('#img-igemlogo').css('transition', '.35s ease-in');
-					$('#img-igemlogo').css('opacity', '1');	
-				}
-			});
-		});
+                $('#top_title').css('display', 'none');
+				$('#top_menu').css('display', 'none');
+				//$('#top_menu_14').css('display', 'none');
+                $('#HQ_page').css('display', 'none');
+				$('#top_menu_under').css('display', 'none');	
+                });
+		$('#HQ_page').attr("id","iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
+		$('#mw-content-text').attr("id","overruled").removeClass('mw-content-ltr');
 	</script>
-	<h1 style="text-align: center">UMaryland</h1>
-	<div id="div-title" style="text-align: center;">
-		<h2 class="green">Hok</h2>
-		<h2>/</h2>
-		<h2 class="red">Sok</h2>
-		<h3 style="text-align:center">Internal Plasmid Retention System</h3>
-	<img src="img/hoksokdiagram.png" id="img-hoksok" style="border:5px solid black"/>
+<style>
+        #bars_item {
+            display: none;
+        }
+
+        #sideMenu {
+            display: none;
+        }  
+
+        #bodyContent, #content, html, body, #globalWrapper, #iGEM, #overruled {
+             width: 100%;
+             padding: 0 0 0 0;
+             border: none;
+             margin: 0 0 0 0;
+             background: transparent;
+			 font-family: Raleway !important;
+			 min-width: 1000px;
+			 min-height: 500px;
+        }
+
+         #top_title {
+             display: none;
+             line-height: inherit;
+         }
+
+         #sideMenu {
+             display: none;
+         }
+
+        /* Navbar and body setup */
+        body {
+			overflow: normal;
+        }
+
+        #content {
+                margin-top: 0px;
+        }
+		
+	#UMD-content {
+		font-family: Raleway !important;
+		min-width: 1000px;
+		color: white;
+		font-weight: 300;
+		
+	}
+	
+	#UMD-content a {
+		color: white;
+	}
+	
+	#nav li {
+		display: inline;
+		font-size: 18pt;
+		margin-right: 35px;
+	}
+	
+	#nav {
+		margin-right: 2%;
+		margin-left: auto;
+		width: 810px;
+	}
+	
+	#nav ul {
+		list-style: none;
+	}
+	
+	#h2 {
+		font-family: Raleway !important;
+		display: none;
+		font-size: 36pt !important;
+		margin-top: 0px !important;
+		text-align: left !important;
+	}
+	
+	#h3, #div-h3 {
+		font-family: Raleway !important;
+		display: none;
+		font-size: 20pt !important;
+		line-height: 1.5em !important;
+		text-align: left !important;
+	}
+	
+	#div-text {
+		width: 1100px;
+		padding-top: 20px;
+	}
+	
+	#img-logo {
+		display: none;
+		margin-top: 10px;
+		float: left;
+		margin-right: 50px;
+	}
+	
+	.notOutline {
+		margin-left: 50px;
+		min-height: 400px;
+		min-width: 1000px;
+	}
+	
+	.hide {
+		display: none;
+	}
+	a {
+		padding-right: 0px !important;
+		text-decoration: none !important;
+	}
+	
+	
+	.tour {
+		display: none;
+		position: absolute;
+		right: 150px;
+		top: 50%;
+		bottom: auto;
+		left; auto;
+	}
+	
+	html {
+		background: url(http://2016.igem.org/wiki/images/7/7e/T--UMaryland--main.jpg) !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+	}
+	
+	.background {
+		background-color: rgba(0,0,0, 0.7);
+		padding: 5px 5px 5px 5px;
+	}
+	
+	.background2 {
+		background-color: rgba(0,0,0, 0.7);
+		padding: 5px 0px 5px 0px;
+	}
+	
+	.background3 {
+		background-color: rgba(0,0,0, 0.7);
+		padding: 5px 10px 5px 10px;
+	}
+	
+	#navContainer {
+		position: relative;
+		width: 100%;
+		height: 25px;
+		margin-top: 80px;
+		margin-bottom: 120px;
+		min-width: 1000px;
+	}
+	
+	
+	#small {
+		font-size: 14pt !important;
+		display: block !important;
+		font-family: Raleway !important;
+		margin-right: 2%;
+		margin-left: auto;
+		width: 500px;
+		
+	}
+	
+	.smallContainer {
+		width: 100%;
+		min-width: 1000px;
+		height: 30px;
+		margin-top: 120px;
+		
+	}
+</style>
+<div id="UMD-content">
+	<div id="navContainer">
+	<div class="hide">
+		<nav id="nav">
+			<ul>
+				<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+				<li><a href="http://2016.igem.org/Team:UMaryland/Parts_Collection">Parts</a></li>
+				<li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+				<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+				<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+				<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+			</ul>	
+		</nav>
 	</div>
-	<div id="bot-nav">
-		<ul>
-			<li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="img/FBLogo.png"/> </a> </li>
-			<li> <a href="https://www.instagram.com/umarylandigem/"> <img src="img/InstaLogo.png"/> </a> </li>
-			<li> <a href="mailto:umarylandigem@gmail.com"> <img src="img/MailLogo.png"/> </a> </li>
-		</ul>
 	</div>
-</body>
-<script type="text/javascript" src="js/index.js"></script>
+	<div class="notOutline">
+		<img src="http://2016.igem.org/wiki/images/9/9d/T--UMaryland--newlogosquare.png" id="img-logo" alt="UMaryland iGEM Logo" width="300px"/>
+		<div id="div-text">
+			<p id="h2"><span class="background">Biosequestration of Methane</span></p>
+			<p id="h3"><span class="background2">Creating a strain of E. coli that break down methane to be implemented into landfills as an environmentally friendly strategy for ameliorating global climate change</span></p>
+		</div>
+	<div class="smallContainer">
+		<div class="hide">
+			<p id="small"><span class="background">Follow us on <a target="_blank" href="https://www.facebook.com/UMarylandiGEM/" style="text-decoration: underline;">Facebook</a> and <a target="_blank" href="https://www.instagram.com/umarylandigem/" style="text-decoration: underline;">Instagram</a> for updates!</span></p>
+		</div>
+	</div>
+	</div>
+</div>
+	<style>
+		#img-logoNav{
+			display: none;
+			margin-left: 50px;
+			margin-top: 42px;
+			width: 260px;
+			float: left;
+		}
+	</style>
+</div>
+	<script>
+	
+	
+		$.fn.extend({
+			animateCss: function (animationName) {
+				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+				this.addClass('animated ' + animationName).one(animationEnd, function() {
+					$(this).removeClass('animated ' + animationName);
+				});
+			}
+		});
+		
+		$(window).load(function() {
+			var timeoutID;
+			var timeoutID2;
+			
+			$('#img-logo, #h2').animateCss('fadeInUp');
+			$('#h2, #img-logo').css('display','block');
+			timeoutID = window.setTimeout(show2, 800);
+			
+			
+		})
+		
+		function show2(){
+			$('#h3, #div-h3').animateCss('fadeInUp');
+			$('#h3, #div-h3').css('display','block');
+			timeoutID = window.setTimeout(show3, 800);
+		}
+			
+		function show3() {
+			$('nav, #small').animateCss('fadeInUp');
+			$('.hide').css('display','block')
+			timeoutID = window.setTimeout(show4, 2000);
+		}
+		
+		function show4() {
+			$('.tour').animateCss('slideInLeft');
+			//$('.tour').css('display','block')
+			timeoutID = window.setTimeout(show5, 5000);
+		}
+		
+		function show5() {
+			$('.tour').animateCss('pulse');
+			timeoutID = window.setTimeout(show5, 5000);
+		}
+		
+	</script>
+	
 </html>

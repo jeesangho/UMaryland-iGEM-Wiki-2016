@@ -10,7 +10,9 @@
     <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
     <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
     <script src="http://2016.igem.org/wiki/images/d/d3/T--UMaryland--slick.txt" type="text/javascript"></script>
-    <title>Human Practices</title>
+    <script src="http://2016.igem.org/wiki/images/3/33/T--UMaryland--smoothScroll.txt"></script>
+
+    <title>Modeling</title>
 </head>
 
 <body>
@@ -289,7 +291,7 @@
             display: block;
         }
 
-        #div-navResized.pushed a:hover {
+        #div-navResized.pushed a:hover, #div-navResized.pushed img:hover {
             opacity: .7;    
             text-decoration: none;
         }
@@ -356,16 +358,12 @@
 		
 	<style>
 		.caption {
-			font-size: 12pt;
 			font-weight: bold;
-			margin-left: 25px;
+			font-size: 12pt;
+			margin-top: 10px;
+			line-height: 2em;
 		}
-		
-		#div-figures{
-			padding-bottom: 100px;
-			font-size: 14pt;
-		}
-		
+	
 		.titleText {
 			position: absolute;
 			top: 350px;
@@ -413,20 +411,15 @@
         #div-text {
 			padding-top: 50px;
 			padding-bottom: 150px;
+			min-height: 800px;
         }
 
-        .div-scrollPic {
+        #div-pic {
             z-index: -999;
             height: 500px;
 			background-color: transparent;
         }
 
-		.scrollContainer {
-			
-			position: relative;
-			width: 100%;
-		}
-		
         .imageEmbed {
             /* creates border around image on each page */
             border-style: solid;
@@ -436,17 +429,8 @@
             border-width: 2px;
         }
 
-		.longText li {
-			
-            font-size: 14pt;
-            line-height: 2;
-            font-weight: 400;
-		}
-		
-        #div-text p {
+        #div-text p, .longText li {
             /* formats text and lists within .longText */
-			padding-top: 15px;
-			padding-bottom: 15px;
             font-size: 14pt;
             line-height: 2;
             font-weight: 400;
@@ -464,9 +448,19 @@
         h4 {
             /* formats intratext section headings */
             font-size: 20pt;
-            margin-top: 80px;
         }
 
+		h5 {
+			font-size: 16pt;
+			display: inline;
+		}
+		
+		.div-h5 {
+			
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		
         .blockText {
             /* initially hides all of the text on page */
             display: none;
@@ -477,6 +471,23 @@
             margin-top: 30px;
         }
 
+        .figure {
+            /* fixes the width of images in results tables */
+            width: 80%;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 7%;
+			margin-right: 13%;
+        }
+		
+		.figureImg {
+			width: 100%;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+		}
+		
 
         /* formats caption and heading of results tables */
         td p {
@@ -506,35 +517,55 @@
         #h4-first {
             margin-top: 50px;
         }
-		
-		#div-slideshow {
-			margin-top: 40px;
-			margin-bottom: 40px;
-			margin-left: auto;
-			margin-right: auto;
-			width: 800px;
-		}
-		
-		#div-slideshow img {
-			width: 750px;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			margin-left: auto;
-			margin-right: auto;
-			border: 2px solid #A8A8A8;
-		}
-		
-		#div-dots {
-            height: 100px;
+
+        /* table of element */
+
+        #table-selector {
+            width: 80%;
+			min-width: 600px;
+			max-width: 1500px;
+			position: absolute;
+            border-collapse: collapse;
+            background: none;
+        }
+
+        #table-selector th {
+			width: 25%;
+            text-align: center;
+        }
+
+        .borderRight {
+            border-right: 1px solid #A8A8A8;
+        }
+
+        .borderBoth {
+            border-left: 1px solid #A8A8A8;
+            border-right: 1px solid #A8A8A8;
+        }
+
+        .borderTop {
+            border-bottom: 1px solid #A8A8A8;
+        }
+
+        th p {
+            font-size: 24pt;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 5px 0px 15px 0px;
+            margin: 0 0 0 0;
         }
 		
-		#div-dots {
-            height: 100px;
+		.div-scrollPic {
+            z-index: -999;
+            height: 500px;
+			background-color: transparent;
         }
-		
+
         </style>
-	<nav>		
-		<a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo" width="128px"></a>
+	<nav>	
+        <a href="http://2016.igem.org/Team:UMaryland">	
+		<img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo" width="128px">
+        </a>
 		<ul>
 			<a style="opacity: 0">Fix</a>
 			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
@@ -548,7 +579,7 @@
 	<img src="http://2016.igem.org/wiki/images/e/e5/T--UMaryland--more.png" id="img-more">
 	<!-- Nav bar when more button is clicked	 -->
 	<div id="div-navResized">
-		<img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized">
+		<a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized"></a>
 		<ul>
 			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
 			<li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
@@ -558,72 +589,133 @@
 			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
 		</ul>	
 	</div>
-	<div class="scrollContainer">
-		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--il.jpg" class="div-scrollPic" style="height: 650px;">
-		<div class="titleText"> 
-				<style>
-				</style>
-			<!-- where background image below titles show -->
-			<h11>Interlab Study</h11></br>
-			<h21>Fluorescence Data From 3 Different Constructs with GFP</h21></br>
-			<h31>Standardizing fluorescence measurements and promoting collaboration. </h31></br>
-			</div>
-			</div>
-	</div>
+	
+	<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/0/01/T--UMaryland--bioreactor.jpg" class="div-scrollPic" style="height: 650px;">
+	<div class="titleText"> 
+		<!-- where background image below titles show -->
+			<h11>Methane Biosequestration </h11></br>
+			<h21>Creating Bacteria to Break Down Methane</h21></br>
+			<h31>Environmentally friendly strategy for ameliorating global climate change</h31></br>
+		</div>
+        </div>
+	<div id="div-text"> <!-- Start of main text of page -->
 		<!-- Heading text -->
-		
-	<div id="div-text">
-		<div class="longText">
-			<p>The interlab study measures the fluorescence of three different constructs with GFP as well as a positive and negative control. It attempts to standardize the fluorescence measurements by adjusting absorbance values when compared to blanks, reducing the amount of independent variables by controlling for concentration, and adjusting fluorescence values based on the standard curve of FITC.  The goal of this study is to see how the observed fluorescence values compare across the iGEM community to see if the adjustments successfully standardize fluorescence measurements.</p>
-			<p>As a community of synthetic biologist, a key to the advancement of the field is collaboration among groups. For proper collaboration, we must be able to communicate our findings in ways that are concrete and well defined, making standards essential.</p>
-		</div>
-		<div class="longText">
-			<h4>Tested Devices</h4>
-			<p>Transform competent cells with Test Devices 1 - 3, positive control, and negative control provided and plate them overnight on chloramphenicol resistant plates.</p>
-			<ul>
-				<li>Test Device 1: J23101.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 2: J23106.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 3: J23117.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Positive Control Device: I20270 in pSB1C3</li>
-				<li>Negative Control Device: R0040 in pSB1C3</li>
-			</ul>
-		</div>
-		<div class="longText" id="div-protocol">
-			<h4>Protocol</h4>
-			<ol>
-				<li>Pick two colonies from each plate to inoculate and grow overnight.
-</li>
-				<li>Calibrate the plate reader-
-Measure absorbance of LUDOX and water to find a corrected absorbance that can then be used to find a conversion factor for a standard OD600 measurement.</li>
-				<li>Use FITC to create a standard fluorescence curve - 
-Measure fluorescence of FITC at different concentrations to generate a curve of fluorescence over concentration.</li>
-				<li>Measure OD600  of the overnight cultures and create dilutions to put them at an OD600 of 0.02.</li>
-				<li>Incubate at 37 C and take 100ul samples every hour (from hours 0-6).</li>
-				<li>Measure OD600 of all the samples and record.</li>
-			</ol>
-		</div>
-		<div class="longText">
-			<h4>Results</h4>
-			<div id="div-results">
-				<ul>
-					<li>Most samples grew exponentially, device 1 seemed to have little growth.</li>
-					<li>Negative control and device 3 did not show fluorescence. Positive control, device 1, and device 2 showed increases in fluorescence over time.</li>
-					<li>The results show that fluorescence per unit of concentration remains relatively constant over time.</li>
-				</ul>
+		<style>
+			.longText strong {
+				font-size: 14pt;
+				line-height: 2;
+			}
+			
+			.longText {
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			
+			.textSection {
+				display: none;
+			}
+			
+			.longText p {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
+		</style>
+		<table id="table-selector"> 
+			<thead>
+				<th class="borderRight navigator borderTop" id="th-background" data-select="background"><p>Background</p></th>
+				<th class="borderBoth navigator borderTop" id="th-strategy" data-select="design"><p>Design</p></th>
+				<th class="borderLeft navigator borderTop" id="th-results" data-select="results"><p>Results</p></th>
+				<!--<th class="borderBoth navigator borderTop" id="th-experiment" data-select="experiment"><p>Experiment</p></th>-->
+			</thead>
+		</table>
+		</br></br></br>
+		<div class="longText"> 
+			<div class="textSection" id="div-background">
+			<h4>Background</h4>
+			<p>When solar energy is absorbed by the Earth’s surface, the energy radiates back and is then absorbed by greenhouse gases. This absorption causes heat to stay at the Earth’s surface, creating a warming effect. Methane is a potent greenhouse gas in the atmosphere that, though not as abundant as other greenhouse gases, has a major affect on the warming of the planet. The three biggest contributors to methane emissions are fossil fuel production, livestock farming, and landfills.</p> 
+			<p>Different ways of managing methane emissions and reducing the amount of methane production are being to put to use. Legislation passed by the EPA requires Oil and Gas companies to monitor their methane emissions and are required to operate under regulations that require emissions to be under a certain quantity. Methane in landfills is managed by flaring or used in power generators that function as an alternative energy source.</p> 
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/1/1d/T--UMaryland--generator.jpg" class="figureImg" />
+				<small class="caption">Landfill electricity generator system using methane as seen in Gude Landfill, MD</small>
 			</div>
-			<div id="div-slideshow">
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--absorbance.JPG">
-					<small class="caption">Figure 1. Cell growth versus absorbance.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/1/17/T--UMaryland--fluorescence.JPG">
-					<small class="caption">Figure 2. Cell growth versus flourescence.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--abs-fluor.JPG">
-					<small class="caption">Figure 3. Cell growth versus absorbance / flourescence.</small>
-				</div>
+			<p>Livestock produce methane gas in their metabolism and manure produces methane as it decomposes. In attempt to control the amount of methane produced by the latter, farms can implement anaerobic digesters that use the biogases produced by anaerobic digestion and decomposition of manure to create an alternative energy or heat source. </p>
+			<p>However, regulations do not stop the problem, flaring is not 100% effective and can produce air pollutants, and machines that are able to use methane as an energy or heat source can be expensive and difficult to maintain.</p>
+			<p>A biological alternative to reducing methane in the atmosphere is the implementation of methanotrophs, prokaryotes that metabolize and use methane as their main carbon source.</p>
+			</div>
+		</div>
+		<div class="longText">
+			<div class="textSection" id="div-design">
+			<h4>Design</h4>
+			<p>As a way to sequester methane emissions, we will engineer E. coli to be able to metabolize methane. To do this, we have designed two metabolic pathways that take methane to biomass or carbon dioxide.</p>
+			<ul>
+				<li>Both pathways start with the conversion of methane to methanol using the sMMO gene found in Methylococcus capsulatus, a methanotroph. This gene produces an enzyme that can oxidize methane, therefore converting it to methanol. </li>
+				<li>Once the methane is converted to methanol, other engineered E. coli will metabolize the methanol. This will be able to happen in two different pathways that we have designed.</li>
+				<li>The first pathway, as we call the fructose pathway, uses a series of enzymes to convert the methanol to a fructose derivative.</li>
+				<li>The second, or alternative pathway, as we call the formate pathway, will convert the methanol to carbon dioxide, a much less potent gas, and NADH, a molecule commonly used in redox reactions.</li>
+				<li>The engineered bacteria will be co-cultured to provide the complete pathway of methane metabolism.</li>
+				<li>This co-culture can be applied to the piping of landfills, where methane gas may escape.</li>
+			</ul>
+			</div>
+		</div>
+		<div class="longText">
+			<div class="textSection" id="div-results">
+			<h4>Results</h4>
+			<style>
+				.sideNav {
+					width: 100%;
+					margin-top: 50px;
+					margin-bottom: 50px;
+				}
+				
+				.sideNav ul {
+					margin-left: 0px;
+				}
+				
+				.sideNav li {
+					list-style: none;
+					display: inline;
+					margin-right: 15%;
+				}
+				
+				.sideNav a, .div-h5 a {
+					color: blue;
+					text-decoration: underline;
+				}
+				
+				.sideNav a:visited, .div-h5 a:visited {
+					color: blue;
+					text-decoration: underline;
+				}
+				
+				.btt {
+					margin-left: 15px;
+					font-size: 10pt;
+				}
+				
+			</style>
+			<div class="sideNav" id="sideNav">
+				<p>View the results of our plasmids:</p>
+				<ul>
+					<li> <a href="#smmo" data-scroll>sMMO</a> </li>
+					<li> <a href="#formate" data-scroll>Formate</a> </li>
+					<li> <a href="#fructose" data-scroll>Fructose</a> </li>
+				<ul>
+			</div>
+			<h5 id="smmo">sMMO</h5>
+			<p>The first plasmid, termed “sMMO” , is adopted from Team Braunschweig 2014. This plasmid has the sMMO gene that produces the soluble form of methane monooxygenase, which converts methane to methanol.</p>
+			<p>We attempted to recreate this plasmid using several different methods. The plasmid consists of a lac pL promoter, inducible by IPTG, six sMMO subunits, a ribosome binding site before each subunit, and a double terminator. The subunits are MMOB, MMOC, MMOD, MMOX, MMOY, and MMOZ. MMOB, MMOC, MMOD, and MMOX were all special ordered from the registry. The lac pL promoter and ribosome binding site were obtained from the kit. An RBS, MMOY,  another RBS, MMOZ, and the double terminator were designed into a G-Block provided by IDT.</p>
+			<p>We designed the G-Block to have an overhang on both ends that corresponded to the ends of a linearized backbone and then performed a gibson assembly to insert that set of genes into a chloramphenicol resistant backbone provided by iGEM. We then attempted to combine a ribosome binding site with each subunit using 3A assembly.  The plan was then to sequentially combine the subunits together, combine them with the G-Block part, and then combine the promoter with that using more 3A assemblies. Unfortunately, we were not able to find success in this strategy and the length of the process proved to be a major setback so we looked to try a new method.</p> 
+			<p>For this new method, we hoped to take advantage of the ease of gibson assemblies. We designed primers for each subunit. The forward primer would contain an overhang to correspond to the part it would attach to as well as a ribosome binding site. The reverse primer would simply anneal to the end of the subunit, excluding the final subunit, which would also contain an overhang that would correspond to the backbone. The products of the PCR reactions would then be put into a gibson reaction with a plasmid that had a chloramphenicol resistant backbone and an insert of the lac pL promoter. The proposed order would be MMOB, MMOC, MMOD, and MMOX, with MMOB having an overhang with the end of the lac pL promoter, MMOC having an overhang with MMOB, MMOD having an overhang with MMOC, and MMOX having an overhang with MMOD (in the forward primer) and the backbone (in the reverse primer). This method, too, was not providing us the results we were expecting.</p>
+			<p>Our final attempt at creating the sMMO plasmid involved purchasing two new G-Blocks, one with the promoter, a ribosome binding site, and MMOX, and another with ribosome binding sites in front of MMOB, MMOC, and MMOD. These G-Blocks were designed with overhangs to be combined with each other and be used in a gibson reaction with a chloramphenicol resistant backbone to create a plasmid. This plasmid was then to be combined with the MMOY/MMOZ plasmid using a 3A assembly.</p>
+
+			<div class="div-h5"><h5 id="fructose">Fructose</h5><a href="#table-selector" class="btt" data-scroll>Back to top</a></div>
+			<p>The next plasmid we assembled was our “Fructose” plasmid. This plasmid, adopted from Team Aachen 2015, directs a metabolic pathway that converts methanol to formaldehyde with the MDH2 enzyme (methane dehydrogenase), then converts formaldehyde to 3-hexulose-6-phosphate with the HPS enzyme (3-hexulose-6-phosphate synthase), and converts that product to D-fructose 6-phosphate using the PHI enzyme (6-phospho-3-hexuloisomerase). This enzymatic pathway converts methanol to a fructose derivative.</p>
+			<p>To assemble this part we ordered two G-Blocks, one containing a lac pL promoter, a ribosome binding site, and MDH2, and another containing ribosome binding sites in front of HPS and PHI and a double terminator. The G-Blocks were designed so that they had overhangs that corresponded with each other as well as the ends of the backbone. We performed a gibson assembly to put all the pieces together and got our final product of the assembled plasmid.</p>
+			<p>To test the functionality of our plasmid we transformed BL21 with the construct. We performed an SDS PAGE to analyze if the protein was being expressed. We also measured the methanol concentration over time when the cells were grown in methanol setting under induction.</p>
+			
+			<div class="div-h5"><h5 id="formate">Formate</h5><a href="#table-selector"class="btt" data-scroll>Back to top</a></div>
+			<p>Our final plasmid, the “Formate” plasmid, was adopted from Team UESTC-China 2014. We designed a plasmid with the same MDH2 gene as the Fructose plasmid, an FDH gene, and an FALDH gene. The pathway created by these enzymes converts methanol to carbon dioxide and NADH by first using MDH2 to convert methanol to formaldehyde, using FALDH to convert formaldehyde to formate, and using FDH to convert formate to the final product. To assemble this plasmid we attempted to</p>
 			</div>
 		</div>
 	</div>
@@ -663,32 +755,16 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginCheck = marginTitle / 2;
 			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
+				$('.titleText, #table-selector').css('left','15px');
+				$('.titleText, #table-selector').css('margin-left','0px');
 			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
+				$('.titleText, #table-selector').css('left','50%');
+				$('.titleText, #table-selector').css('margin-left','-40%');
 			}
 		})
 		
 		$(window).load(function() {
-			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
-			var marginLeft = marginTotal / 2;
-			if (marginLeft > 14) {
-				$('.longText').css('margin-left', marginLeft);
-			}else {
-				$('.longText').css('margin-left', '15px');
-			}
-			
-			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
-			var marginCheck = marginTitle / 2;
-			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
-			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
-			}
+			$(window).resize();
 		})
 		
 	</script>
@@ -726,7 +802,7 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 			}
 		),
 		// Window width effect on top nav bar
-		$(document).ready(function() {     
+		$(document).ready(function() {  		
 			function checkWidth() {		
 				if ($(window).width() < 1090 || $('nav').hasClass('pushed')){
 					$('nav li').css('display', 'none');	
@@ -779,13 +855,13 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 				}
 			});
 	</script>
-        <script> $('#iGEM').css('display','block'); 
-		
-		$('body').css('display', 'block');</script>
+        <script> $('#iGEM').css('display','block'); </script>
 		<script>
 		$(document).ready(function(){
+		  $('#div-figures').slick({
+		  });
+		  $('body').css('display', 'block')
 		  
-		
 		});
 		
 			$.fn.extend({
@@ -797,9 +873,75 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 			}
 		});
 		
+		
 		var toggle = 1;
 
-		
-		
+
+</script>
+<script>
+var clicked = '';
+var current = 'background'; // sets initial display to be purpose
+ $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+	if (selected != current) {							// only change display / trigger animation if clicking different nav
+		changeText(selected)
+	}
+ })
+ 
+var dir = location.hash;								// grabs the anchor (text following the #)
+var n = dir.indexOf('?');								// and initially sets the page 
+dir = dir.substring(0, n != -1 ? n : dir.length);		
+dir = dir.replace('#','');
+if (dir == '') {
+	dir = 'background';
+}
+changeText(dir)
+switch (dir) {
+	case 'purpose':
+        break;
+    case 'background':
+        break;
+	case 'experiment':
+        displayTable(dir)
+        break;
+	case 'results':
+        displayTable(dir)
+        break;
+    default:
+        break;
+}
+
+$(".subNav").click(function() {
+	clicked = $(this).attr('data-select');	
+    $('html, body').animate({
+        scrollTop: $("#h4-"+ clicked).offset().top
+    }, 0000);
+});
+
+function displayTable(selected) {
+	$('#ul-'+selected).css('display','block');
+}
+
+function changeText(selected) {
+	$('.navigator').css('border-bottom','1px solid #A8A8A8');		// make all navigational element have no bottom border
+	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border						// hides all text
+	var widthText = $('.longText').outerWidth(false);
+	$('.textSection').css('width', widthText);		
+	$('.textSection').css('display','none');
+	$('.subNavList').css('display','none');							// slighly shifts right all text to set up for animation
+	$('.textSection').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
+	$('#div-' + selected).css('display','block');									// the div containing the text is displayed
+	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
+	$('.textSection').css('width', '100%');	
+	current = selected;												// sets the current display
+	location.hash = current;
+}
+
 		</script>
+		
+    <script>
+        smoothScroll.init({
+            offset: 80
+        });
+    </script>
 </html>

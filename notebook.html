@@ -1,0 +1,1395 @@
+</div>
+</div>
+<html lang="en">
+
+<head>
+    <script>
+        $('body').css('display', 'none');
+    </script>
+    <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
+    <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
+    <script src="http://2016.igem.org/wiki/images/d/d3/T--UMaryland--slick.txt" type="text/javascript"></script>
+    <script src="http://2016.igem.org/wiki/images/3/33/T--UMaryland--smoothScroll.txt"></script>
+
+    <title>About Our Team</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'Exo';
+        font-style: normal;
+        font-weight: 400;
+        src: url(http://2016.igem.org/wiki/images/0/02/T--UMaryland--Exo.woff) format('woff2');
+    }
+    
+    @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: 400;
+        src: url(http://2016.igem.org/wiki/images/6/61/T--UMaryland--Lora.woff) format('woff2');
+    }
+    
+    @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 200;
+        src: url(http://2016.igem.org/wiki/images/b/b7/T--UMaryland--RalewayLight.woff) format('woff2');
+    }
+    
+    @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        src: url(http://2016.igem.org/wiki/images/5/58/T--UMaryland--Raleway.woff) format('woff2');
+    }
+</style>
+
+<body>
+    <style>
+        #bars_item {
+            display: none;
+        }
+        
+        #sideMenu {
+            display: none;
+        }
+        
+        html {
+            width: 100%;
+            height: 100%;
+            padding: 0 0 0 0;
+            border: none;
+            margin: 0 0 0 0;
+            font-family: Raleway;
+        }
+        
+        #top_title {
+            display: none;
+            line-height: inherit;
+        }
+        
+        #sideMenu {
+            display: none;
+        }
+        /* Navbar and body setup */
+        
+        body {
+            font-family: Raleway;
+            overflow-x: hidden;
+            /*background: #FEFFFA;*/
+			background-color: transparent;
+        }
+        
+        #content {
+            margin-top: 0px;
+        }
+        /* Navbar */
+        
+        nav {
+            opacity: 1.0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            line-height: 10px;
+            font-size: 20pt;
+            display: block;
+            background: #fff;
+            border-bottom: 1px solid black;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            z-index: 1;
+            margin-top: 18px;
+        }
+        
+        element.style {
+            text-decoration: none;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Exo', sans-serif;
+        }
+        
+        nav a:visited {
+            color: black;
+        }
+        
+        nav a:hover {
+            opacity: .7;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            list-style: none;
+            transition: all .5s ease;
+            text-align: right;
+        }
+        
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        /* Nav bar when more icon is clicked */
+        
+        #div-navResized {
+            font-size: 20pt;
+            position: fixed;
+            text-align: center;
+            display: none;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 200px;
+            z-index: 3;
+        }
+        
+        #div-navResized a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Exo', sans-serif;
+        }
+        
+        #div-navResized ul {
+            list-style: none;
+            margin-right: 40px;
+            margin-top: 0px;
+        }
+        
+        #div-navResized ul li {
+            margin-top: 4px;
+        }
+        
+        #div-title {
+            z-index: -999;
+        }
+        /* Background of page */
+        
+        
+        /* Classes */
+        
+        .description {
+            margin-top: 200px;
+            min-width: 970px;
+        }
+        
+        .border {
+            border-bottom: 1px black;
+        }
+        
+        .image {
+            position: relative;
+            width: 100%;
+            /* for IE 6 */
+        }
+        
+        .pull-right {
+            float: right !important;
+        }
+        
+        .pull-left {
+            float: left !important;
+            margin-left: -28px;
+        }
+        /* Pushed class actives */
+        
+        #img-more.pushed {
+            box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .3);
+        }
+        
+        #div-navResized.pushed {
+            display: block;
+        }
+        
+        #div-navResized.pushed a:hover {
+            text-decoration: underline;
+        }
+        
+        nav.pushed {
+            height: 100%;
+        }
+        
+        body.pushed {
+            overflow-y: hidden;
+        }
+        
+        nav img.pushed {
+            display: none;
+        }
+        /* Hides nav bar when scrolling */
+        
+        .scrolled {
+            font-size: 10pt;
+            line-height: 20px;
+        }
+        /* animation when mouse is over Navbar */
+        
+        .hover {
+            font-size: 20pt;
+            line-height: 40px;
+        }
+        /* Logo */
+        
+        #img-logo {
+            width: 260px;
+            float: left;
+            position: fixed;
+            margin-top: 4px;
+            margin-left: 65px;
+            opacity: 1.0;
+        }
+        /* More Icon */
+        
+        #img-more {
+            position: fixed;
+            display: none;
+            width: 50px;
+            height: 50px;
+            margin-right: 0px;
+            right: 15px;
+            z-index: 2;
+            margin-top: -31px;
+        }
+        
+        #img-UMD {
+            z-index: -999;
+            margin-left: -8px;
+            margin-top: -12px;
+            height: 600px;
+        }
+        /* Logos when more button is clicked */
+        
+        #img-logoResized {
+            width: 300px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: -165px;
+        }
+    </style>
+    <style>
+        #div-content {
+            margin-top: 40px;
+            min-height: 800px;
+        }
+        
+        .date {
+            text-decora: italic;
+        }
+        
+        .h3-heading {
+            font-size: 18pt;
+            font-weight: 800;
+        }
+        
+        .sidebar {
+            width: 260px;
+            margin-right: 60px;
+            margin-left: auto;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            font-size: 16pt;
+            float: right;
+        }
+        
+        #div-content {
+            min-width: 300px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .h2-subhead {
+            font-size: 28pt;
+            list-style: none;
+            clear: both;
+            padding: 0 0 0 0;
+            margin: 0 0 80px 0 !important;
+        }
+        
+        .h2-subhead li {
+            margin-right: 120px;
+            display: inline;
+        }
+        
+        .title {
+            font-size: 56pt;
+            margin-bottom: 40px;
+        }
+        
+        .contentText {
+            line-height: 1.5em;
+            font-size: 14pt;
+            max-width: 700px;
+        }
+        
+        .textBody {
+            padding-bottom: 30px;
+        }
+        
+        #div-content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        #div-text {
+            padding-bottom: 200px;
+			width: 80%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search {
+            width: 240px;
+            font-size: 12pt;
+            padding: 4px 4px 4px 4px;
+            margin-bottom: 15px;
+        }
+        
+        .sideLinks {
+            margin-left: 10px;
+            margin-top: 20px;
+            font-size: 14pt;
+            line-height: 1.25em;
+        }
+        
+        .tags {
+            display: none;
+        }
+        /* creates a solid gray border between elements of navigational element */
+        
+        .borderRight {
+            border-right: 2px solid #A8A8A8;
+        }
+        
+        .borderLeft {
+            border-left: 2px solid #A8A8A8;
+            border-bottom: 2px solid #A8A8A8;
+        }
+        
+        .borderRight {
+            border-bottom: 4px solid #A8A8A8;
+        }
+        
+        .borderBoth {
+            border-left: 2px solid #A8A8A8;
+            border-right: 2px solid #A8A8A8;
+            border-bottom: 2px solid #A8A8A8;
+        }
+        
+        #table-selector {
+            /* makes a single border between two cells rather than two */
+            border-collapse: collapse;
+        }
+        
+        #table-selector {
+            width: 100%;
+			min-width: 600px;
+			max-width: 1500px;
+            border-collapse: collapse;
+            background: none;
+        }
+        
+        #table-selector th {
+            /* makes each cell of nav evenly spaced */
+            text-align: center;
+            width: 25%;
+            /* modify when adding / deleting elements in nav */
+        }
+        
+        th p {
+            /* formats text inside table of navigational elements */
+            /* makes cursor emulate a link to show it's clickable */
+            font-size: 20pt;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 5px 0px 15px 0px;
+            margin: 0 0 0 0;
+        }
+        
+        th p:hover {
+            /* makes links bold when hovered to show it is a link */
+            font-weight: 800;
+        }
+        
+        .sectionClass {
+            display: none;
+        }
+        
+        #div-journal {
+            display: block;
+        }
+        
+        .textBody p {
+            margin-top: 20px;
+        }
+    </style>
+
+    <style>
+        /* Permanent bottom bar */
+        
+        #bot-nav {
+            background-color: #f9f9f9;
+            border-top: 1px solid #f5f5f5;
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            display: block;
+            color: black;
+            font-size: 12pt;
+            font-family: 'Lora', serif;
+            z-index: -1;
+        }
+        
+        #social-media {
+            width: 100%;
+            margin: 0 0 0 0;
+        }
+        
+        .pull-right a {
+            padding-right: 0px !important;
+        }
+        
+        .copyright {
+            text-align: center;
+            width: 272px;
+            height: 30px;
+            margin-top: -20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pull-left {
+            margin-top: -3px;
+            width: 83px;
+            margin-left: 30px;
+            margin-right: auto;
+            display: inline;
+            height: 34px;
+        }
+        
+        .pull-left p {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0 !important;
+            line-height: 0px !important;
+        }
+        
+        .pull-right {
+            width: 83px;
+            margin-right: 30px;
+            margin-left: auto;
+        }
+        
+        #copyright {
+            text-align: center;
+            left: auto;
+            right: auto;
+            width: 100%;
+            padding: 0 0 0 0;
+            margin-top: 0px;
+            float: left;
+        }
+        
+        #container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+        }
+        
+        #container img {
+            height: 20px;
+            width: 20px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+        
+        #bot-nav img:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+        
+        #container li {
+            display: inline;
+            list-style: none;
+            padding-right: 25px;
+        }
+        
+        .pull-left {
+            float: left;
+        }
+        
+        #bot-nav a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #contact:hover {
+            text-shadow: .1px .1px black;
+        }
+		
+		.div-scrollPic {
+            z-index: -999;
+            height: 500px;
+			background-color: transparent;
+        }
+		
+		.titleText {
+			position: absolute;
+			top: 350px;
+			left: 50%;
+			margin-left: -40%;
+			right: auto;
+			width: 80%;
+			min-width: 600px;
+			max-width: 1500px;
+		}
+		
+		 h11 {		
+            color: white;
+            font-size: 30pt;
+            font-weight: 400;
+            text-align: left;
+        }
+		
+		h11, h21, h31 {
+			font-family: Lora;
+			display: inline-block;
+			position: relative;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-top: 10px;
+			padding-right: 10px;
+			background: rgba(0,0,0, 0.7);
+			line-height: 1em;
+		}
+		
+		h21 {
+            color: white;
+            font-size: 24pt;
+            font-weight: 300;
+            text-align: left;
+        }
+
+    </style>
+    <script>
+        /* Hiding stupid stuff*/
+        $(document).ready(function() {
+            $('#top_title').css('display', 'none');
+            $('#top_menu').css('display', 'none');
+            //$('#top_menu_14').css('display', 'none');
+            $('#HQ_page').css('display', 'none');
+            $('#top_menu_under').css('display', 'none');
+        });
+        $('#HQ_page').attr("id", "iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
+        $('#mw-content-text').attr("id", "overruled").removeClass('mw-content-ltr');
+		$('#content').attr("id", "overruled2").removeClass('mw-body');
+    </script>
+    <nav>
+         <a href="http://2016.igem.org/Team:UMaryland">	
+		<img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo" width="128px">
+        </a>
+		<ul>
+			<a style="opacity: 0">Fix</a>
+			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+		</ul>	
+	</nav>
+	<img src="http://2016.igem.org/wiki/images/e/e5/T--UMaryland--more.png" id="img-more">
+	<!-- Nav bar when more button is clicked	 -->
+	<div id="div-navResized">
+		<a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized"></a>
+		<ul>
+			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+		</ul>	
+	</div>
+	
+	<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--notebook.jpg" class="div-scrollPic" style="height: 550px;">
+	<div class="titleText"> 
+		<!-- where background image below titles show -->
+			<h11>UMaryland iGEM Notebook</h11></br>
+			<h21>Recording Our iGEM Experience</h21>
+		</div>
+    </div>
+    <div id="div-text">
+        <!-- Start of main text of page -->
+        <!-- Heading text -->
+
+        <div id="div-content">
+            <p class="title"></p>
+            <table id="table-selector">
+                <!-- Table of navigational links -->
+                <thead>
+                    <!-- .border classes signify where border needs to be drawn -->
+                    <!-- navigator class trigger javascript on that element     -->
+                    <!-- data-select attribute sends to script which element    -->
+                    <!-- was clicked 											-->
+                    <th class="borderRight navigator" id="th-journal" data-select="journal">
+                        <p>Journal</p>
+                    </th>
+                    <th class="borderBoth navigator" id="th-protocol" data-select="protocol">
+                        <p>Protocol</p>
+                    </th>
+                    <th class="borderLeft navigator" id="th-safety" data-select="safety">
+                        <p>Safety</p>
+                    </th>
+                </thead>
+            </table>
+            <div id="div-journal" class="sectionClass">
+                <div class="sidebar">
+                    <form id="form-searchJournal" action="javascript:void();">
+                        <input type="search" class="search" id="searchbox-journal" placeholder="Search Our Journal" name="notebooksearch" />
+                    </form>
+                </div>
+                <div class="contentText blog">
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week1">Week 1</p>
+                        <em class="date">June 6th - June 10th</em>
+                        <p class="p-text">Our first step this summer was to finalize the design of our three plasmids (sMMO, Fructose, and Formate). Many of the genes needed to create our plasmids are offered in the iGEM registry, but we realized that we would need to order some genes as GBlocks from IDT. We began to design GBlocks for the genes not offered in the registry (MMOY & MMOZ subunits, MDH2, HPS, PHI), which was a new experience for most of our lab members, who had little experience creating parts for Gibson Assembly.</p>
+                        <p class="p-text">This summer, we moved into a new lab space, so we had to set up the lab with all our equipment. Once that was completed, we were able to train our very young team in the basic skills of genetic engineering, like using micropipettes and performing transformations.</p>
+                        <p class="tags">Week1, week, 1, wet, lab, set, up, lb, idt, gblocks, mmoy, mmoz, mdh2, hps, phi, smmo, fructose, formate, june, 6th, 10th, 6/6, 6/10, 6/7, 6/8, 6/9</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week2">Week 2</p>
+                        <em class="date">June 13th - June 17th</em>
+                        <p class="p-text">We received the iGEM kit this week! After opening the kit, we all cloned the biobricks we had requested (MMO subunits B,D,C,X; FDH; FALDH) to create stocks of them. After cloning those genes, we grew overnight cultures that we miniprepped to isolate the plasmids with the biobricks.</p>
+                        <p class="p-text">During dry lab, we revised the design for our GBlocks (MMOY & MMOZ subunits, MDH2, HPS, PHI), to include restriction sites, and promoters and terminators where needed. We also scavenged the building for old lab equipment that other scientists wanted to dispose. In addition to scavenging for lab equipment, we scavenged for DNA and asked team Braunshweig for a copy of the sMMO plasmid they constructed in 2015.</p>
+                        <p class="tags">Week2, week, 2, wet, lab, dry, lab, gblocks, mmoy, mmoz, mdh2, hps, phi, restriction, sites, re, promoters, terminators, braunshweig, smmo, plasmid, clone, overight, miniprep, fdh, faldh, june, 13th, 17th, 6/13, 6/14, 6/15, 6/16, 6/17</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week3">Week 3</p>
+                        <em class="date">June 20th - June 24th</em>
+                        <p class="p-text">We started assembling parts together to reach our final goals of creating plasmids with their respective promoters, ribosome binding sites, enzymes, and terminators. We used the technique of 3A assembly - the digestion and ligation of an antibiotic resistant backbone with two inserts - to attach ribosome binding sites to each of the biobricks we requested.</p>
+                        <p class="p-text">We then transformed our competent cells with the assembled plasmids (after which they grew successfully on our antibiotic plates) and grew them overnight to then extract the plasmid DNA by doing a miniprep. We also contacted a professor on campus who works with methane to ask her about her safety protocol when handling the gas. </p>
+                        <p class="tags">Week3, week, 3, promoter, promoters, rbs, ribosome, binding, sites, terminator, terminators, 3A, 3A assembly, ligation, digestion, biobricks, transformation, transform, methane, professor, miniprep, june, 20th, 24th, 6/20, 6/21, 6/22, 6/23, 6/24</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week4">Week 4</p>
+                        <em class="date">June 27 - July 1st</em>
+                        <p class="p-text">After digesting our minipreps, we screened our resulting plasmids using a gel. Our results from the gel matched up with our expectations, so we continued our process of assembling the plasmids using 3A. This time, we attempted to combine the RBS and FDH plasmid with the RBS and FALDH, RBS and MMOB with RBS and MMOD, and RBS and MMOC with RBS and MMOX. Additionally, we finalized our g blocks and met with several university employees to discuss funding.</p>
+                        <p class="tags">Week4, week, 4, miniprep, gel, 3A, rbs, ribosome, binding, sites, FALDH, MMOB, MMOD, MMOC, MMOX, g, blocks, GBlocks, funding, june, 27th, july, 1st, 6/27, 6/28, 6/29, 6/30, 7/1, 7/01</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week5">Week 5</p>
+                        <em class="date">July 4th - July 8th</em>
+                        <p class="p-text">
+                            We spent the week continuing the 3A assembly we had started earlier. Because our supply of backbone was very limited, we digested one of the igem parts, ran a gel, and extracted the backbone to use for our assembly. After transforming competent cells with the ligations of the two parts and backbone, we, unfortunately, observed no growth on our plates.
+                        </p>
+                        <p class="tags">week, 5, july, 4th, 8th, 7/4, 7/5, 7/6, 7/7, 7/8, 3A, assembly, backgone, extraction, gel, extracted, ligation, plates, plating</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week6">Week 6</p>
+                        <em class="date">July 11th - July 15th</em>
+                        <p class="p-text">
+                            Because our 3A assemblies from the prior week failed, we attempted to digest, ligate, and transform everything again. Though we did get growth on plates, a restriction enzyme digestion and gel to screen our resulting plasmids did not provide the results we were expecting. Additionally, Team Braunschweig’s plasmid had arrived, so we attempted to recover their plasmid of sMMO.
+                        </p>
+                        <p class="tags">week, 6, july, 11th, 15h, 7/11, 7/12, 7/13, 7/14, 7/15, 3A, assembly, digest, ligate, transformation, transform, gel, team, braunschweig, plasmid, smmo</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week7">Week 7</p>
+                        <em class="date">July 18th - July 22th</em>
+                        <p class="p-text">
+                            We transformed E. coli with the plasmid that was extracted, but somehow had growth on both chloramphenicol and ampicillin resistant plates; the suspected backbone only had chloramphenicol resistance. When running a gel of a restricted digest of the plasmid, we observed bands that were not expected. Additionally, we tried sequencing all our DNA recovered over the past few weeks and were disappointed to see only a few of our samples matched the expected sequences (RBS with MMOX and RBS with FDH). While our cloning was proving to have its challenges, we successfully held our Second Annual Mid Atlantic Meetup.
+                        </p>
+                        <p class="tags">week, 7, july, 18th, 22th, 7/18, 7/19, 7/20, 7/21, 7/22, e, coli, chlor, amp, chloramphenicol, ampicillin, backgone, gel, restrition, digest, sequencing, rbs, mmox, fdh, mid, atlantic, meetup, second, annual</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week8">Week 8</p>
+                        <em class="date">July 25th - July 29th</em>
+                        <p class="p-text">
+                            Due to time limitations and difficulty with traditional 3A assemblies, we decided to take a different approach on cloning. Instead of sequentially digesting and ligating, we chose to start Gibson assemblies. We designed primers for each part, the forward having a gibson overhang, ribosome binding site, and annealing sequence and the reverse containing just an annealing sequence. Our G-blocks also came in, which were designed to be ready for a Gibson assembly with a backbone. We created stocks by transforming our resulting Gibson assemblies. We also had our first experience with PCR, as we wanted to try an alternative way to extract backbone. At the end of the week, we volunteered with Building with Biology in Port Discovery and explained the significance and applications of synthetic biology.
+                        </p>
+                        <p class="tags">week, 8, july, 25th, 29th, 3A, assembly, gibson, overhang, ribosome, binding, site, rbs, annealing,reverse, g, blocks, g-blocks, pcr, backbone, port, discovery, biology, building, with, synthetic, biology</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week9">Week 9</p>
+                        <em class="date">August 1st - August 5th</em>
+                        <p class="p-text">
+                            We ordered primers to construct our formate and fructose plasmids via Gibson assembly. Sequencing results showed that our fructose plasmid was successfully constructed and our formate plasmid has RBS with FALDH and RBS with FDH. To continue working on the formate plasmid, we began a 3A assembly with a promoter, RBS, and MDH2 (an ordered g block that was assembled into a chloramphenicol resistant backbone.
+                        </p>
+                        <p class="tags">week, 9, august, 1st, gibsone, formate, fructose, plasmid, rbs, faldh, fdh, ribisome, binding, sites, 3A, assembly, mhd2, g, block, blocks, g-blocks, chloramphenicol, chlor</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Week10">Week 10</p>
+                        <em class="date">August 8th - August 12th </em>
+                        <p class="p-text">
+                            We finished our 3A assembly and found promising results from sequences. Therefore, we moved on to adding the final piece to the formate plasmid - a double terminator. We also designed and ordered primers to create a Gibson assembly of a promoter and four subunits of the sMMO enzymes.
+                        </p>
+                        <p class="tags">week, 10, 3A, sequence, assembly, smmo, double, terminator, gibson, sub, unit, subunit, sequence, enzyme</p>
+                    </div>
+					<div class="textBody">
+                        <p class="h3-heading" id="Week11">Week 11</p>
+                        <em class="date">August 15th - August 19th </em>
+                        <p class="p-text">
+                        </p>We completed the interlab study to contribute data to standardizing fluorescence measurements across various laboratories. It will be a step forward in collaboration in synthetic biology. We also selected our track for the competition and submitted our title and abstract. We plan to test two of our constructs in a plating experiment with induction by IPTG to see out it affects growth. Then we intend to perform SDS PAGE to see if there are noticeable bands for our protein size
+                        <p class="tags">week, 15th, 19th, 15, 19, track, title, abstract, interlab, il, measurements, SDS, PAGE, IPTG, plating, fructose, formate</p>
+                    </div>
+					
+					<div class="textBody">
+                        <p class="h3-heading" id="Week12">Week 12</p>
+                        <em class="date">August 22th - August 26th </em>
+                        <p class="p-text">Our fructose and formate pathway plasmids were completed and sequenced and found the presence of the double terminator. Our growth test proved successful as many colonies were visible. We also distributed pamphlets about methane and interviewed farmers at the UMD Farmer’s Market and the Montgomery Agricultural Fair to gauge their knowledge and interest in methane, especially with regards to livestock.
+                        </p>
+                        <p class="tags">week, 22th, 26th, 22, 26, fructose, formate, plasmid, sequence, double, terminator, pamphlets, methane, farmers, farmer, Farmer's, Market, UMD, Montgomery, Agricultural, Fair, livestock</p>
+                    </div>
+					
+					<div class="textBody">
+                        <p class="h3-heading" id="Week13">Week 13</p>
+                        <em class="date">August 29th - September 2nd </em>
+                        <p class="p-text">We ran SDS-PAGE on extracts from our fructose and formate pathway constructs along with positive and negative controls. We also discovered that FDH and FALDH genes were missing stop codons in the registry, which may have prevented us from seeing the bands on the gel. We are also continuing construction of the sMMO using the Gibson Assembly method using overhangs that were added using PCR. We also visited the Onley Farmer’s Market to continue to gather information about methane from farmers. 
+                        </p>
+                        <p class="tags">week, 29th, august, september, 2nd, SDS, PAGE, fructose, formate, constructs, positive, negative, controls, FDH, FALDH, codon, stop, sMMO, gibson, pcr, onley, farmer, farmer's, market, methane</p>
+                    </div>
+					
+					<div class="textBody">
+                        <p class="h3-heading" id="Week14-Week15">Week 14 - Week 15</p>
+                        <em class="date">September 5th - September 16th</em>
+                        <p class="p-text">We re-ran the SDS-PAGE gel on our fructose and formate pathway constructs to detect overexpression of protein, we did not see clear overexpression and will perform site directed mutagenesis to add the missing stop codons. We also tested a growth rate curve of the BL21 strain of E. coli that we are using to test our constructs to practice for the bioreactor. 
+                        </p>
+                        <p class="tags">week, 14, 15, september, 5, 16, sds, page, fructose, formate,bl21, growth, rate, curve, bioreactor, site, directed, mutagenesis</p>
+                    </div>
+					
+					<div class="textBody">
+                        <p class="h3-heading" id="Week16-Week17">Week 16 - Week 17</p>
+                        <em class="date">September 16th - September 30th</em>
+                        <p class="p-text">Site directed mutagenesis was completed successfully on our constructs and a growth rate curve of bacteria transformed with the fructose plasmid constructs was gathered. The growth rate was favorable and ensured that the plasmid did not end of cell death. We also re-did the SDS-PAGE but still did not see a noticeable band where MDH2 or other proteins are located.
+                        </p>
+                        <p class="tags">week, 16, 17, september, 16, 30, site, directed, mutagenesis, construct, fructose, sds, page, mdh2</p>
+                    </div>
+                </div>
+            </div>
+            <div id="div-protocol" class="sectionClass">
+                <div class="sidebar">
+                    <form id="form-searchProtocol" action="javascript:void();">
+                        <input type="search" class="search" id="searchbox-protocol" placeholder="Search Our Protocols" name="notebooksearch" />
+                    </form>
+                </div>
+                <div class="contentText procedure">
+                    <div class="textBody">
+                        <p class="h3-heading" id="MakingLBBroth">Making LB Broth</p>
+                        <p class="p-text">Note:<br /> Typical procedure calls for 25 g LB Broth powder per 1L of pure water.<br /> We have 500 mL bottles and we do not want to overfill them so we will do a quarter of that amount.<br /> This also helps in that if one bottle gets contaminated, then only a quarter of the LB broth batch will need to be discarded.<br />
+                            <p class="tags">LB, broth, food, making, media</p>
+                            <p class="p-text">
+                                <ol>
+                                    <li>Mass 6.25 g of LB powder 4 times</li>
+                                    <li>Add to 4 bottles</li>
+                                    <li>Add 250 mL pure water in each</li>
+                                    <li>Swirl to mostly dissolve</li>
+                                    <li>Seal cap tightly and then unscrew the cap about two turns</li>
+                                    <li>Cover with aluminum foil</li>
+                                    <li>Place autoclave tape on at least one bottle</li>
+                                    <li>Place bottles in a basket</li>
+                                    <li>Autoclave for 20 minutes on liquid setting</li>
+                                    <li>Do not add antibiotics to pure broth. Only add to LB used to plate</li>
+                                </ol>
+                            </p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="MakingLBPlates">Making LB Plates</p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Measure out 25 g of LB broth powder for every one litre of plating material desired. (divide as necessary; we typically do this in quarters)</li>
+                                <li>Place in desired container</li>
+                                <li>Add 15 g of bacto agar for every litre of plating material desired (divide as necessary)</li>
+                                <li>Add 1 L of pure water to container (divide as necessary)</li>
+                                <li>Swirl until mostly dissolved</li>
+                                <li>Seal cap tightly and then unscrew the cap about two turns</li>
+                                <li>Cover caps with aluminum foil</li>
+                                <li>Add at least one piece of autoclave tape</li>
+                                <li>Autoclave for 20 minutes on liquid setting. Do not set exhaust time. Ensure door is sealed and liquid media is selected</li>
+                                <li>Allow to cool to about 50 degrees Celsius. Cool until it is warm to touch. Do not forget to add corresponding antibiotic</li>
+                            </ol>
+                        </p>
+                        <p class="p-text">
+                            <strong>Adding Antibiotics</strong>
+                        </p>
+                        <p class="p-text">
+                            Note:<br />Chloramphenicol is kept in 1000x stock<br /> Ampicillin is kept in 500x stock<br />
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Thaw antibiotic</li>
+                                <li>Add 250 uL CMP to 250mL LB/agar or 500 uL AMP to 250mL LB/agar</li>
+                            </ol>
+                        </p>
+                        <p class="tags">plates, lb, food, making, chlor, chloramphenicol, amp, ampicillin, antibiotic</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="RestrictionDigestandLigation(3AAssembly)">Restriction Digest and Ligation (3A Assembly)</p>
+                        <p class="p-text">
+                            Protocol modified from this source:<br />
+                            <a href="http://2015.igem.org/wiki/images/f/f6/STHLM_3A_assembly_protocol.pdf">http://2015.igem.org/wiki/images/f/f6/STHLM_3A_assembly_protocol.pdf</a>
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Acquire all necessary information including nanodrop concentrations of any miniprepped samples as well as the concentration of the linearized plasmid backbone. Calculate the volume of miniprepped DNA necessary to total approximately 500 ng. Designate the DNA strands that are to be ligated together as either A or B.</li>
+                                <li>Create the three master mixes. One will contain EcoRI and PstI, another will contain EcoRI and SpeI, and the last will contain XbaI and PstI. Combine with water and cutsmart buffer in the ratios directed below. The tables direct for 25 µL to be the final volume. This is enough for 5 digestions. Amounts of CutSmart buffer and water can be adjusted as necessary. Enzyme concentration should only be adjusted in the case of an increase in final volume due to micropipette limitations.</li>
+                                <li>Prepare linear backbone for digest by measuring out 4 µL (100 ng) of the backbone of choice and 4 µL of the master mix for the linearized plasmid backbone for each ligation planned for the next step into one PCR tube. Mix well with a pipette. Total volume 8uL.</li>
+                                <li>Prepare sample A’s by adding 500 ng worth of DNA to a labeled PCR tube. Supplement with water so that the total volume added is 5 µL. Add 5 µL of master mix A to each tube. Total volume 10 uL.</li>
+                                <li>Prepare sample B’s by adding 500 ng worth of DNA to a labeled PCR tube. Supplement with water so that the total volume added is 5 µL. Add 5 µL of master mix B to each tube. Total volume 10 uL.</li>
+                                <li>Place all samples in the incubator (set at 37 degrees Celsius) for at least one hour. Longer durations are acceptable. They can be left overnight.</li>
+                                <li>Heat kill restriction enzymes at 80 degrees celsius in the the thermocycler (or another apparatus) for 20 minutes.</li>
+                            </ol>
+                            <p class="p-text">
+                                <strong>Ligation</strong>
+                            </p>
+                            <p class="p-text">
+                                <ol>
+                                    <li>Add 2 µL of backbone, 2 µL of enzyme A, and 2 µL of enzyme B to a labeled PCR tube.</li>
+                                    <li>Add 1 uL T4 DNA ligase buffer Add 2 uL ddH2O</li>
+                                    <li>Add T4 DNA ligase, total volume 10 uL</li>
+                                    <li>Allow to sit at room temperature for at least one hour. It can be left overnight at room temperature.</li>
+                                </ol>
+                            </p>
+                            <p class="tags">restriction, digest, and, ligation, (3A, Assembly), 3A, Assembly, master, mix, EcoRi, PstI, XbaI, heat, kill, pcr, incubator, thermocycler, dna, buffer, ligase, T4</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Transformation">Transformation</p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Set water bath to 42 C</li>
+                                <li>Make sure SOC media is not contaminated. LB is also usable</li>
+                                <li>Label test tubes and microcentrifuge tubes</li>
+                                <li>Obtain competent cells. KEEP ON ICE</li>
+                                <li>Thaw ON ICE until cells are thawed</li>
+                                <li>If necessary, create 20 uL aliquots of competent cells in microcentrifuge tubes, keep on ice and return to the -80 as soon as possible</li>
+                                <li>Add 2 uL of DNA to 20 uL of competent cells in a microcentrifuge tube</li>
+                                <li>Pipette to resuspend, but do so gently so as to not harm the cells</li>
+                                <li>Place back on ice for 5 minutes</li>
+                                <li>Return any unused cells marking date thawed ON ICE</li>
+                                <li>Heat shock at 42 C for 30 - 45s</li>
+                                <li>Remove from heat then place in ice for 5 mins</li>
+                                <li>Add 200 uL of SOC/rescue media. FLAME BOTTLE AND BOTTLE CAP THOROUGHLY </li>
+                                <li>Rescue for one hour in incubator with shaker</li>
+                                <li>Plate cells on plates with antibiotics overnight at 37 C</li>
+                            </ol>
+                        </p>
+                        <p class="p-text">
+                            Optional-plate 50uL onto plate with differing antibiotic resistance for control
+                        </p>
+                        <p class="tags">transformation, water, bath, soc, rescue, media,ice,competent, cells, incubator, antibiotic, plate</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="PreparingOvernights">Preparing Overnights</p>
+                        <p class="p-text">
+                            Note: <br />Sterilize test tubes, lids, and micropipette tips before using, and perform procedure close to flame.
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Gather 5 mL culture tubes and label</li>
+                                <li>Ignite bunsen burner</li>
+                                <li>Remove plates from incubator (if not already done so)</li>
+                                <li>Add 5 mL of LB Broth to test tubes. FLAME BOTTLE AND BOTTLE CAP THOROUGHLY </li>
+                                <li>Add of (10 uL) ampicillin or (5 uL) chloramphenicol. (Change amount if not from stock solutions of 500X and 1000X)</li>
+                                <li>Use a micropipette to obtain one colony from each plate then release colony in the media</li>
+                                <li>Eject pipette tip in the test tube as well and close</li>
+                                <li>FLAME CULTURE TUBE AND CAP</li>
+                                <li>Place in shaker/incubator overnight</li>
+                            </ol>
+                        </p>
+                        <p class="tags">preparing, overnights, plasmid, cloning, amp, ampicillin, chlor, chloramphenicol, shaker, incubator, bunsen, burner, lb, broth, media</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="Miniprep">Miniprep</p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Obtain overnight cultures</li>
+                                <li>Label microcentrifuge tubes</li>
+                                <li>Use pipette to transfer 2 x 0.63mL of culture to microcentrifuge tubes, leaving pipette tips inside the respective tubes for future use</li>
+                                <li>Try to avoid the pipette tips already inside</li>
+                                <li>Centrifuge for 5 minutes at 13000 g</li>
+                                <li>Dispose of supernatant, being careful not to lose cells (tap sides gently but do not flick)</li>
+                                <li>Repeat steps 3, 4, and 5 until all of the culture has been centrifuged</li>
+                                <li>Add 250uL of P1 Buffer and mix with pipette</li>
+                                <li>Add 250uL of P2 Buffer</li>
+                                <li>You can use the same pipette tips as long as you don’t touch the inside of the pipette</li>
+                                <li>Invert at least 4-6 times. This is the important step for DNA</li>
+                                <li>Add 350 uL of P3 and invert 4-6 more times</li>
+                                <li>Centrifuge for 10 minutes at highest setting (13500 x g; protocol calls for 17900 g, but centrifuge in use has max of 13500 g)</li>
+                                <li>Remove all supernatant and place in QIAprep 2.0 spin column via pipette</li>
+                                <li>Centrifuge for 30-60 seconds. Discard flow through</li>
+                                <li>Wash spin column with 0.5 mL Buffer PB</li>
+                                <li>Centrifuge for 30-60 seconds. Discard flow through</li>
+                                <li>Wash spin column with 0.75 mL Buffer PE</li>
+                                <li>Centrifuge for 30-60 seconds. Discard flow through</li>
+                                <li>Centrifuge for one more minute and discard flow through</li>
+                                <li>Place QIAprep 2.0 column in a clean 1.5 mL microcentrifuge tube</li>
+                                <li>Elute DNA a with 25 uL pure water or Buffer EB</li>
+                                <li>Set centrifuge to 7500 x g to keep caps from falling off</li>
+                                <li>Centrifuge for one minute after letting sit for one minute. DO NOT DISCARD FLOW THROUGH</li>
+                                <li>Repeat steps 20-22</li>
+                                <li>Dispose of spin column</li>
+                                <li>Take microcentrifuge tube and test for concentration in a nanodrop</li>
+                            </ol>
+                        </p>
+                        <p class="tags">miniprep, overnight, plasmid, centrifuge, p1, p2, buffer, p3, pe, pb, spin, column, QIAprep, 2.0</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="GibsonAssemblywithGblocks">Gibson Assembly with G blocks</p>
+                        <p class="p-text">
+                            <strong>Standard</strong>
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Acquire materials including NEB kit, G blocks, and linearized backbone</li>
+                                <li>G blocks should be spun down in the centrifuge for 3-5 seconds at 3,000 g to reform pellets that may have been affected by shipping</li>
+                                <li>Resuspend G blocks in water. To make each the same concentration of 50 ng/μl, 20 μl of TE Buffer should be added to the pelleted g block fragments. (adjust if starting amount is not 1000 ng)</li>
+                                <li>If backbone is in solid form this should be resuspended as well and the resultant concentration should be noted</li>
+                                <li>Measure out 10 μl of 2X Gibson Assembly Master Mix into container of choice.
+                                    <li>Add in 100 ng of plasmid to the tube. About 2-3 times molar excess of g block should then be added. (volume needs to be calculated)</li>
+                                    <li>Pure water should then be added to reach a total volume of 20 μL</li>
+                                    <li>Incubate the container at 50 degrees Celsius for one hour</li>
+                                    <li>The plasmid is now ready for transformation and sequencing</li>
+                            </ol>
+                        </p>
+                        <p class="p-text">
+                            <strong>Combining Mdh2, HPS, and PHI Using NEB Gibson Kit</strong>
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Acquire materials including NEB kit, G blocks, and linearized pSB1A3 backbone</li>
+                                <li>G blocks should be spun down in the centrifuge for 3-5 seconds at 3,000 g to reform pellets that may have been affected by shipping</li>
+                                <li>Resuspend G blocks in water. To make each the same concentration of 50 ng/μl, 20 μl of TE Buffer should be added to the pelleted g block fragments</li>
+                                <li>If backbone is in solid form this should be resuspended as well and the resultant concentration should be noted</li>
+                                <li>Measure out 10 μl of 2X Gibson Assembly Master Mix into container of choice</li>
+                                <li>Add in 100 ng (.07 pmol) of plasmid to the tube. About 2-3 times excess of g blocks should then be added. .2 pmol of both Mdh2 and HPS/PHI will be added. This equates to about .18 μg each or 3.6 μL of each solution. (The two fragments differ only by 70 bp in length. As such the difference in the number of moles is marginal here)</li>
+                                <li>Pure water should then be added to reach a total volume of 20 μL. This will have to be adjusted for at the time of the procedure as the volume added in by the plasmid is not known yet</li>
+                                <li>Incubate the container at 50 degrees Celsius for one hour</li>
+                                <li>The plasmid is now ready for transformation and sequencing</li>
+                            </ol>
+                        </p>
+                        <p class="tags">gibson, assembly, with, g, blocks, neb, kit, new, england, bioscience, backbone, pellet, te buffer, mdh2, hps, phi, master, mix</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="GelElectrophoresis">Gel Electrophoresis</p>
+                        <p class="p-text">
+                            <strong>Gel Casting</strong>
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Measure out 0.75 g agarose for 1.5% gel, 0.5g for 1% gel</li>
+                                <li>Add agarose to 50 mL SYBRsafe in .5x TBE in erlenmeyer flask</li>
+                                <li>Microwave in 30 s intervals until agarose is dissolved, making sure to cover flask with paper towel</li>
+                                <li>Pour into gel mold, add comb and let cool 20 min</li>
+                                <li>Take gel out of mold and put into gel chamber</li>
+                            </ol>
+                        </p>
+                        <p class="p-text">
+                            <strong>Gel Electrophoresis</strong>
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Cover gel in 1x LB buffer</li>
+                                <li>Add 5 uL of ladder to far left well</li>
+                                <li>Add 1 uL dye to 5 uL DNA, then load 5uL into each well</li>
+                                <li>Run gel at 150 V for 1 hr, until loading dye is about 75% the way to the end</li>
+                            </ol>
+                        </p>
+                        <p class="tags">gel, electrophoresis, casting, agarose, sybrsafe, tbe, chamber, comb,mold, ladder, V, volts, wells, buffer</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="GelPurification">Gel Purification</p>
+                        <p class="p-text">
+                            Note: <br />Taken from Zymo Research. Meant for use with ZymoClean kit. <br />
+                            <a href="http://www.zymoresearch.com/downloads/dl/file/id/34/d4001i.pdf">http://www.zymoresearch.com/downloads/dl/file/id/34/d4001i.pdf</a>
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Excise the DNA fragment<sup>1</sup> from the agarose gel using a razor blade, scalpel or other device and transfer it into a 1.5 ml microcentrifuge tube</li>
+                                <li>Add 3 volumes of ADB to each volume of agarose excised from the gel (e.g. for 100 µl (mg) of agarose gel slice add 300 µl of ADB)</li>
+                                <li>Incubate at 37-55 °C for 5-10 minutes until the gel slice is completely dissolved<sup>2</sup></li>
+                                <li>For DNA fragments > 8 kb, following the incubation step, add one additional volume (equal to that of the gel slice) of water to the mixture for better DNA recovery (e.g., 100 µl agarose, 300 µl ADB, and 100 µl water)</li>
+                                <li>Transfer the melted agarose solution to a Zymo-Spin Column in a Collection Tube</li>
+                                <li>Centrifuge for 30-60 seconds. Discard the flow-through<sup>3</sup></li>
+                                <li>Add 200 µl of DNA Wash Buffer to the column and centrifuge for 30 seconds. Discard the flow-through. Repeat the wash step</li>
+                                <li>Add ≥ 6 µl DNA Elution Buffer<sup>4</sup> or water<sup>5</sup> directly to the column matrix. Place column into a 1.5 ml tube and centrifuge for 30-60 seconds to elute DNA</li>
+                            </ol>
+                        </p>
+                        <p class="p-text">
+                            <small>
+							<sup>1</sup> The amount of agarose excised from the gel should be as small as possible.<br />
+							<sup>2</sup> Do not incubate above 60°C. It is important that the gel slice dissolve completely. This can be facilitated by gentle mixing during the incubation.<br />
+							<sup>3</sup> Remove the flow-through by aspiration. Avoid contamination of the collection tube rim.<br />
+							<sup>4</sup> DNA Elution Buffer: 10 mM Tris-HCl, pH 8.5, 0.1 mM EDTA.<br />
+							<sup>5</sup> Elution of DNA from the column is dependent on pH and temperature. If water is used, make sure the pH is >6.0. Waiting 1 minute prior to elution may improve the yield of larger (> 6 kb) DNA. For even larger DNA (> 10 kb), the total yield may be improved by eluting the DNA with 60-70 C DNA Elution Buffer<br />
+							</small>
+                        </p>
+                        <p class="tags">gel, purification, zymo, zymoclean, kit, excise, gel, slice, agarose, adb</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="DNAPrecipitationfromFilterPaper">DNA Precipitation from Filter Paper</p>
+                        <p class="p-text">
+                            <ol>
+                                <li>To recover the DNA, cut the marked circle area that contains the dried plasmid DNA</li>
+                                <li>Using clean forceps, insert the filter paper into a 1.5 ml microcentrifuge tube. Add 100 µl of TE buffer or Ultrapure water, vortex briefly and incubate at room temperature for 5 minutes. Vortex again and briefly centrifuge</li>
+                                <li>Add 20 µL of 3M sodium acetate (final conc. 0.3M) and mix well</li>
+                                <li>Add 300 µL of cold 100% ethanol from -20 C (final conc. 70% EtOH), mix, and centrifuge on high for 10 min</li>
+                                <li>Pour out supernatant and wash pellet with 1 mL 70% EtOH</li>
+                                <li>Remove EtOH after washing with pipette</li>
+                                <li>Dry under vacuum for 5 min</li>
+                            </ol>
+                        </p>
+                        <p class="p-text">
+                            (revised for Braunschweig’s filter paper, which was too large and the conc of DNA was too high to use the procedure above)
+                        </p>
+                        <p class="p-text">
+                            <ol>
+                                <li>To recover the DNA, cut the marked circle area that contains the dried plasmid DNA</li>
+                                <li>Using clean forceps, insert the filter paper into a 1.5 ml microcentrifuge tube. Add 750 µl of TE buffer or Ultrapure water, vortex briefly and incubate at room temperature for 5 minutes. Vortex again and briefly centrifuge</li>
+                                <li>Split into two 1.5 ml microcentrifuge tubes, leaving filter paper in original</li>
+                                <li>Add 75 µL of 3M sodium acetate (final conc. 0.3M) to each tube and mix well</li>
+                                <li>Add 1125 µL of cold 100% ethanol from -20 C (final conc. 70% EtOH) to each tube, mix, and centrifuge on high for 10 min</li>
+                                <li>Pour out supernatant and wash pellet with 7.5 mL 70% EtOH</li>
+                                <li>Remove EtOH after washing with pipette</li>
+                                <li>Air dry</li>
+                            </ol>
+                        </p>
+                        <p class="tags">dna, precipitation, from, filter, paper, plasmid, sodium acetate, ethanol, etoh, pellet, dried, te, buffer, vacuum</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id="AutoclavingWaste">Autoclaving Waste</p>
+                        <p class="p-text">
+                            <ol>
+                                <li>Put biohazard bag in an autoclave tray</li>
+                                <li>Put in autoclave in ‘wrapped’ setting for 1 hour heating and 2 hour drying
+                                    <li>Make sure waste is not liquid and has dried</li>
+                                    <li>Put the autoclaved waste inside a regular trash bag and make sure the regular trash bag is tied</li>
+                                    <li>Take waste to the black dumpster behind the building</li>
+                            </ol>
+                        </p>
+                        <p class="tags">autoclaving, waste, autoclave, biohazard, trash</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading" id=""></p>
+                        <p class="p-text">
+
+                        </p>
+                        <p class="tags"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="div-safety" class="sectionClass">
+                <div class="contentText risk">
+                    <div class="textBody">
+                        <p class="h3-heading">Personal Protective Equipment</p>
+						<p class="p-text">Every member of UMaryland iGEM was required to take various online and classroom safety training before performing experiments in the lab, including proper safety protocol. We made sure to wear gloves, closed toed shoes, and safety glasses when conducting experiments.</p>
+                    </div>
+                    <div class="textBody">
+                        <p class="h3-heading">Biocontainment</p>
+						<p class="p-text">Making sure that our transformed bacteria does not escape into the environment was a very important concern for our team. We constantly cleaned our surfaces, properly disposed of waste, and autoclaved frequently in order to prevent environmental harm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bot-nav">
+        <div id="container">
+            <div class="pull-left">
+                <a href="mailto:umarylandigem@gmail.com">
+                    <p id="contact"> Contact Us </p>
+                </a>
+            </div>
+            <div class="pull-right">
+                <ul id="social-media">
+                    <li>
+                        <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png" /> </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--Instalogo.png" /> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="copyright">© University of Maryland iGEM 2016</p>
+        </div>
+    </div>
+	<script>
+	$(window).resize(function() {
+			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
+			var marginLeft = marginTotal / 2;
+			if (marginLeft > 14) {
+				$('.longText').css('margin-left', marginLeft);
+			} else {
+				$('.longText').css('margin-left', '15px');
+			}
+			
+			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
+			var marginCheck = marginTitle / 2;
+			if (marginCheck < 15) {
+				$('.titleText').css('left','15px');
+				$('.titleText').css('margin-left','0px');
+			} else {
+				$('.titleText').css('left','50%');
+				$('.titleText').css('margin-left','-40%');
+			}
+		})
+	</script>
+	<script>
+		$(window).load(function() {
+			if ( $(document).outerWidth(true) < 1101) {
+				$('.sidebar').css('position', 'absolute')
+				$('.sidebar').css('right', 'auto')
+				$('.sidebar').css('left', '750px')
+			} else {
+				$('.sidebar').css('position', 'relative')
+				$('.sidebar').css('right', '')
+				$('.sidebar').css('left', '')
+				$('.sidebar').css('margin-right', '60px')
+				$('.sidebar').css('margin-left', 'auto')
+			}
+			
+			var offset = $('#bot-nav').offset();
+			$('body').css('height', offset.top + 100)
+			
+			$(window).resize();
+		})
+		
+		$(window).resize(function() {
+			if ( $(document).outerWidth(true) < 1101) {
+				$('.sidebar').css('position', 'absolute')
+				$('.sidebar').css('right', 'auto')
+				$('.sidebar').css('left', '750px')
+			} else {
+				$('.sidebar').css('position', 'relative')
+				$('.sidebar').css('right', '')
+				$('.sidebar').css('left', '')
+				$('.sidebar').css('margin-right', '60px')
+				$('.sidebar').css('margin-left', 'auto')
+			}
+			var offset = $('#bot-nav').offset();
+			$('body').css('height', offset.top)
+		
+		})
+	</script>
+    <script>
+        smoothScroll.init({
+            offset: 80
+        });
+    </script>
+    <script>
+        $(".search").on("change keyup paste", function() {
+            var origin = $(this).attr('id') //check which search box was input into 
+            var searchString = $(this).val().toLowerCase(); //get the search input 
+            $('.sideLinks').css('display', 'none'); //hides sidebar headers
+
+            if (searchString == '' || searchString == ' ') { //if delete all search terms restore function
+                $('.sideLinks').css('display', 'block')
+                if (origin == 'searchbox-journal') {
+                    $('.blog .textBody').css('display', 'block');
+                } else if (origin == 'searchbox-protocol') {
+                    $('.procedure .textBody').css('display', 'block');
+                }
+            }
+
+
+
+            //only hide the corresponding information
+            if (origin == 'searchbox-journal') {
+                $('.blog .textBody').css('display', 'none');
+            } else if (origin == 'searchbox-protocol') {
+                $('.procedure .textBody').css('display', 'none');
+            }
+
+            var searchArray = searchString.split(' '); //turn string into array
+            searchArray = jQuery.grep(searchArray, function(value) {
+                if (value != '' || value != ' ') {
+                    return value; //removes empty spaces from array
+                }
+            });
+
+            var DOMElementSearch = $('.textBody').toArray(); //get all entries in array
+
+            $(DOMElementSearch).each(function(i) { //for every entry 
+                var tagsList = $(this).children('.tags').text().toLowerCase(); //grab tags
+                var tagsArray = tagsList.split(', '); //turns tags into array
+                var points = 0;
+                $(searchArray).each(function(i) { //for every search term
+                    var searchTerm = searchArray[i] //grab search term in string from array
+                    var result = $.inArray(searchTerm, tagsArray); //check if within array
+                    if (result > -1) { //if found
+                        points += 1; //add one hit
+                    }
+                })
+                var maxPoints = searchArray.length; //if all search terms are within tag list
+                if (points == maxPoints) {
+                    $(DOMElementSearch[i]).css('display', 'block'); //display element
+                }
+            })
+
+
+        })
+    </script>
+    <script>
+        var current = '';
+        var previous = '';
+        var dir = 'journal';
+        var selected = '';
+
+        $('.navigator').click(function() { // when any element with .class is clicked, trigger function
+            selected = $(this).attr('data-select'); // grabs the name of the navigational element clicked
+            if (selected != current) { // only change display / trigger animation if clicking different nav
+                $('.navigator').css('border-bottom', '1px solid #A8A8A8'); // make all navigational element have no bottom border
+                $('#th-' + selected).css('border-bottom', '4px solid #A8A8A8'); // the clicked navigational element given border					// slighly shifts right all text to set up for animation
+                $('.sectionClass').css('display', 'none');
+
+                if ($('#searchbox-' + selected).val() == '' || $('#search-' + selected).val() == '') {
+                    //$('#searchbox-' + selected).siblings().css('display', 'block');
+                    $('#searchbox-' + selected).siblings().children('.sideLinks').css('display', 'block');
+                }
+
+                $('#div-' + selected).css('margin-left', '60px')
+                $('#div-' + selected).css('display', 'block');
+                $('#div-' + selected).animate({
+                    marginLeft: '0px'
+                }, 200); // the text is animated to quickly move left											// sets the current display
+                current = selected;
+            }
+
+        })
+    </script>
+    <script>
+        /* Generates sidebar links based on headers */
+
+        $(document).ready(function() {
+            $(".blog .h3-heading").each(function() {
+                var header = $(this).text();
+                var date = $(this).siblings('.date').text();
+                var target = header.replace(/\s+/g, '');
+                $('#form-searchJournal').append("<a href=\"#" + target + "\" data-scroll data-week=\"" + header + "\"><p class=\"sideLinks\">" + header + "<br />" + date + "</p></>")
+            });
+
+            $(".procedure .h3-heading").each(function() {
+                var header = $(this).text();
+                var date = $(this).siblings('.date').text();
+                var target = header.replace(/\s+/g, '');
+                $('#form-searchProtocol').append("<a href=\"#" + target + "\" data-scroll data-week=\"" + header + "\"><p class=\"sideLinks\">" + header + "<br />" + date + "</p></>")
+            });
+        })
+
+        /* Search Script */
+    </script>
+    <script>
+        $('.linkText').click(function() {
+            $(this).css('text-decoration', 'none');
+            $(this).focusout();
+        });
+    </script>
+    <!-- For nav bar scrolling + hovering + window resize effects-->
+    <script>
+        // Animation over top nav bar when mouse hovers
+        $('nav').mouseover(
+                function() {
+                    $('#img-logo').css('transition', '.35s ease-in');
+                    $('#img-logo').css('opacity', '1');
+                    $('#img-igemlogo').css('transition', '.35s ease-in');
+                    $('#img-igemlogo').css('opacity', '1');
+                    $('nav ul').addClass("hover");
+                }
+            ),
+            $('nav').mouseout(
+                function() {
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 0) {
+                        if ($(window).width() >= 980) {
+                            var pushed = $('body').hasClass('pushed');
+                            if (pushed == false) {
+                                $('#img-logo').css('transition', '.25s ease');
+                                $('#img-logo').css('opacity', '0');
+                                $('#img-igemlogo').css('transition', '.25s ease');
+                                $('#img-igemlogo').css('opacity', '0');
+                                $('nav ul').removeClass("hover");
+                                $('nav').css('transition', '.5s ease');
+                            }
+                        }
+                    }
+
+                }
+            ),
+            // Window width effect on top nav bar
+            $(document).ready(function() {
+                function checkWidth() {
+                    if ($(window).width() < 980 || $('nav').hasClass('pushed')) {
+                        $('nav li').css('display', 'none');
+                        $('#img-more').css('display', 'block');
+                        $('nav ul').addClass("hover");
+                        $('#img-logo').css('transition', '.35s ease-in');
+                        $('#img-logo').css('opacity', '1');
+                        $('#img-igemlogo').css('transition', '.35s ease-in');
+                        $('#img-igemlogo').css('opacity', '1')
+                    } else {
+                        $('nav li').css('display', 'inline');
+                        $('#img-more').css('display', 'none');
+                        $('nav ul').removeClass("hover");
+                        if ($(window).scrollTop() > 0) {
+                            $('#img-igemlogo').css('transition', '.25s ease');
+                            $('#img-igemlogo').css('opacity', '0');
+                            $('#img-logo').css('transition', '.25s ease');
+                            $('#img-logo').css('opacity', '0');
+                            $('nav ul').addClass("scrolled");
+                        }
+                    }
+                }
+                // Execute on load
+                checkWidth();
+                // Bind event listener
+                $(window).resize(checkWidth);
+            });
+        // Resized nav bar effect when more icon is clicked
+        $('#img-more').click(function() {
+            $('#img-more').toggleClass('pushed');
+            $('#div-navResized').toggleClass('pushed');
+            $('nav').toggleClass('pushed');
+            $('nav img').toggleClass('pushed');
+            if ($(window).width() >= 980) {
+                var pushed = $('body').hasClass('pushed');
+                if (pushed == false) {
+                    $('nav li').css('display', 'inline');
+                    $('#img-more').css('display', 'none');
+                    $('nav ul').removeClass("hover");
+                    $('#img-igemlogo').css('transition', '.25s ease');
+                    $('#img-igemlogo').css('opacity', '0');
+                    $('#img-logo').css('transition', '.25s ease');
+                    $('#img-logo').css('opacity', '0');
+                }
+            }
+        });
+        // Scrolling animation for top nav bar
+        var nav = $('nav ul');
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll > 0) {
+                if ($(window).width() >= 980) {
+                    nav.addClass("scrolled");
+                    nav.removeClass("hover");
+                    $('#img-logo').css('transition', '.25s ease');
+                    $('#img-logo').css('opacity', '0');
+                    $('#img-igemlogo').css('transition', '.25s ease');
+                    $('#img-igemlogo').css('opacity', '0');
+                }
+            } else {
+                nav.removeClass("scrolled");
+                $('#img-logo').css('transition', '.35s ease-in');
+                $('#img-logo').css('opacity', '1');
+                $('#img-igemlogo').css('transition', '.35s ease-in');
+                $('#img-igemlogo').css('opacity', '1');
+            }
+        });
+
+        $('body').css('display', 'block');
+    </script>
+</body>
+
+</html>

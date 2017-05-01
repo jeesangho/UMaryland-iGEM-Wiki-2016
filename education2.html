@@ -356,7 +356,6 @@
 		
 	<style>
 		.caption {
-			font-size: 12pt;
 			font-weight: bold;
 			margin-left: 25px;
 		}
@@ -368,7 +367,7 @@
 		
 		.titleText {
 			position: absolute;
-			top: 350px;
+			top: 300px;
 			left: 50%;
 			margin-left: -40%;
 			right: auto;
@@ -436,20 +435,14 @@
             border-width: 2px;
         }
 
-		.longText li {
-			
-            font-size: 14pt;
-            line-height: 2;
-            font-weight: 400;
-		}
-		
-        #div-text p {
+        #div-text p, .longText li {
             /* formats text and lists within .longText */
 			padding-top: 15px;
 			padding-bottom: 15px;
             font-size: 14pt;
             line-height: 2;
             font-weight: 400;
+			text-align: left;
         }
 
         .longText {
@@ -477,35 +470,65 @@
             margin-top: 30px;
         }
 
-
-        /* formats caption and heading of results tables */
-        td p {
-            padding: 15px 0 15px 0;
-            margin: 0 0 30px 0;
-            font-size: 12pt;
-            line-height: 1.5;
-            width: 500px;
+        .figure {
+            /* fixes the width of images in results tables */
+            width: 800px;
+			display: block;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
         }
-
-        td h51 {
-            padding: 0 0 15px 0;
-            margin: 25px 0 0px 0;
-            font-size: 16pt;
-        }
-
-        td {
-            vertical-align: top;
-        }
-
-        #table-devices {
-            width: 600px;
-            margin-left: 190px;
-            margin-right: auto;
-        }
-
-        #h4-first {
-            margin-top: 50px;
-        }
+		
+		#div-activities {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			padding-bottom: 30px;
+			width: 950px;
+		}
+		
+		.profiles {
+			border: 2px solid #A8A8A8;
+			width: 900px;
+			margin-left: 20px;
+			margin-right: 20px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		
+		.profiles p {
+			line-height: 1.5em !important;
+			font-size: 12pt !important;
+			padding: 0 0 0 0 !important;
+			margin-left: 0px !important;
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
+			margin-right: 15px !important;
+		}
+		
+		.profiles strong {
+			margin-left: 15px;
+			margin-top: 15px;
+			font-size: 14pt;
+			display: block;
+			line-height: 2em;
+			
+		}
+		
+		.profiles img {
+			margin-left: 15px;
+			margin-bottom: 15px;
+			width: 400px;
+			float: left;
+			margin-right: 20px;
+		}
 		
 		#div-slideshow {
 			margin-top: 40px;
@@ -513,6 +536,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			width: 800px;
+			padding-bottom: 70px;
 		}
 		
 		#div-slideshow img {
@@ -528,9 +552,9 @@
             height: 100px;
         }
 		
-		#div-dots {
-            height: 100px;
-        }
+		#div-text a, #div-text a:visited{
+			color: blue;
+		}
 		
         </style>
 	<nav>		
@@ -559,73 +583,190 @@
 		</ul>	
 	</div>
 	<div class="scrollContainer">
-		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--il.jpg" class="div-scrollPic" style="height: 650px;">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/9/90/T--UMaryland--educationMain.jpg" class="div-scrollPic" style="height: 650px;">
 		<div class="titleText"> 
 				<style>
 				</style>
 			<!-- where background image below titles show -->
-			<h11>Interlab Study</h11></br>
-			<h21>Fluorescence Data From 3 Different Constructs with GFP</h21></br>
-			<h31>Standardizing fluorescence measurements and promoting collaboration. </h31></br>
+				<h11>Engagement</h11></br>
+				<h21>Furthering the dialogue with the public about synthetic biology</h21></br>
 			</div>
 			</div>
 	</div>
+	<div id="div-text"> <!-- Start of main text of page -->
 		<!-- Heading text -->
 		
-	<div id="div-text">
-		<div class="longText">
-			<p>The interlab study measures the fluorescence of three different constructs with GFP as well as a positive and negative control. It attempts to standardize the fluorescence measurements by adjusting absorbance values when compared to blanks, reducing the amount of independent variables by controlling for concentration, and adjusting fluorescence values based on the standard curve of FITC.  The goal of this study is to see how the observed fluorescence values compare across the iGEM community to see if the adjustments successfully standardize fluorescence measurements.</p>
-			<p>As a community of synthetic biologist, a key to the advancement of the field is collaboration among groups. For proper collaboration, we must be able to communicate our findings in ways that are concrete and well defined, making standards essential.</p>
-		</div>
-		<div class="longText">
-			<h4>Tested Devices</h4>
-			<p>Transform competent cells with Test Devices 1 - 3, positive control, and negative control provided and plate them overnight on chloramphenicol resistant plates.</p>
-			<ul>
-				<li>Test Device 1: J23101.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 2: J23106.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 3: J23117.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Positive Control Device: I20270 in pSB1C3</li>
-				<li>Negative Control Device: R0040 in pSB1C3</li>
-			</ul>
-		</div>
-		<div class="longText" id="div-protocol">
-			<h4>Protocol</h4>
-			<ol>
-				<li>Pick two colonies from each plate to inoculate and grow overnight.
-</li>
-				<li>Calibrate the plate reader-
-Measure absorbance of LUDOX and water to find a corrected absorbance that can then be used to find a conversion factor for a standard OD600 measurement.</li>
-				<li>Use FITC to create a standard fluorescence curve - 
-Measure fluorescence of FITC at different concentrations to generate a curve of fluorescence over concentration.</li>
-				<li>Measure OD600  of the overnight cultures and create dilutions to put them at an OD600 of 0.02.</li>
-				<li>Incubate at 37 C and take 100ul samples every hour (from hours 0-6).</li>
-				<li>Measure OD600 of all the samples and record.</li>
-			</ol>
-		</div>
-		<div class="longText">
-			<h4>Results</h4>
-			<div id="div-results">
-				<ul>
-					<li>Most samples grew exponentially, device 1 seemed to have little growth.</li>
-					<li>Negative control and device 3 did not show fluorescence. Positive control, device 1, and device 2 showed increases in fluorescence over time.</li>
-					<li>The results show that fluorescence per unit of concentration remains relatively constant over time.</li>
-				</ul>
-			</div>
-			<div id="div-slideshow">
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--absorbance.JPG">
-					<small class="caption">Figure 1. Cell growth versus absorbance.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/1/17/T--UMaryland--fluorescence.JPG">
-					<small class="caption">Figure 2. Cell growth versus flourescence.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--abs-fluor.JPG">
-					<small class="caption">Figure 3. Cell growth versus absorbance / flourescence.</small>
-				</div>
+	<div class="longText" style="margin-bottom: 30px;">
+		<p>To learn about other potential applications of our project, we interviewed cattle farmers about their awareness of cow’s methane contribution and their environmental practices. With our information, we prepared and distributed a brochure that informed animal farmers how to reduce greenhouse gas emissions. We also reached out to the public at farmer’s markets and gauged their support on topics like GMO’s and global warming. We discussed our project and the relevant environmental issues. Finally, to garner interest for iGEM and synthetic biology, we engaged future scientists at different points in their careers by performing activities with kids at a Building with Biology event in Baltimore, introducing synthetic biology to local high schoolers, and leading activities for college students at a STEM expo at the University of Maryland.</p>
+	</div>
+	<div class="scrollContainer">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/50/T--UMaryland--portdiscover.jpg" class="div-scrollPic">
+			<div class="titleText" >
+				<h21>Building with Biology: Port Discovery</h21></br>
+				<h31>July 30th, 2016</h31>
 			</div>
 		</div>
+	</div>
+		<div class="longText">
+			<p>We volunteered at the Building with Biology Event held at Port Discovery in Baltimore, MD to raise awareness about synthetic biology among children 8 and up. We manned six tables with different activities involving synthetic biology, which are described in more depth below.
+			</p>
+		</div>
+		<div class="longText">
+			<div id="div-activities">
+                <div id="div-super" class="profiles">
+						<strong>Super Organism!</strong>
+                    <img src="http://2016.igem.org/wiki/images/1/10/T--UMaryland--superorganisms.jpg" id="img-super" />
+                    
+                        <p>At this station, visitors were introduced to two catastrophic situations that they needed to solve using their imaginations: 1) Their friend fell off of a skyscraper, and 2) Their friend caused a massive oil spill in the ocean. To tackle the first problem, kids designed a superhero that could shoot spiderwebs or fly to ultimately catch their friend. For the second problem, kids designed a super bacteria that could clean the ocean by detecting, degrading, or digesting oil. This activity served as a introduction of the possibilites of synthetic biology and genetic engineering.
+                        </p>
+                    
+                </div>
+                <div id="div-parts" class="profiles">
+						<strong>Kit of Parts</strong>
+                    <img src="http://2016.igem.org/wiki/images/1/1f/T--UMaryland--kitofparts.jpg" id="img-parts" />
+                    
+                        <p> Visitors would learn about the concept of BioBricks and versatility of engineering cells to solve global issues. They used a cell model made of wooden poles and color-coded parts that fit on the poles. Each color had a different function like red for production and blue for sensing. A visitor would pick a challenge card with an area of research on it ranging from making synthetic blood to treating malaria. Then she would make a cell that would solve the problem using a solution description on the back of the card. </p>
+                    
+                </div>
+                <div id="div-bistro" class="profiles">
+						<strong>Bio Bistro</strong>
+                    <img src="http://2016.igem.org/wiki/images/d/d2/T--UMaryland--biobistro.jpg" id="img-bistro" />
+                    
+                        <p>Eat it? Think about it? No way? Visitors were introduced to a variety of engineered foods, both currently available and in development, and asked their opinion on consuming the goods. Items included vanilla flavoring, caffeine, and milk synthesized by yeast, a food pill that provided all daily nutrients, golden rice, and meat created in a lab. Participants were also introduced to different ways we have modified agriculture like selective breeding, genetic engineering, and synthetic biology.</p>
+                    
+                </div>
+                <div id="div-tech" class="profiles">
+						<strong>Tech Tokens</strong>
+                    <img src="http://2016.igem.org/wiki/images/8/88/T--UMaryland--techtokens.jpg" id="img-tech" />
+                    
+                        <p> Visitors would be introduced to a wide range of applications for synthetic biology to start a conversation among the visitors on the level of importance of each application. Each visitor at the table was given a stack of colored coins to represent their opinion. They would place all their coins on the application(s) most important to them and then we would all discuss their choices and reasoning. An additional activity was to give each person at the table a character card with occupations ranging from president of the U.S. to Canadian college student. They would repeat the process of placing coins, but this time in the mindset of the occupation they were given. </p>
+                    
+                </div>
+                <div id="div-bacteria" class="profiles">
+						<strong>Build Your Own Bacteria</strong>
+                    <img src="http://2016.igem.org/wiki/images/8/8b/T--UMaryland--buildyourownbacteria.jpg" id="img-super" />
+                    
+                        <p>This station combines science, art and play to present an analogy for synthetic biology. First, participants used legos to build their own plasmid, mixing and matching different parts. Different legos were used as an analogy for BioBricks, and contained pieces such as promoters and terminators. Visitors were able to pick what physical characteristics they wanted their bacteria to have, such as body color and number of legs, by picking the appropriate lego BioBricks. Then, participants were able to draw the bacteria they just built on our worksheet. </p>
+                    
+                </div>
+                <div id="div-broth" class="profiles">
+						<strong>Make Your Own LB Broth</strong>
+                    <img src="http://2016.igem.org/wiki/images/d/d9/T--UMaryland--broth.jpg" id="img-super" />
+                    
+                        <p>How do scientists feed their bacteria? Visitors learned about LB broth and were able to make their own “imitation LB broth” by mixing lemonade powder and water. To make their mixture, participants weighed out the proper amount of powder using a scale and measured out the correct amount of water using beakers.</p>
+                    
+                </div>
+                <div id="div-color" class="profiles">
+						<strong>Colorful Creations</strong>
+                    <img src="http://2016.igem.org/wiki/images/3/3a/T--UMaryland--pipette.jpg" id="img-super" />
+                    
+                        <p>Science is an art! Participants were able to try pipetting food coloring into test tubes with water, and then mix different shades to make their own colorful creations.</p>
+                    
+                </div>
+        </div>
+		</div>
+	<div class="scrollContainer">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/1/10/T--UMaryland--highschool.jpeg" class="div-scrollPic">
+			<div class="titleText" >
+				<h21>River Hill High School</h21></br>
+				<h31>June 6th, 2016</h31>
+			</div>
+		</div>
+	</div>
+	<div class="longText">
+            <p>UMaryland iGEM visited two AP Biology classes at River Hill High School located in Howard County to present and discuss a variety of synthetic biology topics. We explained what synthetic biology is, how it works, applications of genetic engineering, benefits / misconceptions of GMOs, and what iGEM is.</p>
+			<p>The students thought that synthetic biology was an interesting concept, and we even answered a few questions about starting a high school iGEM team. We learned that synthetic biology is not covered in traditional high school classes, so we have to go more in-depth when explaining it. Students in AP Biology already have an understanding of basic genetics, but it was helpful to go over the material again when introducing new content.</p>
+            <p><a href="http://2016.igem.org/wiki/images/3/32/T--UMaryland--RiverHillPowerpoint.pdf">Download the Powerpoint in PDF format</a>
+            </p>
+	</div>
+		<div class="longText">
+		 <div id="div-slideshow">
+            <div><img src="http://2016.igem.org/wiki/images/9/9e/T--UMaryland--slide1.jpg" />
+            </div>
+            <div><img data-lazy="http://2016.igem.org/wiki/images/2/28/T--UMaryland--slide2.png" />
+            </div>
+            <div><img data-lazy="http://2016.igem.org/wiki/images/7/74/T--UMaryland--slide3.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/e/eb/T--UMaryland--slide4.png">
+            </div>
+            <div><img data-lazy="http://2016.igem.org/wiki/images/2/27/T--UMaryland--slide5.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/1/12/T--UMaryland--slide6.png">
+            </div>
+            <div><img data-lazy="http://2016.igem.org/wiki/images/c/ca/T--UMaryland--slide7.png">
+            </div>
+            <div><img data-lazy="http://2016.igem.org/wiki/images/c/cb/T--UMaryland--slide8.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/c/c0/T--UMaryland--slide9.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/4/4d/T--UMaryland--slide10.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/4/4d/T--UMaryland--slide11.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/f/fb/T--UMaryland--slide12.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/c/c1/T--UMaryland--slide13.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/3/38/T--UMaryland--slide14.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/8/85/T--UMaryland--slide15.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/1/1e/T--UMaryland--slide16.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/e/ef/T--UMaryland--slide17.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/e/e0/T--UMaryland--slide18.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/b/bf/T--UMaryland--slide19.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/7/7e/T--UMaryland--slide20.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/0/0d/T--UMaryland--slide21.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/4/4b/T--UMaryland--slide22.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/f/ff/T--UMaryland--slide23.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/4/41/T--UMaryland--slide24.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/c/c8/T--UMaryland--slide25.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/e/e9/T--UMaryland--slide26.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/0/0c/T--UMaryland--slide27.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/3/3a/T--UMaryland--slide28.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/d/d5/T--UMaryland--slide29.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/c/c4/T--UMaryland--slide30.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/d/db/T--UMaryland--slide31.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/7/7e/T--UMaryland--slide32.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/c/c8/T--UMaryland--slide33.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/4/41/T--UMaryland--slide.png">
+            </div>
+            <div> <img data-lazy="http://2016.igem.org/wiki/images/2/22/T--UMaryland--slide35.png">
+            </div>
+        </div>
+		</div>
+		<div class="longText">
+			<p>In the future, we would want to have more interactive parts in our presentation when we would ask the students questions and have discussions during the powerpoint, rather than saving all their questions until the end. A good idea we would like to try to encourage more productive discussion is to split students up into small groups and have them discuss their views of GMOs and the applications that they know, and then share with the class. This would ensure more student participation and help us understand what they already know and any misconceptions they might have.</p>
+		</div>
+	<div class="scrollContainer">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/2/25/T--UMaryland--fair.jpg" class="div-scrollPic">
+			<div class="titleText" >
+				<h21>STEM Fair</h21></br>
+				<h31>September 24th, 2016</h31>
+			</div>
+		</div>
+	</div>
+	<div class="longText">
+		 <p>UMaryland iGEM was invited to the STEM Fair hosted by the UMD Engineers Without Borders at the Kim Engineering building on campus. We talked about synthetic biology and iGEM to members of campus and held the micropipette activity. At the fair was also other engineering and computer science clubs which opened up dialogue for further collaboration.</p>
+	</div>
 	</div>
     <div id="bot-nav">
         <div id="container">
@@ -647,10 +788,22 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 		
 	<script>
 		
-        $('#div-slideshow').slick({
+         $('#div-slideshow').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
 			dots: true
+
         });
-	
+		
+		 $('#div-activities').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+
+        });
+		
 		$(window).resize(function() {
 			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginLeft = marginTotal / 2;
@@ -692,6 +845,116 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 		})
 		
 	</script>
+	<script>
+        /* Hiding stupid stuff*/
+        $(document).ready(function () {
+            $('#top_title').css('display', 'none');
+            $('#top_menu').css('display', 'none');
+            $('#HQ_page').css('display', 'none');
+            $('#top_menu_under').css('display', 'none');
+        });
+        $('#HQ_page').attr("id", "iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
+        $('#mw-content-text').attr("id", "overruled").removeClass('mw-content-ltr');
+
+        // Animation over top nav bar when mouse hovers
+        $('nav').mouseover(
+                function () {
+                    $('#img-logo').css('transition', '.35s ease-in')
+                        .css('opacity', '1');
+                    $('#img-igemlogo').css('transition', '.35s ease-in')
+                        .css('opacity', '1');
+                    $('nav ul').addClass("hover");
+                }
+            ),
+            $('nav').mouseout(
+                function () {
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 0) {
+                        if ($(window).width() >= 1090) {
+                            var pushed = $('body').hasClass('pushed');
+                            if (pushed == false) {
+                                $('#img-logo').css('transition', '.25s ease')
+                                    .css('opacity', '0');
+                                $('#img-igemlogo').css('transition', '.25s ease')
+                                    .css('opacity', '0');
+                                $('nav ul').removeClass("hover");
+                                $('nav').css('transition', '.5s ease');
+                            }
+                        }
+                    }
+
+                }
+            ),
+            // Window width effect on top nav bar
+            $(document).ready(function () {
+                function checkWidth() {
+                        if ($(window).width() < 1090 || $('nav').hasClass('pushed')) {
+                            $('nav li').css('display', 'none');
+                            $('#img-more').css('display', 'block');
+                            $('nav ul').addClass("hover");
+                            $('#img-logo').css('transition', '.35s ease-in')
+                                .css('opacity', '1');
+                            $('#img-igemlogo').css('transition', '.35s ease-in')
+                                .css('opacity', '1');
+                        }
+                        else {
+                            $('nav li').css('display', 'inline');
+                            $('#img-more').css('display', 'none');
+                            $('nav ul').removeClass("hover");
+                            if ($(window).scrollTop() > 0) {
+                                $('#img-igemlogo').css('transition', '.25s ease')
+                                    .css('opacity', '0');
+                                $('#img-logo').css('transition', '.25s ease')
+                                    .css('opacity', '0');
+                                $('nav ul').addClass("scrolled");
+                            }
+                        }
+                    }
+                    // Execute on load
+                checkWidth();
+                // Bind event listener
+                $(window).resize(checkWidth);
+            });
+        // Resized nav bar effect when more icon is clicked
+        $('#img-more').click(function () {
+            $('#img-more').toggleClass('pushed');
+            $('#div-navResized').toggleClass('pushed');
+            $('nav').toggleClass('pushed');
+            $('nav img').toggleClass('pushed');
+            if ($(window).width() >= 1090) {
+                var pushed = $('body').hasClass('pushed');
+                if (pushed == false) {
+                    $('nav li').css('display', 'inline');
+                    $('#img-more').css('display', 'none');
+                    $('nav ul').removeClass("hover");
+                }
+            }
+        });
+        // Scrolling animation for top nav bar
+        var nav = $('nav ul');
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 0) {
+                if ($(window).width() >= 1090) {
+                    nav.addClass("scrolled");
+                    nav.removeClass("hover");
+                    $('#img-logo').css('transition', '.25s ease')
+                        .css('opacity', '0');
+                    $('#img-igemlogo').css('transition', '.25s ease')
+                        .css('opacity', '0');
+                }
+            }
+            else {
+                nav.removeClass("scrolled");
+                $('#img-logo').css('transition', '.35s ease-in')
+                    .css('opacity', '1');
+                $('#img-igemlogo').css('transition', '.35s ease-in')
+                    .css('opacity', '1');
+            }
+        });
+
+        $('body').css('display', 'block');
+    </script>
        <script>
 		/* Hiding stupid stuff*/
         $('#top_title').css('display', 'none');
@@ -704,102 +967,7 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 		$('#HQ_page').attr("id","iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
 		$('#mw-content-text').attr("id","overruled").removeClass('mw-content-ltr');
 	</script>
-	<script>	
-		// Animation over top nav bar when mouse hovers
-		$('nav').mouseover(
-			function () {
-				$('#img-logo').css('transition', '.35s ease-in')
-				    .css('opacity', '1');
-				$('nav ul').addClass("hover");
-			}	
-		),
-		$('nav').mouseout(
-			function () {
-			var scroll = $(window).scrollTop();
-				if (scroll > 0) {if ( $(window).width() >= 1090) { var pushed = $('body').hasClass('pushed'); if (pushed == false) {
-					$('nav ul').removeClass("hover");
-					$('nav').css('transition', '.5s ease');
-			    	$('#img-logo').css('transition', '.25s ease')
-				        .css('opacity', '0');
-				}}}
-
-			}
-		),
-		// Window width effect on top nav bar
-		$(document).ready(function() {     
-			function checkWidth() {		
-				if ($(window).width() < 1090 || $('nav').hasClass('pushed')){
-					$('nav li').css('display', 'none');	
-					$('#img-more').css('display','block');
-					$('nav ul').addClass("hover");
-					$('#img-logo').css('transition', '.35s ease-in')
-					    .css('opacity', '1');
-				} else {
-					$('nav li').css('display', 'inline');
-					$('#img-more').css('display','none');
-					$('nav ul').removeClass("hover");
-					if ($(window).scrollTop() > 0) {
-						$('#img-logo').css('transition', '.25s ease')
-						    .css('opacity', '0');
-						$('nav ul').addClass("scrolled");
-					}	
-				}
-			}
-		// Execute on load
-    		checkWidth();
-    	// Bind function to window resize
-    		$(window).resize(checkWidth);
-		});
-		// Resized nav bar effect when more icon is clicked
-		$('#img-more').click(function() {
-			$('#img-more').toggleClass('pushed');
-			$('#div-navResized').toggleClass('pushed');
-			$('nav').toggleClass('pushed');
-			$('nav img').toggleClass('pushed');
-			$('body').toggleClass('pushed');
-			if ($(window).width() >= 1090) { var pushed = $('body').hasClass('pushed'); if (pushed == false){
-				$('nav li').css('display', 'inline');
-				$('#img-more').css('display','none');
-				$('nav ul').removeClass("hover");
-			}}
-		});
-		// Scrolling animation for top nav bar
-			var nav = $('nav ul');
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-				if (scroll > 0) { if ( $(window).width() >= 1090) {
-					nav.addClass("scrolled");
-					nav.removeClass("hover");
-					$('#img-logo').css('transition', '.25s ease')
-					    .css('opacity', '0');
-				}} else {
-					nav.removeClass("scrolled");
-					$('#img-logo').css('transition', '.35s ease-in')
-					    .css('opacity', '1');
-				}
-			});
-	</script>
+	
         <script> $('#iGEM').css('display','block'); 
-		
-		$('body').css('display', 'block');</script>
-		<script>
-		$(document).ready(function(){
-		  
-		
-		});
-		
-			$.fn.extend({
-			animateCss: function (animationName) {
-				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-				this.addClass('animated ' + animationName).one(animationEnd, function() {
-					$(this).removeClass('animated ' + animationName);
-				});
-			}
-		});
-		
-		var toggle = 1;
-
-		
-		
 		</script>
 </html>

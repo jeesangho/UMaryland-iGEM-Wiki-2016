@@ -1,65 +1,93 @@
+</div>
 
-
-</div></div>
+</div>
 <html lang="en">
+
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <script> 
-        $(body).css('display','none'); 
-        </script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript">
-		if (typeof jQuery == 'undefined') {
-			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-		}
-	</script>
-	<link href='https://fonts.googleapis.com/css?family=Exo|Lora' rel='stylesheet' type='text/css'>	
-        
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-	<link href='http://sachinchoolur.github.io/lightGallery/lightgallery/css/lightgallery.css' rel='stylesheet' type='text/css'>
-	<title>2nd Annual Mid-Atlantic Meet-up</title>
+    <script>
+        $('body').css('display', 'none');
+    </script>
+    <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
+    <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
+    <title>Projects</title>
 </head>
+
 <body>
-<style>
+    <style>
+        @font-face {
+            font-family: 'Exo';
+            font-style: normal;
+            font-weight: 400;
+            src: url(http://2016.igem.org/wiki/images/0/02/T--UMaryland--Exo.woff) format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 400;
+            src: url(http://2016.igem.org/wiki/images/6/61/T--UMaryland--Lora.woff) format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 200;
+            src: url(http://2016.igem.org/wiki/images/b/b7/T--UMaryland--RalewayLight.woff) format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            src: url(http://2016.igem.org/wiki/images/5/58/T--UMaryland--Raleway.woff) format('woff2');
+        }
+    </style>
+    <style>
         #bars_item {
             display: none;
         }
-
+        
         #sideMenu {
             display: none;
-        }  
-
-        #bodyContent, #content, html, body, #globalWrapper, #iGEM, #overruled {
-             width: 100%;
-             height: 100%;
-             padding: 0 0 0 0;
-             border: none;
-             margin: 0 0 0 0;
-             background: transparent;
-			 font-family: Raleway;
         }
-
-         #top_title {
-             display: none;
-             line-height: inherit;
-         }
-
-         #sideMenu {
-             display: none;
-         }
-
+        
+        #bodyContent,
+        #content,
+        html,
+        body,
+        #globalWrapper,
+        #iGEM,
+        #overruled {
+            width: 100%;
+            height: 100%;
+            padding: 0 0 0 0;
+            border: none;
+            margin: 0 0 0 0;
+            background: transparent;
+            font-family: Raleway;
+        }
+        
+        #top_title {
+            display: none;
+            line-height: inherit;
+        }
+        
+        #sideMenu {
+            display: none;
+        }
         /* Navbar and body setup */
+        
         body {
             font-family: 'Lora', serif;
             overflow-x: hidden;
+            background-color: black;
         }
-
+        
         #content {
-                margin-top: 0px;
+            margin-top: 0px;
         }
-
         /* Navbar */
+        
         nav {
             opacity: 1.0;
             position: fixed;
@@ -70,46 +98,45 @@
             font-size: 20pt;
             display: block;
             background: #fff;
-            border-bottom: 1px solid black;	
+            border-bottom: 1px solid black;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             z-index: 1;
             margin-top: 18px;
-        } 
-
+        }
+        
         element.style {
             text-decoration: none;
         }
-
+        
         nav a {
             text-decoration: none;
             color: black;
             font-family: 'Exo', sans-serif;
         }
-
+        
         nav a:visited {
             color: black;
         }
-
+        
         nav a:hover {
             opacity: .7;
             text-decoration: none;
         }
-
-        nav ul {	
+        
+        nav ul {
             list-style: none;
             transition: all .5s ease;
             text-align: right;
         }
-
+        
         nav li {
             display: inline;
             margin-right: 20px;
         }
-
         /* Nav bar when more icon is clicked */
-
+        
         #div-navResized {
             font-size: 20pt;
             position: fixed;
@@ -121,210 +148,106 @@
             margin-top: 200px;
             z-index: 3;
         }
-
+        
         #div-navResized a {
             text-decoration: none;
             color: black;
             font-family: 'Exo', sans-serif;
         }
-
-        #div-navResized ul {	
+        
+        #div-navResized ul {
             list-style: none;
             margin-right: 40px;
             margin-top: 0px;
         }
-
+        
         #div-navResized ul li {
-            margin-top: 4px;	
+            margin-top: 4px;
         }
-
+        
         #div-title {
             z-index: -999;
         }
-
-        /* Permanent bottom bar */
-        #bot-nav {
-            background-color: #f9f9f9;    
-            border-top: 1px solid #f5f5f5;
-            position: absolute;
-            width: 100%;
-            height: 75px;
-            margin-top: 20px;
-            display: block;
-            color: black;
-            font-size: 12pt;
-            font-family: 'Lora', serif;
-            z-index: -1;
-        }
-
-        #container {
-            width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-top: -7px;
-        }
-
-        #container img {
-            height: 20px;
-            width: 20px;
-            margin-top: -40px;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-        }
-
-        #bot-nav img:hover {
-            -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-        }
-
-        #container ul {
-            text-align: center;
-            margin-top: -13px;
-            margin-right: -22px;
-        }
-
-        #container li {
-            display: inline;
-            margin-right: -14px;
-        }
-
-        #bot-nav a {
-            text-decoration: none;
-            color: black;
-        }
-
-        #copyright {
-            text-align: center;
-            padding-top: 24px;
-            padding-right: 63px;
-        }
-
-        #contact:hover {
-            text-shadow: .1px .1px black;
-        }
-
-        /* Resized bot-nav */
-
-        h4, h5 {
-            font-family: 'Lora', serif;
-            font-weight: normal;
-            font-size: 12pt;
-        }
-
-        #bot-navResized {
-            text-align: center;
-        }
-
-        #bot-navResized img {
-            height: 20px;
-            width: 20px;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-        }
-
-        #bot-navResized ul {
-            text-align: center;
-            margin-top: 6px;
-        }
-
-        #bot-navResized li {
-            display: inline;
-            margin-right: -14px;
-        }
-
-        #copyrightResized {
-            margin-top: -23px;
-        }
-
-        #contactResized {
-            margin-top: -10px;
-        }
-
-        #contactResized:hover {
-            text-shadow: .1px .1px black;
-        }
-
         /* Background of page */
-
+        
         html {
             background-color: rgba(0, 0, 0, 0.06);
         }
-
         /* Classes */
-
+        
         .description {
             margin-top: 200px;
             min-width: 970px;
         }
-
+        
         .border {
             border-bottom: 1px black;
         }
-
-        .image { 
-           position: relative; 
-           width: 100%; /* for IE 6 */
+        
+        .image {
+            position: relative;
+            width: 100%;
+            /* for IE 6 */
         }
-
+        
         .pull-right {
             float: right !important;
         }
-
+        
         .pull-left {
             float: left !important;
             margin-left: -28px;
         }
-
         /* Pushed class actives */
+        
         #img-more.pushed {
             box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .3);
         }
-
+        
         #div-navResized.pushed {
             display: block;
         }
-
-        #div-navResized.pushed a:hover {
-            text-decoration: underline;
+        
+        #div-navResized.pushed a:hover, #div-navResized.pushed img:hover {
+            text-decoration: none;
+            opacity: .7;
         }
-
+        
         nav.pushed {
             height: 100%;
         }
-
+        
         body.pushed {
             overflow-y: hidden;
         }
-
+        
         nav img.pushed {
             display: none;
         }
-
         /* Hides nav bar when scrolling */
+        
         .scrolled {
             font-size: 10pt;
             line-height: 20px;
-        }	
-
+        }
         /* animation when mouse is over Navbar */
+        
         .hover {
             font-size: 20pt;
             line-height: 40px;
         }
-
         /* Logo */
+        
         #img-logo {
-            width: 150px;
+            width: 260px;
             float: left;
             position: fixed;
             margin-top: 4px;
             margin-left: 65px;
             opacity: 1.0;
         }
-
         /* iGEM logo */
+        
         #img-igemlogo {
             width: 60px;
             float: right;
@@ -332,8 +255,8 @@
             margin-top: 1px;
             opacity: 1.0;
         }
-
         /* More Icon */
+        
         #img-more {
             position: fixed;
             display: none;
@@ -342,376 +265,374 @@
             margin-right: 0px;
             right: 15px;
             z-index: 2;
-            margin-top: -11px;
+            margin-top: -38px;
         }
-
+        
         #img-UMD {
             z-index: -999;
             margin-left: -8px;
             margin-top: -12px;
             height: 600px;
         }
-
         /* Logos when more button is clicked */
-
+        
         #img-logoResized {
-            width: 200px;
+            width: 300px;
             display: block;
             margin-right: auto;
             margin-left: auto;
             margin-top: -165px;
-            padding-right: 40px;
         }
-       
-		/* Start Page Specific CSS */
-
-		.h1 {							/* Centers the heading text on the page at different sizes */
-			color: white;			/* makes the text centered and gray colored */
-			font-size: 56pt;
-			font-weight: 200;
-			text-align: center;
-			margin-top: 30px;
-			border-bottom: none;
-			line-height: 1em;
-		}
-
-		.h3 {
-			color: white;
-			font-size: 20pt;
-			font-weight: 400;
-			text-align: center;
-			max-width: 80%;
-			margin-left: auto;
-			margin-right: auto;
-			line-height: 1.25em;
-		}
-
-
-		/* makes circles display horizontally at a fixed width, 
+        /* Start Page Specific CSS */
+        
+        .h1 {
+            /* Centers the heading text on the page at different sizes */
+            color: white;
+            /* makes the text centered and gray colored */
+            font-size: 56pt;
+            font-weight: 200;
+            text-align: center;
+            margin-top: 30px;
+            border-bottom: none;
+            line-height: 1em;
+        }
+        
+        .h3 {
+            color: white;
+            font-size: 20pt;
+            font-weight: 400;
+            text-align: center;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5em;
+        }
+        /* makes circles display horizontally at a fixed width, 
 		   turns div from rectangle to circle 					*/
-		.circle {
-			display: inline-block;
-			margin-left: 45px;
-			width: 260px;
-			height: 260px;
-			overflow: hidden;
-			-webkit-border-radius: 50%;
-			-moz-border-radius: 50%;
-			border-radius: 50%;
-			color: white;
-		}
-
-		/* makes the actual image inside circle the same width as .circle */
-		.circle img {
-			width:260px;
-		}
-
-		/* Triggers darkening of the image within .circle when hovered */
-		.circle img:hover {
-			opacity: 0.4;
-		}
-
-		/* moves all circles down and centered on the page */
-		#div-circles {
-			margin-top: 30px;
-			margin-bottom: 10px;
-			width: 960px;
-			margin-left: auto;
-			margin-right:auto;
-			
-		}
-
-		/* Creates initially invisible text that overlay the circles, positioned over it */
-		.insideText {
-			color: white; 
-			position: absolute;
-			opacity: 0;
-			z-index: 99999;
-			margin-top: 55px;
-			margin-left: 30px;
-		}
-
-		/* Formats the text inside the circles that show up when darkened */
-		.h4 {
-			color: white; 
-			font-size: 24pt;
-			font-weight: 200;
-			line-height: 1.5em;
-			margin-bottom: 15px;
-			max-width: 200px;
-			text-align: center;
-			margin-top: 15px;
-		}
-		
-		.h5 {
-			color: white; 
-			font-size: 16pt;
-			font-weight: 200;
-			line-height: 1.5em;
-			margin-bottom: 15px;
-			max-width: 200px;
-			text-align: center;
-			margin-top: 15px;
-		}
-
-		/* Prevents the overlay text links from being blue and underlined */
-		#div-circles a {
-			text-decoration: none;
-			color: white;
-		}
-		
-		#education, #h5-last {
-			margin-left: 25px;
-			margin-top: 35px;
-		}
-		
-		#div-pic {
-			/* sets the background image above the main text */
-			padding-top: 10px;
-			padding-bottom: 40px;
-			min-width: 1200px;
-			max-width: 1200px;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 20px;
-			overflow: hidden;
-		}
-		
-		#video {
-			position: absolute;
-			z-index: -999;
-		}
-	</style>
-        <script>
-		/* Hiding stupid stuff*/
-		$(document).ready(function() {
-                $('#top_title').css('display', 'none');
-				$('#top_menu').css('display', 'none');
-				//$('#top_menu_14').css('display', 'none');
-                $('#HQ_page').css('display', 'none');
-				$('#top_menu_under').css('display', 'none');	
-                });
-		$('#HQ_page').attr("id","iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
-		$('#mw-content-text').attr("id","overruled").removeClass('mw-content-ltr');
-	</script>
-	<nav>		
-		<img src="http://2016.igem.org/wiki/images/e/e3/16UMD-logoTemp.png" id="img-logo" width="128px">
-		<a href="http://2016.igem.org/Main_Page">
-		<img src="http://2016.igem.org/wiki/images/3/3d/T--UMaryland--igemlogo.png" id="img-igemlogo" width="128px">
-		</a>
-		<ul>
-			<a style="opacity: 0">Fix</a>
-			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
-			<!--<li><a href="http://2016.igem.org/Team:UMaryland/parts">Parts</a></li>
-			<li><a href="http://2016.igem.org/Team:UMaryland/modeling">Modeling</a></li>-->
-			<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
-			<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
-			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
-		</ul>	
-	</nav>
-	<img src="http://2016.igem.org/wiki/images/e/e5/T--UMaryland--more.png" id="img-more">
-	<!-- Nav bar when more button is clicked	 -->
-	<div id="div-navResized">
-		<img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized">
-		<ul>
-			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
-			<!--<li><a href="http://2016.igem.org/Team:UMaryland/parts">Parts</a></li>
-			<li><a href="http://2016.igem.org/Team:UMaryland/modeling">Modeling</a></li>-->
-			<li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
-			<li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
-			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
-		</ul>	
-	</div>
-	<div id="div-text"> <!-- Start of main text of page -->
-		<!-- Heading text -->
-		<div id="div-pic">
-			<video id="video" width="1200px" height="300px" autoplay loop>
-				<source src="http://2016.igem.org/wiki/images/c/cd/T--UMaryland--outreach.webm" type="video/webm">
-			</video>
-			<p class="h1">Projects</p>
-			<p class="h3"></p>
-		</div>
-			<!-- Contains all of the circles to be clicked on -->
-		<div id="div-circles"> 
-			<div id="div-humanpractices" class="circle"> 
-			<!-- Class 'circle' makes div from rectangle into circle -->
-				<a href="http://2016.igem.org/Team:UMaryland/humanpractices"> 
-				<!-- Makes the entire circle clickable -->
-					<div class="insideText"><p class="h4">Methane Sequestration</p><p class="h5">coming soon!</p></div>
-					<img id="img-humanpractices" src="http://2016.igem.org/wiki/images/f/fb/T--UMaryland--humanpracticescircle.png" />
-				</a>
-			</div>
-			<div id="div-meetup" class="circle">
-				<a href="http://2016.igem.org/Team:UMaryland/meetup">
-					<div class="insideText"><p class="h4">DIY -80 C Freezer</p><p class="h5">coming soon!</p></div></div>
-					<img id="img-meetup" src="http://2016.igem.org/wiki/images/d/dd/T--UMaryland--meetupcircle.png" />
-				</a>	
-			</div>
-			<div id="div-education" class="circle">
-				<a href="http://2016.igem.org/Team:UMaryland/education">
-					<div class="insideText"><p class="h4" id="education">Interlab Study</p><p class="h5" id="h5-last">coming soon!</p></div>
-					<img id="img-education" src="http://2016.igem.org/wiki/images/d/d6/T--UMaryland--education.png" />
-				</a>
-			</div>
-		</div>
-		<!-- End of #div-circles -->
-	</div>
-    <div id="bot-nav">
-        <div id="container">
-            <div class="pull-left">
-                <a href="mailto:umarylandigem@gmail.com"><p id="contact"> Contact Us </p></a>
-            </div>	
-            <p id="copyright">© University of Maryland iGEM 2016</p>
-            <div class="pull-right">
-                <ul id="social-media">
-                    <li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png"/> </a> </li>
-                    <li> <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--Instalogo.png"/> </a> </li>
-                </ul>
-            </div>	
+        
+        .circle {
+            display: inline-block;
+            margin-left: 45px;
+            width: 260px;
+            height: 260px;
+            overflow: hidden;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            color: white;
+        }
+        /* makes the actual image inside circle the same width as .circle */
+        
+        .circle img {
+            width: 260px;
+        }
+        /* Triggers darkening of the image within .circle when hovered */
+        
+        .circle img:hover {
+            opacity: 0.4;
+        }
+        /* moves all circles down and centered on the page */
+        
+        #div-circles {
+            margin-top: 5px;
+            padding-bottom: 50px;
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Creates initially invisible text that overlay the circles, positioned over it */
+        
+        .insideText {
+            color: white;
+            position: absolute;
+            opacity: 0;
+            z-index: 99999;
+            margin-top: 55px;
+            margin-left: 30px;
+        }
+        /* Formats the text inside the circles that show up when darkened */
+        
+        .h4 {
+            color: white;
+            font-size: 24pt;
+            font-weight: 200;
+            line-height: 1.5em;
+            margin-bottom: 15px;
+            max-width: 200px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .h5 {
+            color: white;
+            font-size: 16pt;
+            font-weight: 200;
+            line-height: 1.5em;
+            margin-bottom: 15px;
+            max-width: 200px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        /* Prevents the overlay text links from being blue and underlined */
+        
+        #div-circles a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #div-pic {
+            /* sets the background image above the main text */
+            padding-top: 10px;
+            padding-bottom: 40px;
+            min-width: 960px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        
+        #video {
+            position: absolute;
+            z-index: -999;
+        }
+        
+        .covervid-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -999;
+        }
+    </style>
+    <nav>
+        <a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo"></a>
+        <ul>
+            <a style="opacity: 0">Fix</a>
+            <li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+        </ul>
+    </nav>
+    <img src="http://2016.igem.org/wiki/images/e/e5/T--UMaryland--more.png" id="img-more">
+    <!-- Nav bar when more button is clicked	 -->
+    <div id="div-navResized">
+        <a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized"></a>
+        <ul>
+            <li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
+			<li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+        </ul>
+    </div>
+    <div id="div-text">
+        <!-- Start of main text of page -->
+        <!-- Heading text -->
+        <div id="div-pic">
+            <p class="h1">Projects</p>
+            <p class="h3">We set out to slow the pace of global warming by sequestering methane in the environment. Along the way we are engineering a DIY -80 C freezer to increase access to synthetic biology.</p>
         </div>
-        <div id="bot-navResized">
-            <a href="mailto:umarylandigem@gmail.com"><h4 id="contactResized"> Contact Us </h4></a>	
-            <h5 id="copyrightResized">© University of Maryland iGEM 2016</h5>
-            <ul id="social-mediaResized">
-                <li> <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--FBlogo.png"/> </a> </li>
-                <li> <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--Instalogo.png"/> </a> </li>
-            </ul>
+        <!-- Contains all of the circles to be clicked on -->
+        <div id="div-circles">
+            <div id="div-methane" class="circle">
+                <!-- Class 'circle' makes div from rectangle into circle -->
+                <a href="http://2016.igem.org/Team:UMaryland/Description">
+                    <div class="insideText">
+                        <p class="h4">Methane Sequestration</p>
+                    </div>
+                    <img id="img-methane" src="http://2016.igem.org/wiki/images/a/a8/T--UMaryland--landfillcircle.jpeg" />
+                </a>
+            </div>
+            <div id="div-freezer" class="circle">
+                <a href="http://2016.igem.org/Team:UMaryland/Hardware">
+                    <div class="insideText">
+                        <p class="h4">DIY -80 C Freezer</p>
+                    </div>
+                    <img id="img-freezer" src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--freezercircle.jpeg" />
+                </a>
+            </div>
+            <div id="div-interlab" class="circle">
+                <a href="http://2016.igem.org/Team:UMaryland/Measurement">
+                    <div class="insideText">
+                        <p class="h4">Interlab Study</p>
+                    </div>
+                    <img id="img-interlab" src="http://2016.igem.org/wiki/images/9/91/T--UMaryland--interlabcircle.jpeg" />
+                </a>
+            </div>
+        </div>
+        <!-- End of #div-circles -->
+
+        <div class="covervid-wrapper">
+            <video class="covervid-video" autoplay loop>
+			<source src="http://2016.igem.org/wiki/images/2/2c/T--UMaryland--projects.webm" type="video/webm">
+			<source src="http://2016.igem.org/wiki/images/1/19/T--UMaryland--project.mp4" type="video/mp4">
+		</video>
         </div>
     </div>
-	<script>
-
-	$('.linkText').click( function() { $(this).css('text-decoration','none'); $(this).focusout();});
-	</script>
-        <!-- For nav bar scrolling + hovering + window resize effects-->
-	<script>
-		// Animation over top nav bar when mouse hovers
-		$('nav').mouseover(
-			function () {
-				$('#img-logo').css('transition', '.35s ease-in');
-				$('#img-logo').css('opacity', '1');
-				$('#img-igemlogo').css('transition', '.35s ease-in');
-				$('#img-igemlogo').css('opacity', '1');
-				$('nav ul').addClass("hover");
-			}	
-		),
-		$('nav').mouseout(
-			function () {
-			var scroll = $(window).scrollTop();
-				if (scroll > 0) {if ( $(window).width() >= 980) { var pushed = $('body').hasClass('pushed'); if (pushed == false) {
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-					$('nav ul').removeClass("hover");
-					$('nav').css('transition', '.5s ease');
-				}}}
-
-			}
-		),
-		// Window width effect on top nav bar
-		$(document).ready(function() {
-			function checkWidth() {		
-				if ($(window).width() < 980 || $('nav').hasClass('pushed')){
-					$('nav li').css('display', 'none');	
-					$('#img-more').css('display','block');
-					$('nav ul').addClass("hover");
-					$('#img-logo').css('transition', '.35s ease-in');
-					$('#img-logo').css('opacity', '1');
-					$('#img-igemlogo').css('transition', '.35s ease-in');
-					$('#img-igemlogo').css('opacity', '1')
-				} else {
-					$('nav li').css('display', 'inline');
-					$('#img-more').css('display','none');
-					$('nav ul').removeClass("hover");
-					if ($(window).scrollTop() > 0) {
-						$('#img-igemlogo').css('transition', '.25s ease');
-						$('#img-igemlogo').css('opacity', '0');
-						$('#img-logo').css('transition', '.25s ease');
-						$('#img-logo').css('opacity', '0');
-						$('nav ul').addClass("scrolled");
-					}	
-				}
-			}
-            function checkBotNav() {		
-				if ($(window).width() < 980){
-                    $('#container').css('display', 'none');
-                    $('#bot-navResized').css('display', 'block');
-                    $('#bot-nav').css('height', '110px');	
-				} else {
-                    $('#container').css('display', 'block');
-                    $('#bot-navResized').css('display', 'none');
-                    $('#bot-nav').css('height', '75px');
-				}
-			}
-		// Execute on load
-    		checkWidth();
-            checkBotNav();
-    		// Bind event listener
-    		$(window).resize(checkWidth);
-    		$(window).resize(checkBotNav);
-		});
-		// Resized nav bar effect when more icon is clicked
-		$('#img-more').click(function() {
-			$('#img-more').toggleClass('pushed');
-			$('#div-navResized').toggleClass('pushed');
-			$('nav').toggleClass('pushed');
-			$('nav img').toggleClass('pushed');
-			if ($(window).width() >= 980) { var pushed = $('body').hasClass('pushed'); if (pushed == false){
-				$('nav li').css('display', 'inline');
-				$('#img-more').css('display','none');
-				$('nav ul').removeClass("hover");
-				$('#img-igemlogo').css('transition', '.25s ease');
-				$('#img-igemlogo').css('opacity', '0');
-				$('#img-logo').css('transition', '.25s ease');
-				$('#img-logo').css('opacity', '0');
-			}}
-		});
-		// Scrolling animation for top nav bar
-			var nav = $('nav ul');
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-				if (scroll > 0) { if ( $(window).width() >= 980) {
-					nav.addClass("scrolled");
-					nav.removeClass("hover");
-					$('#img-logo').css('transition', '.25s ease');
-					$('#img-logo').css('opacity', '0');
-					$('#img-igemlogo').css('transition', '.25s ease');
-					$('#img-igemlogo').css('opacity', '0');
-				}} else {
-					nav.removeClass("scrolled");
-					$('#img-logo').css('transition', '.35s ease-in');
-					$('#img-logo').css('opacity', '1');
-					$('#img-igemlogo').css('transition', '.35s ease-in');
-					$('#img-igemlogo').css('opacity', '1');	
-				}
-			});
-                  
-                $(body).css('display','block');
-	</script>
-    <script src="http://pixelcog.github.io/parallax.js/js/parallax.min.js">
+    <script>
+        /* Hiding stupid stuff*/
+        $(document).ready(function() {
+            $('#top_title').css('display', 'none');
+            $('#top_menu').css('display', 'none');
+            //$('#top_menu_14').css('display', 'none');
+            $('#HQ_page').css('display', 'none');
+            $('#top_menu_under').css('display', 'none');
+        });
+        $('#HQ_page').attr("id", "iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
+        $('#mw-content-text').attr("id", "overruled").removeClass('mw-content-ltr');
     </script>
-	<script>
-		$('.circle').hover( //when hovering over any circle trigger script
-			function() { 
-				$(this).css('background-color','black');							//makes the circle background black to darken img
-				$(this).children().children('.insideText').css('opacity','100');	//makes inside text visible
-				$(this).children().children('img').css('opacity','.4');				//decreases opacity of img to simulate darkening 
-			}, 
-			function() { 
-				$(this).css('background-color','#FEFFFA');							//makes the circle background white to not show
-				$(this).children().children('.insideText').css('opacity','0');		//makes inside text invisible
-				$(this).children().children('img').css('opacity','100');			//increase opacity of img to return to normal
-			}
-		)
-		$('.insideText').hover(
-			function() {
-				$(this).children('.h4').css('font-weight','400')		//makes heading 'hok/sok' or 'side projects' bold when hovered over
-				$(this).siblings('img').css('opacity','.4');}, 		//makes img darkened when hovering over the text
-			function() {
-				$(this).children('.h4').css('font-weight','200')		//returns everything to normal
-			}
-		)
+    <script>
+        var height = $(document).outerHeight(true);
+        var width = $(document).outerWidth(true);
+
+
+        resizeVid();
+
+        $(window).resize(resizeVid);
+
+        function resizeVid() {
+            $('.covervid-video').css("width", "")
+                .css("height", "");
+            height = $(document).outerHeight(true);
+            width = $(document).outerWidth(true);
+            if (height <= 600) {
+                $('.covervid-video').css('height', 720);
+            } else {
+                ratio = width / height;
+                if (ratio < 1.777777777777) {
+                    $('.covervid-video').css('height', height + 60);
+                } else if (ratio >= 1.777777777777) {
+                    $('.covervid-video').css('width', width + 60);
+                }
+            }
+        }
+
+        // Animation over top nav bar when mouse hovers
+        $('nav').mouseover(
+                function() {
+                    $('#img-logo').css('transition', '.35s ease-in')
+                        .css('opacity', '1');
+                    $('#img-igemlogo').css('transition', '.35s ease-in')
+                        .css('opacity', '1');
+                    $('nav ul').addClass("hover");
+                }
+            ),
+            $('nav').mouseout(
+                function() {
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 0) {
+                        if ($(window).width() >= 1090) {
+                            var pushed = $('body').hasClass('pushed');
+                            if (pushed == false) {
+                                $('#img-logo').css('transition', '.25s ease')
+                                    .css('opacity', '0');
+                                $('#img-igemlogo').css('transition', '.25s ease')
+                                    .css('opacity', '0');
+                                $('nav ul').removeClass("hover");
+                                $('nav').css('transition', '.5s ease');
+                            }
+                        }
+                    }
+
+                }
+            ),
+            // Window width effect on top nav bar
+            $(document).ready(function() {
+                function checkWidth() {
+                    if ($(window).width() < 1090 || $('nav').hasClass('pushed')) {
+                        $('nav li').css('display', 'none');
+                        $('#img-more').css('display', 'block');
+                        $('nav ul').addClass("hover");
+                        $('#img-logo').css('transition', '.35s ease-in')
+                            .css('opacity', '1');
+                        $('#img-igemlogo').css('transition', '.35s ease-in')
+                            .css('opacity', '1')
+                    } else {
+                        $('nav li').css('display', 'inline');
+                        $('#img-more').css('display', 'none');
+                        $('nav ul').removeClass("hover");
+                        if ($(window).scrollTop() > 0) {
+                            $('#img-igemlogo').css('transition', '.25s ease')
+                                .css('opacity', '0');
+                            $('#img-logo').css('transition', '.25s ease')
+                                .css('opacity', '0');
+                            $('nav ul').addClass("scrolled");
+                        }
+                    }
+                }
+                // Execute on load
+                checkWidth();
+                // Bind event listener
+                $(window).resize(checkWidth);
+            });
+        // Resized nav bar effect when more icon is clicked
+        $('#img-more').click(function() {
+            $('#img-more').toggleClass('pushed');
+            $('#div-navResized').toggleClass('pushed');
+            $('nav').toggleClass('pushed');
+            $('nav img').toggleClass('pushed');
+            if ($(window).width() >= 1090) {
+                var pushed = $('body').hasClass('pushed');
+                if (pushed == false) {
+                    $('nav li').css('display', 'inline');
+                    $('#img-more').css('display', 'none');
+                    $('nav ul').removeClass("hover");
+                }
+            }
+        });
+        // Scrolling animation for top nav bar
+        var nav = $('nav ul');
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll > 0) {
+                if ($(window).width() >= 1090) {
+                    nav.addClass("scrolled");
+                    nav.removeClass("hover");
+                    $('#img-logo').css('transition', '.25s ease')
+                        .css('opacity', '0');
+                    $('#img-igemlogo').css('transition', '.25s ease')
+                        .css('opacity', '0');
+                }
+            } else {
+                nav.removeClass("scrolled");
+                $('#img-logo').css('transition', '.35s ease-in')
+                    .css('opacity', '1');
+                $('#img-igemlogo').css('transition', '.35s ease-in')
+                    .css('opacity', '1');
+            }
+        });
+
+        $('body').css('display', 'block');
 	</script>
+	<script>
+        $('.circle').hover( //when hovering over any circle trigger script
+            function() {
+                $(this).css('background-color', 'black'); //makes the circle background black to darken img
+                $(this).children().children('.insideText').css('opacity', '100'); //makes inside text visible
+                $(this).children().children('img').css('opacity', '.4'); //decreases opacity of img to simulate darkening 
+            },
+            function() {
+                $(this).css('background-color', '#FEFFFA'); //makes the circle background white to not show
+                $(this).children().children('.insideText').css('opacity', '0'); //makes inside text invisible
+                $(this).children().children('img').css('opacity', '100'); //increase opacity of img to return to normal
+            }
+        )
+        $('.insideText').hover(
+            function() {
+                $(this).children('.h4').css('font-weight', '400') //makes heading 'hok/sok' or 'side projects' bold when hovered over
+                $(this).siblings('img').css('opacity', '.4');
+            }, //makes img darkened when hovering over the text
+            function() {
+                $(this).children('.h4').css('font-weight', '200') //returns everything to normal
+            }
+        )
+    </script>
 </body>
-		
+
 </html>

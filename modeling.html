@@ -6,6 +6,7 @@
 <head>
     <script>
         $('body').css('display', 'none');
+        $('body').css('opacity', '0');
     </script>
     <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
     <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
@@ -355,17 +356,15 @@
         </style>
 		
 	<style>
+		
+		
 		.caption {
-			font-size: 12pt;
 			font-weight: bold;
-			margin-left: 25px;
+			font-size: 12pt;
+			margin-top: 10px;
+			line-height: 2em;
 		}
-		
-		#div-figures{
-			padding-bottom: 100px;
-			font-size: 14pt;
-		}
-		
+	
 		.titleText {
 			position: absolute;
 			top: 350px;
@@ -413,20 +412,15 @@
         #div-text {
 			padding-top: 50px;
 			padding-bottom: 150px;
+			min-height: 800px;
         }
 
-        .div-scrollPic {
+        #div-pic {
             z-index: -999;
             height: 500px;
 			background-color: transparent;
         }
 
-		.scrollContainer {
-			
-			position: relative;
-			width: 100%;
-		}
-		
         .imageEmbed {
             /* creates border around image on each page */
             border-style: solid;
@@ -436,17 +430,8 @@
             border-width: 2px;
         }
 
-		.longText li {
-			
-            font-size: 14pt;
-            line-height: 2;
-            font-weight: 400;
-		}
-		
-        #div-text p {
+        #div-text p, .longText li {
             /* formats text and lists within .longText */
-			padding-top: 15px;
-			padding-bottom: 15px;
             font-size: 14pt;
             line-height: 2;
             font-weight: 400;
@@ -463,8 +448,8 @@
 
         h4 {
             /* formats intratext section headings */
+			margin-top: 40px !important;
             font-size: 20pt;
-            margin-top: 80px;
         }
 
         .blockText {
@@ -477,6 +462,22 @@
             margin-top: 30px;
         }
 
+        .figure {
+            /* fixes the width of images in results tables */
+            width: 80%;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 7%;
+			margin-right: 13%;
+        }
+		
+		.figureImg {
+			width: 100%;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+		}
 
         /* formats caption and heading of results tables */
         td p {
@@ -506,30 +507,42 @@
         #h4-first {
             margin-top: 50px;
         }
-		
-		#div-slideshow {
-			margin-top: 40px;
-			margin-bottom: 40px;
-			margin-left: auto;
-			margin-right: auto;
-			width: 800px;
-		}
-		
-		#div-slideshow img {
-			width: 750px;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			margin-left: auto;
-			margin-right: auto;
-			border: 2px solid #A8A8A8;
-		}
-		
-		#div-dots {
-            height: 100px;
+
+        /* table of element */
+
+        #table-selector {
+            width: 80%;
+			min-width: 600px;
+			max-width: 1500px;
+			position: absolute;
+            border-collapse: collapse;
+            background: none;
         }
-		
-		#div-dots {
-            height: 100px;
+
+        #table-selector th {
+			width: 25%;
+            text-align: center;
+        }
+
+        .borderRight {
+            border-right: 1px solid #A8A8A8;
+        }
+
+        .borderBoth {
+            border-left: 1px solid #A8A8A8;
+            border-right: 1px solid #A8A8A8;
+        }
+
+        .borderTop {
+            border-bottom: 1px solid #A8A8A8;
+        }
+
+        th p {
+            font-size: 16pt !important;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 5px 0px 15px 0px;
+            margin: 0 0 0 0;
         }
 		
         </style>
@@ -559,72 +572,189 @@
 		</ul>	
 	</div>
 	<div class="scrollContainer">
-		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--il.jpg" class="div-scrollPic" style="height: 650px;">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/a/a8/T--UMaryland--smmo.jpg" class="div-scrollPic" style="height: 650px;" >
 		<div class="titleText"> 
 				<style>
 				</style>
 			<!-- where background image below titles show -->
-			<h11>Interlab Study</h11></br>
-			<h21>Fluorescence Data From 3 Different Constructs with GFP</h21></br>
-			<h31>Standardizing fluorescence measurements and promoting collaboration. </h31></br>
+			<h11>Modeling</h11></br>
+			<h21>Predicting Data and Optimizing Results</h21></br>
+			<h31>Applying engineering principals to biological systems</h31></br>
 			</div>
 			</div>
 	</div>
 		<!-- Heading text -->
 		
-	<div id="div-text">
+	<div id="div-text"> <!-- Start of main text of page -->
+		<!-- Heading text -->
+		<style>
+			.longText strong {
+				font-size: 14pt;
+				line-height: 2;
+			}
+			
+			.longText {
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			
+			.textSection {
+				display: none;
+			}
+			
+			.longText p {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
+			.purple {
+				color: #700A91;
+			}
+			
+		</style>
+		<table id="table-selector"> 
+			<thead>
+				<th class="borderRight navigator borderTop" id="th-background" data-select="background"><p>Background</p></th>
+				<th class="borderBoth navigator borderTop" id="th-pathway" data-select="pathway"><p>Pathway</p></th>
+				<th class="borderBoth navigator borderTop" id="th-optimization" data-select="optimization"><p>Optimization</p></th>
+				<th class="borderLeft navigator borderTop" id="th-results" data-select="results"><p>Results</p></th>
+			</thead>
+		</table>
+		</br></br></br>
 		<div class="longText">
-			<p>The interlab study measures the fluorescence of three different constructs with GFP as well as a positive and negative control. It attempts to standardize the fluorescence measurements by adjusting absorbance values when compared to blanks, reducing the amount of independent variables by controlling for concentration, and adjusting fluorescence values based on the standard curve of FITC.  The goal of this study is to see how the observed fluorescence values compare across the iGEM community to see if the adjustments successfully standardize fluorescence measurements.</p>
-			<p>As a community of synthetic biologist, a key to the advancement of the field is collaboration among groups. For proper collaboration, we must be able to communicate our findings in ways that are concrete and well defined, making standards essential.</p>
-		</div>
-		<div class="longText">
-			<h4>Tested Devices</h4>
-			<p>Transform competent cells with Test Devices 1 - 3, positive control, and negative control provided and plate them overnight on chloramphenicol resistant plates.</p>
-			<ul>
-				<li>Test Device 1: J23101.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 2: J23106.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 3: J23117.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Positive Control Device: I20270 in pSB1C3</li>
-				<li>Negative Control Device: R0040 in pSB1C3</li>
-			</ul>
-		</div>
-		<div class="longText" id="div-protocol">
-			<h4>Protocol</h4>
-			<ol>
-				<li>Pick two colonies from each plate to inoculate and grow overnight.
-</li>
-				<li>Calibrate the plate reader-
-Measure absorbance of LUDOX and water to find a corrected absorbance that can then be used to find a conversion factor for a standard OD600 measurement.</li>
-				<li>Use FITC to create a standard fluorescence curve - 
-Measure fluorescence of FITC at different concentrations to generate a curve of fluorescence over concentration.</li>
-				<li>Measure OD600  of the overnight cultures and create dilutions to put them at an OD600 of 0.02.</li>
-				<li>Incubate at 37 C and take 100ul samples every hour (from hours 0-6).</li>
-				<li>Measure OD600 of all the samples and record.</li>
-			</ol>
-		</div>
-		<div class="longText">
-			<h4>Results</h4>
-			<div id="div-results">
-				<ul>
-					<li>Most samples grew exponentially, device 1 seemed to have little growth.</li>
-					<li>Negative control and device 3 did not show fluorescence. Positive control, device 1, and device 2 showed increases in fluorescence over time.</li>
-					<li>The results show that fluorescence per unit of concentration remains relatively constant over time.</li>
-				</ul>
-			</div>
-			<div id="div-slideshow">
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--absorbance.JPG">
-					<small class="caption">Figure 1. Cell growth versus absorbance.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/1/17/T--UMaryland--fluorescence.JPG">
-					<small class="caption">Figure 2. Cell growth versus flourescence.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--abs-fluor.JPG">
-					<small class="caption">Figure 3. Cell growth versus absorbance / flourescence.</small>
+			<div class="textSection" id="div-background">
+				<h4>Background</h4>
+				<p>The Modeling portion of the UMaryland iGEM project proposes specific adjustments to the expression levels of enzymes in the methane digestion pathways. Our modeling efforts focus on ensuring the viability of our engineered organism, and optimizing the efficiencies of our pathways. Along the way, our team encountered stumbling blocks that we would like to illuminate for iGEM teams in the future. Incorporated into our modeling page is a concise guide on getting started with the Matlab applet, Simbiology, to model simple metabolic pathways. If you have no interest in this guide, please feel free to optimize your time by skipping over the purple text.</p>
+				<div class="purple">
+					<p>Simbiology is a tool that enables teams with variable modeling backgrounds to build pathway architectures by using a simple drag and drop interface. Although Simbiology is an extremely useful and intuitive tool, it does require some experience to navigate, and it does have its errors; but more on that later. The first step is to open Simbiology by typing “simbiology” into the Matlab command window, then hitting enter.</p>
+					<div class="figure" style="width:550px; margin-left: auto; margin-right: auto; ">
+						<img src="http://2016.igem.org/wiki/images/c/ca/T--UMaryland--symbiomenu.jpg" style="margin-left: auto; margin-right: auto; width:150px; display: block;" class="figureImg" />
+						<small class="caption">Simbiology allows you to drag these elements onto an interface to design your model. For our model, we mainly used the “species” icon and the “reaction” icon.</small>
+					</div>
+					<p>To begin drawing your metabolic pathway, drag and drop a “reaction” icon, located on the left hand sign of the window, onto the blank canvas covering the right half of the window. Then double click on the small orange reaction circle that you placed, and enter your chemical reaction into the block property editor by replacing “null -> null” with your balanced formula. Enzymes are included in the balanced formula. Make sure your enzyme is represented as both a reactant and a product. Clicking out of the Block Property Editor will create species with arrows pointing into your reaction and arrows pointing out of your reaction. Enzymes are connected to the reaction by a dotted line, representing an intermediate that is not consumed or produced by the reaction.  You may place as many reactions and species onto the canvas as you would like. If you would like an example model architecture, our pathways are shown later.</p>
 				</div>
 			</div>
+		</div>
+		<div class="longText">
+			<div class="textSection" id="div-pathway">
+			<h4>Creating the Pathway Architecture</h4>
+				<p>The models for our formate and fructose pathways each consist of two compartments, four reactions and 14 or 15 species, respectively. The initial goal for our project was to produce a co-culture of cells consisting of “sMMO Cells” that produce methanol and “Formate/Fructose Cells” that detoxify methanol, all in an effort to completely biodegrade methane. The first compartment in our model shown below is the “sMMO Cell” that converts methane to methanol, which travels to the second compartment of our model, either the “Formate” or “Fructose Cell.” Each species represents a different molecule involved in our pathway. The architecture for our Formate pathway displays a progression of compounds starting at methane and ending at carbon dioxide. In all, this pathway is facilitated by four enzymes.</p>
+				<img src="http://2016.igem.org/wiki/images/7/75/T--UMaryland--formateModel.jpg" width="100%" />
+				<p>The first half of each pathway is identical. The first enzyme used in each pathway is sMMO, which catalyses the oxidation of methane to methanol while simultaneously oxidizing NADH to NAD+. Both pathways then proceed to oxidize methanol to formaldehyde, which is a reaction catalyzed by the MDH2 enzyme.</p>
+				<img src="http://2016.igem.org/wiki/images/e/eb/T--UMaryland--fructoseModel.jpg" width="100%" />
+				<p>Once formaldehyde is produced, the two pathways begin to differ. In the Formate Pathway, formaldehyde is first oxidized to formate, which is then oxidized to carbon dioxide by FALDH and FDH enzymes respectively. In the Fructose Pathway, formaldehyde is incorporated into a 5 carbon sugar by HPS to make D-arabinose 6-phosphate, a 6 carbon sugar. PHI then converts D-arabinose 6-phosphate into D-fructose-6-phosphate, which is a substrate of glycolysis.</p>
+				<p>The enzyme kinetics for each of the aforementioned proteins are listed in the table below:</p>
+				<style>
+				
+					table {
+					font-size: 14 pt;
+					background-color: transparent;
+					width: 100%;
+				}
+				
+				table td  {
+					font-size: 14pt;
+					line-height: 1.5em;
+					text-align: left;
+				}
+
+th { text-decoration: bold; font-size: 14pt;
+					line-height: 1.5em;
+					text-align: left; }
+				</style>
+				<table>
+					<thead>
+						<th width="15%">Enzyme</th>
+						<th width="40%">K<sub>m</sub> (mM)</th>
+						<th width="45">V<sub>max</sub> </br><small>(micromoles product/minute/mg enzyme)</small></th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>sMMO<sup>1</sup></td>
+							<td>0.003 </td>
+							<td>0.056</td>
+						</tr>
+						<tr>
+							<td>MDH2<sup>2</sup></td>
+							<td>360</td>
+							<td>0.09</td>
+						</tr>
+						<tr>
+							<td>FALDH<sup>3</sup></td>
+							<td>0.09</td>
+							<td>5.9</td>
+						</tr>
+						<tr>
+							<td>FDH<sup>4</sup></td>
+							<td>1400.0 (formaldehyde)</br>34.0 (NAD<sup>+</sup>)</td>
+							<td>0.625</td>
+						</tr>
+						<tr>
+							<td>HPS<sup>5</sup></td>
+							<td>0.74 (formaldehyde)</br>0.081 (D-ribulose-5-phosphate)</td>
+							<td>5.9</td>
+						</tr>
+						<tr>
+							<td>PHI<sup>6</sup></td>
+							<td>0.029</td>
+							<td>20</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="purple">
+					<p>Enzyme kinetics can be entered into the Reaction Editor by double clicking on the small orange circle representing a reaction. First choose a Kinetic Law, then enter the kinetic values simbiology asks for. Simbiology will then use the Kinetic Law and kinetic values to produce a reaction rate.</p> 
+					<p>The standard units for V<sub>max</sub> are micromol product/minute/milligram enzyme, however, Simbiology initially asks for V<sub>max</sub> in terms of micromole/minute. To the best of our knowledge the easiest way to include enzyme amount as a factor in your model is by manually changing the units of Vmax to micromole/minute/micromole by clicking on the unit drop down menu and selecting “Create new unit” (V<sub>max</sub> must be represented in units of micromole/minute/micromole because of dimensional analysis constraints in Matlab, but keep in mind that you will most likely enter enzyme amount as a mass value). After changing V<sub>max</sub> units, you must change the ReactionRate by multiplying the given formula by the name of your enzyme. At any point in the creation of your model, you may double click on the species representing your enzyme and enter an amount value (leave the enzyme amount in terms of micromole).</p>
+					<img src="http://2016.igem.org/wiki/images/6/6c/T--UMaryland--pingpong.jpg" width="100%" />
+					<p>This stage of creating our Simbiology model presented a subtle, yet extremely significant stumbling block to our progress. The drop down menu for units allows one to select different prefixes for units. Unfortunately, it seems as though these prefixes were not properly integrated into the software, and Simbiology will not perform the necessary dimensional analyses to convert between micro and milli, for example. Therefore, it is crucial that all your analogous units employ identical units. For example, our modeling team decided to work exclusively with a “micro” prefix for concentration and molarity units. 56 nanomoles became 0.056 micromoles and 300 millimolarity became 300,000 micromolarity.</p>
+					<p>This leads us to an important piece of advice: do not implicitly trust everything the program claims to do. Our modeling team discovered this discrepancy in the Simbiology software by running models in parallel with certain hand done calculations. When our model did not remotely resemble our paper and pencil calculations, we knew there was an error in the way Simbiology handled units. We recommend that in addition to creating your desired model, you create a control model where the outcome is known, or perform hand-written calculations to check certain parts of your model.</p>
+					<p>From this point on, Simbiology runs fairly smoothly, so we’ll leave it to you to figure out the rest. Best of luck!</p>
+				</div>
+				<p>After we created the basic architecture for our two models, we experimented with various parameters to optimize our pathway.</p>
+			</div>
+		</div>
+		<div class="longText">
+			<div class="textSection" id="div-optimization">
+				<h4>Optimization and Parameter Scanning</h4>
+				<p>We analyzed the contributions of three different parameters on the viability of our pathways: methanol tolerance, methane concentration, and presence of an Activator protein, ACT.</p>
+				<p><strong>Parameter 1: Methanol tolerance</strong></p>
+				<p>Methanol, formaldehyde, and formate are toxic substrates produced by the methane digestion pathways. As our project stands, each pathway is cloned so that the enzymes are expressed in 1:1 ratios. Under these circumstances, formaldehyde and formate do not build up in the cell. However, because the MDH2 enzyme has a relatively large K<sub>m</sub> of 360,000 μM, methanol builds up to a toxic concentration. MDH2 must therefore be expressed at a higher cellular concentration than sMMO so that methanol production does not significantly outpace methanol consumption.</p>
+				<p>Team Aachen 2015, which worked to upcycle methanol into a universal carbon source, indicated that their E. coli survived methanol concentrations at up to 1.6M. By modifying the ratio of sMMO and MDH2 enzymes, we simulated the efficiency of our pathway under conditions of increased methanol production.</p>
+				<div class="figure">
+					<img src="http://2016.igem.org/wiki/images/b/b0/T--UMaryland--graph1.jpg" class="figureImg" />
+					<small class="caption">Simulations were run to determine the equilibrium concentration of methanol at various sMMO to MDH2 ratios. We found that at a ratio of 300 mg to 217.3 mg respectively, methanol concentration reaches an equilibrium of 0.5M. By running a multitude of these simulations, and tracking the amount of carbon dioxide produced over a set time period, we were able to conclude that Increasing the sMMO to MDH2 ratio beyond 300 mg to 217.3 mg will not significantly improve methane degradation (as indicated by carbon dioxide production).</small>
+				</div>
+				<p>Sidenote: Because the reaction catalyzed by MDH2 forms a bottleneck in our pathway, we concluded that MDH2 should be expressed at the greatest concentration. We determined the peak enzyme concentration to be 5.3 μM because Team Braunschweig 2014 experimentally calculated that their part, which used the same backbone, promoter, and ribosome binding site that we used for all our parts, expressed protein at 5.3 μM. Expression for every other enzyme is tuned based on the fact that MDH2 concentration is 5.3 μM (217.3 mg per liter).</p>
+				<p>We sought to optimize the ratio of MDH2 to sMMO by finding the point at which an increase in sMMO production no longer contributes to significantly faster methane digestion (inferred from carbon dioxide production). We found that increasing sMMO beyond 240 mg per liter does not greatly contribute to our pathway running faster. This ratio of sMMO to MDH2 corresponds with a methanol equilibrium of 0.5 M, which according to Team Braunschweig is non-toxic to the cell.</p>
+				<p><strong>Parameter 2: Methane Concentration</strong>
+				<p>In seawater, methane has a maximum solubility of 890 μM<sup>7</sup>. To determine the optimal methane concentration for our pathway, we created multiple models with methane concentration ranging from 0 μM to 890 μM. At a methane concentration of 200 μM, methane degradation (inferred from carbon dioxide production) began to plateau.** In order to degrade the highest fraction of methane possible, methane should therefore be bubbled through the cells at a concentration of 200 μM, which is equivalent to 0.031% methane (v/v).</p>
+				<p><strong>Parameter 3: Presence of ACT protein</strong></p>
+				<p>Literature analysis of the MDH2 enzyme reveals that an activator protein, ACT, reduces the K<sub>m</sub> of MDH2 by 2-fold. Our team did not plan to clone the ACT protein, but the modeling team decided to determine if cloning this protein would significantly improve the efficiency of our pathway. We repeated the parameter scanning above (with methanol tolerance and methane concentration) after changing the Km of MDH2 from to 360,000 μM to 180,000 μM. We found that sMMO concentration once again peaked at 0.5M, but the corresponding sMMO concentration was an increased 300 mg/L, implying that the pathway functioned at a higher rate. Methane is still most efficiently degraded at a concentration of 0.031%.</p>
+			</div>
+		</div>
+		<div class="longText">
+			<div class="textSection" id="div-results">
+				<h4>Calculating the Success of Our Optimized Pathway</h4>
+				<p>With the results of our parameter scanning, we have compiled together a series of recommendations to optimize our pathway, and modeled the effect of said pathway.</p>
+				<div class="figure">
+					<img src="http://2016.igem.org/wiki/images/3/32/T--UMaryland--graph2.jpg" class="figureImg" />
+					<small class="caption">After optimizing enzyme ratios and determining the steady state methanol concentration that those ratios correspond to, we were able to simulate our optimized pathway and observe the rate of methane degradation. Once our optimized pathway reaches steady state, the only product formed is carbon dioxide. This demonstrates that our engineered E. coli cells can survive our pathway, because no toxic intermediates build up in excessive amounts. After a 10 day period, 0.2 moles of carbon dioxide are produced, corresponding to 0.2 moles of methane consumed. This value holds true for the Fructose pathway as well as the formate pathway.</small>
+				</div>
+					<p>After optimizing our pathway, we briefly analyzed the kinetic values of our enzymes to adjust the concentrations of FALDH, FDH, HPS, and PHI in response to the optimized pathway. These changes have no significance to our optimization. Ultimately we recommend that if MDH2 is expressed at 100%, sMMO should be expressed at 29.4%, FALDH should be expressed at 8.5%, FDH should be expressed at 22.6%, HPS should be expressed at 1.5%, and PHI should be expressed at 0.79%. This recommendation will be reflected in future work through the selection of promoters and ribosome binding sites that achieve these enzyme concentration ratios. If these ratios are followed, methanol concentration should reach equilibrium at 0.5 M, which, according to experimentation by Team Braunschweig, is viable.
+					<p>If the ACT protein is expressed, 0.2 moles of methane (4.48 liters stp) will be digested by 1 liter of cell culture every 10 days. If the ACT protein is not expressed by the cells, there is a 20% reduction in efficiency, causing 0.16 moles of methane (3.6 liters stp) to be digested by 1 liter of cell culture every 10 days.** In terms of proportion of methane sequestered, we should be able to digest all methane bubbled through our solution as long as If methane gas is bubbled through at a concentration of 0.031%.</p>
+				
+			</div>
+		</div>
+		<div class="longText">
+			<h4>References</h4>
+				<ol>
+<li>Green, J.; Dalton, H. <em>Biochem. J </em><strong>1986</strong>, 236, 155–162.
+<li>Krog, A.; Heggeset, T. M. B.; Müller, J. E. N.; Kupper, C. E.; Schneider, O.; Vorholt, J. A.; Ellingsen, T. E.; Brautaset, T. PLoS One <strong>2013</strong>, 8 (3), e59188.</li>
+<li>Martínez, M. C.; Achkor, H.; Persson, B.; Fernández, M. R.; Shafqat, J.; Farrés, J.; Jörnvall, H.; Parés, X. Eur. <em>J. Biochem.</em> <strong>1996</strong>, 241 (3), 849–857.</li>
+<li>Fogal, S.; Beneventi, E.; Cendron, L.; Bergantino, E. <em>Appl. Microbiol. Biotechnol.</em> <strong>2015</strong>, 99 (22), 9541–9554.</li>
+<li>Nobuo Kato, Hiroyuki Ohashi, Takao Hori, Yoshiki Tani & Koichi Ogata (1977) Properties of 3-Hexulose Phosphate Synthase and Phospho-3-hexuloisomerase of a Methanol-utilizing Bacterium, 77a, <em>Agricultural and Biological Chemistry,</em> 41:7, 1133-1140, DOI: 10.1080/00021369.1977.10862658 </li>
+<li>Chen, L. M., H. Yurimoto, K. Z. Li, I. Orita, M. Akita, N. Kato, Y. Sakai and K. Izui (2010). "Assimilation of formaldehyde in transgenic plants due to the introduction of the bacterial ribulose monophosphate pathway genes." <em>Biosci Biotechnol Biochem</em> 74(3): 627-635.</li>
+<li>Yamamoto, S.; Alcauskas, J. B.; Crozier, T. E. <em>J. Chem. Eng. Data</em> <strong>1976</strong>, 21 (1), 78–80.</li>
+				</ol>
 		</div>
 	</div>
     <div id="bot-nav">
@@ -663,32 +793,17 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginCheck = marginTitle / 2;
 			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
+				$('.titleText, #table-selector').css('left','15px');
+				$('.titleText, #table-selector').css('margin-left','0px');
 			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
+				$('.titleText, #table-selector').css('left','50%');
+				$('.titleText, #table-selector').css('margin-left','-40%');
 			}
 		})
 		
 		$(window).load(function() {
-			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
-			var marginLeft = marginTotal / 2;
-			if (marginLeft > 14) {
-				$('.longText').css('margin-left', marginLeft);
-			}else {
-				$('.longText').css('margin-left', '15px');
-			}
-			
-			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
-			var marginCheck = marginTitle / 2;
-			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
-			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
-			}
+			$(window).resize();
+            $('body').css('opacity', '1');
 		})
 		
 	</script>
@@ -801,5 +916,49 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 
 		
 		
+		</script>
+		
+<script>
+var clicked = '';
+var current = 'background'; // sets initial display to be purpose
+ $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+	if (selected != current) {							// only change display / trigger animation if clicking different nav
+		changeText(selected)
+	}
+ })
+ 
+var dir = location.hash;								// grabs the anchor (text following the #)
+var n = dir.indexOf('?');								// and initially sets the page 
+dir = dir.substring(0, n != -1 ? n : dir.length);		
+dir = dir.replace('#','');
+if (dir == '') {
+	dir = 'background';
+}
+changeText(dir)
+
+$(".subNav").click(function() {
+	clicked = $(this).attr('data-select');	
+    $('html, body').animate({
+        scrollTop: $("#h4-"+ clicked).offset().top
+    }, 0000);
+});
+
+
+function changeText(selected) {
+	$('.navigator').css('border-bottom','1px solid #A8A8A8');		// make all navigational element have no bottom border
+	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border						// hides all text
+	var widthText = $('.longText').outerWidth(false);
+	$('.textSection').css('width', widthText);		
+	$('.textSection').css('display','none');
+	$('.subNavList').css('display','none');							// slighly shifts right all text to set up for animation
+	$('.textSection').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
+	$('#div-' + selected).css('display','block');									// the div containing the text is displayed
+	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
+	$('.textSection').css('width', '100%');	
+	current = selected;												// sets the current display
+	location.hash = current;
+}
+
 		</script>
 </html>

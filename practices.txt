@@ -10,7 +10,7 @@
     <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
     <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
     <script src="http://2016.igem.org/wiki/images/d/d3/T--UMaryland--slick.txt" type="text/javascript"></script>
-    <title>Human Practices</title>
+    <title>Modeling</title>
 </head>
 
 <body>
@@ -356,44 +356,30 @@
 		
 	<style>
 		.caption {
-			font-size: 12pt;
 			font-weight: bold;
 			margin-left: 25px;
 		}
-		
+	
+		.titleText {
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+			min-width: 1000px;
+			max-width: 1500px;
+		}
 		#div-figures{
 			padding-bottom: 100px;
 			font-size: 14pt;
 		}
-		
-		.titleText {
-			position: absolute;
-			top: 350px;
-			left: 50%;
-			margin-left: -40%;
-			right: auto;
-			width: 80%;
-			min-width: 600px;
-			max-width: 1500px;
-		}
-		
-		h11, h21, h31 {
-			font-family: Lora;
-			display: inline-block;
-			position: relative;
-			padding-bottom: 10px;
-			padding-left: 10px;
-			padding-top: 10px;
-			padding-right: 10px;
-			background: rgba(0,0,0, 0.7);
-			line-height: 1em;
-		}
-		
-        h11 {		
+        h11 {							
             color: white;
             font-size: 30pt;
             font-weight: 400;
             text-align: left;
+            display: block;
+			margin-top: 60px;
+			padding-top: 180px;
+            margin-bottom: 0.83em;
         }
 
         h21 {
@@ -401,32 +387,32 @@
             font-size: 24pt;
             font-weight: 300;
             text-align: left;
+            display: block;
+            margin-top: 0.83em;
+            margin-bottom:: 0.83em;
         }
 
         h31 {
             color: white;
-            font-size: 20pt;
+            font-size: 18pt;
             font-weight: 200;
             text-align: left;
+            display: block;
+            margin-top: 0.83em;
+            margin-bottom:: 0.83em;
         }
 
         #div-text {
 			padding-top: 50px;
-			padding-bottom: 150px;
+			background-color: #f9f9f9;
         }
 
-        .div-scrollPic {
+        #div-pic {
             z-index: -999;
             height: 500px;
 			background-color: transparent;
         }
 
-		.scrollContainer {
-			
-			position: relative;
-			width: 100%;
-		}
-		
         .imageEmbed {
             /* creates border around image on each page */
             border-style: solid;
@@ -436,17 +422,8 @@
             border-width: 2px;
         }
 
-		.longText li {
-			
-            font-size: 14pt;
-            line-height: 2;
-            font-weight: 400;
-		}
-		
-        #div-text p {
+        #div-text p, .longText li {
             /* formats text and lists within .longText */
-			padding-top: 15px;
-			padding-bottom: 15px;
             font-size: 14pt;
             line-height: 2;
             font-weight: 400;
@@ -477,6 +454,18 @@
             margin-top: 30px;
         }
 
+        .figure {
+            /* fixes the width of images in results tables */
+            width: 800px;
+			display: block;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+        }
 
         /* formats caption and heading of results tables */
         td p {
@@ -506,35 +495,9 @@
         #h4-first {
             margin-top: 50px;
         }
-		
-		#div-slideshow {
-			margin-top: 40px;
-			margin-bottom: 40px;
-			margin-left: auto;
-			margin-right: auto;
-			width: 800px;
-		}
-		
-		#div-slideshow img {
-			width: 750px;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			margin-left: auto;
-			margin-right: auto;
-			border: 2px solid #A8A8A8;
-		}
-		
-		#div-dots {
-            height: 100px;
-        }
-		
-		#div-dots {
-            height: 100px;
-        }
-		
         </style>
 	<nav>		
-		<a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo" width="128px"></a>
+		<img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo" width="128px">
 		<ul>
 			<a style="opacity: 0">Fix</a>
 			<li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
@@ -558,74 +521,46 @@
 			<li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
 		</ul>	
 	</div>
-	<div class="scrollContainer">
-		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--il.jpg" class="div-scrollPic" style="height: 650px;">
-		<div class="titleText"> 
-				<style>
-				</style>
-			<!-- where background image below titles show -->
-			<h11>Interlab Study</h11></br>
-			<h21>Fluorescence Data From 3 Different Constructs with GFP</h21></br>
-			<h31>Standardizing fluorescence measurements and promoting collaboration. </h31></br>
-			</div>
-			</div>
-	</div>
+	<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/6/69/T--UMaryland--parts.jpg" id="div-pic">
+	<div class="titleText"> 
+		<!-- where background image below titles show -->
+			<h11>Parts Collection</h11>
+			<h21>BioBrick Devices Submitted to the Registry</h21>
+			<h31>Furthering collaboration and standardization of genetic parts</h31>
+		</div>
+        </div>
+	<div id="div-text"> <!-- Start of main text of page -->
 		<!-- Heading text -->
 		
-	<div id="div-text">
+		
 		<div class="longText">
-			<p>The interlab study measures the fluorescence of three different constructs with GFP as well as a positive and negative control. It attempts to standardize the fluorescence measurements by adjusting absorbance values when compared to blanks, reducing the amount of independent variables by controlling for concentration, and adjusting fluorescence values based on the standard curve of FITC.  The goal of this study is to see how the observed fluorescence values compare across the iGEM community to see if the adjustments successfully standardize fluorescence measurements.</p>
-			<p>As a community of synthetic biologist, a key to the advancement of the field is collaboration among groups. For proper collaboration, we must be able to communicate our findings in ways that are concrete and well defined, making standards essential.</p>
+			<p>Coming Soon!</p>
+			<p>We are working hard on constructing the parts and submitting them to the registry to be used in other synthetic biology projects!</p>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br />
 		</div>
-		<div class="longText">
-			<h4>Tested Devices</h4>
-			<p>Transform competent cells with Test Devices 1 - 3, positive control, and negative control provided and plate them overnight on chloramphenicol resistant plates.</p>
+		<!--<div class="longText">
+			<h4></h4>
+			<p>Three different constructs were synthesized by UMaryland iGEM in hopes of being co-cultured. They were:</p>
 			<ul>
-				<li>Test Device 1: J23101.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 2: J23106.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 3: J23117.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Positive Control Device: I20270 in pSB1C3</li>
-				<li>Negative Control Device: R0040 in pSB1C3</li>
+				<li>sMMO Construct: oxidizing methane into methanol using oxygen</li>
+				<li>Formate Construct: further oxidizing methanol into carbon dioxide using NADH</li>
+				<li>Fructose Construct: further oxidizing methanol into cellular metabolites</li>
 			</ul>
 		</div>
 		<div class="longText" id="div-protocol">
 			<h4>Protocol</h4>
-			<ol>
-				<li>Pick two colonies from each plate to inoculate and grow overnight.
-</li>
-				<li>Calibrate the plate reader-
-Measure absorbance of LUDOX and water to find a corrected absorbance that can then be used to find a conversion factor for a standard OD600 measurement.</li>
-				<li>Use FITC to create a standard fluorescence curve - 
-Measure fluorescence of FITC at different concentrations to generate a curve of fluorescence over concentration.</li>
-				<li>Measure OD600  of the overnight cultures and create dilutions to put them at an OD600 of 0.02.</li>
-				<li>Incubate at 37 C and take 100ul samples every hour (from hours 0-6).</li>
-				<li>Measure OD600 of all the samples and record.</li>
-			</ol>
 		</div>
 		<div class="longText">
 			<h4>Results</h4>
 			<div id="div-results">
-				<ul>
-					<li>Most samples grew exponentially, device 1 seemed to have little growth.</li>
-					<li>Negative control and device 3 did not show fluorescence. Positive control, device 1, and device 2 showed increases in fluorescence over time.</li>
-					<li>The results show that fluorescence per unit of concentration remains relatively constant over time.</li>
-				</ul>
 			</div>
-			<div id="div-slideshow">
+			<div id="div-figures">
 				<div>
 					<img class="figure" src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--absorbance.JPG">
 					<small class="caption">Figure 1. Cell growth versus absorbance.</small>
 				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/1/17/T--UMaryland--fluorescence.JPG">
-					<small class="caption">Figure 2. Cell growth versus flourescence.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--abs-fluor.JPG">
-					<small class="caption">Figure 3. Cell growth versus absorbance / flourescence.</small>
-				</div>
 			</div>
-		</div>
+		</div>-->
 	</div>
     <div id="bot-nav">
         <div id="container">
@@ -646,13 +581,8 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 </body>
 		
 	<script>
-		
-        $('#div-slideshow').slick({
-			dots: true
-        });
-	
 		$(window).resize(function() {
-			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
+			var marginTotal = $('.titleText').outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginLeft = marginTotal / 2;
 			if (marginLeft > 14) {
 				$('.longText').css('margin-left', marginLeft);
@@ -660,19 +590,17 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 				$('.longText').css('margin-left', '15px');
 			}
 			
-			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
+			var marginTitle = $('.titleText').outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginCheck = marginTitle / 2;
 			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
+				$('.titleText').css('margin-left','15px');
 			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
+				$('.titleText').css('margin-left','auto');
 			}
 		})
 		
 		$(window).load(function() {
-			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
+			var marginTotal = $('.titleText').outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginLeft = marginTotal / 2;
 			if (marginLeft > 14) {
 				$('.longText').css('margin-left', marginLeft);
@@ -680,14 +608,12 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 				$('.longText').css('margin-left', '15px');
 			}
 			
-			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
+			var marginTitle = $('.titleText').outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginCheck = marginTitle / 2;
 			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
+				$('.titleText').css('margin-left','15px');
 			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
+				$('.titleText').css('margin-left','auto');
 			}
 		})
 		
@@ -779,13 +705,12 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 				}
 			});
 	</script>
-        <script> $('#iGEM').css('display','block'); 
-		
-		$('body').css('display', 'block');</script>
+        <script> $('#iGEM').css('display','block'); </script>
 		<script>
 		$(document).ready(function(){
-		  
-		
+		  $('#div-figures').slick({
+		  });
+		  $('body').css('display', 'block')
 		});
 		
 			$.fn.extend({
@@ -797,9 +722,8 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 			}
 		});
 		
+		var element_position = $('#div-protocol').offset().top;
 		var toggle = 1;
 
-		
-		
 		</script>
 </html>

@@ -5,7 +5,7 @@
 
 <head>
     <script>
-        $('body').css('display', 'none');
+        $('body').css('opacity', '0');
     </script>
     <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
     <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
@@ -356,16 +356,10 @@
 		
 	<style>
 		.caption {
-			font-size: 12pt;
 			font-weight: bold;
 			margin-left: 25px;
 		}
-		
-		#div-figures{
-			padding-bottom: 100px;
-			font-size: 14pt;
-		}
-		
+	
 		.titleText {
 			position: absolute;
 			top: 350px;
@@ -413,20 +407,15 @@
         #div-text {
 			padding-top: 50px;
 			padding-bottom: 150px;
+			min-height: 800px;
         }
 
-        .div-scrollPic {
+        #div-pic {
             z-index: -999;
             height: 500px;
 			background-color: transparent;
         }
 
-		.scrollContainer {
-			
-			position: relative;
-			width: 100%;
-		}
-		
         .imageEmbed {
             /* creates border around image on each page */
             border-style: solid;
@@ -436,17 +425,8 @@
             border-width: 2px;
         }
 
-		.longText li {
-			
-            font-size: 14pt;
-            line-height: 2;
-            font-weight: 400;
-		}
-		
-        #div-text p {
+        #div-text p, .longText li {
             /* formats text and lists within .longText */
-			padding-top: 15px;
-			padding-bottom: 15px;
             font-size: 14pt;
             line-height: 2;
             font-weight: 400;
@@ -463,8 +443,8 @@
 
         h4 {
             /* formats intratext section headings */
+			margin-top: 40px !important;
             font-size: 20pt;
-            margin-top: 80px;
         }
 
         .blockText {
@@ -477,6 +457,22 @@
             margin-top: 30px;
         }
 
+        .figure {
+            /* fixes the width of images in results tables */
+            width: 80%;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 7%;
+			margin-right: 13%;
+        }
+		
+		.figureImg {
+			width: 100%;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+		}
 
         /* formats caption and heading of results tables */
         td p {
@@ -506,32 +502,50 @@
         #h4-first {
             margin-top: 50px;
         }
-		
-		#div-slideshow {
-			margin-top: 40px;
-			margin-bottom: 40px;
-			margin-left: auto;
-			margin-right: auto;
-			width: 800px;
-		}
-		
-		#div-slideshow img {
-			width: 750px;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			margin-left: auto;
-			margin-right: auto;
-			border: 2px solid #A8A8A8;
-		}
-		
-		#div-dots {
-            height: 100px;
+
+        /* table of element */
+
+        #table-selector {
+            width: 80%;
+			min-width: 600px;
+			max-width: 1500px;
+			position: absolute;
+            border-collapse: collapse;
+            background: none;
+        }
+
+        #table-selector th {
+			width: 25%;
+            text-align: center;
+        }
+
+        .borderRight {
+            border-right: 1px solid #A8A8A8;
+        }
+
+        .borderBoth {
+            border-left: 1px solid #A8A8A8;
+            border-right: 1px solid #A8A8A8;
+        }
+
+        .borderTop {
+            border-bottom: 1px solid #A8A8A8;
+        }
+
+        th p {
+            font-size: 16pt !important;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 5px 0px 15px 0px;
+            margin: 0 0 0 0;
         }
 		
-		#div-dots {
-            height: 100px;
+		.div-scrollPic {
+            z-index: -999;
+            height: 500px;
+			background-color: transparent;
         }
-		
+
         </style>
 	<nav>		
 		<a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo" width="128px"></a>
@@ -559,73 +573,388 @@
 		</ul>	
 	</div>
 	<div class="scrollContainer">
-		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--il.jpg" class="div-scrollPic" style="height: 650px;">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/8/87/T--UMaryland--freezer.jpg" class="div-scrollPic" style="height: 650px;">
 		<div class="titleText"> 
-				<style>
-				</style>
 			<!-- where background image below titles show -->
-			<h11>Interlab Study</h11></br>
-			<h21>Fluorescence Data From 3 Different Constructs with GFP</h21></br>
-			<h31>Standardizing fluorescence measurements and promoting collaboration. </h31></br>
+			<h11>Hardware</h11></br>
+			<h21>DIY Ultra-low Freezer</h21></br>
+			<h31>Increasing access to synthetic biology</h31></br>
 			</div>
 			</div>
 	</div>
 		<!-- Heading text -->
 		
 	<div id="div-text">
+		<style>
+			.longText strong {
+				font-size: 14pt;
+				line-height: 2;
+			}
+			
+			.longText {
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			
+			.textSection {
+				display: none;
+			}
+			
+			.longText p {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
+			.figure {
+            /* fixes the width of images in results tables */
+            width: 70%;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 10%;
+			margin-right: 13%;
+        }
+		
+		.figureImg {
+			width: 100%;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+		}
+		
+		.caption {
+			font-weight: bold;
+			font-size: 12pt;
+			margin-top: 10px;
+			line-height: 2em;
+		}
+		</style>
+		<table id="table-selector"> 
+			<thead>
+				<th class="borderRight navigator borderTop" id="th-background" data-select="background"><p>Background</p></th>
+				<th class="borderBoth navigator borderTop" id="th-construction" data-select="construction"><p>Construction</p></th>
+				<th class="borderBoth navigator borderTop" id="th-modeling" data-select="modeling"><p>Modeling</p></th>
+				<th class="borderLeft navigator borderTop" id="th-demonstration" data-select="demonstration"><p>Demonstration</p></th>
+			</thead>
+		</table>
+		</br></br></br>
+				<style>
+				
+				table {
+					font-size: 14 pt;
+					background-color: transparent;
+					width: 100%;
+				}
+				
+				table td  {
+					font-size: 14pt;
+					line-height: 1.5em;
+					text-align: left;
+				}
+
+th { text-decoration: bold; font-size: 16pt;
+					line-height: 1.5em;
+					text-align: left; }
+
+				h5 {
+			font-size: 16pt;
+			display: inline;
+		}
+		
+		.div-h5 {
+			
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		
+				</style>
+			<style>
+				.sideNav {
+					width: 100%;
+					margin-top: 50px;
+					margin-bottom: 50px;
+				}
+				
+				.sideNav ul {
+					margin-left: 0px;
+				}
+				
+				.sideNav li {
+					list-style: none;
+					display: inline;
+					margin-right: 15%;
+				}
+				
+				.sideNav a, .div-h5 a, #table-parts a, .tableLink {
+					color: blue !important;
+					text-decoration: underline !important;
+				}
+				
+				.sideNav a:visited, .div-h5 a:visited, #table-parts a:visited, .tableLink {
+					color: blue !important;
+					text-decoration: underline !important;
+				}
+				
+				.btt {
+					margin-left: 15px;
+					font-size: 10pt;
+				}
+				
+			</style>
+<div class="longText">
+<div class="textSection" id="div-background">
+<h4>Background</h4>
+<img src="http://2016.igem.org/wiki/images/d/d4/T--UMaryland--freezerEx.jpg" style="float: left; margin-right: 20px; width: 300px" /><p>We built the DIY ultra-low freezer specifically for iGEM teams. Ultra-low freezers, which are necessary to keep competent cells ready for transformation, are a vital part of any synthetic biology lab. However, they are complex and prohibitively expensive. The most affordable models are around $5000 USD and must be maintained by professionals. Many iGEM teams that struggle with funding cannot afford to purchase or maintain them.</p>
+<p style="clear: both">The DIY ultra-low freezer is our solution, a sub $300 USD, compact, modular device that any team can afford and maintain. Our freezer fits inside of refrigeration devices available in most school environments, including freezers and ice machines, to achieve temperatures below -70 C. The freezer is composed of solid parts held together with thermal grease and rubber bands, so it can be disassembled and repaired effortlessly. It can hold five PCR tubes or one 1.5 mL tube of competent cells, enough for a single team.</p>
+
+</div>
+</div>
 		<div class="longText">
-			<p>The interlab study measures the fluorescence of three different constructs with GFP as well as a positive and negative control. It attempts to standardize the fluorescence measurements by adjusting absorbance values when compared to blanks, reducing the amount of independent variables by controlling for concentration, and adjusting fluorescence values based on the standard curve of FITC.  The goal of this study is to see how the observed fluorescence values compare across the iGEM community to see if the adjustments successfully standardize fluorescence measurements.</p>
-			<p>As a community of synthetic biologist, a key to the advancement of the field is collaboration among groups. For proper collaboration, we must be able to communicate our findings in ways that are concrete and well defined, making standards essential.</p>
+			<div class="textSection" id="div-construction">
+			<h4>Construction</h4>
+			<p>The DIY freezer requires very little assembly and can be easily maintained due to its modularity.</p>
+			<div class="div-h5"><h5>List of Parts</h5></div>
+			<table id="#table-parts">
+				<thead>
+					<th>Component</th>
+					<th>Price</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.shop.customthermoelectric.com/04812-5L31-04CFG-2-Stage-Thermoelectric-Peltier-Module-04812-5L31-04CFG.htm">Small Cooler</a></td>
+						<td>$65 + $3 RTV sealant*</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.shop.customthermoelectric.com/25412-5L31-07CQQ-2-Stage-Thermoelectric-Peltier-Module-25412-5L31-07CQQ.htm">Large Cooler</a></td>
+						<td>$63 (RTV sealed)</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.shop.customthermoelectric.com/Water-Block-162-x-162-x-055-WBA-162-055-CU-01.htm">Water Block</a></td>
+						<td>$93</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.shop.customthermoelectric.com/Ceramique-2-thermal-Compound-27-gram-tube-TG-CMQ2-27G.htm">Thermal Grease</a></td>
+						<td>$5</td>
+					</tr>
+<tr><td><a class="tableLink" target="_blank" href="http://www.thingiverse.com/thing:1833890 ">3D printed shell</a></td><td>$3</td></tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.thingiverse.com/thing:1833893">3D printed scaffolding</a></td>
+						<td>$0.25</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.shop.customthermoelectric.com/DC-Power-Supply-25-Watt-33-volt-60-Amp-PS-025W1-33-60.htm ">Power supply 1</a></td>
+						<td>$25</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.alliedelec.com/mean-well-usa-lrs-150-15/70696542/?mkwid=siRZqQtpJ&pcrid=30980760979&gclid=CNHAmr-n488CFQsehgodHMUKmg ">Power supply 2</a></td>
+						<td>$20</TD>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="https://www.amazon.com/ZMLM-Submersible-Fountain-Aquarium-Hydroponic/dp/B01FFP4ST8">ZMLM water pump</a></td>
+						<td>$20</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="https://www.trcelectronics.com/View/Tumbler/32V86S.shtml">AC cable x2</a></td>
+						<td>$10</td>
+					</tr>
+					<tr>
+						<td><a class="tableLink" target="_blank" href="http://www.hottubwarehouse.com/18-x-6-clear-vinyl-tubing?gclid=CIaukcep488CFY1ahgodpRMDEQ">Vinyl tubing</a></td>
+						<td>$3</td>
+					</tr>
+					<tr>
+						<td>Styrofoam insulation</td>
+						<td>recycle</td>
+					</tr>
+					<tr>
+						<td>Rubber band</td>
+						<td>recycle</td>
+					</tr>
+					<tr>
+						<td></br></td>
+						<td></br></td>
+						<td></br></td>
+					</tr>
+					<tr>
+						<td>TOTAL</td>
+						<td>$312.25**</td>
+					</tr>	
+				</tbody>
+				
+			</table>
+<p>
+*RTV sealent is necessary to protect the coolers from condensation damage.</br>
+** Project cost $290 at the time of assembly. prices have increased unexpectedly.</p>
+			<div class="div-h5"><h5>Assembly</h5></div>
+				<p>The freezer has a brick-like vertical structure and is assembled by stacking parts in the proper order shown below. The final dimensions are 2” cubed.</p>
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/1/1c/T--UMaryland--freezerAssembly.jpg" class="figureImg" />
+			</div>
+				<p>The large cooler is mounted onto the water block with thermal grease. To mount, begin by cleaning the surfaces of the water block and the cooler. Next, apply a thin layer of thermal grease in a zig-zag pattern, covering as much surface as possible. Place the hot side of the cooler (side wires are on) on the block and twist it into the block to spread the grease and squeeze out any excess. Align the cooler with the block. Repeat this process when mounting the small cooler on top of the large cooler.</p>
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/5/59/Thermal.jpg" class="figureImg" />
+			</div>
+			<div class="div-h5"><h5>Wiring</h5></div>
+				<p>CAUTION: do not work on the power supply or wires when they are plugged in!
+Wire the large power supply to the large cooler and the small supply to the small cooler. Hook the brown wire to L, blue to N, green/yellow to ground, black to -V, red to +V.</p>
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/c/cf/T--UMaryland--wiring.jpg" class="figureImg" />
+			</div>
+			<div class="div-h5"><h5>Sample</h5></div>
+				<p>To install the sample, push it into the styrofoam block. If it it becomes difficult, use a pipette tip to help form a hole.</p>
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/0/03/T--UMaryland--freezerSample.jpg" class="figureImg" />
+			</div>
+			<div class="div-h5"><h5>Pump and Tubing</h5></div>
+				<p>Cut the tubing to appropriate length and use it to connect one barb on the cold block to the pump’s nozzle. Place the pump at the bottom of the reservoir. Only run the pump when it is fully submerged.</p>
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/e/e8/T--UMaryland--pumpTubing.jpg" class="figureImg" />
+			</div>
+			
+			
+			</div>
 		</div>
-		<div class="longText">
-			<h4>Tested Devices</h4>
-			<p>Transform competent cells with Test Devices 1 - 3, positive control, and negative control provided and plate them overnight on chloramphenicol resistant plates.</p>
-			<ul>
-				<li>Test Device 1: J23101.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 2: J23106.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 3: J23117.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Positive Control Device: I20270 in pSB1C3</li>
-				<li>Negative Control Device: R0040 in pSB1C3</li>
+<div class="longText">
+			<div class="textSection" id="div-modeling">
+			<style>
+				#div-modeling img {
+					margin-left: 5px;
+					margin-right: 5px;
+				}	
+				
+				#div-modeling ul {
+					margin: 0 0 0 0 !important;
+				}
+				
+				#div-modeling strong {
+					font-family: Arial;
+					font-weight: bold;
+				}
+				
+				.subhead {
+					font-size: 16pt !important;
+				}
+				
+			</style>
+			<h4>Modeling</h4>
+			</br>
+			<strong class="subhead">First Stage</strong>
+			</br>
+			<img src="http://2016.igem.org/wiki/images/c/c0/T--UMaryland--freezerDiagram.jpg" width="350px" style="float: left; margin-right: 20px; margin-bottom: 10px;" />
+			<p>The first calculation to be performed is the heat load on the sample being frozen, which must be removed by the small cooler in contact with that sample. We have found that the best resource for these calculations is on the Marlow Industries Website. The Marlow website also provides instructions on how to select the appropriate cooler for the calculated heat load. Four types of heat load can act on the sample being frozen: active, radiation, conductive, and convective heat load.</p>
+			<p style="clear: both"><strong>Active heat load</strong> comes from the sample itself. It only applies to running electronic devices and not to cells, so it is zero in this situation. Radiation heat load, which is heat radiating off of surroundings and onto the sample, is usually insignificant, but in situations with large temperature differences like this freezer, it can have an effect.
+			</p>
+			</br >
+			<p>The formula for <strong>radiation heat load</strong> is:</p>
+			<img src="http://2016.igem.org/wiki/images/8/8d/T--UMaryland--freezerE1.png"/>
+			<p><ul style="list-style:none;">
+				<li>F is the shape factor, which we will assume is equal to the worst case, 1.</li>
+				<li>e is emissivity, which is 0.94 for clear plastic, which the tubes are made of.<sup>1</sup></li>
+				<li>S it the Stefan-Boltzmann constant <img src="http://2016.igem.org/wiki/images/1/13/T--UMaryland--freezerE2.png" class="inlineFigure"/></li>
+				<li>A is surface area of the sample, which, for a typical 1.5 ml tube (Diameter 0.010 m, length 0.045 m) is about <img src="http://2016.igem.org/wiki/images/0/09/T--UMaryland--freezerE3.png" class="inlineFigure"/></li>
+				<li>In a freezer, the ambient temperature, T<sub>amb</sub> = -20 C = 253 K, and we are assuming the cooled temperature T<sub>c</sub> = -80 C = 193 K</li>
+				<li>So radiation heat load = <img src="http://2016.igem.org/wiki/images/b/b4/T--UMaryland--freezerE4.png" class="inlineFigure"/></li>
+			</ul></p>
+			</br>
+			<p><strong>Conductive heat load</strong> is heat travelling through a solid medium (styrofoam in the freezer’s case) from the surroundings to the sample.
+			<p>The formula for conductive heat load is <img src="http://2016.igem.org/wiki/images/5/55/T--UMaryland--freezerE5.png" /></p>
+			<p><ul style="list-style:none;">
+				<li>k is the thermal conductivity, which is <img src="http://2016.igem.org/wiki/images/0/02/T--UMaryland--freezerE6.png" /> for styrofoam.<sup>2</sup></li>
+				<li>A is the surface area, which we calculated to be <img src="http://2016.igem.org/wiki/images/6/66/T--UMaryland--freezerE7.png" /></li>
+				<li>DT is the temperature difference between the sample and the environment, which is 253 K - 193 K = 60 K</li>
+				<li>L is the length of the heat path, or the length of solid medium between the sample and environment, which is 0.020 m for the freezer’s styrofoam block</li>
+				</br>
+				<li>So conductive heat load = <img src="http://2016.igem.org/wiki/images/0/02/T--UMaryland--freezerE8.png" /></li>
+			</ul></p>
+			</br>
+			<p><strong>Convective heat load</strong> is heat transferred from a fluid or gas flowing over the sample. Since the sample is surrounded on all sides by styrofoam, there is no air flow over the sample and no convective heat load (0 watts).</p>
+			</br></br>
+			<p><strong>First Stage Heat Load = Active + Radiation + Conductive + Convective = 1.8 W</strong></p>
+			</br></br>
+			<p>Since the heat load on the sample is 1.8 W, the small cooler in contact with the sample must run under that heat load. According to the small cooler’s spec sheet, the cooler maintains most of its efficacy under this heat load.<sup>3</sup> Although the chart predicts the small cooler will produce a temperature differential of over -50, this result is unlikely in reality. However, we can conclude that this cooler is appropriate for this heat load.</p>
+			</p>
+			</br>
+			</br>
+			</br>
+			<strong class="subhead">Second Stage</strong>
+			</br>
+			<img src="http://2016.igem.org/wiki/images/9/97/T--UMaryland--freezerDiagram2.jpg" width="100%" />
+			<p>The heat load on the bottom cooler is almost entirely active heat load from the top cooler, so we only need to calculate active heat load.</p>
+			<p><img src="http://2016.igem.org/wiki/images/1/15/T--UMaryland--freezerE9.png" /></p>
+			<p>where I is current and V is voltage. The power supply has been measured with a voltmeter at 3.3 volts, so, according to the small cooler’s spec sheet, the cooler will draw around 3.7 amps.</p></br>
+			<p><img src="http://2016.igem.org/wiki/images/e/e1/T--UMaryland--freezerE10.png" /></p>
+			</br>
+			<p>According to its spec sheet, the large cooler remains effective under a heat load of this size.<sup>4</sup> The predicted temperature differential is around -60, but, again, this is unlikely to actually happen. The large cooler should effectively cool the small cooler, however.</p>
+			</br></br>
+			<strong class="subhead">Third Stage</strong>
+			</br></br>
+			<img src="http://2016.igem.org/wiki/images/d/d7/T--UMaryland--freezerDiagram3.jpg" style="width:300px; margin-right: 20px; float: left;" />
+			<p>Again, heat load on the third stage, the coolant, is almost entirely active heat load from the second stage. The first stage’s load on the second stage needs to be included as well.</p>
+			<p>The spec sheet of the second cooler shows that when we connect it to the lower power supply, which was measured at 15 volts, it will draw 7 amps.<sup>4</sup></p>
+			<p><img src="http://2016.igem.org/wiki/images/7/79/T--UMaryland--freezerEq11.png" /></p>
+			<p>Since the reservoir is not actually a cooler, all this heat must exit into the environment. 
+The reservoir has thin walls allowing quick conduction of heat and is surrounded by air, so we can do a calculation to find the temperature of the coolant with the convective heat load equation:</p>
+			<img src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--freezerE12.png" /></br></br>
+			<ul style="list-style: none">
+			<li>We set the heat load to 117 W from above</li>
+			<li>h is the convective heat load coefficient, which, according to Marlow<sup>5</sup> is <img src="http://2016.igem.org/wiki/images/5/53/T--UMaryland--freezerE13.png" /></li>
+			<li>A is the surface area of the reservoir. We estimate our reservoir, a red bucket, to have about a 6 square foot, or 0.557 square meter surface area.</li>
+			<li>T<sub>air</sub> is the ambient temperature. We run our freezer in a larger stand-in freezer, where T<sub>air</sub> is -20 C</li>
+			<li>T<sub>c</sub> is the unknown coolant temperature we are solving for.</li></br>
+			<li><img src="http://2016.igem.org/wiki/images/3/3f/T--UMaryland--freezerE14.png"/></li>
 			</ul>
-		</div>
-		<div class="longText" id="div-protocol">
-			<h4>Protocol</h4>
-			<ol>
-				<li>Pick two colonies from each plate to inoculate and grow overnight.
-</li>
-				<li>Calibrate the plate reader-
-Measure absorbance of LUDOX and water to find a corrected absorbance that can then be used to find a conversion factor for a standard OD600 measurement.</li>
-				<li>Use FITC to create a standard fluorescence curve - 
-Measure fluorescence of FITC at different concentrations to generate a curve of fluorescence over concentration.</li>
-				<li>Measure OD600  of the overnight cultures and create dilutions to put them at an OD600 of 0.02.</li>
-				<li>Incubate at 37 C and take 100ul samples every hour (from hours 0-6).</li>
-				<li>Measure OD600 of all the samples and record.</li>
-			</ol>
+			<p>An experiment with a bucket of ice demonstrated that the freezer is capable of below -70 C if the coolant is 1.5 C, so this temperature is more than cold enough. However, it will be necessary to use a substance that will not freeze at this temperature, or a smaller coolant reservoir that will leak less heat and maintain a temperature above freezing but below 1.5 C (set T<sub>c</sub> = 0 or 1.5, and solve for A, obtaining a surface area between 0.251 m<sup>2</sup> and 0.270 m<sup>2</sup>)</p>
+			<p>The ice experiment mentioned above also revealed that the heat load on the coolant may be different from expected. The temperature of coolant entering the freezer was 1.5C, and the exiting coolant was 5.0C, and the coolant was flowing through the cooler 1 liter per minute. The specific heat capacity of water is <img src="http://2016.igem.org/wiki/images/5/5b/T--UMaryland--freezerE16.png" />, so we can calculate a new heat load:</p>
+			<img src="http://2016.igem.org/wiki/images/e/e9/T--UMaryland--freezerE15.png" /></br>
+			<img src="http://2016.igem.org/wiki/images/1/14/T--UMaryland--freezerE17.png" />
+			<p>This temperature is below 1.5 C so the freezer will still go below -70. It is also below zero again, so it still requires a substance that will not freeze (if we repeat our surface area calculation, the area is between 0.514 m<sup>2</sup> and 0.533 m<sup>2</sup>)</p>
+			<p>Knowing the temperature of the coolant, the heat load on the water block (same as load on coolant) and the flow rate allows us to calculate the temperature of the cold block based on this graph<sup>6</sup>, which gives us the temperature that the coolers must bring to -80 C. However, since the coolers operate so differently from their predicted behavior at such low temperatures, this calculation is not helpful and will not be done on this page.</p>
+			<style>
+				.ul-citation li {
+					font-size: 10pt !important;
+				}
+			</style>
+			<p><ul style="list-style: none;" class="ul-citation">
+				<li><sup>1</sup>http://www.infrared-thermography.com/material-1.htm</li>
+				<li><sup>2</sup>http://hyperphysics.phy-astr.gsu.edu/hbase/tables/thrcn.html</li>
+				<li><sup>3</sup>http://www.customthermoelectric.com/tecs_multistage/pdf/04812-5L31-04CFG_spec_sht.pdf</li>
+				<li><sup>4</sup>http://www.customthermoelectric.com/tecs_multistage/pdf/25412-5L31-07CQQ_spec_sht.pdf</li>
+				<li><sup>5</sup>http://www.marlow.com/resources/knowledgebase/iii-tec-selection-procedure.html</li>
+				<li><sup>6</sup>http://www.customthermoelectric.com/Water_blocks/pdf/WBA-1.62-0.55-CU-01%20thermal%20resistance.pdf</li>
+			</ul></p>
+			</div>
 		</div>
 		<div class="longText">
-			<h4>Results</h4>
-			<div id="div-results">
-				<ul>
-					<li>Most samples grew exponentially, device 1 seemed to have little growth.</li>
-					<li>Negative control and device 3 did not show fluorescence. Positive control, device 1, and device 2 showed increases in fluorescence over time.</li>
-					<li>The results show that fluorescence per unit of concentration remains relatively constant over time.</li>
-				</ul>
+			<div class="textSection" id="div-demonstration">
+			<h4>Demonstration</h4>
+			<p>Once the freezer was assembled, the first text we performed was to pump ice water (1.5C) through the cold block and run the freezer in a room temperature (24C) environment. The temperature of the sample was measured to be -60C by our thermometer. The video on the left shows the freezer in action under these conditions.</p>
+			<div style="width: 100%;" >
+			<video style="width: 40%; float: left; margin-right: 5%;" controls>
+				<source src="http://2016.igem.org/wiki/images/9/92/T--UMaryland--FreezerVid1.mp4" type="video/mp4" />
+				<source src="" type="video/webm" />
+				<a href="http://2016.igem.org/wiki/images/9/92/T--UMaryland--FreezerVid1.mp4">Click here to download the video</a>
+			</video>
+			<video style="width: 40%; margin-left: 5%;" controls>
+				<source src="http://2016.igem.org/wiki/images/7/75/T--UMaryland--FreezerVid2.mp4" type="video/mp4" />
+				<source src="http://2016.igem.org/wiki/images/2/2e/T--UMaryland--FreezerVid2.webm" type="video/webm" />
+				<a href="http://2016.igem.org/wiki/images/7/75/T--UMaryland--FreezerVid2.mp4">Click here to download the video</a>
+			</video>
 			</div>
-			<div id="div-slideshow">
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--absorbance.JPG">
-					<small class="caption">Figure 1. Cell growth versus absorbance.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/1/17/T--UMaryland--fluorescence.JPG">
-					<small class="caption">Figure 2. Cell growth versus flourescence.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--abs-fluor.JPG">
-					<small class="caption">Figure 3. Cell growth versus absorbance / flourescence.</small>
-				</div>
-			</div>
-		</div>
+			<p>The measurement given by the thermometer is not the actual temperature of the freezer. The digital thermometer is only rated down to -50 C, with increasing error as temperatures decrease further.<sup>1</sup> To “calibrate” our thermometer, we inserted it into a laboratory -80 freezer, which the thermometer measured as -66C (see right video). The sample is in fact below -70C (we assume it is -74C) despite the thermometer’s reading.</p>	
+			<p>Next, we ran the whole system with a sample of competent cells in a stand-in refrigerator (4 C) overnight. Our coolant reservoir was a styrofoam container full of ice.</p>
+			<video style="width: 100%;" controls> 
+				<source src="http://2016.igem.org/wiki/images/f/fa/T--UMaryland--FreezerVid3.mp4" type="video/mp4" />
+				<source src="http://2016.igem.org/wiki/images/b/b6/T--UMaryland--FreezerVid3.webm" type="video/webm" />
+				<a href="http://2016.igem.org/wiki/images/f/fa/T--UMaryland--FreezerVid3.mp4">Click here to download the video</a>
+			</video>
+			<p>Possibly due to cold temperatures, the styrofoam lost its watertightness and bled all of the water out, leaving the pump dry and causing the system to overheat. </p>
+			<img src="http://2016.igem.org/wiki/images/b/b7/T--UMaryland--result1.jpg" width="100%" />
+			<p>The plastic shell and scaffolding melted beyond repair, while the plastic nozzles on the water block partially melted. As the plastic shell melted, it fell onto the bottom cooler and cut the cooler’s red wire. The small power supply, which was directly under the water block, became wet when the nozzles melted, and it stopped functioning. The top cooler suffered from an unknown internal failure.</p>
+			<img src="http://2016.igem.org/wiki/images/8/8b/Result2.JPG" width="100%" />
+			<p>The melted pump nozzles were easily glued back to the water block, restoring its function. The small power supply dried out after one day and began working again. The large cooler’s red wire was reattached with heat-shrink, and the cooler fully regained functionality. The melted shell and top cooler could not be repaired. The total cost to repair the freezer was therefore $66, to replace the shell and top cooler.</p>
+			<p><ul style="list-style: none; margin: 0 0 0 0 !important;" class="ul-citation">
+			<li><sup>1</sup>http://www.customthermoelectric.com/Meters%20and%20Testing/pdf/EE-MS6501%20Digital%20Thermometer%20watermarked%20s.pdf</li>
+			</ul></p>
+		</div></div>
 	</div>
     <div id="bot-nav">
         <div id="container">
@@ -663,32 +992,17 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
 			var marginCheck = marginTitle / 2;
 			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
+				$('.titleText, #table-selector').css('left','15px');
+				$('.titleText, #table-selector').css('margin-left','0px');
 			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
+				$('.titleText, #table-selector').css('left','50%');
+				$('.titleText, #table-selector').css('margin-left','-40%');
 			}
 		})
 		
 		$(window).load(function() {
-			var marginTotal = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
-			var marginLeft = marginTotal / 2;
-			if (marginLeft > 14) {
-				$('.longText').css('margin-left', marginLeft);
-			}else {
-				$('.longText').css('margin-left', '15px');
-			}
-			
-			var marginTitle = $(window).outerWidth(true) - $('.titleText').outerWidth(false);
-			var marginCheck = marginTitle / 2;
-			if (marginCheck < 15) {
-				$('.titleText').css('left','15px');
-				$('.titleText').css('margin-left','0px');
-			} else {
-				$('.titleText').css('left','50%');
-				$('.titleText').css('margin-left','-40%');
-			}
+			$(window).resize();
+            $('body').css('opacity', '1');
 		})
 		
 	</script>
@@ -801,5 +1115,49 @@ Measure fluorescence of FITC at different concentrations to generate a curve of 
 
 		
 		
+		</script>
+		
+<script>
+var clicked = '';
+var current = 'background'; // sets initial display to be purpose
+ $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+	if (selected != current) {							// only change display / trigger animation if clicking different nav
+		changeText(selected)
+	}
+ })
+ 
+var dir = location.hash;								// grabs the anchor (text following the #)
+var n = dir.indexOf('?');								// and initially sets the page 
+dir = dir.substring(0, n != -1 ? n : dir.length);		
+dir = dir.replace('#','');
+if (dir == '') {
+	dir = 'background';
+}
+changeText(dir)
+
+$(".subNav").click(function() {
+	clicked = $(this).attr('data-select');	
+    $('html, body').animate({
+        scrollTop: $("#h4-"+ clicked).offset().top
+    }, 0000);
+});
+
+
+function changeText(selected) {
+	$('.navigator').css('border-bottom','1px solid #A8A8A8');		// make all navigational element have no bottom border
+	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border						// hides all text
+	var widthText = $('.longText').outerWidth(false);
+	$('.textSection').css('width', widthText);		
+	$('.textSection').css('display','none');
+	$('.subNavList').css('display','none');							// slighly shifts right all text to set up for animation
+	$('.textSection').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
+	$('#div-' + selected).css('display','block');									// the div containing the text is displayed
+	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);
+	$('.textSection').css('width', '100%');	
+	current = selected;												// sets the current display
+	location.hash = current;
+}
+
 		</script>
 </html>

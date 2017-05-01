@@ -355,12 +355,6 @@
         </style>
 		
 	<style>
-		.caption {
-			font-size: 12pt;
-			font-weight: bold;
-			margin-left: 25px;
-		}
-		
 		#div-figures{
 			padding-bottom: 100px;
 			font-size: 14pt;
@@ -436,14 +430,7 @@
             border-width: 2px;
         }
 
-		.longText li {
-			
-            font-size: 14pt;
-            line-height: 2;
-            font-weight: 400;
-		}
-		
-        #div-text p {
+        #div-text p, .longText li {
             /* formats text and lists within .longText */
 			padding-top: 15px;
 			padding-bottom: 15px;
@@ -477,6 +464,29 @@
             margin-top: 30px;
         }
 
+       .figure {
+            /* fixes the width of images in results tables */
+            width: 70%;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 10%;
+			margin-right: 13%;
+        }
+		
+		.figureImg {
+			width: 100%;
+            border-style: solid;
+            border-color: #A8A8A8;
+            border-width: 2px;
+		}
+		
+		.caption {
+			font-weight: bold;
+			font-size: 12pt;
+			margin-top: 10px;
+			line-height: 2em;
+		}
 
         /* formats caption and heading of results tables */
         td p {
@@ -559,72 +569,60 @@
 		</ul>	
 	</div>
 	<div class="scrollContainer">
-		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/5/5a/T--UMaryland--il.jpg" class="div-scrollPic" style="height: 650px;">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/d/d8/T--UMaryland--human.jpeg" class="div-scrollPic" style="height: 650px;">
 		<div class="titleText"> 
 				<style>
 				</style>
 			<!-- where background image below titles show -->
-			<h11>Interlab Study</h11></br>
-			<h21>Fluorescence Data From 3 Different Constructs with GFP</h21></br>
-			<h31>Standardizing fluorescence measurements and promoting collaboration. </h31></br>
+				<h11>Human Practices</h11></br>
+				<h21>Reaching Out to the Community</h21></br>
+				<h31>Receiving feedback to integrate into our project</h31></br>
 			</div>
 			</div>
 	</div>
+	<div class="scrollContainer">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/b/b8/T--UMaryland--market.jpg" class="div-scrollPic">
+			<div class="titleText" >
+				<h21>Interviewing Farmers at Markets about Methane</h21>
+			</div>
+		</div>
+	</div>
+	<div id="div-text"> <!-- Start of main text of page -->
 		<!-- Heading text -->
 		
-	<div id="div-text">
 		<div class="longText">
-			<p>The interlab study measures the fluorescence of three different constructs with GFP as well as a positive and negative control. It attempts to standardize the fluorescence measurements by adjusting absorbance values when compared to blanks, reducing the amount of independent variables by controlling for concentration, and adjusting fluorescence values based on the standard curve of FITC.  The goal of this study is to see how the observed fluorescence values compare across the iGEM community to see if the adjustments successfully standardize fluorescence measurements.</p>
-			<p>As a community of synthetic biologist, a key to the advancement of the field is collaboration among groups. For proper collaboration, we must be able to communicate our findings in ways that are concrete and well defined, making standards essential.</p>
+			<p>The big idea behind our project is finding a way to mitigate global warming by reducing the emission of a specific greenhouse gas, methane. Because we are interested in implementing our project in landfills and potentially cattle farms as well, we realized that we would have to work closely with the individuals who work in these locations. However, nothing can be achieved if these people share misconceptions about the problems that face our environment, how they are caused, and what can be done to stop them. When interviewing cattle farmers, we found that some of them did not see climate change as a relevant issue, so we decided to put together a brochure that describes the problem of climate change, how methane contributes, and what farmers can do to reduce their methane emissions.
+			</p>
+			<p><a href="http://2016.igem.org/wiki/images/7/79/T--UMaryland--pamphlet.pdf">Download the phamphlet in PDF format</a></p>
 		</div>
 		<div class="longText">
-			<h4>Tested Devices</h4>
-			<p>Transform competent cells with Test Devices 1 - 3, positive control, and negative control provided and plate them overnight on chloramphenicol resistant plates.</p>
-			<ul>
-				<li>Test Device 1: J23101.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 2: J23106.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Test Device 3: J23117.B0034.E0040.B0015 in pSB1C3</li>
-				<li>Positive Control Device: I20270 in pSB1C3</li>
-				<li>Negative Control Device: R0040 in pSB1C3</li>
-			</ul>
-		</div>
-		<div class="longText" id="div-protocol">
-			<h4>Protocol</h4>
-			<ol>
-				<li>Pick two colonies from each plate to inoculate and grow overnight.
-</li>
-				<li>Calibrate the plate reader-
-Measure absorbance of LUDOX and water to find a corrected absorbance that can then be used to find a conversion factor for a standard OD600 measurement.</li>
-				<li>Use FITC to create a standard fluorescence curve - 
-Measure fluorescence of FITC at different concentrations to generate a curve of fluorescence over concentration.</li>
-				<li>Measure OD600  of the overnight cultures and create dilutions to put them at an OD600 of 0.02.</li>
-				<li>Incubate at 37 C and take 100ul samples every hour (from hours 0-6).</li>
-				<li>Measure OD600 of all the samples and record.</li>
-			</ol>
-		</div>
-		<div class="longText">
-			<h4>Results</h4>
-			<div id="div-results">
-				<ul>
-					<li>Most samples grew exponentially, device 1 seemed to have little growth.</li>
-					<li>Negative control and device 3 did not show fluorescence. Positive control, device 1, and device 2 showed increases in fluorescence over time.</li>
-					<li>The results show that fluorescence per unit of concentration remains relatively constant over time.</li>
-				</ul>
-			</div>
-			<div id="div-slideshow">
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--absorbance.JPG">
-					<small class="caption">Figure 1. Cell growth versus absorbance.</small>
+			 <div id="div-slideshow">
+				<div><img src="http://2016.igem.org/wiki/images/9/91/T--UMaryland--pamphlet1.jpg" />
 				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/1/17/T--UMaryland--fluorescence.JPG">
-					<small class="caption">Figure 2. Cell growth versus flourescence.</small>
-				</div>
-				<div>
-					<img class="figure" src="http://2016.igem.org/wiki/images/4/43/T--UMaryland--abs-fluor.JPG">
-					<small class="caption">Figure 3. Cell growth versus absorbance / flourescence.</small>
+				<div><img src="http://2016.igem.org/wiki/images/7/7f/T--UMaryland--pamphlet2.jpg" />
 				</div>
 			</div>
+		</div>
+		<div class="longText">
+			<p>Overall, we learned that cattle farmers have diverse points of view and cannot simply be put into one category. For example, through our interviews, we noted that that cattle farmers have differing views on whether climate change exists. Some believe that it is an urgent issue and that the impacts of it have been seen in agriculture, while others believe that temperatures repeat themselves in cycles and there has been no net impact on global weather. It is difficult to convince those who do not believe in global warming the urgency of reducing greenhouse gas emissions, so it is important to raise awareness of extreme climates around the globe and the impact that greenhouse gas emissions have.</p>
+			<p>Also, we learned that the government places significant regulations on farmers when it comes to their impact on the environment, and farmers may resent these regulations since they believe the regulations harm their farming practices. When farmers were asked what practices harm the environment, the main issues we heard about were chemicals running off into the Chesapeake Bay. Greenhouse gas emissions were often forgotten. We also heard individuals bring up the idea that farmers get bad publicity if they do not respect the environment, so more public pressure on farmers to reduce their greenhouse gas emissions could be very effective. Before our project could be implemented, we would need to raise awareness of climate change as a real problem, educate about the contributions of greenhouse gasses, and work with farmers to figure out a manageable implementation strategy that would not harm their practice.</p>
+		</div>
+	<div class="scrollContainer">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/1/1c/T--UMaryland--gude.jpg" class="div-scrollPic">
+			<div class="titleText" >
+				<h21>Gude Landfill, Montgomery County MD</h21>
+			</div>
+		</div>
+	</div>
+		<div class="longText">
+			<p>The Shady Grove Processing Center and Transfer Station is a landfill and waste energy facility located in Derwood, MD that processes 700 tons of waste annually. However only 5% of waste ends up in landfills, the rest is recycled or burned at waste energy facilities such as the one in Derwood. However, during the natural biodegradation of trash in landfills, a significant amount of methane is produced and can cause much damage to the atmosphere. Current measures taken to combat the release of methane into the atmosphere including flaring the gas.</p>
+			<p>The Gude landfill in Montgomery County, Maryland is an out-of-commission landfill that has been capped and no longer accepts trash. However it still releases large sums of methane and is a site of flaring. During our visit Dr. Karasik pointed out the network of piping that draw gas from the landfill, and different controls that exist to ensure all unmanned processes are running safely. He also discussed many complaints received in regards to juxtaposing such a facility near a residential area, further emphasizing the importance of waste management reform.</p>
+			<div class="figure">
+				<img src="http://2016.igem.org/wiki/images/e/e2/T--UMaryland--flaring.jpg" class="figureImg" />
+				<small class="caption">Towers used for flaring low quality methane</small>
+			</div>
+			<p>Gas from a landfill is collected through a complex series of wells, perforated pipes, and blowers which direct the gas mixture which is predominantly methane to a facility that either burns it for energy if it is of good quality, or flares it (combusts it) if it is of poor quality. Flaring may prevent methane from entering the atmosphere but is not 100% effective. Furthermore, it requires expensive infrastructure and a lot of regular maintenance. These features prevent many waste treatment facilities around the nation from implementing methane management solutions. Thus Dr. Karasik advised us that our project was of value and could greatly mitigate methane emissions if implemented correctly by providing a low-maintenance, and cost effective solution to the issue. </p>
+			<p>This visit was incredibly useful in directing the course of our research and determining more specifications for our bacteria. We discussed some of the limitations and restrictions we would have to keep in mind when designing our bioreactor, and how to integrate it into the existing infrastructures. We deduced that we would need to be able to make use of current methods of directing methane across landfills, such as the complex series of pipes and blowers, to direct the methane to our bioreactor. We were also given  a rough estimate of the composition of gas we would be receiving so that we may plan how to separate and utilize the methane. </p>
 		</div>
 	</div>
     <div id="bot-nav">
