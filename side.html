@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Increase compatibility with older browsers that do not support HTML5 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<!-- Load jQuery from the web, if down then local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (typeof jQuery == 'undefined') {
+			document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}
+	</script>
+	<!-- Load Google Web Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css' />
+	<!-- Load CSS for the page -->	
+	<link href='css/side.css' rel='stylesheet' type='text/css' />
+	<!-- Title of the web page - as displayed in the tab -->
+	<title>UMaryland iGEM 2015 - Hok/Sok</title>
+</head>
+<body>
+	<div id="div-topbar"> 		<!-- Start of top header navigation bar 		-->
+		<div id="div-border">	<!-- Should remain the same throughout all pages-->
+			<a href="index.html"><img src="img/logo.png" id="img-logo" alt="UMaryland iGEM Logo"/></a>
+			<nav>
+				<ul>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="parts.html">Parts</a></li>
+					<li><a href="outreach.html">Outreach</a></li>
+					<li><a href="notebook.html">Notebook</a></li>
+					<li><a href="about.html">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	<div id="div-text"> <!-- Start of main text of page -->
+		<!-- Heading text -->
+		<div id="div-pic"> 
+		<!-- where background image below titles show -->
+			<h1>Side Projects</h1>
+			<h2>Other Endeavors by 2015 UMaryland iGEM</h2>
+			<h3>Producing lutein, an important deterrant in age related macular degeneration, and miraculin, a taste changing protein</h3>
+		</div>
+		<table id="table-selector"> <!-- Table of navigational links -->
+			<thead>
+				<!-- .border classes signify where broder needs to be drawn -->
+				<!-- navigator class trigger javascript on that element     -->
+				<!-- data-select attribute sends to script which element    -->
+				<!-- was clicked 											-->
+				<th class="borderRight navigator" id="th-lutein" data-select="lutein"><p>Lutein</p></th>
+				<th class="borderLeft navigator" id="th-miraculin" data-select="miraculin"><p>Miraculin</p></th>
+			</thead>
+		</table>
+		<div class="blockText initialDisplay" id="div-lutein">
+			<div class="longText">
+				<p>Though significantly delayed by the acquisition of relevant sequences, we laid the groundwork to engineer a biosynthetic pathway to optimize lutein production in E. coli. Lutein, one of many xanthophyll pigments produced by photosynthetic organisms, has been shown to delay the onset and severity of Age-related Macular Degeneration (AMD) in a dose-dependent manner (Liu, 2014). Over 8% of all adults between the ages of 45-85 exhibit impaired vision due to AMD, and the number of people with AMD symptoms is projected to reach 288 million by 2040 (Wong, 2014).</p> 
+				<p>Currently, lutein is extracted in small quantities from marigold flowers and microalga that contain an abundance of related molecules. Current efforts to synthesize lutein via organic chemistry typically involve the generation of toxic byproducts. We intend to engineer a synthetic biological system capable of producing lutein with increased resource- and time-efficiency as to be amenable to straightforward extraction techniques.</p>
+				<p>To this end, we will transform pre-existing lycopenic E. coli with a novel plasmid engineered for the preferential production of lutein relative to other products in the carotenoid pathway. Lycopene, a precursor in lutein biosynthesis, is produced in E. coli capable of rerouting farnesyl pyrophosphate into carotenoid biosynthesis. The genes for lycopene producing enzymes have previously been introduced by both outside researchers (Kim 2009) as well as previous iGEM teams (Cambridge 2009). Through a small number of inducible enzymatic reactions encoded on a second plasmid, lycopene can then converted to lutein. This requires cyclization by a β-cyclase (LYCB) and an ε- cyclase (LYCE) to form α-carotene, followed by a hydroxylation event on each ring by a β-hydroxylase and an ε- hydroxylase.</p>
+			</div>
+			<img class="imageEmbed imgW800" id="img-amd" src="img/amd.png" alt="A demonstration of age related macular degeneration"/>
+			<div class="longText">
+				<p>Lutein requires α-carotene as a precursor in its biosynthesis. In most photosynthetic organisms, independent activity of LYCB and LYCE produces stoichiometric levels of α- carotene as well as β-carotene (a useful molecule in its own right, but a contaminating side-product in lutein synthesis). To increase the ratio of α-carotene to β-carotene, we plan on producing the two cyclases separately in one E. coli, with the LYCE gene under a stronger promoter than the LYCB gene. This attempts to force carotenoid synthesis through α-carotene via increased specific activity of the ε-cyclase. We will tailor associated promoters as well as induction conditions in order to maximize the α-carotene/β-carotene ratio.</p>
+				<p>Thus far, we have cloned and submitted the ε-cyclase and -hydroxylase to the iGEM registry (see parts page), to complement pre-existing β-cyclase and hydroxylase biobricks. We have also developed a basic version of a mathematical modeling system capable of predicting output of the enzymes contributing to α-carotene production.</p>
+				<p>After tuning its predictive ability to the experimentally determined output of the biosynthetic pathway, we intend to create an easy-to-use interface so that other iGEMers may input basic kinetic data and production goals and receive information on appropriate expression levels for the enzymes in their pathway of interest, as well as candidate promoters in the iGEM registry that may approximate this level of expression.</p>
+			</div>
+		</div>
+		<div id="div-miraculin" class="blockText">
+			<div class="longText">
+				<p>One of our primary goals at the start of the summer was to train new members in basic molecular biology techniques and familiarize them with the general process of biobrick construction and amendment. We looked for a small project that might be a fruitful endeavor for our budding scientists and that would improve a part in the registry. We settled on adding a promoter to the miraculin coding region.</p>
+			</div>
+			<img class="imageEmbed imgW500" id="img-miraculin" src="img/miraculin.jpg" alt="An image of the miracle fruit"/>
+			<div class="longText">
+				<p>Miraculin is an approximately 100kDa glycoprotein found naturally in <em>Synsepalum dulcificum</em> (the miracle fruit) that binds sweet receptors, making acidic foods be perceived as sweet. To elicit and verify protein production, we added a pBAD promoter to the miraculin coding region, induced expression with 0.1% arabinose for 18 hours, and verified protein expression using SDS-PAGE.</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+var current = 'lutein'; // sets initial display to be purpose
+ $('.navigator').click( function() { 					// when any element with .class is clicked, trigger function
+	var selected = $(this).attr('data-select');			// grabs the name of the navigational element clicked
+	if (selected != current) {							// only change display / trigger animation if clicking different nav
+		changeText(selected)
+	}
+ })
+ 
+var dir = location.hash;								// grabs the anchor (text following the #)
+var n = dir.indexOf('?');								// and initially sets the page 
+dir = dir.substring(0, n != -1 ? n : dir.length);		
+dir = dir.replace('#','');
+if (dir == '') {
+	dir = 'lutein';
+}
+switch (dir) {
+	case 'lutein':
+        break;
+	case 'miraculin':
+        changeText(dir)
+        break;
+    default:
+        break;
+}
+
+function changeText(selected) {
+	$('.navigator').css('border-bottom','none');					// make all navigational element shave no bottom border
+	$('#th-' + selected).css('border-bottom', '4px solid #A8A8A8');	// the clicked navigational element given border		
+	$('.blockText').css('display','none');							// hides all text
+	$('.blockText').css('margin-left', '60px')						// slighly shifts right all text to set up for animation
+	$('#div-' + selected).css('display','block');					// the div containing the text is displayed
+	$('#div-' + selected).animate({ marginLeft: '0px'}, 200);		// the text is animated to quickly move left
+	current = selected;												// sets the current display
+	location.hash = current;
+}
+
+ 
+</script>
+</html>

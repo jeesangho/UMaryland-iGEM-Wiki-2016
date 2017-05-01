@@ -1,0 +1,270 @@
+body {	
+	/* Enforces font on the entire page, colored black by default
+	   Makes background off-white slightly to improve visibility with gray font */
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	background-color: #FEFFFA;
+	min-width: 1200px;
+	max-width: 1200px;
+	overflow-x:hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Navbar */
+nav {
+	min-width: 1200px;
+    opacity: 1.0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 10px;
+    font-size: 20pt;
+    display: block;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid black;
+} 
+
+nav a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Exo', sans-serif;
+}
+
+nav ul {	
+	list-style: none;
+	text-align: center;
+	transition: all .5s ease;
+}
+
+nav ul li {
+	display: inline;
+	margin-right: 20px;
+}
+
+/* Permanent bottom bar */
+#bot-nav {
+    background: #f9f9f9;
+    border-top: 1px solid #f5f5f5;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    top: 1200px;
+}
+
+#bot-nav ul {
+	margin-top: 25px;
+	list-style: none;
+	text-align: center;
+}
+
+#bot-nav li {
+	display: inline;
+	font-size: 20pt;
+	color: black;
+}
+
+#bot-nav a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -5px;
+	text-decoration: none;
+	font-size: 12pt;
+	color: black;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#bot-nav li:hover {
+	text-shadow: .5px .5px black;
+}
+
+/* Classes */
+
+/* Hides nav bar when scrolling */
+.scrolled {
+	font-size: 10pt;
+	line-height: 0px;
+}	
+
+/* animation when mouse is over Navbar */
+.hover {
+	font-size: 20pt;
+	line-height: 10px;
+}
+
+/* Content */
+
+h1 {							/* Centers the heading text on the page at different sizes */
+	color: #6B6B6B;				/* makes the text centered and gray colored */
+	font-size: 56pt;
+	font-weight: 200;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+/* Descriptions */
+
+h2 {
+	font-size: 18pt;
+	margin-left: 100px;
+	margin-top: 0px;
+}
+
+h3 {
+	color: #545454;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 16pt;
+	line-height: 1.5;
+	max-width: 860px;
+	margin-left: 180px;
+	padding-bottom: 20px;
+}
+
+p {
+	margin-left: 100px;
+	max-width: 500px;
+	font-size: 12pt;
+    line-height: 2;
+    font-weight: 400;
+}
+
+.description {
+	display: none;
+	float: left;
+	min-height: 600px;
+}
+
+#table-selector {
+	/* formats the table containing nav elements to be centered, addes space on top / bottom */
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#table-selector th {
+	/* makes each cell of nav evenly spaced */
+	text-align: center; 
+	width: 25%; /* modify when adding / deleting elements in nav */
+}
+
+th p {
+	/* formats text inside table of navigational elements */
+	/* makes cursor emulate a link to show it's clickable */
+	font-size: 24pt;
+	font-weight: 400;
+	cursor: pointer;
+	padding: 5px 0px 15px 0px;
+	margin: 0 0 0 0;
+}
+
+#div-content {
+}
+
+th p:hover {
+	/* makes links bold when hovered to show it is a link */
+	font-weight: 800;
+}
+
+#table-selector {
+	/* makes a single border between two cells rather than two */
+    border-collapse: collapse;
+}
+
+.profiles {
+	display: none;
+}
+
+#div-students {
+	display: block;
+}
+
+.clickImage:hover {
+	cursor: pointer;
+}
+
+/* creates a solid gray border between elements of navigational element */
+.borderRight {
+	border-right: 2px solid #A8A8A8;
+}
+
+.borderLeft {
+	border-left: 2px solid #A8A8A8;
+}
+
+.borderRight {
+	border-bottom: 4px solid #A8A8A8;
+}
+
+.borderBoth {
+	border-left: 2px solid #A8A8A8;
+	border-right: 2px solid #A8A8A8;
+}
+
+/* Images */
+
+/* Logo */
+#img-logo {
+	width: 150px;
+	float: left;
+	position: fixed;
+	margin-top: 12px;
+	margin-left: 65px;
+	opacity: 1.0;
+}
+
+/* iGEM logo */
+#img-igemlogo {
+	width: 60px;
+	float: right;
+	position: fixed;
+	margin-top: 10px;
+	opacity: 1.0;
+}
+
+.clickImage {
+	width: 200px;
+	height: 128px;
+	border: 4px solid #FEFFFA;
+}
+
+#table-advisors, #table-students {
+	margin-top: 50px;
+	margin-left: 700px;
+}
+
+.clickImageSmall {
+	display: none;
+	width: 80px;
+	height: 50px;
+}
+
+.clickImageSmallS {
+	display: none;
+	width: 80px;
+	height: 50px;
+}
+
+.clickImageSmall, .clickImageS, .clickImageSmallS:hover {
+	cursor: pointer;
+}
+
+.nospacing {
+	width: 80px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+#table-navigator, #table-navigatorS {
+	margin-left: 709px;
+}
+
+.clickImageS  {
+	width: 150px;
+}

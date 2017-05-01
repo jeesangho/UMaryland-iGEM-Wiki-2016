@@ -1,58 +1,261 @@
-
 /* Navbar and body setup */
+
 body {
 	font-family: 'Raleway', sans-serif;
+<<<<<<< HEAD
+	color: #fff;
+	overflow-x: hidden;
+=======
 	color: white;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+>>>>>>> SangHo-V1
 }
 
+/* Navbar */
 nav {
+<<<<<<< HEAD
+    opacity: 1.0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 10px;
+    font-size: 20pt;
+    display: block;
+    background: #fff;
+    border-bottom: 1px solid black;	
+} 
+=======
 	margin-top: 100px;
-	font-size: 28pt;
+	font-size: 24pt;
 }
+>>>>>>> SangHo-V1
 
 nav a {
 	text-decoration: none;
-	color: white;
+	color: black;
+	font-family: 'Exo', sans-serif;
 }
 
-a:hover {
-	font-weight: 800;
-}
-
-nav ul {
+nav ul {	
 	list-style: none;
+	transition: all .5s ease;
+	text-align: right;
+}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* Nav bar when more icon is clicked */
+
+#div-navResized {
+	font-size: 20pt;
+	position: fixed;
+	text-align: center;
+	display: none;
+	margin-top: -55px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin-top: 100px;
+}
+
+#div-navResized a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Exo', sans-serif;
+}
+
+#div-navResized ul {	
+	list-style: none;
+<<<<<<< HEAD
+	margin-right: 40px;
+=======
 	text-align: right;
 	margin-right: 50px;
-	padding-top: 50px;
+	padding-top: 35px;
+>>>>>>> SangHo-V1
 }
 
-nav ul li {
+#div-navResized ul li {
+	margin-top: 20px;	
+}
+
+/* Hok Sok */
+#div-title {
+	margin-top: -7px;
+}
+
+/* Permanent bottom bar */
+#bot-nav {
+    background-color: #f9f9f9;    
+    border-top: 1px solid #f5f5f5;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    top: 2000px;
+    display: block;
+}
+
+#bot-nav img {
+	height: 30px;
+	width: 30px;
+}
+
+#bot-nav img:hover {
+	-webkit-filter: drop-shadow(-1.5px 1.5px 2px black);
+}
+
+#bot-nav li {
 	display: inline;
-	padding-left: 40px;
+	margin-left: 15px;
 }
 
+<<<<<<< HEAD
+#bot-nav ul {
+	margin-top: 20px;
+	text-align: center;
+=======
 #img-logo {
 	margin-left: 50px;
-	width: 500px;
+	width: 400px;
 	float: left;
+>>>>>>> SangHo-V1
 }
 
-#div-text {
-	margin-left: 50px;
-	padding-top: 40px;
+#bot-nav a {
+	text-decoration: none !important;
+}
+
+/* Background of page */
+
+html {
+	background-color: #FEFFFA;
 }
 
 /* Start Page Specific CSS */
 
+/* UMaryland */
 h1 {
-	font-size: 125pt;
+<<<<<<< HEAD
+	font-size: 14vw;
+	margin-top: 100px;
+	margin-bottom: 40px;
+	text-shadow: -3px 3px 1px black;
+=======
+	margin-top: 10%;
+	font-size: 80pt;
 	font-weight: 200;
 	clear: both;
+>>>>>>> SangHo-V1
 }
 
+/* Project Name*/
 h2 {
-	font-size: 72pt;
+<<<<<<< HEAD
+	font-size: 9vw;
+	display: inline;
+}
+
+/* Project Description */
+h3 {
+	margin-top: 40px;
+	font-size: 4vw;
+}
+
+/* Classes */
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+/* Pushed class actives */
+#img-more.pushed {
+	box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+#div-navResized.pushed {
+	display: block;
+}
+
+#div-navResized.pushed a:hover {
+	text-decoration: underline;
+}
+
+nav.pushed {
+	height: 100%;
+}
+
+body.pushed {
+	overflow-y: hidden;
+}
+
+nav img.pushed {
+	display: none;
+}
+
+#bot-nav.pushed {
+	display: none;
+}
+
+/* Hides nav bar when scrolling */
+.scrolled {
+	font-size: 10pt;
+	line-height: 0px;
+}	
+
+/* animation when mouse is over Navbar */
+.hover {
+	font-size: 20pt;
+	line-height: 10px;
+}
+
+/* Images */
+
+/* Logo */
+#img-logo {
+	width: 150px;
+	float: left;
+	position: fixed;
+	margin-top: 12px;
+	margin-left: 65px;
+	opacity: 1.0;
+}
+
+/* iGEM logo */
+#img-igemlogo {
+	width: 60px;
+	float: right;
+	position: fixed;
+	margin-top: 10px;
+	opacity: 1.0;
+}
+
+/* hok sok diagram */
+#img-hoksok {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	width: 80%;
+	z-index: -999;
+=======
+	font-size: 60pt;
 	font-weight: 200;
+>>>>>>> SangHo-V1
 }
 
 /* sets the background image */
@@ -61,6 +264,45 @@ h2 {
 	z-index: -999;
 	left: 0px;
 	top: 0px;
+<<<<<<< HEAD
 	width: 100%;
-	height: 100%;
+	height: auto;
+	min-height: 77%;
+}
+
+/* More Icon */
+#img-more {
+	position: fixed;
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin-right: 0px;
+	right: 15px;
+	margin-top: -20px;
+}
+
+/* Logos when more button is clicked */
+
+#img-logoResized {
+	width: 150px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -450px;
+}
+#img-igemlogoResized {
+	width: 60px; 
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 350px;
+=======
+	width: 2560px;
+	height: 1440px;
+}
+
+html {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+>>>>>>> SangHo-V1
 }

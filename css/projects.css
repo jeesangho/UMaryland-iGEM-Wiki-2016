@@ -5,84 +5,132 @@ body {
 	   Makes background off-white slightly to improve visibility with gray font */
 	font-family: 'Raleway', sans-serif;
 	color: black;
-	background-color: #FEFFFA;
+	background-color: #FFFEFE;
+	min-width: 1200px;
+	max-width: 1200px;
+	overflow-x: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+/* Navbar */
 nav {
-	/* Moves the top bar to be centered with the UMD logo, increases font size */
-	margin-top: 50px;
-	font-size: 20pt;
-}
+	min-width: 1200px;
+    opacity: 1.0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 10px;
+    font-size: 20pt;
+    display: block;
+    background: #d8d8d8;
+    width: 100%;
+} 
 
 nav a {
-	/* removes underlining of links by default, makes color of text grayish */
 	text-decoration: none;
-	color: #757575;
+	color: black;
+	font-family: 'Exo', sans-serif;
 }
 
-a:hover {
-	/* when hovering over links, the text becomes bold to signify it can be clicked on */
-	font-weight: 800;
-}
-
-nav ul {
-	/* removes bullets in the list */
+nav ul {	
 	list-style: none;
-	text-align: right;
-	padding-top: 30px;
+	text-align: center;
+	transition: all .5s ease;
 }
 
 nav ul li {
-	/* makes list display horizontally, increases spacing with the left side */
 	display: inline;
-	padding-left: 40px;
+	margin-right: 20px;
 }
 
+/* Permanent bottom bar */
+#bot-nav {
+    background: #d8d8d8;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    margin-top: 45px;
+}
+
+#bot-nav ul {
+	margin-top: 25px;
+	list-style: none;
+	text-align: center;
+}
+
+#bot-nav li {
+	display: inline;
+	font-size: 20pt;
+	color: black;
+}
+
+#bot-nav a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -5px;
+	text-decoration: none;
+	font-size: 12pt;
+	color: black;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#bot-nav li:hover {
+	text-shadow: .5px .5px black;
+}
+
+/* Images */
+
+/* Logo */
 #img-logo {
-	/* fixes size of logo, makes the nav bar go to the right of the logo */
-	width: 300px;
+	width: 150px;
 	float: left;
+	position: fixed;
+	margin-top: 12px;
+	margin-left: 65px;
+	opacity: 1.0;
 }
 
-#div-text {
-	/* Increases space between main content and the nav heading */
-	padding-top: 40px;
+/* iGEM logo */
+#img-igemlogo {
+	width: 60px;
+	float: right;
+	position: fixed;
+	margin-top: 10px;
+	opacity: 1.0;
 }
 
-#div-topbar {
-	/* fixes the size of the heading to improve compatibility, centers on the page */
-	margin-right: auto;
-	margin-left: auto;
-	min-width: 1366px;
-	max-width: 1366px;
+/* Classes */
+
+/* Hides nav bar when scrolling */
+.scrolled {
+	font-size: 10pt;
+	line-height: 0px;
+}	
+
+/* animation when mouse is over Navbar */
+.hover {
+	opacity: 1.0;
+	font-size: 20pt;
+	line-height: 10px;
 }
 
-#div-border {
-	/* create a smaller div that is centered, which has a gray bottom border
-	   creates the shadow underneath border									 */
-	margin-left: auto;
-	margin-right: auto;
-	min-width: 1200px;
-	max-width: 1200px;
-	border-bottom-style: solid;
-	border-color: #A8A8A8;
-	border-width: 2px;
-	-webkit-box-shadow: -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
-	-moz-box-shadow:    -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
-	box-shadow:         -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
-}
 /* Start Page Specific CSS */
 
 h1 {							/* Centers the heading text on the page at different sizes */
 	color: #6B6B6B;				/* makes the text centered and gray colored */
-	font-size: 60pt;
+	font-size: 56pt;
 	font-weight: 200;
 	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 5px;
 }
 
 h2 {
 	color: #6B6B6B;
-	font-size: 30pt;
+	font-size: 28pt;
 	font-weight: 200;
 	text-align: center;
 }
@@ -95,6 +143,8 @@ h3 {
 	max-width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 
@@ -102,8 +152,9 @@ h3 {
    turns div from rectangle to circle 					*/
 .circle {
 	display: inline-block;
-	margin-right: 15px;
-	width: 300px;
+	margin-right: 10px;
+	width: 260px;
+	height: 260px;
 	overflow: hidden;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -113,7 +164,7 @@ h3 {
 
 /* makes the actual image inside circle the same width as .circle */
 .circle img {
-	width:300px;
+	width:260px;
 }
 
 /* Triggers darkening of the image within .circle when hovered */
@@ -123,7 +174,7 @@ h3 {
 
 /* moves all circles down and centered on the page */
 #div-circles {
-	margin-top: 100px;
+	margin-top: 50px;
 	margin-left: 70px;
 }
 

@@ -1,0 +1,1450 @@
+</div>
+</div>
+<html lang="en">
+
+<head>
+    <script>
+        $('body').css('display', 'none');
+    </script>
+    <script src="http://2016.igem.org/wiki/images/9/95/T--UMaryland--html5shiv.txt"></script>
+    <script src="http://2016.igem.org/wiki/images/c/ce/T--UMaryland--parallax.txt"></script>
+    <script src="http://2016.igem.org/wiki/images/d/d3/T--UMaryland--slick.txt" type="text/javascript"></script>
+
+    <title>About Our Team</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'Exo';
+        font-style: normal;
+        font-weight: 400;
+        src: url(http://2016.igem.org/wiki/images/0/02/T--UMaryland--Exo.woff) format('woff2');
+    }
+    
+    @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: 400;
+        src: url(http://2016.igem.org/wiki/images/6/61/T--UMaryland--Lora.woff) format('woff2');
+    }
+    
+    @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 200;
+        src: url(http://2016.igem.org/wiki/images/b/b7/T--UMaryland--RalewayLight.woff) format('woff2');
+    }
+    
+    @font-face {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        src: url(http://2016.igem.org/wiki/images/5/58/T--UMaryland--Raleway.woff) format('woff2');
+    }
+</style>
+<style>
+    /* Slider */
+    
+    .slick-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .slick-list:focus {
+        outline: none;
+    }
+    
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+    
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    
+    .slick-track:before,
+    .slick-track:after {
+        display: table;
+        content: '';
+    }
+    
+    .slick-track:after {
+        clear: both;
+    }
+    
+    .slick-loading .slick-track {
+        visibility: hidden;
+    }
+    
+    .slick-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+    
+    [dir='rtl'] .slick-slide {
+        float: right;
+    }
+    
+    .slick-slide img {
+        display: block;
+    }
+    
+    .slick-slide.slick-loading img {
+        display: none;
+    }
+    
+    .slick-slide.dragging img {
+        pointer-events: none;
+    }
+    
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+    
+    .slick-loading .slick-slide {
+        visibility: hidden;
+    }
+    
+    .slick-vertical .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+    
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+    
+    .slick-arrow {
+        background-color: #B0B0B0;
+    }
+</style>
+<style>
+    @charset 'UTF-8';
+    /* Slider */
+    
+    .slick-loading .slick-list {
+        background: #fff url('http://2016.igem.org/wiki/images/8/85/T--UMaryland--ajax-loader.gif') center center no-repeat;
+    }
+    /* Icons */
+    
+    @font-face {
+        font-family: 'slick';
+        font-weight: normal;
+        font-style: normal;
+        src: url('./fonts/slick.eot');
+        src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('http://2016.igem.org/wiki/images/a/a9/T--UMaryland--slick.woff') format('woff'), url('http://2016.igem.org/wiki/images/b/b8/T--UMaryland--slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    }
+    /* Arrows */
+    
+    .slick-prev,
+    .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+    
+    .slick-prev:hover,
+    .slick-prev:focus,
+    .slick-next:hover,
+    .slick-next:focus {
+        color: transparent;
+        outline: none;
+        background: transparent;
+    }
+    
+    .slick-prev:hover:before,
+    .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+        opacity: 1;
+    }
+    
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before {
+        opacity: .25;
+    }
+    
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: 'slick';
+        font-size: 25px;
+        line-height: 1;
+        opacity: .75;
+        color: #808080;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .slick-prev {
+        left: -25px;
+    }
+    
+    [dir='rtl'] .slick-prev {
+        right: -25px;
+        left: auto;
+    }
+    
+    .slick-prev:before {
+        content: '←';
+    }
+    
+    [dir='rtl'] .slick-prev:before {
+        content: '→';
+    }
+    
+    .slick-next {
+        right: -25px;
+    }
+    
+    [dir='rtl'] .slick-next {
+        right: auto;
+        left: -25px;
+    }
+    
+    .slick-next:before {
+        content: '→';
+    }
+    
+    [dir='rtl'] .slick-next:before {
+        content: '←';
+    }
+    /* Dots */
+    
+    .slick-dotted.slick-slider {
+        margin-bottom: 30px;
+    }
+    
+    .slick-dots {
+        position: absolute;
+        bottom: -25px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+    
+    .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    
+    .slick-dots li button:hover,
+    .slick-dots li button:focus {
+        outline: none;
+    }
+    
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        opacity: 1;
+    }
+    
+    .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        opacity: .25;
+        color: black;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: black;
+    }
+</style>
+<style>
+    #bars_item {
+        display: none;
+    }
+    
+    #sideMenu {
+        display: none;
+    }
+    
+    #content {
+        margin-top: 0px;
+    }
+    
+    body {
+        /* Enforces font on the entire page, colored black by default
+	   Makes background off-white slightly to improve visibility with gray font */
+        font-family: 'Raleway', sans-serif;
+        color: black;
+        background-color: #FEFFFA;
+        overflow-x: hidden;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .follow {
+        background-color: #FEFFFA;
+    }
+    /* Navbar */
+    
+    nav {
+        opacity: 1.0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        line-height: 10px;
+        font-size: 20pt;
+        display: block;
+        background: #fff;
+        border-bottom: 1px solid black;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        z-index: 1;
+        margin-top: 18px;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Exo', sans-serif;
+    }
+    
+    a:visited {
+        color: black;
+    }
+    
+    nav ul {
+        list-style: none;
+        transition: all .5s ease;
+        text-align: right;
+    }
+    
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav a:hover,
+    nav a:focus {
+        opacity: .7;
+        text-decoration: none;
+    }
+    /* Nav bar when more icon is clicked */
+    
+    #div-navResized {
+        font-size: 20pt;
+        position: fixed;
+        text-align: center;
+        display: none;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 200px;
+        z-index: 3;
+    }
+    
+    #div-navResized a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Exo', sans-serif;
+    }
+    
+    #div-navResized ul {
+        list-style: none;
+        margin-right: 40px;
+        margin-top: 0px;
+    }
+    
+    #div-navResized ul li {
+        margin-top: 4px;
+    }
+    
+    #div-title {
+        z-index: -999;
+    }
+    
+    #copyrightResized {
+        margin-top: -23px;
+    }
+    
+    #contactResized {
+        margin-top: -10px;
+    }
+    
+    #contactResized:hover {
+        text-shadow: .1px .1px black;
+    }
+    /* Content */
+    
+    table {
+        background: none;
+        border: none;
+    }
+    
+   .titleText {
+			position: absolute;
+			top: 350px;
+			left: 50%;
+			margin-left: -40%;
+			right: auto;
+			width: 80%;
+			min-width: 1000px;
+			max-width: 1500px;
+		}
+		
+		h11, h21, h31 {
+			font-family: Lora;
+			display: inline-block;
+			position: relative;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-top: 10px;
+			padding-right: 10px;
+			background: rgba(0,0,0, 0.7);
+			line-height: 1em;
+		}
+		
+        h11 {		
+            color: white;
+            font-size: 30pt;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        h21 {
+            color: white;
+            font-size: 24pt;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        h31 {
+            color: white;
+            font-size: 20pt;
+            font-weight: 200;
+            text-align: left;
+        }
+    
+    #div-content p {
+        font-size: 12pt;
+        line-height: 2;
+        font-weight: 400;
+    }
+    
+    #table-selector {
+        /* formats the table containing nav elements to be centered, addes space on top / bottom */
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1500px;
+        min-width: 1000px;
+    }
+    
+    #table-selector th {
+        /* makes each cell of nav evenly spaced */
+        text-align: center;
+        width: 25%;
+        /* modify when adding / deleting elements in nav */
+    }
+    
+    th p {
+        /* formats text inside table of navigational elements */
+        /* makes cursor emulate a link to show it's clickable */
+        font-size: 5vw;
+        font-weight: 400;
+        cursor: pointer;
+        padding: 5px 0px 15px 0px;
+        margin: 0 0 0 0;
+    }
+    
+    th p:hover {
+        /* makes links bold when hovered to show it is a link */
+        font-weight: 800;
+    }
+    
+    #table-selector {
+        /* makes a single border between two cells rather than two */
+        border-collapse: collapse;
+    }
+    
+    .clickImage:hover {
+        cursor: pointer;
+    }
+    /* Acknowledgements */
+    
+    #companies li,
+    #school li {
+        display: inline;
+        margin-right: 35px;
+    }
+    
+    #launch li {
+        display: inline;
+        margin-left: 13px;
+        margin-right: 13px;
+        font-size: 14pt;
+        letter-spacing: 2px;
+        line-height: 1.7em;
+    }
+    
+    #div-acknowledgements ul {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+    
+    #div-acknowledgements {
+        margin-bottom: 30px;
+    }
+    
+    #companies {
+        max-width: 930px;
+    }
+    
+    #school {
+        max-width: 1000px;
+    }
+    
+    #launch {
+        max-width: 752px;
+    }
+    
+    #companies img {
+        margin-bottom: 20px;
+    }
+    
+    #school img {
+        margin-bottom: 30px;
+    }
+    /* creates a solid gray border between elements of navigational element */
+    
+    .borderRight {
+        border-right: 2px solid #A8A8A8;
+    }
+    
+    .borderLeft {
+        border-left: 2px solid #A8A8A8;
+    }
+    
+    .borderRight {
+        border-bottom: 4px solid #A8A8A8;
+    }
+    
+    .borderBoth {
+        border-left: 2px solid #A8A8A8;
+        border-right: 2px solid #A8A8A8;
+    }
+    /* Pushed class actives */
+    
+    #img-more.pushed {
+        box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .3);
+    }
+    
+    #div-navResized.pushed {
+        display: block;
+    }
+    
+    #div-navResized.pushed a:hover {
+        opacity: .7;
+        text-decoration: none;
+    }
+    
+    nav.pushed {
+        height: 100%;
+    }
+    
+    body.pushed {
+        overflow-y: hidden;
+    }
+    
+    nav img.pushed {
+        display: none;
+    }
+    /* Hides nav bar when scrolling */
+    
+    .scrolled {
+        font-size: 10pt;
+        line-height: 20px;
+    }
+    /* animation when mouse is over Navbar */
+    
+    .hover {
+        font-size: 20pt;
+        line-height: 40px;
+    }
+    /* Images */
+    /* Logo */
+    
+    #img-logo {
+        width: 260px;
+        float: left;
+        position: fixed;
+        margin-top: 4px;
+        margin-left: 65px;
+        opacity: 1.0;
+    }
+    /* More Icon */
+    
+    #img-more {
+        position: fixed;
+        display: none;
+        width: 50px;
+        height: 50px;
+        margin-right: 0px;
+        right: 15px;
+        z-index: 2;
+        margin-top: 12px;
+    }
+    /* Logo when more button is clicked */
+    
+    #img-logoResized {
+        width: 300px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: -160px;
+    }
+    /* Sponsors */
+    
+    #img-Qiagen {
+        height: 120px;
+    }
+    
+    #img-IDT {
+        height: 75px;
+    }
+    
+    #img-NEB {
+        height: 105px;
+    }
+    
+    #img-Edge,
+    #img-CMNS {
+        height: 70px;
+    }
+    
+    #img-IBBR,
+    #img-ILS {
+        height: 100px;
+    }
+    /* Classes */
+    
+    .centered {
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .nospacing {
+        width: 80px;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+    
+    .navigator {
+        background-color: #FEFFFA;
+    }
+    
+    #div-content {
+        display: block;
+        min-width: 1000px;
+        max-width: 1500px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .thanks {
+        font-size: 14pt;
+        font-weight: 800;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 752px;
+    }
+    
+    #launch li {
+        white-space: nowrap;
+    }
+    
+    #otherPeople li {
+        list-style: none;
+        font-size: 10pt;
+        letter-spacing: 2px;
+        line-height: 1.7em;
+    }
+    
+    #div-background {
+        height: 500px;
+    }
+</style>
+
+<style>
+    #div-studentDetail img,
+    #div-advisorsDetail img {
+        width: 500px;
+    }
+    
+    .floatLeft {
+        float: right;
+        min-width: 500px;
+        height: 350px;
+        overflow-y: auto;
+    }
+    
+    #div-studentDetail,
+    #div-advisorsDetail {
+        margin-bottom: 30px;
+        min-width: 1035px;
+    }
+    
+    #div-studentDetailNav,
+    #div-advisorsDetailNav {
+        margin-bottom: 150px;
+    }
+    
+    #div-studentDetailNav img,
+    #div-advisorsDetailNav img {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    #div-studentDetailNav img:hover,
+    #div-advisorsDetailNav img:hover {
+        cursor: pointer;
+    }
+    
+    #div-advisorsDetailNav {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<style>
+    #div-insideText {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 1000px;
+        padding-top: 10px;
+    }
+    /* Permanent bottom bar */
+    
+    #bot-nav {
+        background-color: #f9f9f9;
+        border-top: 1px solid #f5f5f5;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        display: block;
+        color: black;
+        font-size: 12pt;
+        font-family: 'Lora', serif;
+        z-index: -1;
+    }
+    
+    #social-media {
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+    
+    .pull-right a {
+        padding-right: 0px !important;
+    }
+    
+    .copyright {
+        text-align: center;
+        width: 272px;
+        height: 30px;
+        margin-top: -20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pull-left {
+        margin-top: -3px;
+        width: 83px;
+        margin-left: 30px;
+        margin-right: auto;
+        display: inline;
+        height: 34px;
+    }
+    
+    .pull-left p {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0 !important;
+        line-height: 0px !important;
+    }
+    
+    .pull-right {
+        width: 83px;
+        margin-right: 30px;
+        margin-left: auto;
+    }
+    
+    #copyright {
+        text-align: center;
+        left: auto;
+        right: auto;
+        width: 100%;
+        padding: 0 0 0 0;
+        margin-top: 0px;
+        float: left;
+    }
+    
+    #container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+    
+    #container img {
+        height: 20px;
+        width: 20px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    
+    #bot-nav img:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    #container li {
+        display: inline;
+        list-style: none;
+        padding-right: 25px;
+    }
+    
+    .pull-left {
+        float: left;
+    }
+    
+    #bot-nav a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #contact:hover {
+        text-shadow: .1px .1px black;
+    }
+	
+	.follow {
+		padding-bottom: 100px;
+	}
+</style>
+
+<body>
+    <nav>
+        <a href="http://2016.igem.org/Team:UMaryland"><img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logo"></a>
+        <ul>
+            <a style="opacity: 0">Fix</a>
+            <li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+        </ul>
+    </nav>
+    <img src="http://2016.igem.org/wiki/images/e/e5/T--UMaryland--more.png" id="img-more">
+    <!-- Nav bar when more button is clicked	 -->
+    <div id="div-navResized">
+        <img src="http://2016.igem.org/wiki/images/2/26/T--UMaryland--newlogo.jpeg" id="img-logoResized">
+        <ul>
+            <li><a href="http://2016.igem.org/Team:UMaryland/projects">Projects</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/Part_Collection">Parts</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/Model">Modeling</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/outreach">Outreach</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/notebook">Notebook</a></li>
+            <li><a href="http://2016.igem.org/Team:UMaryland/about">About Us</a></li>
+        </ul>
+    </div>
+    <div class="scrollContainer">
+		<div data-parallax="scroll" data-image-src="http://2016.igem.org/wiki/images/6/66/T--UMaryland--teampic.jpeg" class="div-scrollPic" style="height: 650px;">
+		<div class="titleText"> 
+			<!-- where background image below titles show -->
+			<h11>Our Team</h11></br>
+			<h21>Training the Next Generation of Synthetic Biologists</h21></br>
+			<h31>Solving major global and local issues under the adivising of faculty and graduate advisors.</h31></br>
+			</div>
+			</div>
+	</div>
+    <div class="follow">
+        <table id="table-selector">
+            <!-- Table of navigational links -->
+            <thead>
+                <!-- .border classes signify where border needs to be drawn -->
+                <!-- navigator class trigger javascript on that element     -->
+                <!-- data-select attribute sends to script which element    -->
+                <!-- was clicked 											-->
+                <th class="borderRight navigator" id="th-students" data-select="students">
+                    <p>Students</p>
+                </th>
+                <th class="borderBoth navigator" id="th-advisors" data-select="advisors">
+                    <p>Advisors</p>
+                </th>
+                <th class="borderLeft navigator" id="th-acknowledgements" data-select="acknowledgements">
+                    <p>Acknowledgements</p>
+                </th>
+            </thead>
+        </table>
+        <div id="div-content">
+            <div id="div-students" class="profiles">
+                <div id="div-studentDetail">
+                    <div id="div-subhashini" class="description">
+                        <div class="floatLeft">
+                            <h2>Subhashini Arumugam</h2>
+                            <p>Subhashini Arumugam is a freshman bioengineering major that aspires to go to medical school someday. Besides science, she is very interested in learning languages, writing, and political activism. She is also very passionate about dance, yoga, making breakfast, and taking naps. She hopes to gain research experience and exposure to the many facets of synthetic biology through iGEM, and looks forward to contributing to the team's outreach projects.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/8/8b/T--UMaryland--subhashini.jpg">
+                    </div>
+                    <div id="div-jacob" class="description">
+                        <div class="floatLeft">
+                            <h2>Jacob Premo</h2>
+                            <p>Jacob Premo is a freshman currently majoring in biochemistry and microbiology. He joined the UMaryland iGEM team in hopes of working with his peers on meaningful and unique research topics. After his undergraduate career, Jacob plans to pursue a PhD which he would like to put to use developing new medicines. Outside of his academic and research life Jacob enjoys reading books and watching sports.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/3/3d/T--UMaryland--jacob.png">
+                    </div>
+                    <div id="div-ben" class="description">
+                        <div class="floatLeft">
+                            <h2>Ben Walton</h2>
+                            <p>Ben is a rising sophomore pursuing a double-degree in Mechanical Engineering and Computer Science. At this point in college, he still does not know his career path, but hopes that the experience of iGEM will help to give him some ideas. Outside of school, Ben can be found playing cards or board games with friends, reading, or slack-lining. Very recently, he has developed an interest in snorkeling and scuba diving.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/0/0d/T--UMaryland--ben.png">
+                    </div>
+                    <div id="div-sangho" class="description">
+                        <div class="floatLeft">
+                            <h2>SangHo Jee</h2>
+                            <p>SangHo is a freshman biochemistry and neurobiology & physiology double major in the Integrated Life Sciences program, who primarily joined iGEM to work on their wiki and website design, while gaining exposure to how the wet labs work. He hopes to one day attend medical school in the future but is interested in research as well. Outside of iGEM he enjoys web programming, reading the news, and playing video games.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/8/8f/T--UMaryland--sangho.jpg">
+                    </div>
+                    <div id="div-seth" class="description">
+                        <div class="floatLeft">
+                            <h2>Seth Cohen</h2>
+                            <p>Seth is a freshman biochemistry major at the University of Maryland. Outside of science his favorite things to do are play basketball and write fiction. His favorite food is probably falafel on pita bread with tomatoes, cucumbers, feta, lettuce, tahini, and hummus. His favorite animal is definitely the elephant. Another kind of interesting fact about him is that he is vegetarian. That's pretty much all you need to know about Seth!
+                                <p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/e/e2/T--UMaryland--seth.jpg">
+                    </div>
+                    <div id="div-maria" class="description">
+                        <div class="floatLeft">
+                            <h2>Maria Novitskaya</h2>
+                            <p>Maria is a rising sophomore Neurobiology and Physiology major. She is passionate about science, friendship, and getting enough sleep. Her likes include the color green, movies and documentaries, and making great guacamole. Her dislikes include getting stuck in traffic, spinach, and writing bios.
+                                <p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--maria.jpg">
+                    </div>
+                    <div id="div-nancy" class="description">
+                        <div class="floatLeft">
+                            <h2>Nancy Zhang</h2>
+                            <p>Presenting Nancy Zhang! Nancy is a freshman majoring in Neurology & Physiology and is also a part of the ILS program in the Honors College. Aside from her strong focus in science, Nancy has a great passion for art and devotes her spare time to arts, crafts and sculpture, therefore she brings an artistic touch in addition to years of research experience. She hopes to be able to unite different disciplines like engineering, graphic design, and wet lab work in research to help the team create a strong project this year!
+                                <p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/4/47/T--UMaryland--nancy.jpg">
+                    </div>
+                    <div id="div-chaoyang" class="description">
+                        <div class="floatLeft">
+                            <h2>Chaoyang Wang</h2>
+                            <p>Chaoyang is a freshman studying Neurobiology and Physiology with a minor in Music Performance in the Integrated Life Sciences Program. Aspiring to become a surgeon one day, Chaoyang is an Executive Board Member of the American Medical Student Association. He has researched 2 summers at an Adult Stem Cell lab at the NIH and hopes to contribute his lab experience to the iGEM team.</p>
+                            <p>Chaoyang has also recently partaken in an Alternative Spring Break to New York City to join the movement to end the stigma against HIV and AIDS. Outside of academics, he enjoys playing piano and has played in various renowned locales, including Carnegie Hall and the Millennium Stage at the Kennedy Center. Among his many wins are first prize at the 29th annual International Young Artist Piano Competition. Chaoyang also enjoys taking artsy pictures and loves hanging out with friends.
+                                <p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/1/1b/T--UMaryland--chaoyang.jpg">
+                    </div>
+                    <div id="div-chunmun" class="description">
+                        <div class="floatLeft">
+                            <h2>Chun Mun Loke</h2>
+                            <p>Chun Mun Loke (né Descan Aï Rembassa Adéwola Köloe !Xobile) was born in the village of Tokkna in Kenya. Born with jaundice, he has struggled to gain acceptance of his African heritage since birth. At age 3, his parents won the national lottery, earning enough money for a boat to leave Africa. Their intended destination was America, but the monsoon winds blew them off course and they arrived in Singapore. While in Singapore, Loke gained publicity for his performance on the WISC, being the youngest person to score 5 standard deviations over the general mean. He also gained publicity for his skills as an actor, starring as lead roles in the Singaporean feature films Xiao Hai Bu Ben. He decided not to pursue a career in acting, however, declining offers from noteworthy Western producers, due to the lack of opportunity for Asian American actors to succeed in the Hollywood industry. At age 7, he moved to Australia. Nothing interesting happened there, so we'll skip over that part. At age 9, he moved to America. Loke dedicated a majority of his free time (over 15 minutes a day) to honing his piano skills. He won the International Tchaikovsky Competition for his performance of Liszt's Hungarian Rhapsody No. 20. Two years later, he performed the famous P.D.Q. Bach Concerto for Two Pianos vs Orchestra with Lang Lang and the Berlin Philharmonic. Loke has won the Nobel Prize in physics twice, once for experimental procedures disproving the breakdown of classical mechanics at the quantum level and reaffirming Einstein's determininstic description of the Universe, and another time for his discovery of the existance of Bose-Einstein condensate particles exhibiting monopole like qualities. That same year, he also received the Nobel Prize in medicine for his methods of indefinite telomere expansion supplemented by p53 upregulation, achieving long term totipotency. Unbeknownst to society, Loke has invented a time machine and has been preserving the stability of the world in our timeline. He seeded the Earth during the Cambrian Explosion, implanted a tall, black monolith in prehistoric Africa, taught Fibonacci mathematics, presented blueprints for the printing press to Gutenberg, prevented the advancement of the Cold War into a full nuclear war, developed kill codes to terminate existing LOICs, and forewarned the TLC of First Contact. In order to live a more humble life as Siddhartha Gautama did, Loke sold all his assets and donated all his money to the charities. He now lives in a cardboard box behind the North Campus Diner in the University of Maryland. To supplement his efforts, he teaches introductory chemistry and biology classes. Recently, he has picked up weightlifting. His newest goal is to be able to bench a crate of 420 Kaplan MCAT study guide books.</p>
+
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/7/74/T--UMaryland--chunmun.jpg">
+                    </div>
+                    <div id="div-paula" class="description">
+                        <div class="floatLeft">
+                            <h2>Paula Kleyman</h2>
+                            <p>Paula is a rising sophomore studying bioengineering. She hopes to further her studies in graduate school and pursue a career in academia. Her hobbies include long distance running, singing, and playing logic games. On campus she is involved with the Resident Hall Association and is a part of the Integrated Life Sciences living-learning program. She loves dogs, especially corgis, and bunnies, especially Angora rabbits. </p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/e/e6/T--UMaryland--paula.jpeg">
+                    </div>
+					<div id="div-chris" class="description">
+                        <div class="floatLeft">
+                            <h2>Chris Kuffner</h2>
+                            <p>Chris Is a sophomore bioengineer who has been lucky enough to grow up surrounded by biotechnology. Before going to UMD, Chris lived in Massachusetts near Kendall Square and had the privilege to start an iGEM team at his own high school. This year, Chris built the DIY ultra low freezer for a cheap way to preserve competent cells, something his high school team did not have. When Chris isn’t working on biotech he is probably skating, eating, or both.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/c/c2/T--UMaryland--chris.jpg">
+                    </div>
+                </div>
+                <div id="div-studentDetailNav">
+                    <img src="http://2016.igem.org/wiki/images/8/8b/T--UMaryland--subhashini.jpg">
+                    <img src="http://2016.igem.org/wiki/images/3/3d/T--UMaryland--jacob.png">
+                    <img src="http://2016.igem.org/wiki/images/0/0d/T--UMaryland--ben.png">
+                    <img src="http://2016.igem.org/wiki/images/8/8f/T--UMaryland--sangho.jpg">
+                    <img src="http://2016.igem.org/wiki/images/e/e2/T--UMaryland--seth.jpg">
+                    <img src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--maria.jpg">
+                    <img src="http://2016.igem.org/wiki/images/4/47/T--UMaryland--nancy.jpg">
+                    <img src="http://2016.igem.org/wiki/images/1/1b/T--UMaryland--chaoyang.jpg">
+                    <img src="http://2016.igem.org/wiki/images/7/74/T--UMaryland--chunmun.jpg">
+                    <img src="http://2016.igem.org/wiki/images/e/e6/T--UMaryland--paula.jpeg">
+					<img src="http://2016.igem.org/wiki/images/c/c2/T--UMaryland--chris.jpg">
+                </div>
+
+            </div>
+            <div id="div-advisors" class="profiles">
+                <div id="div-advisorsDetail">
+
+                    <div id="div-Ed" class="description">
+                        <div class="floatLeft">
+                            <h2>Dr. Edward Eisenstein</h2>
+                            <p> Edward Eisenstein is a Fellow in the Institute for Bioscience and Biotechnology Research and an Associate Professor in the Fischell Department of Bioengineering at the University of Maryland. Trained in modern structural enzymology, his current research interests are focused on protein and biosystem engineering for discovery and application in plants and microorganisms.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/d/dd/T--UMaryland--Dr.Eisenstein.png">
+
+                    </div>
+                    <div id="div-Jason" class="description">
+                        <div class="floatLeft">
+                            <h2>Dr. Jason Kahn</h2>
+                            <p> Jason D. Kahn is a biophysical chemist who studies protein-nucleic acid interaction and engineering. He is best known for studies of DNA looping, bending, twisting, and cyclization, as well as hybridization thermodynamics for modified bases. He teaches a variety of chemistry, biochemistry, and molecular biology courses, which he credits for initiating his interest in synthetic biology. Dr. Kahn was a graduate student at UC Berkeley and a post-doc at Yale before coming to Maryland in 1994.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--Dr.Kahn.png">
+
+                    </div>
+                    <div id="div-Boots" class="description">
+                        <div class="floatLeft">
+                            <h2>Dr. Booth "Boots" Quimby</h2>
+                            <p> Dr. Quimby is Associate Director of the Integrated Life Sciences honors program in the Honors College at the University of Maryland. Prior to joining the Department of Cell Biology and Molecular Genetics at UMD as a full-time instructor, she earned her Master's of Arts in teaching from the University of South Carolina, after which she taught high school science in Atlanta, Georgia for eight years. She then returned to graduate school and received her doctorate in genetics and molecular biology from Emory University.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/9/91/T--UMaryland--Dr.Quimby.png">
+
+                    </div>
+                    <div id="div-Naren" class="description">
+                        <div class="floatLeft">
+                            <h2>Naren Bhokisham</h2>
+                            <p> Naren is a Graduate Student in Molecular and Cell Biology at the University of Maryland, College Park. He received his undergraduate degree in Industrial Biotechnology from St. Joseph’s College of Engineering, Anna University, India. He works in the intersection of synthetic biology, metabolic engineering and biomaterials, involving assembly of enzyme cascades on various interfaces to generate small molecules and engineering microbes to display novel phenotypes in response to small molecules. Apart from science, his pursuits include traveling, running and latin dancing.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/6/6b/T--UMaryland--Naren.jpeg">
+
+                    </div>
+					<div id="div-iowis" class="description">
+                        <div class="floatLeft">
+                            <h2>Iowis Zhu</h2>
+                            <p>Iowis was the former president and founder of UMaryland iGEM, leading the team to two gold medals. During his time as an undergraduate he studied characteristics of DNA looping protein in Dr. Kahn's lab. Now he is enrolled in the University of San Francisco Medical Scientist Training Program as a graduate student working towards an MD/PhD. Outside of lab, he loves reading manga, watching sports (as a Boston sports fan), and following the global politics.</p>
+                        </div>
+                        <img src="http://2016.igem.org/wiki/images/1/16/T--UMaryland--iowis.jpg">
+
+                    </div>
+                </div>
+                <div id="div-advisorsDetailNav">
+                    <img src="http://2016.igem.org/wiki/images/d/dd/T--UMaryland--Dr.Eisenstein.png">
+                    <img src="http://2016.igem.org/wiki/images/a/ae/T--UMaryland--Dr.Kahn.png">
+                    <img src="http://2016.igem.org/wiki/images/9/91/T--UMaryland--Dr.Quimby.png">
+                    <img src="http://2016.igem.org/wiki/images/6/6b/T--UMaryland--Naren.jpeg">
+                    <img src="http://2016.igem.org/wiki/images/1/16/T--UMaryland--iowis.jpg">
+                </div>
+            </div>
+        </div>
+        <div id="div-acknowledgements" class="profiles">
+            <p class="thanks"> We thank all of our sponsors for supporting us by providing funds, equipment, and supplies.</p>
+            <ul id="companies">
+                <li> <img src="http://2016.igem.org/wiki/images/7/79/T--UMaryland--Qiagen.jpg" id="img-Qiagen" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/6/67/Idt_logo.png" id="img-IDT" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/4/44/T--Pittsburgh--SponsorsNEB.jpg" id="img-NEB" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/1/1e/T--UMaryland--EdgeBio.jpg" id="img-Edge" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/a/a7/T--UMaryland--MedImmune.jpg" id="img-Medimmune" /></li>
+				<li> <img src="http://2016.igem.org/wiki/images/b/bc/T--UMaryland--ysi.jpg" width="150" id="img-ysi" /></li>
+            </ul>
+            <ul id="school">
+                <li> <img src="http://2016.igem.org/wiki/images/d/d8/T--UMaryland--Clark.jpg" id="img-Clark" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/f/fd/T--UMaryland--CMNS2.jpg" id="img-CMNS" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/1/1b/T--UMaryland--IBBR.jpg" id="img-IBBR" /></li>
+                <li> <img src="http://2016.igem.org/wiki/images/a/aa/T--UMaryland--ILS.jpg" id="img-ILS" /></li>
+            </ul>
+            <p class="thanks"> We would like to thank everyone who donated to our <a href="https://www.launch.umd.edu/project/2518" style="margin: 0 0 0 0; padding: 0 0 0 0;">Launch campaign</a>, especially: </p>
+            <ul id="launch">
+                <li> Ana Cohen </li>
+                <li> Dan and Rita Premo </li>
+                <li> Teresa McTigue </li>
+                <li> John Kuffner </li>
+                <li> Natalia Novitskaya </li>
+                <li> Khing Loke </li>
+                <li> Tyson Slocum </li>
+                <li> Jenny Yang </li>
+                <li> Pandoor Arumugam </li>
+                <li> Suchitra and Jayanth Banavar </li>
+                <li> Lawrence Rutledge </li>
+                <li> Raymond St. Leger </li>
+                <li> Ed Eisenstein </li>
+                <li> Tassia Kolesnikow </li>
+                <li> Tong Guo </li>
+                <li> Bertha Reyes </li>
+                <li> Byrne Quimby </li>
+                <li> Qiang Yang </li>
+                <li> Alexandra Cohen </li>
+                <li> Liangwei Wang </li>
+                <li> Xinfeng Lu </li>
+            </ul>
+            <p class="thanks"> Thank you to all who made this year possible: </p>
+            <ul id="otherPeople">
+                <li> UMD Department of Cell Biology and Molecular Genetics (CBMG) </li>
+                <li> UMD Institute of Bioscience and Biotechnology Research (IBBR) </li>
+                <li> UMD Fischell Department of Bioengineering (BIOE) </li>
+				<li> UMD Clark School of Engineering (ENGR)</li>
+                <li> Shelly Chamness, Howard County Public Schools </li>
+                <li> Dr. Robert Infantino, UMD Department of Biology </li>
+                <li> Ben Woodard, UMD Bioprocess Scale-Up Facility </li>
+                <li> John Wilhelm III, Integrated DNA Technologies </li>
+                <li> William E. Bentley Lab, UMD BIOE, IBBR </li>
+                <li> Danielle Curtis, UMD Department of Art </li>
+                <li> Dr. Angus Murphy, UMD Plant Sciences </li>
+                <li> Lai-Xi Wang Lab, UMD Biochemistry </li>
+                <li> Tom O’Dougherty, Port Discovery </li>
+                <li> Dr. Francis Cunningham, CMBG</li>
+                <li> Dr. Darryll J. Pines, ENGR</li>
+                <li> Cierra Clinkscales, IBBR </li>
+                <li> Dr. Eli Groban, Autodesk </li>
+                <li> Dr. Ian White, UMD BIOE </li>
+                <li> Jennifer Schwartz, ENGR </li>
+                <li> Dr. Ganesh Sriram, BIOE </li>
+                <li> Heather Medina, ENGR </li>
+				<li> 2014 Team Braunschweig</li>
+				<li> 2014 Team UESTC China</li>
+				<li> 2015 Team Aachen<li>
+            </ul>
+        </div>
+    </div>
+    <div id="bot-nav">
+        <div id="container">
+            <div class="pull-left">
+                <a href="mailto:umarylandigem@gmail.com">
+                    <p id="contact"> Contact Us </p>
+                </a>
+            </div>
+            <div class="pull-right">
+                <ul id="social-media">
+                    <li>
+                        <a href="https://www.facebook.com/UMarylandiGEM/"> <img src="http://2016.igem.org/wiki/images/9/9f/T--UMaryland--fbLogo.jpeg" /> </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/umarylandigem/"> <img src="http://2016.igem.org/wiki/images/c/ca/T--UMaryland--instalogo.jpg" /> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="copyright">© University of Maryland iGEM 2016</p>
+        </div>
+    </div>
+</body>
+<!-- For nav bar scrolling + hovering -->
+<script>
+    // Animation over top nav bar when mouse hovers
+    $('nav').mouseover(
+            function() {
+                $('#img-logo').css('transition', '.35s ease-in');
+                $('#img-logo').css('opacity', '1');
+                $('nav ul').addClass("hover");
+            }
+        ),
+        $('nav').mouseout(
+            function() {
+                var scroll = $(window).scrollTop();
+                if (scroll > 0) {
+                    if ($(window).width() >= 980) {
+                        var pushed = $('body').hasClass('pushed');
+                        if (pushed == false) {
+                            $('#img-logo').css('transition', '.25s ease');
+                            $('#img-logo').css('opacity', '0');
+                            $('nav ul').removeClass("hover");
+                            $('nav').css('transition', '.5s ease');
+                        }
+                    }
+                }
+
+            }
+        ),
+        // Window width effect on top nav bar
+        $(document).ready(function() {
+            function checkSponsors() {
+                if ($(window).width() < 788) {
+                    $('#img-Edge').css('margin-top', '33px');
+                    $('#img-Medimmune').css('margin-top', '-10px');
+                    if ($(window).width() < 563) {
+                        $('#img-Edge').css('margin-top', '0px');
+                        $('#img-Medimmune').css('margin-top', '-40px');
+                    }
+                } else {
+                    $('#img-Edge').css('margin-top', '0px');
+                    $('#img-Medimmune').css('margin-top', '-10px');
+                }
+            }
+
+            function checkWidth() {
+                if ($(window).width() < 980 || $('nav').hasClass('pushed')) {
+                    $('nav li').css('display', 'none');
+                    $('#img-more').css('display', 'block');
+                    $('nav ul').addClass("hover");
+                    $('#img-logo').css('transition', '.35s ease-in');
+                    $('#img-logo').css('opacity', '1');
+                } else {
+                    $('nav li').css('display', 'inline');
+                    $('#img-more').css('display', 'none');
+                    $('nav ul').removeClass("hover");
+                    if ($(window).scrollTop() > 0) {
+                        $('#img-logo').css('transition', '.25s ease');
+                        $('#img-logo').css('opacity', '0');
+                        $('nav ul').addClass("scrolled");
+                    }
+                }
+            }
+            //Page specific
+            function headerFontSize() {
+                if ($(window).width() < 645) {
+                    $('th p').css('font-size', '5vw');
+                } else {
+                    $('th p').css('font-size', '24pt');
+                }
+            }
+
+            // Execute on load
+            checkWidth();
+            headerFontSize();
+            checkSponsors();
+            // Bind function to window resize
+            $(window).resize(checkWidth);
+            $(window).resize(headerFontSize);
+            $(window).resize(checkSponsors);
+        });
+    // Resized nav bar effect when more icon is clicked
+    $('#img-more').click(function() {
+        $('#img-more').toggleClass('pushed');
+        $('#div-navResized').toggleClass('pushed');
+        $('nav').toggleClass('pushed');
+        $('nav img').toggleClass('pushed');
+        $('body').toggleClass('pushed');
+        if ($(window).width() >= 980) {
+            var pushed = $('body').hasClass('pushed');
+            if (pushed == false) {
+                $('nav li').css('display', 'inline');
+                $('#img-more').css('display', 'none');
+                $('nav ul').removeClass("hover");
+                $('#img-logo').css('transition', '.25s ease');
+                $('#img-logo').css('opacity', '0');
+            }
+        }
+    });
+    // Scrolling animation for top nav bar
+    var nav = $('nav ul');
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll > 0) {
+            if ($(window).width() >= 980) {
+                nav.addClass("scrolled");
+                nav.removeClass("hover");
+                $('#img-logo').css('transition', '.25s ease');
+                $('#img-logo').css('opacity', '0');
+            }
+        } else {
+            nav.removeClass("scrolled");
+            $('#img-logo').css('transition', '.35s ease-in');
+            $('#img-logo').css('opacity', '1');
+        }
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        var dir = location.hash; // grabs the anchor (text following the #)
+        var n = dir.indexOf('?'); // and initially sets the page 
+        dir = dir.substring(0, n != -1 ? n : dir.length);
+        dir = dir.replace('#', '');
+        if (dir == '') {
+            dir = 'students';
+        }
+        changeText(dir)
+    });
+
+    $('#div-advisorsDetailNav').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        dots: true,
+        focusOnSelect: true,
+        arrows: true,
+        asNavFor: '#div-advisorsDetail'
+    });
+
+    $('#div-advisorsDetail').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#div-advisorsDetailNav'
+    });
+
+    $('#div-studentDetailNav').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 5,
+        dots: true,
+        focusOnSelect: true,
+        asNavFor: '#div-studentDetail'
+    });
+
+    $('#div-studentDetail').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#div-studentDetailNav'
+    });
+</script>
+<script>
+    /* Hiding stupid stuff*/
+    $('#top_title').css('display', 'none');
+    $('#top_menu').css('display', 'none');
+    //$('#top_menu_14').css('display', 'none');
+    $('#top_menu_under').css('display', 'none');
+    $('#content').removeClass('mw-body');
+    $('#content').attr('role', 'dummy2')
+    $('#content').attr('id', 'dummy')
+    $('#HQ_page').attr("id", "iGEM"); //voids all dumb CSS iGEM HQ wrote which overrides our code
+    $('#mw-content-text').attr("id", "overruled").removeClass('mw-content-ltr');
+</script>
+<script>
+    $(window).resize(function() {
+        var widthTotal = $('#table-selector').outerWidth(false);
+        var widthText = widthTotal - 500 - 80;
+        $('.floatLeft').css('width', widthText);
+    })
+
+    $(document).ready(function() {
+
+        var widthTotal = $('#table-selector').outerWidth(false);
+        var widthText = widthTotal - 500 - 80;
+        $('.floatLeft').css('width', widthText);
+    })
+</script>
+<script>
+    var clickedT = '';
+    var current = '';
+    var currentT = 'students';
+
+
+
+
+    // sets initial display to be purpose
+    $('.navigator').click(function() { // when any element with .class is clicked, trigger function
+        var selectedT = $(this).attr('data-select'); // grabs the name of the navigational element clicked
+        if (selectedT != currentT) { // only change display / trigger animation if clicking different nav
+            changeText(selectedT)
+        }
+
+    })
+
+    function changeText(selectedT) {
+        $('.navigator').css('border-bottom', '1px solid #A8A8A8'); // make all navigational element have no bottom border
+        $('#th-' + selectedT).css('border-bottom', '4px solid #A8A8A8'); // the clicked navigational element given border		
+        $('.profiles').css('display', 'none');
+        $('#div-' + selectedT).css('margin-left', '60px') // slighly shifts right all text to set up for animation
+        $('#div-' + selectedT).css('display', 'block');
+        $('.slick-slider').slick('setPosition');
+        $('#div-' + selectedT).animate({
+            marginLeft: '0px'
+        }, 200); // the text is animated to quickly move left
+        currentT = selectedT; // sets the current display
+        location.hash = currentT;
+    }
+
+
+    $('#bars_item').css('display', 'none');
+    $('#sideMenu').css('display', 'none');
+
+    $('body').css('display', 'block');
+</script>
+<script>
+    function breakTable() {
+        var margin = $('#' + current + '-container').css('margin-left');
+        if (margin < 460) {
+            $('#' + currentT + '-container').prepend('<br />')
+        }
+    }
+
+    $(window).resize(breakTable);
+    breakTable();
+</script>
+</html>

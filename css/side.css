@@ -1,0 +1,235 @@
+/* Navbar and body setup */
+body {	
+	/* Enforces font on the entire page, colored black by default
+	   Makes background off-white slightly to improve visibility with gray font */
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	background-color: #FFFEFE;
+	min-width: 1200px;
+	max-width: 1200px;
+	overflow-x:hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	/* Moves the top bar to be centered with the UMD logo, increases font size */
+	margin-top: 50px;
+	font-size: 20pt;
+}
+
+nav a {
+	/* removes underlining of links by default, makes color of text grayish */
+	text-decoration: none;
+	color: #757575;
+}
+
+a:hover {
+	/* when hovering over links, the text becomes bold to signify it can be clicked on */
+	font-weight: 800;
+}
+
+nav ul {
+	/* removes bullets in the list */
+	list-style: none;
+	text-align: right;
+	padding-top: 30px;
+}
+
+nav ul li {
+	/* makes list display horizontally, increases spacing with the left side */
+	display: inline;
+	padding-left: 40px;
+}
+
+#img-logo {
+	/* fixes size of logo, makes the nav bar go to the right of the logo */
+	width: 300px;
+	float: left;
+}
+
+#div-text {
+	/* Increases space between main content and the nav heading */
+	padding-top: 20px;
+}
+
+#div-topbar {
+	/* fixes the size of the heading to improve compatibility, centers on the page */
+	margin-right: auto;
+	margin-left: auto;
+	min-width: 1200px;
+	max-width: 1200px;
+}
+
+#div-border {
+	/* create a smaller div that is centered, which has a gray bottom border
+	   creates the shadow underneath border									 */
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 1150px;
+	max-width: 1150px;
+	border-bottom-style: solid;
+	border-color: #A8A8A8;
+	border-width: 2px;
+	-webkit-box-shadow: -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
+	-moz-box-shadow:    -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
+	box-shadow:         -1px 15px 20px -15px rgba(50, 50, 50, 0.56);
+}
+
+/*							*/
+/* Start Resuable CSS code 	*/
+/*						   	*/
+
+h1 {							/* Centers the heading text on the page at different sizes 		*/
+	color: white;				/* makes the text centered and white to contrast background img */
+	font-size: 56pt;
+	font-weight: 200;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	font-size: 28pt;
+	font-weight: 200;
+	text-align: center;
+}
+
+h3 {
+	color: white;
+	font-size: 20pt;
+	font-weight: 400;
+	text-align: center;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#div-pic {
+	/* sets the background image above the main text */
+	padding-top: 30px;
+	background-image: url("../img/Prettyflowers.jpg");
+	padding-bottom: 30px;
+	margin-top: 20px;
+	min-width: 1200px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.imageEmbed {
+	/* creates border around image on each page */
+	border-style: solid;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-color: #A8A8A8;
+	border-width: 2px;
+}
+
+#table-selector {
+	/* formats the table containing nav elements to be centered, addes space on top / bottom */
+	width: 100%;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#table-selector th {
+	/* makes each cell of nav evenly spaced */
+	text-align: center; 
+	width: 25%; /* modify when adding / deleting elements in nav */
+}
+
+th p {
+	/* formats text inside table of navigational elements */
+	/* makes cursor emulate a link to show it's clickable */
+	font-size: 24pt;
+	font-weight: 400;
+	cursor: pointer;
+	padding: 5px 0px 15px 0px;
+	margin: 0 0 0 0;
+}
+
+th p:hover {
+	/* makes links bold when hovered to show it is a link */
+	font-weight: 800;
+}
+
+#table-selector {
+	/* makes a single border between two cells rather than two */
+    border-collapse: collapse;
+}
+
+/* creates a solid gray border between elements of navigational element */
+.borderLeft {
+	border-left: 2px solid #A8A8A8;
+}
+
+.borderRight {
+	border-right: 2px solid #A8A8A8;
+}
+
+.borderBoth {
+	border-left: 2px solid #A8A8A8;
+	border-right: 2px solid #A8A8A8;
+}
+
+.borderRight {
+	border-bottom: 4px solid #A8A8A8;
+}
+
+
+p, .longText li {
+	/* formats text and lists within .longText */
+	font-size: 16pt;
+	line-height: 2;
+	font-weight: 400;
+}
+
+.longText {
+	/* fixes width of the text and displays it slighly left of center */
+	width: 850px;
+	margin-left: 75px;
+	margin-right: auto;
+}
+
+h4 {
+	/* formats intratext section headings */
+	font-size: 20pt;
+	margin-top: 80px;
+}
+
+
+.blockText {
+	/* initially hides all of the text on page */
+	display: none;
+	margin-top: 50px;
+}
+
+.firstHeader {
+	margin-top: 30px;
+}
+
+/* fixes width of each image and makes it centered in between the text */
+
+.imgW800 {
+	width: 800px;
+	margin-left: 80px;
+}
+
+.imgW500 {
+	width: 500px;
+	margin-left: 200px;
+}
+
+.noBottomMargin {
+	margin-bottom: 0px;
+}
+
+.initialDisplay {
+	/* initially display only the first text block*/
+	display: block;
+}
+/*						   */
+/* Start Page Specific CSS */
+/*						   */
